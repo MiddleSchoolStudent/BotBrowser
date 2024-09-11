@@ -1,5 +1,5 @@
 {
-    "profile_version": "1.0.0",
+    "profileVersion": "1.0.0",
     "variables": {
       "locale": "ru",
       "prefSelectedLanguages": "ru",
