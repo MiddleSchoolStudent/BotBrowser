@@ -1,5 +1,21 @@
 {
     "profile_version": "1.0.0",
+    "variables": {
+      "locale": "ru",
+      "prefSelectedLanguages": "ru",
+      "storageQuotaInBytes": 596797550592,
+      "newPageRandomHistory": false,
+      "timezone": "Europe/Moscow",
+      "keepPagesActive": false,
+      "disableConsoleMessage": true,
+      "noises": {
+        "clientRectsFactor": 1.001,
+        "textMetricsFactor": 1.001,
+        "canvas2d": [1, 0, 0, 1, 2],
+        "canvasWebgl": [2, 1, 1, 0, 1],
+        "audio": [0.01, 0.03, 0.01, 0.04, 0.02]
+      }
+    },
     "fingerprints": {
       "browser": {
         "version": "128.0.6613.137",
@@ -6086,8 +6102,8 @@
           "bitness": "64"
         },
         "gpu": {
-          "debugVendor": "Google Inc. (Apple)",
-          "debugRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+          "unmaskedVendor": "Google Inc. (Apple)",
+          "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
           "preferredCanvasFormat": "bgra8unorm",
           "adapter": {
             "default": {
