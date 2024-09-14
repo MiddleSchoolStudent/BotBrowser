@@ -19,7 +19,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
     ```
 4. Use `--bot-profile` to pass profile information to the browser at startup, for example:
     ```bash
-    chromium-browser --no-sandbox --bot-profile="{path_of_}/chrome128-macarm.enc"
+    chromium-browser --no-sandbox --bot-profile="{path_of_}/chrome128_macarm.enc"
     ```
 
 5. Profile has an expiration time. Please contact me if you need the new profile: middleschoolstudent@mail.ru
