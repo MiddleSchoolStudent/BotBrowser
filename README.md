@@ -25,7 +25,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
 ## More information
 
-1. if you're interested in exactly what BotBrowser can do, check [here](profiles#Features).
+1. if you're interested in exactly what BotBrowser can do, check [here](profiles#features).
 2. if you want to compile your own Chrome, check out the steps [here](build).
 
 
