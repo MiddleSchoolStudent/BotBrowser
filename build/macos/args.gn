@@ -1,19 +1,19 @@
 blink_symbol_level=0
 build_with_tflite_lib=false
-cc_wrapper="env CCACHE_SLOPPINESS=time_macros ccache"
+cflags_cc=["-std=c++17"]
 chrome_pgo_phase=0
 clang_use_chrome_plugins=false
+cxx_language_standard="c++17"
 disable_fieldtrial_testing_config=true
 enable_exceptions=false
 enable_hangout_services_extension=false
 enable_iterator_debugging=false
+enable_lens_desktop=false
 enable_mdns=false
 enable_mse_mpeg2ts_stream_parser=true
 enable_nacl=false
-enable_print_preview=false
 enable_reading_list=false
 enable_remoting=false
-enable_reporting=false
 enable_rust=true
 enable_swiftshader=true
 enable_updater=false
@@ -30,10 +30,11 @@ is_component_build=false
 is_debug=false
 is_official_build=true
 link_pulseaudio=false
-optimize_webui=true
 proprietary_codecs=true
 symbol_level=0
 treat_warnings_as_errors=false
+use_custom_libcxx=true
+use_libcxx=true
 use_official_google_api_keys=false
 use_pulseaudio=false
 use_sysroot=false
