@@ -33,43 +33,43 @@
     },
     "fingerprints": {
         "browser": {
-            "version": "128.0.6613.137",
+            "version": "129.0.6668.60",
             "userAgentData": {
                 "architecture": "arm",
                 "bitness": "64",
                 "brands": [
                     {
-                        "brand": "Chromium",
-                        "version": "128"
-                    },
-                    {
-                        "brand": "Not;A=Brand",
-                        "version": "24"
-                    },
-                    {
                         "brand": "Google Chrome",
-                        "version": "128"
+                        "version": "129"
+                    },
+                    {
+                        "brand": "Not=A?Brand",
+                        "version": "8"
+                    },
+                    {
+                        "brand": "Chromium",
+                        "version": "129"
                     }
                 ],
                 "fullVersionList": [
                     {
-                        "brand": "Chromium",
-                        "version": "128.0.6613.137"
-                    },
-                    {
-                        "brand": "Not;A=Brand",
-                        "version": "24.0.0.0"
-                    },
-                    {
                         "brand": "Google Chrome",
-                        "version": "128.0.6613.137"
+                        "version": "129.0.6668.60"
+                    },
+                    {
+                        "brand": "Not=A?Brand",
+                        "version": "8.0.0.0"
+                    },
+                    {
+                        "brand": "Chromium",
+                        "version": "129.0.6668.60"
                     }
                 ],
                 "mobile": false,
                 "model": "",
                 "platform": "macOS",
                 "platformVersion": "14.6.1",
-                "uaFullVersion": "128.0.6613.137",
+                "uaFullVersion": "129.0.6668.60",
                 "wow64": false
             },
             "webglContext": {
@@ -1221,19 +1221,18 @@
                 "maxTouchPoints": 0,
                 "deviceMemory": 8,
                 "languages": [
-                    "ru",
-                    "en"
+                    "en-US"
                 ],
-                "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+                "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
             },
             "window": {
                 "innerWidth": 1512,
-                "innerHeight": 800,
+                "innerHeight": 823,
                 "outerWidth": 1512,
                 "outerHeight": 944,
                 "screenX": 0,
                 "screenY": 38,
-                "devicePixelRatio": 1
+                "devicePixelRatio": 2
             },
             "voices": [
                 {
@@ -2539,7 +2538,7 @@
                     "state": "granted"
                 },
                 "clipboard-read": {
-                    "state": "prompt"
+                    "state": "granted"
                 },
                 "clipboard-write": {
                     "state": "granted"
@@ -2557,10 +2556,10 @@
                     "state": "prompt"
                 },
                 "camera": {
-                    "state": "prompt"
+                    "state": "granted"
                 },
                 "microphone": {
-                    "state": "prompt"
+                    "state": "granted"
                 },
                 "display-capture": {
                     "state": "prompt"
@@ -2575,348 +2574,348 @@
             "featurePolicy": {
                 "features": [
                     "geolocation",
-                    "storage-access",
-                    "gamepad",
-                    "ch-ect",
-                    "midi",
-                    "display-capture",
-                    "usb",
-                    "local-fonts",
-                    "picture-in-picture",
-                    "join-ad-interest-group",
-                    "publickey-credentials-get",
-                    "browsing-topics",
-                    "otp-credentials",
-                    "encrypted-media",
-                    "ch-save-data",
                     "ch-ua-full-version-list",
-                    "ch-ua-wow64",
-                    "shared-storage",
-                    "ch-downlink",
-                    "ch-prefers-color-scheme",
-                    "sync-xhr",
-                    "ch-ua-model",
-                    "ch-prefers-reduced-transparency",
-                    "serial",
-                    "camera",
-                    "ch-prefers-reduced-motion",
-                    "private-state-token-issuance",
-                    "bluetooth",
-                    "identity-credentials-get",
-                    "ch-ua-full-version",
-                    "fullscreen",
-                    "ch-dpr",
-                    "unload",
-                    "keyboard-map",
-                    "ch-ua-platform",
+                    "cross-origin-isolated",
+                    "screen-wake-lock",
+                    "publickey-credentials-get",
                     "shared-storage-select-url",
-                    "gyroscope",
+                    "ch-ua-arch",
+                    "bluetooth",
+                    "compute-pressure",
+                    "ch-prefers-reduced-transparency",
+                    "usb",
+                    "ch-save-data",
+                    "publickey-credentials-create",
+                    "shared-storage",
+                    "run-ad-auction",
+                    "ch-ua-form-factors",
+                    "ch-downlink",
+                    "otp-credentials",
+                    "payment",
+                    "ch-ua",
+                    "ch-ua-model",
+                    "ch-ect",
+                    "autoplay",
+                    "camera",
+                    "private-state-token-issuance",
+                    "accelerometer",
+                    "ch-ua-platform-version",
+                    "idle-detection",
+                    "private-aggregation",
                     "interest-cohort",
+                    "ch-viewport-height",
+                    "local-fonts",
+                    "ch-ua-platform",
+                    "midi",
+                    "ch-ua-full-version",
+                    "xr-spatial-tracking",
+                    "clipboard-read",
+                    "gamepad",
+                    "display-capture",
+                    "keyboard-map",
+                    "join-ad-interest-group",
+                    "ch-width",
+                    "ch-prefers-reduced-motion",
+                    "browsing-topics",
+                    "encrypted-media",
+                    "gyroscope",
+                    "serial",
+                    "ch-rtt",
                     "ch-ua-mobile",
                     "window-management",
-                    "ch-ua",
-                    "publickey-credentials-create",
-                    "run-ad-auction",
-                    "magnetometer",
-                    "accelerometer",
+                    "unload",
+                    "ch-dpr",
+                    "ch-prefers-color-scheme",
+                    "ch-ua-wow64",
+                    "attribution-reporting",
+                    "fullscreen",
+                    "identity-credentials-get",
                     "private-state-token-redemption",
-                    "ch-ua-arch",
-                    "xr-spatial-tracking",
-                    "ch-ua-form-factors",
-                    "idle-detection",
-                    "ch-ua-platform-version",
-                    "ch-width",
-                    "clipboard-read",
-                    "ch-viewport-width",
-                    "compute-pressure",
-                    "payment",
-                    "ch-viewport-height",
-                    "ch-rtt",
-                    "autoplay",
-                    "cross-origin-isolated",
                     "hid",
                     "ch-ua-bitness",
-                    "screen-wake-lock",
-                    "private-aggregation",
-                    "clipboard-write",
-                    "attribution-reporting",
+                    "storage-access",
+                    "sync-xhr",
                     "ch-device-memory",
+                    "ch-viewport-width",
+                    "picture-in-picture",
+                    "magnetometer",
+                    "clipboard-write",
                     "microphone"
                 ],
                 "allowedFeaturesList": [
                     "geolocation",
-                    "storage-access",
-                    "gamepad",
-                    "ch-ect",
-                    "midi",
-                    "display-capture",
-                    "usb",
-                    "local-fonts",
-                    "picture-in-picture",
-                    "join-ad-interest-group",
-                    "publickey-credentials-get",
-                    "browsing-topics",
-                    "otp-credentials",
-                    "encrypted-media",
-                    "ch-save-data",
                     "ch-ua-full-version-list",
-                    "ch-ua-wow64",
-                    "shared-storage",
-                    "ch-downlink",
-                    "ch-prefers-color-scheme",
-                    "sync-xhr",
-                    "ch-ua-model",
-                    "ch-prefers-reduced-transparency",
-                    "serial",
-                    "camera",
-                    "ch-prefers-reduced-motion",
-                    "private-state-token-issuance",
-                    "bluetooth",
-                    "identity-credentials-get",
-                    "ch-ua-full-version",
-                    "fullscreen",
-                    "ch-dpr",
-                    "unload",
-                    "keyboard-map",
-                    "ch-ua-platform",
+                    "cross-origin-isolated",
+                    "screen-wake-lock",
+                    "publickey-credentials-get",
                     "shared-storage-select-url",
-                    "gyroscope",
+                    "ch-ua-arch",
+                    "bluetooth",
+                    "compute-pressure",
+                    "ch-prefers-reduced-transparency",
+                    "usb",
+                    "ch-save-data",
+                    "publickey-credentials-create",
+                    "shared-storage",
+                    "run-ad-auction",
+                    "ch-ua-form-factors",
+                    "ch-downlink",
+                    "otp-credentials",
+                    "payment",
+                    "ch-ua",
+                    "ch-ua-model",
+                    "ch-ect",
+                    "autoplay",
+                    "camera",
+                    "private-state-token-issuance",
+                    "accelerometer",
+                    "ch-ua-platform-version",
+                    "idle-detection",
+                    "private-aggregation",
                     "interest-cohort",
+                    "ch-viewport-height",
+                    "local-fonts",
+                    "ch-ua-platform",
+                    "midi",
+                    "ch-ua-full-version",
+                    "xr-spatial-tracking",
+                    "clipboard-read",
+                    "gamepad",
+                    "display-capture",
+                    "keyboard-map",
+                    "join-ad-interest-group",
+                    "ch-width",
+                    "ch-prefers-reduced-motion",
+                    "browsing-topics",
+                    "encrypted-media",
+                    "gyroscope",
+                    "serial",
+                    "ch-rtt",
                     "ch-ua-mobile",
                     "window-management",
-                    "ch-ua",
-                    "publickey-credentials-create",
-                    "run-ad-auction",
-                    "magnetometer",
-                    "accelerometer",
+                    "unload",
+                    "ch-dpr",
+                    "ch-prefers-color-scheme",
+                    "ch-ua-wow64",
+                    "attribution-reporting",
+                    "fullscreen",
+                    "identity-credentials-get",
                     "private-state-token-redemption",
-                    "ch-ua-arch",
-                    "xr-spatial-tracking",
-                    "ch-ua-form-factors",
-                    "idle-detection",
-                    "ch-ua-platform-version",
-                    "ch-width",
-                    "clipboard-read",
-                    "ch-viewport-width",
-                    "compute-pressure",
-                    "payment",
-                    "ch-viewport-height",
-                    "ch-rtt",
-                    "autoplay",
-                    "cross-origin-isolated",
                     "hid",
                     "ch-ua-bitness",
-                    "screen-wake-lock",
-                    "private-aggregation",
-                    "clipboard-write",
-                    "attribution-reporting",
+                    "storage-access",
+                    "sync-xhr",
                     "ch-device-memory",
+                    "ch-viewport-width",
+                    "picture-in-picture",
+                    "magnetometer",
+                    "clipboard-write",
                     "microphone"
                 ],
                 "allowlistForFeatures": {
                     "geolocation": [
-                        "https://ya.ru"
-                    ],
-                    "storage-access": [
-                        "*"
-                    ],
-                    "gamepad": [
-                        "*"
-                    ],
-                    "ch-ect": [
-                        "https://ya.ru"
-                    ],
-                    "midi": [
-                        "https://ya.ru"
-                    ],
-                    "display-capture": [
-                        "https://ya.ru"
-                    ],
-                    "usb": [
-                        "https://ya.ru"
-                    ],
-                    "local-fonts": [
-                        "https://ya.ru"
-                    ],
-                    "picture-in-picture": [
-                        "*"
-                    ],
-                    "join-ad-interest-group": [
-                        "*"
-                    ],
-                    "publickey-credentials-get": [
-                        "https://ya.ru"
-                    ],
-                    "browsing-topics": [
-                        "*"
-                    ],
-                    "otp-credentials": [
-                        "https://ya.ru"
-                    ],
-                    "encrypted-media": [
-                        "https://ya.ru"
-                    ],
-                    "ch-save-data": [
-                        "*"
+                        "chrome://newtab"
                     ],
                     "ch-ua-full-version-list": [
-                        "https://ya.ru"
+                        "chrome://newtab"
                     ],
-                    "ch-ua-wow64": [
-                        "https://ya.ru"
+                    "cross-origin-isolated": [
+                        "chrome://newtab"
                     ],
-                    "shared-storage": [
-                        "*"
+                    "screen-wake-lock": [
+                        "chrome://newtab"
                     ],
-                    "ch-downlink": [
-                        "https://ya.ru"
-                    ],
-                    "ch-prefers-color-scheme": [
-                        "https://ya.ru"
-                    ],
-                    "sync-xhr": [
-                        "*"
-                    ],
-                    "ch-ua-model": [
-                        "https://ya.ru"
-                    ],
-                    "ch-prefers-reduced-transparency": [
-                        "https://ya.ru"
-                    ],
-                    "serial": [
-                        "https://ya.ru"
-                    ],
-                    "camera": [
-                        "https://ya.ru"
-                    ],
-                    "ch-prefers-reduced-motion": [
-                        "https://ya.ru"
-                    ],
-                    "private-state-token-issuance": [
-                        "https://ya.ru"
-                    ],
-                    "bluetooth": [
-                        "https://ya.ru"
-                    ],
-                    "identity-credentials-get": [
-                        "https://ya.ru"
-                    ],
-                    "ch-ua-full-version": [
-                        "https://ya.ru"
-                    ],
-                    "fullscreen": [
-                        "https://ya.ru"
-                    ],
-                    "ch-dpr": [
-                        "https://ya.ru"
-                    ],
-                    "unload": [
-                        "*"
-                    ],
-                    "keyboard-map": [
-                        "https://ya.ru"
-                    ],
-                    "ch-ua-platform": [
-                        "*"
+                    "publickey-credentials-get": [
+                        "chrome://newtab"
                     ],
                     "shared-storage-select-url": [
                         "*"
                     ],
-                    "gyroscope": [
-                        "https://ya.ru"
+                    "ch-ua-arch": [
+                        "chrome://newtab"
+                    ],
+                    "bluetooth": [
+                        "chrome://newtab"
+                    ],
+                    "compute-pressure": [
+                        "chrome://newtab"
+                    ],
+                    "ch-prefers-reduced-transparency": [
+                        "chrome://newtab"
+                    ],
+                    "usb": [
+                        "chrome://newtab"
+                    ],
+                    "ch-save-data": [
+                        "*"
+                    ],
+                    "publickey-credentials-create": [
+                        "chrome://newtab"
+                    ],
+                    "shared-storage": [
+                        "*"
+                    ],
+                    "run-ad-auction": [
+                        "*"
+                    ],
+                    "ch-ua-form-factors": [
+                        "chrome://newtab"
+                    ],
+                    "ch-downlink": [
+                        "chrome://newtab"
+                    ],
+                    "otp-credentials": [
+                        "chrome://newtab"
+                    ],
+                    "payment": [
+                        "chrome://newtab"
+                    ],
+                    "ch-ua": [
+                        "*"
+                    ],
+                    "ch-ua-model": [
+                        "chrome://newtab"
+                    ],
+                    "ch-ect": [
+                        "chrome://newtab"
+                    ],
+                    "autoplay": [
+                        "chrome://newtab"
+                    ],
+                    "camera": [
+                        "chrome://newtab"
+                    ],
+                    "private-state-token-issuance": [
+                        "chrome://newtab"
+                    ],
+                    "accelerometer": [
+                        "chrome://newtab"
+                    ],
+                    "ch-ua-platform-version": [
+                        "chrome://newtab"
+                    ],
+                    "idle-detection": [
+                        "chrome://newtab"
+                    ],
+                    "private-aggregation": [
+                        "*"
                     ],
                     "interest-cohort": [
                         "*"
+                    ],
+                    "ch-viewport-height": [
+                        "chrome://newtab"
+                    ],
+                    "local-fonts": [
+                        "chrome://newtab"
+                    ],
+                    "ch-ua-platform": [
+                        "*"
+                    ],
+                    "midi": [
+                        "chrome://newtab"
+                    ],
+                    "ch-ua-full-version": [
+                        "chrome://newtab"
+                    ],
+                    "xr-spatial-tracking": [
+                        "chrome://newtab"
+                    ],
+                    "clipboard-read": [
+                        "chrome://newtab"
+                    ],
+                    "gamepad": [
+                        "*"
+                    ],
+                    "display-capture": [
+                        "chrome://newtab"
+                    ],
+                    "keyboard-map": [
+                        "chrome://newtab"
+                    ],
+                    "join-ad-interest-group": [
+                        "*"
+                    ],
+                    "ch-width": [
+                        "chrome://newtab"
+                    ],
+                    "ch-prefers-reduced-motion": [
+                        "chrome://newtab"
+                    ],
+                    "browsing-topics": [
+                        "*"
+                    ],
+                    "encrypted-media": [
+                        "chrome://newtab"
+                    ],
+                    "gyroscope": [
+                        "chrome://newtab"
+                    ],
+                    "serial": [
+                        "chrome://newtab"
+                    ],
+                    "ch-rtt": [
+                        "chrome://newtab"
                     ],
                     "ch-ua-mobile": [
                         "*"
                     ],
                     "window-management": [
-                        "https://ya.ru"
+                        "chrome://newtab"
                     ],
-                    "ch-ua": [
+                    "unload": [
                         "*"
                     ],
-                    "publickey-credentials-create": [
-                        "https://ya.ru"
+                    "ch-dpr": [
+                        "chrome://newtab"
                     ],
-                    "run-ad-auction": [
-                        "*"
+                    "ch-prefers-color-scheme": [
+                        "chrome://newtab"
                     ],
-                    "magnetometer": [
-                        "https://ya.ru"
-                    ],
-                    "accelerometer": [
-                        "https://ya.ru"
-                    ],
-                    "private-state-token-redemption": [
-                        "https://ya.ru"
-                    ],
-                    "ch-ua-arch": [
-                        "https://ya.ru"
-                    ],
-                    "xr-spatial-tracking": [
-                        "https://ya.ru"
-                    ],
-                    "ch-ua-form-factors": [
-                        "https://ya.ru"
-                    ],
-                    "idle-detection": [
-                        "https://ya.ru"
-                    ],
-                    "ch-ua-platform-version": [
-                        "https://ya.ru"
-                    ],
-                    "ch-width": [
-                        "https://ya.ru"
-                    ],
-                    "clipboard-read": [
-                        "https://ya.ru"
-                    ],
-                    "ch-viewport-width": [
-                        "https://ya.ru"
-                    ],
-                    "compute-pressure": [
-                        "https://ya.ru"
-                    ],
-                    "payment": [
-                        "https://ya.ru"
-                    ],
-                    "ch-viewport-height": [
-                        "https://ya.ru"
-                    ],
-                    "ch-rtt": [
-                        "https://ya.ru"
-                    ],
-                    "autoplay": [
-                        "https://ya.ru"
-                    ],
-                    "cross-origin-isolated": [
-                        "https://ya.ru"
-                    ],
-                    "hid": [
-                        "https://ya.ru"
-                    ],
-                    "ch-ua-bitness": [
-                        "https://ya.ru"
-                    ],
-                    "screen-wake-lock": [
-                        "https://ya.ru"
-                    ],
-                    "private-aggregation": [
-                        "*"
-                    ],
-                    "clipboard-write": [
-                        "https://ya.ru"
+                    "ch-ua-wow64": [
+                        "chrome://newtab"
                     ],
                     "attribution-reporting": [
                         "*"
                     ],
+                    "fullscreen": [
+                        "chrome://newtab"
+                    ],
+                    "identity-credentials-get": [
+                        "chrome://newtab"
+                    ],
+                    "private-state-token-redemption": [
+                        "chrome://newtab"
+                    ],
+                    "hid": [
+                        "chrome://newtab"
+                    ],
+                    "ch-ua-bitness": [
+                        "chrome://newtab"
+                    ],
+                    "storage-access": [
+                        "*"
+                    ],
+                    "sync-xhr": [
+                        "*"
+                    ],
                     "ch-device-memory": [
-                        "https://ya.ru"
+                        "chrome://newtab"
+                    ],
+                    "ch-viewport-width": [
+                        "chrome://newtab"
+                    ],
+                    "picture-in-picture": [
+                        "*"
+                    ],
+                    "magnetometer": [
+                        "chrome://newtab"
+                    ],
+                    "clipboard-write": [
+                        "chrome://newtab"
                     ],
                     "microphone": [
-                        "https://ya.ru"
+                        "chrome://newtab"
                     ]
                 }
             }
@@ -2927,22 +2926,82 @@
             "uaOSVersion": "10.15.7",
             "mediaDevices": [
                 {
-                    "deviceId": "",
+                    "deviceId": "default",
                     "kind": "audioinput",
-                    "label": "",
-                    "groupId": ""
+                    "label": "Default - AirPods",
+                    "groupId": "af480b706f96d4b30d925ea47cda7c47713b9bfc7337f7199f9dcee2327e8651"
                 },
                 {
-                    "deviceId": "",
+                    "deviceId": "0db1d2ccdcffe7091ec3731d81ebc991908b1c363854cd183a2ef79ba7b38b81",
+                    "kind": "audioinput",
+                    "label": "AirPods",
+                    "groupId": "af480b706f96d4b30d925ea47cda7c47713b9bfc7337f7199f9dcee2327e8651"
+                },
+                {
+                    "deviceId": "7b289845ff72732cc9a891968ff07f1854e2bf064f82bf5a3cb30d9b6c3710d9",
+                    "kind": "audioinput",
+                    "label": "Simon  Microphone",
+                    "groupId": "d42b8a5451e532af441b18f0f856d5091aea03315ec1a3044411498fcd6b5c9d"
+                },
+                {
+                    "deviceId": "fe277dd28e84c638cef2cc0c552e25935ee5b00adf90557ce00b2838d58dfbfc",
+                    "kind": "audioinput",
+                    "label": "MacBook Pro麦克风 (Built-in)",
+                    "groupId": "3d3ba2cda234f66caf6cbe6688cd7843cd809ef6f56111b667e97479b5e2fec2"
+                },
+                {
+                    "deviceId": "c5f8e292292a8721e43a6938b39e301834ff082b02d91e49b5928ed8c5532f23",
+                    "kind": "audioinput",
+                    "label": "Microsoft Teams Audio Device (Virtual)",
+                    "groupId": "bd5a5369944568f2d7267ccf979d6a0ced9733ee702d5a1af4c907dab18ee6ed"
+                },
+                {
+                    "deviceId": "6f5aae5c0cb5fe693de3c19e84c2e2949cc6a7a5ae798ed55ef3b545b39a8f3a",
+                    "kind": "audioinput",
+                    "label": "ZoomAudioDevice (Virtual)",
+                    "groupId": "091f13600113fe5bd8da26ee431a3e445ae3cdfaf55c4c5a57d7081bf90f5f9c"
+                },
+                {
+                    "deviceId": "78ec3fb75908a40effec75885c55426b36671422b12293a393ee62f8bdf2bacf",
                     "kind": "videoinput",
-                    "label": "",
-                    "groupId": ""
+                    "label": "FaceTime高清摄像头 (3A71:F4B5)",
+                    "groupId": "5fae22aab2ecddb7b3fad2bf6863dc8fff9bd0e21ed624daa9b2306637581cba"
                 },
                 {
-                    "deviceId": "",
+                    "deviceId": "59244d06a64738f54406a59edcc2cf030094fef29419a71028aa45f332989a7c",
+                    "kind": "videoinput",
+                    "label": "Simon  Camera",
+                    "groupId": "2d29b5d48fadffceab3abdd18726b21d3280b3b241c349c2e892c8cc26955df8"
+                },
+                {
+                    "deviceId": "default",
                     "kind": "audiooutput",
-                    "label": "",
-                    "groupId": ""
+                    "label": "Default - AirPods",
+                    "groupId": "af480b706f96d4b30d925ea47cda7c47713b9bfc7337f7199f9dcee2327e8651"
+                },
+                {
+                    "deviceId": "2c6e6e20a8418e7d20db27a691bb576340f2c4ec214c75831a31a68239d49093",
+                    "kind": "audiooutput",
+                    "label": "AirPods",
+                    "groupId": "af480b706f96d4b30d925ea47cda7c47713b9bfc7337f7199f9dcee2327e8651"
+                },
+                {
+                    "deviceId": "74a044d155c6bad9d3fe9bf1f638511964e2b02140aa33490238d74f7c5a408d",
+                    "kind": "audiooutput",
+                    "label": "MacBook Pro扬声器 (Built-in)",
+                    "groupId": "3d3ba2cda234f66caf6cbe6688cd7843cd809ef6f56111b667e97479b5e2fec2"
+                },
+                {
+                    "deviceId": "c5f8e292292a8721e43a6938b39e301834ff082b02d91e49b5928ed8c5532f23",
+                    "kind": "audiooutput",
+                    "label": "Microsoft Teams Audio Device (Virtual)",
+                    "groupId": "bd5a5369944568f2d7267ccf979d6a0ced9733ee702d5a1af4c907dab18ee6ed"
+                },
+                {
+                    "deviceId": "6f5aae5c0cb5fe693de3c19e84c2e2949cc6a7a5ae798ed55ef3b545b39a8f3a",
+                    "kind": "audiooutput",
+                    "label": "ZoomAudioDevice (Virtual)",
+                    "groupId": "091f13600113fe5bd8da26ee431a3e445ae3cdfaf55c4c5a57d7081bf90f5f9c"
                 }
             ],
             "mimeTypes": {
@@ -6737,17 +6796,17 @@
                     "default": {
                         "isFallbackAdapter": false,
                         "features": [
-                            "indirect-first-instance",
-                            "texture-compression-etc2",
-                            "texture-compression-astc",
-                            "depth-clip-control",
                             "depth32float-stencil8",
+                            "rg11b10ufloat-renderable",
+                            "bgra8unorm-storage",
+                            "texture-compression-astc",
+                            "texture-compression-etc2",
+                            "depth-clip-control",
+                            "texture-compression-bc",
                             "shader-f16",
                             "timestamp-query",
                             "float32-filterable",
-                            "texture-compression-bc",
-                            "rg11b10ufloat-renderable",
-                            "bgra8unorm-storage"
+                            "indirect-first-instance"
                         ],
                         "limits": {
                             "maxTextureDimension1D": 16384,
@@ -7694,17 +7753,17 @@
                     "low-power": {
                         "isFallbackAdapter": false,
                         "features": [
-                            "indirect-first-instance",
-                            "texture-compression-etc2",
-                            "texture-compression-astc",
                             "depth32float-stencil8",
+                            "rg11b10ufloat-renderable",
+                            "bgra8unorm-storage",
+                            "texture-compression-astc",
+                            "texture-compression-etc2",
                             "depth-clip-control",
+                            "texture-compression-bc",
                             "shader-f16",
                             "timestamp-query",
                             "float32-filterable",
-                            "texture-compression-bc",
-                            "rg11b10ufloat-renderable",
-                            "bgra8unorm-storage"
+                            "indirect-first-instance"
                         ],
                         "limits": {
                             "maxTextureDimension1D": 16384,
@@ -8651,17 +8710,17 @@
                     "high-performance": {
                         "isFallbackAdapter": false,
                         "features": [
-                            "indirect-first-instance",
-                            "texture-compression-etc2",
-                            "texture-compression-astc",
-                            "depth-clip-control",
                             "depth32float-stencil8",
-                            "shader-f16",
-                            "timestamp-query",
-                            "float32-filterable",
-                            "texture-compression-bc",
                             "rg11b10ufloat-renderable",
-                            "bgra8unorm-storage"
+                            "bgra8unorm-storage",
+                            "texture-compression-astc",
+                            "texture-compression-etc2",
+                            "depth-clip-control",
+                            "texture-compression-bc",
+                            "timestamp-query",
+                            "shader-f16",
+                            "float32-filterable",
+                            "indirect-first-instance"
                         ],
                         "limits": {
                             "maxTextureDimension1D": 16384,
@@ -9619,7 +9678,7 @@
             },
             "battery": {
                 "charging": true,
-                "chargingTime": 0,
+                "chargingTime": 62520,
                 "dischargingTime": null,
                 "level": 1
             },
