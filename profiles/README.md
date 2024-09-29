@@ -24,6 +24,7 @@ middleschoolstudent@mail.ru
 - [x] Customizing page history
 - [x] Keeping the page active
 - [x] Customizable language / time zone based on Proxy's IP
+- [x] Handle WebRTC leaks
 
 ### Fingerprints covered
 
