@@ -1,0 +1,10 @@
+{
+  "name": "botbrowser-puppeteer",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "author": "MiddleSchoolStudent",
+  "dependencies": {
+    "puppeteer-core": "^23.4.1"
+  }
+}

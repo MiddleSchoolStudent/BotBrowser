@@ -1,0 +1,10 @@
+{
+  "name": "botbrowser-playwright",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "author": "MiddleSchoolStudent",
+  "dependencies": {
+    "playwright": "^1.47.2"
+  }
+}
