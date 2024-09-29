@@ -8,19 +8,15 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
 ## Usage
 
-1. Find the installer from [this folder](binary), although it only supports Ubuntu at the moment, but will be available for more systems in the future.
+1. Find the installer from [this folder](binary), although it only supports MacOS / Ubuntu at the moment, but will be available for more systems in the future.
 2. Although BotBrowser was compiled based on Chromium 130.0.6699.0, don't worry because we have a different [Profiles](profiles) and we can change the version number in the fingerprint.
-3. Use this command to install BotBrowser on your system
-   ```bash
-   dpkg -i chromium-browser-stable_amd64.deb
-   ```
-4. Use `--bot-profile` to pass profile information to the browser at startup, for example:
+3. Use `--bot-profile` to pass profile information to the browser at startup, for example:
 
    ```bash
    chromium-browser --no-sandbox --bot-profile="{path_of_}/chrome128-macarm.enc"
    ```
 
-5. Profile has an expiration time. Please contact me if you need the new profile: middleschoolstudent@mail.ru
+4. Profile has an expiration time. Please contact me if you need the new profile: middleschoolstudent@mail.ru
 
 ## More information
 
