@@ -8,7 +8,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
 ## Usage
 
-1. Find the installer from [this folder](binary), although it only supports MacOS / Ubuntu at the moment, but will be available for more systems in the future.
+1. Find the installer from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases), although it only supports MacOS / Ubuntu at the moment, but will be available for more systems in the future.
 2. Although BotBrowser was compiled based on Chromium 130.0.6699.0, don't worry because we have a different [Profiles](profiles) and we can change the version number in the fingerprint.
 3. Use `--bot-profile` to pass profile information to the browser at startup, for example:
 
