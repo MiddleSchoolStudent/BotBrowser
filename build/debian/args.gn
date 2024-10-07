@@ -1,6 +1,5 @@
 blink_symbol_level=0
 build_with_tflite_lib=false
-cc_wrapper="env CCACHE_SLOPPINESS=time_macros ccache"
 cflags_cc=["-std=c++17"]
 chrome_pgo_phase=0
 clang_use_chrome_plugins=false
@@ -34,6 +33,7 @@ link_pulseaudio=false
 proprietary_codecs=true
 symbol_level=0
 treat_warnings_as_errors=false
+use_ccache = true
 use_custom_libcxx=true
 use_libcxx=true
 use_official_google_api_keys=false
