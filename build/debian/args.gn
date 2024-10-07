@@ -15,6 +15,7 @@ enable_nacl=false
 enable_reading_list=false
 enable_remoting=false
 enable_rust=true
+enable_service_discovery=true
 enable_swiftshader=true
 enable_updater=false
 enable_vr=false
