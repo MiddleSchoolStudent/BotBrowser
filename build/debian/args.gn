@@ -1,5 +1,6 @@
 blink_symbol_level=0
 build_with_tflite_lib=false
+cc_wrapper="env CCACHE_SLOPPINESS=time_macros ccache"
 cflags_cc=["-std=c++17"]
 chrome_pgo_phase=0
 clang_use_chrome_plugins=false
