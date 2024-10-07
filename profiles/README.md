@@ -12,7 +12,7 @@ This command use to generate the encrypted Profile.
 node encryptProfile.js
 ```
 
-I do not provide PrivateKey, please contact me if the Profile has expired, please contact me and I will consider whether to provide you with the new Profile for your purposes:
+I do not provide PrivateKey, please contact me if the Profile has expired, and I will consider whether to provide you with the new Profile for your purposes:
 middleschoolstudent@mail.ru
 
 ## Features
