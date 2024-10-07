@@ -25,6 +25,9 @@ middleschoolstudent@mail.ru
 - [x] Keeping the page active
 - [x] Customizable language / time zone based on Proxy's IP
 - [x] Handle WebRTC leaks
+- [x] Noise on 2d canvas / webgl
+- [x] Audio fingerprinting Noise
+- [x] Scroll bar width
 
 ### Fingerprints covered
 
