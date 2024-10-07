@@ -5,7 +5,7 @@
 1. Prepare a clean Ubuntu 22 host.
 2. Install some dependencies:
    ```bash
-   apt install -y fonts-liberation devscripts equivs software-properties-common libmpfr-dev libgmp3-dev libmpc-dev libstdc++-12-dev clang avahi-daemon libavahi-client-dev libnss-mdns qtbase5-dev libqt5widgets5
+   apt install -y fonts-liberation devscripts equivs software-properties-common libmpfr-dev libgmp3-dev libmpc-dev libstdc++-12-dev clang avahi-daemon libavahi-client-dev libnss-mdns qtbase5-dev libqt5widgets5 libx11-xcb-dev
    ```
 3. Check the compilation steps provided by Google [here](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md). Skip a few steps, you just need to follow these:
 
