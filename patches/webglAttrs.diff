@@ -1,0 +1,40 @@
+diff --git a/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc b/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
+index d7c290c860837..a3a28c06ae047 100644
+--- a/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
++++ b/third_party/blink/renderer/modules/webgl/webgl_rendering_context_base.cc
+@@ -145,6 +145,11 @@
+ #include "third_party/skia/include/core/SkImage.h"
+ #include "ui/gfx/geometry/size.h"
+
++#include <algorithm>
++
+ // Populates parameters from texImage2D except for border, width, height, and
+ // depth (which are not present for all texImage2D functions).
+ #define POPULATE_TEX_IMAGE_2D_PARAMS(params, src_type) \
+@@ -3327,6 +3332,29 @@ WebGLContextAttributes* WebGLRenderingContextBase::getContextAttributes()
+   result->setAntialias(GetDrawingBuffer()->Multisample());
+   result->setXrCompatible(xr_compatible_);
+   result->setDesynchronized(Host()->LowLatencyEnabled());
++
++  std::string key_prefix;
++  if (context_type_ == Platform::kWebGL1ContextType) {
++    key_prefix = "fingerprints.browser.webglContext.contextAttributes";
++  } else if (context_type_ == Platform::kWebGL2ContextType) {
++    key_prefix = "fingerprints.browser.webgl2Context.contextAttributes";
++  }
++
++  if (!key_prefix.empty() && BotProfile::Has(key_prefix)) {
++    result->setAlpha(BotProfile::Get<bool>(key_prefix + ".alpha").value_or(result->alpha()));
++    result->setAntialias(BotProfile::Get<bool>(key_prefix + ".antialias").value_or(result->antialias()));
++    result->setDepth(BotProfile::Get<bool>(key_prefix + ".depth").value_or(result->depth()));
++    result->setDesynchronized(BotProfile::Get<bool>(key_prefix + ".desynchronized").value_or(result->desynchronized()));
++    result->setFailIfMajorPerformanceCaveat(BotProfile::Get<bool>(key_prefix + ".failIfMajorPerformanceCaveat").value_or(result->failIfMajorPerformanceCaveat()));
++    result->setPowerPreference(String(*BotProfile::Get<std::tring>(key_prefix + ".powerPreference")));
++    result->setPremultipliedAlpha(BotProfile::Get<bool>(key_prefix + ".premultipliedAlpha").value_or(result->premultipliedAlpha()));
++    result->setPreserveDrawingBuffer(BotProfile::Get<bool>(key_prefix + ".preserveDrawingBuffer").value_or(result->preserveDrawingBuffer()));
++    result->setStencil(BotProfile::Get<bool>(key_prefix + ".stencil").value_or(result->stencil()));
++    result->setXrCompatible(BotProfile::Get<bool>(key_prefix + ".xrCompatible").value_or(result->xrCompatible()));
++  }
++
+   return result;
+ }
