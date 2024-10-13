@@ -12,7 +12,8 @@ This command use to generate the encrypted Profile.
 node encryptProfile.js
 ```
 
-I do not provide PrivateKey, please contact me if the Profile has expired, and I will consider whether to provide you with the new Profile for your purposes:
+I don't provide the private key to generate the Profile, if you need more Profiles, please contact me, I have over 200k browser fingerprints of real users.
+
 middleschoolstudent@mail.ru
 
 ## Features
