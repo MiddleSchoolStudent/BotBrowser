@@ -1,0 +1,25 @@
+diff --git a/third_party/blink/renderer/core/timezone/timezone_controller.cc b/third_party/blink/renderer/core/timezone/timezone_controller.cc
+index 64c068ce408db..27d4bb2d86828 100644
+--- a/third_party/blink/renderer/core/timezone/timezone_controller.cc
++++ b/third_party/blink/renderer/core/timezone/timezone_controller.cc
+@@ -83,9 +84,18 @@ void DispatchTimeZoneChangeEventToFrames() {
+ }
+
+ bool SetIcuTimeZoneAndNotifyV8(const String& timezone_id) {
+-  DCHECK(!timezone_id.empty());
++  const char* timezoneIdChars;
++  const auto* spoofedTimezone = BotProfile::Get<std::string>("variables.timezone");
++  if (spoofedTimezone) {
++    VLOG(1) << "botbrowser: RendererMain: spoofing timezone: " << *spoofedTimezone;
++    timezoneIdChars = spoofedTimezone->data();
++  } else {
++    DCHECK(!timezone_id.empty());
++    timezoneIdChars = timezone_id.Ascii().data();
++  }
++
+   std::unique_ptr<icu::TimeZone> timezone(icu::TimeZone::createTimeZone(
+-      icu::UnicodeString(timezone_id.Ascii().data(), -1, US_INV)));
++      icu::UnicodeString(timezoneIdChars, -1, US_INV)));
+   CHECK(timezone);
+
+   if (*timezone == icu::TimeZone::getUnknown())
