@@ -18,7 +18,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
    Or you can refer to the [demo](demo) to write the corresponding code with the help of CDP.
 
-4. Profile has an expiration time. Please contact me if you need the new profile: middleschoolstudent@mail.ru
+4. I don't provide the private key to generate the Profile, if you need more Profiles, please contact me, I have over 200k browser fingerprints of real users: middleschoolstudent@mail.ru
 
 ## More information
 
