@@ -1,6 +1,5 @@
 blink_symbol_level=0
 build_with_tflite_lib=false
-cflags_cc=["-std=c++17"]
 chrome_pgo_phase=0
 clang_use_chrome_plugins=false
 cxx_language_standard="c++17"
