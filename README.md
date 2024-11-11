@@ -8,9 +8,10 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
 ## Usage
 
-1. Find the installer from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases), although it only supports MacOS / Ubuntu at the moment, but will be available for more systems in the future.
-2. Although BotBrowser was compiled based on Chromium 130.0.6723.92, don't worry because we have different [Profiles](profiles) and we can change the version number in the fingerprint.
-3. Use `--bot-profile` to pass profile information to the browser at startup, for example:
+1. BotBrowser will keep up with the latest stable version of Chrome in order to deal with antibots checks on browser capabilities.
+2. Find the installer from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases), although it only supports MacOS / Ubuntu at the moment, but will be available for more systems in the future.
+3. We provide some [Profiles](profiles) for Demo.
+4. Use `--bot-profile` to pass profile information to the browser at startup, for example:
 
    ```bash
    chromium-browser --no-sandbox --bot-profile="{path_of_}/chrome128-macarm.enc"
@@ -18,7 +19,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
    Or you can refer to the [demo](demo) to write the corresponding code with the help of CDP.
 
-4. I don't provide the private key to generate the Profile, if you need more Profiles, please contact me, I have over 200k browser fingerprints of real users: middleschoolstudent@mail.ru
+5. I don't provide the private key to generate the Profile, if you need more Profiles, please contact me, I have over 200k browser fingerprints of real users: middleschoolstudent@mail.ru
 
 ## More information
 
