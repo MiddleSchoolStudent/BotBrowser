@@ -52,3 +52,4 @@ middleschoolstudent@mail.ru
 - [x] screen
 - [x] battery
 - [x] keyboard
+- [x] system colors
