@@ -2,9 +2,7 @@ blink_symbol_level=0
 cc_wrapper="env CCACHE_SLOPPINESS=time_macros ccache"
 chrome_pgo_phase=0
 clang_use_chrome_plugins=false
-cxx_language_standard="c++17"
 disable_fieldtrial_testing_config=true
-enable_exceptions=false
 enable_hangout_services_extension=false
 enable_iterator_debugging=false
 enable_lens_desktop=true
