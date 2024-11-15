@@ -9,7 +9,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 ## Usage
 
 1. BotBrowser will keep up with the latest stable version of Chrome in order to deal with antibots checks on browser capabilities.
-2. Find the installer from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases), although it only supports MacOS / Ubuntu at the moment, but will be available for more systems in the future.
+2. Find the installer from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases), although it only supports Windows / MacOS / Ubuntu at the moment, but will be available for more systems in the future.
 3. We provide some [Profiles](profiles) for Demo.
 4. Use `--bot-profile` to pass profile information to the browser at startup, for example:
 
