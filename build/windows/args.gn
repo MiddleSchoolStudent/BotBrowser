@@ -1,4 +1,5 @@
 chrome_pgo_phase=0
+cc_wrapper="sccache"
 clang_use_chrome_plugins=false
 disable_fieldtrial_testing_config=true
 enable_hangout_services_extension=true
@@ -26,7 +27,6 @@ is_component_build=false
 link_pulseaudio=false
 proprietary_codecs=true
 treat_warnings_as_errors=false
-use_libcxx=true
 use_official_google_api_keys=false
 use_pulseaudio=false
 use_sysroot=false
