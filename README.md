@@ -25,7 +25,7 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
 1. if you're interested in exactly what BotBrowser can do, check [here](profiles#features).
 2. if you want to compile your own Chrome, check out the steps [here](build).
-3. Even with CDP, still easily bypass these antibots and achieve good results, including well-known large companies, some experimental projects and some sites with their own developed antibots.
+3. Even with CDP, and with a large number of parallel requests on the same host, still able to bypass antibots and achieved more than 98% success rate, including well-known large companies, some small experimental projects and some sites with their own developed antibots.
   - Cloudflare
   - hCaptcha
   - nuCAPTCHA
