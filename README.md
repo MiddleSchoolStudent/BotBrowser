@@ -14,10 +14,10 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 4. Use `--bot-profile` to pass profile information to the browser at startup, for example:
 
    ```bash
-   chromium-browser --no-sandbox --bot-profile="{path_of_}/chrome128-macarm.enc"
+   chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
    ```
 
-   Or you can refer to the [demo](demo) to write the corresponding code with the help of CDP.
+   Or you can refer to the [demo](Demo) to write the corresponding code with the help of CDP.
 
 5. I don't provide the private key to generate the Profile, if you need more Profiles, please contact me, I have over 200k browser fingerprints of real users: middleschoolstudent@mail.ru
 
@@ -25,6 +25,32 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
 
 1. if you're interested in exactly what BotBrowser can do, check [here](profiles#features).
 2. if you want to compile your own Chrome, check out the steps [here](build).
+3. Even with CDP, still easily bypass these antibots and achieve good results, including well-known large companies, some experimental projects and some sites with their own developed antibots.
+  - Cloudflare
+  - hCaptcha
+  - nuCAPTCHA
+  - Kasada
+  - Cloudfront Bot Management (AWS)
+  - PerimeterX
+  - reCAPTCHA
+  - Akamai Bot Manager
+  - DataDome
+  - Imperva (Incapsula)
+  - F5 Shape Security
+  - adscore
+  - fingerprintjs
+  - creepjs
+  - BrowserScan
+  - fv.pro
+  - pixelscan
+  - Tiktok
+  - yandex
+  - Temu
+  - Linkedin
+  - Ticketmaster
+  - Shein
+  - Facebook
+  - bet365
 
 ---
 
