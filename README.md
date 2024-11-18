@@ -1,31 +1,24 @@
 # BotBrowser
 
-There wasn't a browser on the market that did what I wanted, so I wrote my own.
+**The Ultimate Solution for Undetectable Automated Browsing**
 
-For bot - I don't recommend writing direct solver code for antibots. Because the antibot system is updated very quickly, the algorithms change frequently, and they have a lot of developers, you can get bogged down by them.
+## Introduction
 
-So, it's best to find the fingerprints collected by the antibot, modify Chromium to make a generic fingerprint browser, and then use CDP ([playwright](demo/playwright) / [puppeteer](demo/puppeteer)) to control this browser to implement the corresponding logic.
+BotBrowser is a customized Chromium-based browser engineered to bypass advanced antibot systems effectively. Traditional methods of writing direct solver code for antibots are often short-lived due to rapid updates and frequent algorithm changes by antibot developers. Instead of constantly playing catch-up, BotBrowser focuses on emulating genuine browser fingerprints, providing a generic fingerprint browser that seamlessly blends in with regular user traffic.
 
-## Usage
+By modifying Chromium and leveraging the Chrome DevTools Protocol (CDP) through tools like [Playwright](demo/playwright) or [Puppeteer](demo/puppeteer), BotBrowser allows you to automate browsing tasks while avoiding detection by sophisticated antibot mechanisms.
 
-1. BotBrowser will keep up with the latest stable version of Chrome in order to deal with antibots checks on browser capabilities.
-2. Find the installer from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases), although it only supports Windows / MacOS / Ubuntu at the moment, but will be available for more systems in the future.
-3. We provide some [Profiles](profiles) for Demo.
-4. Use `--bot-profile` to pass profile information to the browser at startup, for example:
+## Features
 
-   ```bash
-   chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
-   ```
+- **Up-to-Date Chromium Base**: BotBrowser stays current with the latest stable version of Chrome to ensure compatibility and effectiveness against the newest antibot checks.
+- **Authentic Browser Fingerprints**: Utilize real browser fingerprints to mimic genuine user behavior accurately.
+- **CDP Integration**: Control the browser programmatically using CDP, enabling complex automation scripts and logic implementation.
+- **High Success Rate**: Achieve over 98% success in bypassing antibots, even with a high volume of parallel requests from the same host.
+- **Cross-Platform Support**: Available for Windows, macOS, and Ubuntu, with more systems planned for future releases.
 
-   Or you can refer to the [demo](Demo) to write the corresponding code with the help of CDP.
+## Proven Effectiveness Against
 
-5. I don't provide the private key to generate the Profile, if you need more Profiles, please contact me, I have over 200k browser fingerprints of real users: middleschoolstudent@mail.ru
-
-## More information
-
-1. if you're interested in exactly what BotBrowser can do, check [here](profiles#features).
-2. if you want to compile your own Chrome, check out the steps [here](build).
-3. Even with CDP, and with a large number of parallel requests on the same host, still able to bypass antibots and achieved more than 98% success rate, including well-known large companies, some small experimental projects and some sites with their own developed antibots.
+- **Antibot Services:**
   - Cloudflare
   - hCaptcha
   - nuCAPTCHA
@@ -37,20 +30,50 @@ So, it's best to find the fingerprints collected by the antibot, modify Chromium
   - DataDome
   - Imperva (Incapsula)
   - F5 Shape Security
-  - adscore
-  - fingerprintjs
-  - creepjs
+  - Adscore
+  - FingerprintJS
+  - CreepJS
   - BrowserScan
   - fv.pro
-  - pixelscan
-  - Tiktok
-  - yandex
+  - Pixelscan
+- **Major Platforms and Websites:**
+  - TikTok
+  - Yandex
   - Temu
-  - Linkedin
+  - LinkedIn
   - Ticketmaster
   - Shein
   - Facebook
-  - bet365
+  - Bet365
+  - ...and many more.
+
+## Installation
+
+1. **Download**: Get the installer for your operating system from our [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
+2. **Profiles**: We provide sample [Profiles](profiles) for demonstration purposes.
+
+## Usage
+
+1. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
+
+   ```bash
+   chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
+   ```
+
+    You can also refer to our [Demo](Demo) scripts for guidance on integrating BotBrowser with CDP.
+
+2. **Profile Generation**: We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 200,000 real user browser fingerprints available.
+
+    **Contact**: middleschoolstudent@mail.ru
+
+## Additional Resources
+
+- **Capabilities**: To explore what BotBrowser can do, visit our [Features](profiles#features) page.
+- **Building from Source**: If you wish to compile your own version of Chromium with our modifications, follow the instructions [here](build).
+
+## Disclaimer
+
+BotBrowser is intended for legitimate use cases that comply with all applicable laws and regulations. Misuse of this tool to violate the terms of service of websites or engage in illegal activities is strictly prohibited.
 
 ---
 
