@@ -60,7 +60,7 @@ By modifying Chromium and leveraging the Chrome DevTools Protocol (CDP) through 
    chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
    ```
 
-    You can also refer to our [Demo](Demo) scripts for guidance on integrating BotBrowser with CDP.
+    You can also refer to our [Demo](demo) scripts for guidance on integrating BotBrowser with CDP.
 
 2. **Profile Generation**: We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 200,000 real user browser fingerprints available.
 
