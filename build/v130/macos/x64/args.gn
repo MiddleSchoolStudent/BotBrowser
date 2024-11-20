@@ -29,6 +29,7 @@ is_official_build=true
 link_pulseaudio=false
 proprietary_codecs=true
 symbol_level=0
+target_cpu="x64"
 treat_warnings_as_errors=false
 use_custom_libcxx=true
 use_libcxx=true
