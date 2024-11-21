@@ -12,9 +12,10 @@ By modifying Chromium and leveraging the Chrome DevTools Protocol (CDP) through 
 
 - **Up-to-Date Chromium Base**: BotBrowser stays current with the latest stable version of Chrome to ensure compatibility and effectiveness against the newest antibot checks.
 - **Authentic Browser Fingerprints**: Utilize real browser fingerprints to mimic genuine user behavior accurately.
+- **Cross-Platform Support**: Available for Windows, macOS, and Ubuntu, with more systems planned for future releases.
+- **Cross-System Fingerprint Emulation**: The goal of BotBrowser is to emulate different fingerprints on any system, so you can use Ubuntu's binary in combination with macOS/Windows' profiles seamlessly.
 - **CDP Integration**: Control the browser programmatically using CDP, enabling complex automation scripts and logic implementation.
 - **High Success Rate**: Achieve over 98% success in bypassing antibots, even with a high volume of parallel requests from the same host.
-- **Cross-Platform Support**: Available for Windows, macOS, and Ubuntu, with more systems planned for future releases.
 
 ## Proven Effectiveness Against
 
@@ -59,6 +60,8 @@ By modifying Chromium and leveraging the Chrome DevTools Protocol (CDP) through 
    ```bash
    chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
    ```
+
+    **Tip**: You can use profiles generated for macOS, Windows, or Ubuntu binaries interchangeably, enabling seamless cross-system fingerprint emulation. For example, use a macOS profile on Ubuntu or a Windows profile on macOS without compatibility issues.
 
     You can also refer to our [Demo](demo) scripts for guidance on integrating BotBrowser with CDP.
 
