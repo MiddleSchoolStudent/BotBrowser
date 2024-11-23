@@ -21,9 +21,10 @@ middleschoolstudent@mail.ru
 ### Unique capabilities
 
 - [x] bypass Incognito mode checks
-- [x] bypass CDPs checks
-- [x] Customizing page history
-- [x] Keeping the page active
+- [x] Avoid CDP leaks and bypass all detection
+- [x] Customize page history to ensure fingerprint diversity
+- [x] Keeps the page Active, even if it loses focus. Ensure that multiple pages remain active
+- [x] Setting Proxy host, username, password without CDP
 - [x] Customizable language / time zone based on Proxy's IP
 - [x] Handle WebRTC leaks
 - [x] Noise on 2d canvas / webgl
