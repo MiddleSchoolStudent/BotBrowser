@@ -10,6 +10,8 @@ By customizing Chromium and using the Chrome DevTools Protocol (CDP) with tools 
 
 We also provide a GUI tool, [BotBrowserConsole](https://github.com/MiddleSchoolStudent/BotBrowser-Console), which allows you to easily launch multiple browser instances for multi-account management.
 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/85431c84-95bc-43ff-997d-639ecfc2d7b7">
+
 ## Features
 
 - **Realistic Fingerprints**: Mimics genuine user behavior using authentic browser fingerprints for undetectable automation.
