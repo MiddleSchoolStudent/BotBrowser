@@ -8,6 +8,8 @@ BotBrowser is a Chromium-based browser designed to bypass advanced antibot syste
 
 By customizing Chromium and using the Chrome DevTools Protocol (CDP) with tools like [Playwright](demo/playwright) or [Puppeteer](demo/puppeteer), BotBrowser enables undetectable automated browsing.
 
+We also provide a GUI tool, [BotBrowserConsole](https://github.com/MiddleSchoolStudent/BotBrowser-Console), which allows you to easily launch multiple browser instances for multi-account management.
+
 ## Features
 
 - **Realistic Fingerprints**: Mimics genuine user behavior using authentic browser fingerprints for undetectable automation.
