@@ -1,15 +1,7 @@
 import { chromium } from "playwright";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 
-const CHROMIUM_EXEC_PATH = path.resolve(
-  fileURLToPath(import.meta.url),
-  "../../../binary/macarm/Chromium.app/Contents/MacOS/Chromium"
-);
-const BOT_PROFILE_PATH = path.resolve(
-  fileURLToPath(import.meta.url),
-  "../../../profiles/chrome128-macarm.enc"
-);
+const CHROMIUM_EXEC_PATH = process.env.CHROMIUM_EXEC_PATH;
+const BOT_PROFILE_PATH = process.env.BOT_PROFILE_PATH;
 
 const browser = await chromium.launch({
   browser: "chrome",
