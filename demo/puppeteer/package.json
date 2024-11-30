@@ -5,6 +5,6 @@
   "main": "index.js",
   "author": "MiddleSchoolStudent",
   "dependencies": {
-    "puppeteer-core": "^23.4.1"
+    "puppeteer-core": "^23.9.0"
   }
 }

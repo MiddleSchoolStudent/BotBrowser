@@ -5,6 +5,6 @@
   "main": "index.js",
   "author": "MiddleSchoolStudent",
   "dependencies": {
-    "playwright": "^1.47.2"
+    "playwright": "^1.49.0"
   }
 }
