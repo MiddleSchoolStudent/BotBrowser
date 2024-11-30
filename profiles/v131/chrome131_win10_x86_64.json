@@ -1,11 +1,42 @@
 {
-    "profileVersion": "1.1.2",
+    "profileVersion": "1.2.0",
+    "variables": {
+        "storageQuotaInBytes": 596797550999,
+        "newPageRandomHistory": false,
+        "keepPagesActive": false,
+        "disableConsoleMessage": true,
+        "noises": {
+            "clientRectsFactor": 1.001,
+            "textMetricsFactor": 1.001,
+            "canvas2d": [
+                10,
+                15,
+                0,
+                10,
+                20
+            ],
+            "canvasWebgl": [
+                10,
+                0,
+                10,
+                15,
+                20
+            ],
+            "audio": [
+                0.01,
+                0.03,
+                0.01,
+                0.04,
+                0.02
+            ]
+        }
+    },
     "fingerprints": {
         "browser": {
-            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-            "version": "131.0.6778.70",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            "version": "131.0.6778.86",
             "userAgentData": {
-                "architecture": "arm",
+                "architecture": "x86",
                 "bitness": "64",
                 "brands": [
                     {
@@ -24,11 +55,11 @@
                 "fullVersionList": [
                     {
                         "brand": "Google Chrome",
-                        "version": "131.0.6778.70"
+                        "version": "131.0.6778.86"
                     },
                     {
                         "brand": "Chromium",
-                        "version": "131.0.6778.70"
+                        "version": "131.0.6778.86"
                     },
                     {
                         "brand": "Not_A Brand",
@@ -37,13 +68,15 @@
                 ],
                 "mobile": false,
                 "model": "",
-                "platform": "macOS",
-                "platformVersion": "14.7.1",
-                "uaFullVersion": "131.0.6778.70",
+                "platform": "Windows",
+                "platformVersion": "10.0.0",
+                "uaFullVersion": "131.0.6778.86",
                 "wow64": false
             },
             "features": {
                 "windowPropertyNames": [
+                    "0",
+                    "1",
                     "Object",
                     "Function",
                     "Array",
@@ -1037,7 +1070,6 @@
                     "AuthenticatorAttestationResponse",
                     "AuthenticatorResponse",
                     "PublicKeyCredential",
-                    "BarcodeDetector",
                     "Bluetooth",
                     "BluetoothCharacteristicProperties",
                     "BluetoothDevice",
@@ -1046,7 +1078,6 @@
                     "BluetoothRemoteGATTServer",
                     "BluetoothRemoteGATTService",
                     "CaptureController",
-                    "CookieDeprecationLabel",
                     "DocumentPictureInPicture",
                     "EyeDropper",
                     "FileSystemDirectoryHandle",
@@ -1204,7 +1235,6 @@
                     "webkitSpeechRecognitionEvent",
                     "webkitRequestFileSystem",
                     "webkitResolveLocalFileSystemURL",
-                    "_sentryDebugIds",
                     "_hst",
                     "google",
                     "gws_wizbind",
@@ -1230,18 +1260,19 @@
                     "_hd",
                     "SuppressedError",
                     "AsyncContext",
-                    "closure_lm_286638",
+                    "closure_lm_720358",
+                    "rwt",
                     "lnk",
                     "silk",
                     "_F_installCssProto",
                     "wiz_progress",
-                    "closure_uid_565105661",
-                    "closure_lm_612156",
+                    "closure_uid_702183115",
+                    "closure_lm_922617",
+                    "userfeedback",
                     "osapi",
                     "gadgets",
                     "shindig",
-                    "googleapis",
-                    "userfeedback"
+                    "googleapis"
                 ],
                 "navigatorPropertyNames": [
                     "vendorSub",
@@ -1291,7 +1322,6 @@
                     "wakeLock",
                     "deviceMemory",
                     "userAgentData",
-                    "cookieDeprecationLabel",
                     "login",
                     "ink",
                     "mediaCapabilities",
@@ -5792,7 +5822,6 @@
                     "EXT_clip_control",
                     "EXT_color_buffer_half_float",
                     "EXT_depth_clamp",
-                    "EXT_disjoint_timer_query",
                     "EXT_float_blend",
                     "EXT_frag_depth",
                     "EXT_polygon_offset_clamp",
@@ -5802,7 +5831,6 @@
                     "EXT_texture_filter_anisotropic",
                     "EXT_texture_mirror_clamp_to_edge",
                     "EXT_sRGB",
-                    "KHR_parallel_shader_compile",
                     "OES_element_index_uint",
                     "OES_fbo_render_mipmap",
                     "OES_standard_derivatives",
@@ -5811,12 +5839,10 @@
                     "OES_texture_half_float",
                     "OES_texture_half_float_linear",
                     "OES_vertex_array_object",
-                    "WEBGL_blend_func_extended",
                     "WEBGL_color_buffer_float",
                     "WEBGL_compressed_texture_astc",
                     "WEBGL_compressed_texture_etc",
                     "WEBGL_compressed_texture_etc1",
-                    "WEBGL_compressed_texture_pvrtc",
                     "WEBGL_compressed_texture_s3tc",
                     "WEBGL_compressed_texture_s3tc_srgb",
                     "WEBGL_debug_renderer_info",
@@ -6003,14 +6029,14 @@
                     "3379": {
                         "name": "MAX_TEXTURE_SIZE",
                         "type": "Number",
-                        "value": 16384
+                        "value": 8192
                     },
                     "3386": {
                         "name": "MAX_VIEWPORT_DIMS",
                         "type": "Int32Array",
                         "value": {
-                            "0": 16384,
-                            "1": 16384
+                            "0": 8192,
+                            "1": 8192
                         }
                     },
                     "3408": {
@@ -6153,7 +6179,7 @@
                         "type": "Float32Array",
                         "value": {
                             "0": 1,
-                            "1": 511
+                            "1": 1023
                         }
                     },
                     "33902": {
@@ -6172,7 +6198,7 @@
                     "34024": {
                         "name": "MAX_RENDERBUFFER_SIZE",
                         "type": "Number",
-                        "value": 16384
+                        "value": 8192
                     },
                     "34076": {
                         "name": "MAX_CUBE_MAP_TEXTURE_SIZE",
@@ -6217,17 +6243,17 @@
                     "34930": {
                         "name": "MAX_TEXTURE_IMAGE_UNITS",
                         "type": "Number",
-                        "value": 16
+                        "value": 32
                     },
                     "35660": {
                         "name": "MAX_VERTEX_TEXTURE_IMAGE_UNITS",
                         "type": "Number",
-                        "value": 16
+                        "value": 32
                     },
                     "35661": {
                         "name": "MAX_COMBINED_TEXTURE_IMAGE_UNITS",
                         "type": "Number",
-                        "value": 32
+                        "value": 64
                     },
                     "35724": {
                         "name": "SHADING_LANGUAGE_VERSION",
@@ -6262,17 +6288,17 @@
                     "36347": {
                         "name": "MAX_VERTEX_UNIFORM_VECTORS",
                         "type": "Number",
-                        "value": 1024
+                        "value": 4096
                     },
                     "36348": {
                         "name": "MAX_VARYING_VECTORS",
                         "type": "Number",
-                        "value": 30
+                        "value": 31
                     },
                     "36349": {
                         "name": "MAX_FRAGMENT_UNIFORM_VECTORS",
                         "type": "Number",
-                        "value": 1024
+                        "value": 4096
                     },
                     "37440": {
                         "name": "UNPACK_FLIP_Y_WEBGL",
@@ -6304,18 +6330,18 @@
                         "shaderType": 35633,
                         "precisionType": 36337,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
                         "shaderType": 35633,
                         "precisionType": 36336,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
@@ -6331,8 +6357,8 @@
                         "shaderType": 35633,
                         "precisionType": 36340,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     },
@@ -6340,8 +6366,8 @@
                         "shaderType": 35633,
                         "precisionType": 36339,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     },
@@ -6358,18 +6384,18 @@
                         "shaderType": 35632,
                         "precisionType": 36337,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
                         "shaderType": 35632,
                         "precisionType": 36336,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
@@ -6385,8 +6411,8 @@
                         "shaderType": 35632,
                         "precisionType": 36340,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     },
@@ -6394,8 +6420,8 @@
                         "shaderType": 35632,
                         "precisionType": 36339,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     }
@@ -6408,27 +6434,23 @@
                     "EXT_color_buffer_half_float",
                     "EXT_conservative_depth",
                     "EXT_depth_clamp",
-                    "EXT_disjoint_timer_query_webgl2",
                     "EXT_float_blend",
                     "EXT_polygon_offset_clamp",
-                    "EXT_render_snorm",
                     "EXT_texture_compression_bptc",
                     "EXT_texture_compression_rgtc",
                     "EXT_texture_filter_anisotropic",
                     "EXT_texture_mirror_clamp_to_edge",
                     "EXT_texture_norm16",
-                    "KHR_parallel_shader_compile",
                     "NV_shader_noperspective_interpolation",
                     "OES_draw_buffers_indexed",
                     "OES_sample_variables",
                     "OES_shader_multisample_interpolation",
                     "OES_texture_float_linear",
-                    "WEBGL_blend_func_extended",
+                    "OVR_multiview2",
                     "WEBGL_clip_cull_distance",
                     "WEBGL_compressed_texture_astc",
                     "WEBGL_compressed_texture_etc",
                     "WEBGL_compressed_texture_etc1",
-                    "WEBGL_compressed_texture_pvrtc",
                     "WEBGL_compressed_texture_s3tc",
                     "WEBGL_compressed_texture_s3tc_srgb",
                     "WEBGL_debug_renderer_info",
@@ -6436,8 +6458,6 @@
                     "WEBGL_lose_context",
                     "WEBGL_multi_draw",
                     "WEBGL_polygon_mode",
-                    "WEBGL_provoking_vertex",
-                    "WEBGL_render_shared_exponent",
                     "WEBGL_stencil_texturing"
                 ],
                 "contextAttributes": {
@@ -6650,14 +6670,14 @@
                     "3379": {
                         "name": "MAX_TEXTURE_SIZE",
                         "type": "Number",
-                        "value": 16384
+                        "value": 8192
                     },
                     "3386": {
                         "name": "MAX_VIEWPORT_DIMS",
                         "type": "Int32Array",
                         "value": {
-                            "0": 16384,
-                            "1": 16384
+                            "0": 8192,
+                            "1": 8192
                         }
                     },
                     "3408": {
@@ -6825,7 +6845,7 @@
                         "type": "Float32Array",
                         "value": {
                             "0": 1,
-                            "1": 511
+                            "1": 1023
                         }
                     },
                     "33902": {
@@ -6844,7 +6864,7 @@
                     "34024": {
                         "name": "MAX_RENDERBUFFER_SIZE",
                         "type": "Number",
-                        "value": 16384
+                        "value": 8192
                     },
                     "34045": {
                         "name": "MAX_TEXTURE_LOD_BIAS",
@@ -6939,7 +6959,7 @@
                     "34930": {
                         "name": "MAX_TEXTURE_IMAGE_UNITS",
                         "type": "Number",
-                        "value": 16
+                        "value": 32
                     },
                     "35071": {
                         "name": "MAX_ARRAY_TEXTURE_LAYERS",
@@ -6959,67 +6979,67 @@
                     "35371": {
                         "name": "MAX_VERTEX_UNIFORM_BLOCKS",
                         "type": "Number",
-                        "value": 12
+                        "value": 14
                     },
                     "35373": {
                         "name": "MAX_FRAGMENT_UNIFORM_BLOCKS",
                         "type": "Number",
-                        "value": 12
+                        "value": 14
                     },
                     "35374": {
                         "name": "MAX_COMBINED_UNIFORM_BLOCKS",
                         "type": "Number",
-                        "value": 24
+                        "value": 60
                     },
                     "35375": {
                         "name": "MAX_UNIFORM_BUFFER_BINDINGS",
                         "type": "Number",
-                        "value": 24
+                        "value": 72
                     },
                     "35376": {
                         "name": "MAX_UNIFORM_BLOCK_SIZE",
                         "type": "Number",
-                        "value": 16384
+                        "value": 65536
                     },
                     "35377": {
                         "name": "MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS",
                         "type": "Number",
-                        "value": 53248
+                        "value": 245760
                     },
                     "35379": {
                         "name": "MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS",
                         "type": "Number",
-                        "value": 53248
+                        "value": 245760
                     },
                     "35380": {
                         "name": "UNIFORM_BUFFER_OFFSET_ALIGNMENT",
                         "type": "Number",
-                        "value": 16
+                        "value": 256
                     },
                     "35657": {
                         "name": "MAX_FRAGMENT_UNIFORM_COMPONENTS",
                         "type": "Number",
-                        "value": 4096
+                        "value": 16384
                     },
                     "35658": {
                         "name": "MAX_VERTEX_UNIFORM_COMPONENTS",
                         "type": "Number",
-                        "value": 4096
+                        "value": 16384
                     },
                     "35659": {
                         "name": "MAX_VARYING_COMPONENTS",
                         "type": "Number",
-                        "value": 120
+                        "value": 124
                     },
                     "35660": {
                         "name": "MAX_VERTEX_TEXTURE_IMAGE_UNITS",
                         "type": "Number",
-                        "value": 16
+                        "value": 32
                     },
                     "35661": {
                         "name": "MAX_COMBINED_TEXTURE_IMAGE_UNITS",
                         "type": "Number",
-                        "value": 32
+                        "value": 64
                     },
                     "35723": {
                         "name": "FRAGMENT_SHADER_DERIVATIVE_HINT",
@@ -7094,17 +7114,17 @@
                     "36347": {
                         "name": "MAX_VERTEX_UNIFORM_VECTORS",
                         "type": "Number",
-                        "value": 1024
+                        "value": 4096
                     },
                     "36348": {
                         "name": "MAX_VARYING_VECTORS",
                         "type": "Number",
-                        "value": 30
+                        "value": 31
                     },
                     "36349": {
                         "name": "MAX_FRAGMENT_UNIFORM_VECTORS",
                         "type": "Number",
-                        "value": 1024
+                        "value": 4096
                     },
                     "36387": {
                         "name": "TRANSFORM_FEEDBACK_PAUSED",
@@ -7124,12 +7144,12 @@
                     "37154": {
                         "name": "MAX_VERTEX_OUTPUT_COMPONENTS",
                         "type": "Number",
-                        "value": 120
+                        "value": 128
                     },
                     "37157": {
                         "name": "MAX_FRAGMENT_INPUT_COMPONENTS",
                         "type": "Number",
-                        "value": 120
+                        "value": 128
                     },
                     "37440": {
                         "name": "UNPACK_FLIP_Y_WEBGL",
@@ -7166,18 +7186,18 @@
                         "shaderType": 35633,
                         "precisionType": 36337,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
                         "shaderType": 35633,
                         "precisionType": 36336,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
@@ -7193,8 +7213,8 @@
                         "shaderType": 35633,
                         "precisionType": 36340,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     },
@@ -7202,8 +7222,8 @@
                         "shaderType": 35633,
                         "precisionType": 36339,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     },
@@ -7220,18 +7240,18 @@
                         "shaderType": 35632,
                         "precisionType": 36337,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
                         "shaderType": 35632,
                         "precisionType": 36336,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 127,
-                            "rangeMax": 127,
-                            "precision": 23
+                            "rangeMin": 15,
+                            "rangeMax": 15,
+                            "precision": 10
                         }
                     },
                     {
@@ -7247,8 +7267,8 @@
                         "shaderType": 35632,
                         "precisionType": 36340,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     },
@@ -7256,1098 +7276,36 @@
                         "shaderType": 35632,
                         "precisionType": 36339,
                         "shaderPrecisionFormat": {
-                            "rangeMin": 31,
-                            "rangeMax": 30,
+                            "rangeMin": 15,
+                            "rangeMax": 14,
                             "precision": 0
                         }
                     }
                 ]
             },
             "navigator": {
-                "hardwareConcurrency": 10,
+                "hardwareConcurrency": 16,
                 "maxTouchPoints": 0,
                 "deviceMemory": 8,
                 "languages": [
-                    "en-US"
+                    "en-GB",
+                    "en-US",
+                    "en"
                 ],
-                "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
             },
             "window": {
-                "innerWidth": 1512,
-                "innerHeight": 857,
-                "outerWidth": 1512,
-                "outerHeight": 944,
-                "screenX": 0,
-                "screenY": 38,
-                "devicePixelRatio": 2
+                "innerWidth": 1450,
+                "innerHeight": 829,
+                "outerWidth": 1450,
+                "outerHeight": 916,
+                "screenX": 62,
+                "screenY": 0,
+                "devicePixelRatio": 1
             },
             "voices": [
                 {
                     "default": true,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Samantha",
-                    "voiceURI": "Samantha"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Aaron",
-                    "voiceURI": "Aaron"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Albert",
-                    "voiceURI": "Albert"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Alice",
-                    "voiceURI": "Alice"
-                },
-                {
-                    "default": false,
-                    "lang": "sv-SE",
-                    "localService": true,
-                    "name": "Alva",
-                    "voiceURI": "Alva"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Amélie",
-                    "voiceURI": "Amélie"
-                },
-                {
-                    "default": false,
-                    "lang": "ms-MY",
-                    "localService": true,
-                    "name": "Amira",
-                    "voiceURI": "Amira"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Anna",
-                    "voiceURI": "Anna"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Arthur",
-                    "voiceURI": "Arthur"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Bad News",
-                    "voiceURI": "Bad News"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Bahh",
-                    "voiceURI": "Bahh"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Bells",
-                    "voiceURI": "Bells"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Boing",
-                    "voiceURI": "Boing"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Bubbles",
-                    "voiceURI": "Bubbles"
-                },
-                {
-                    "default": false,
-                    "lang": "he-IL",
-                    "localService": true,
-                    "name": "Carmit",
-                    "voiceURI": "Carmit"
-                },
-                {
-                    "default": false,
-                    "lang": "en-AU",
-                    "localService": true,
-                    "name": "Catherine",
-                    "voiceURI": "Catherine"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Cellos",
-                    "voiceURI": "Cellos"
-                },
-                {
-                    "default": false,
-                    "lang": "id-ID",
-                    "localService": true,
-                    "name": "Damayanti",
-                    "voiceURI": "Damayanti"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Daniel (English (United Kingdom))",
-                    "voiceURI": "Daniel (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Daniel (French (France))",
-                    "voiceURI": "Daniel (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "bg-BG",
-                    "localService": true,
-                    "name": "Daria",
-                    "voiceURI": "Daria"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Eddy (German (Germany))",
-                    "voiceURI": "Eddy (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Eddy (English (United Kingdom))",
-                    "voiceURI": "Eddy (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Eddy (English (United States))",
-                    "voiceURI": "Eddy (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Eddy (Spanish (Spain))",
-                    "voiceURI": "Eddy (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Eddy (Spanish (Mexico))",
-                    "voiceURI": "Eddy (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Eddy (Finnish (Finland))",
-                    "voiceURI": "Eddy (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Eddy (French (Canada))",
-                    "voiceURI": "Eddy (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Eddy (French (France))",
-                    "voiceURI": "Eddy (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Eddy (Italian (Italy))",
-                    "voiceURI": "Eddy (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Eddy (Portuguese (Brazil))",
-                    "voiceURI": "Eddy (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "nl-BE",
-                    "localService": true,
-                    "name": "Ellen",
-                    "voiceURI": "Ellen"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Flo (German (Germany))",
-                    "voiceURI": "Flo (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Flo (English (United Kingdom))",
-                    "voiceURI": "Flo (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Flo (English (United States))",
-                    "voiceURI": "Flo (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Flo (Spanish (Spain))",
-                    "voiceURI": "Flo (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Flo (Spanish (Mexico))",
-                    "voiceURI": "Flo (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Flo (Finnish (Finland))",
-                    "voiceURI": "Flo (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Flo (French (Canada))",
-                    "voiceURI": "Flo (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Flo (French (France))",
-                    "voiceURI": "Flo (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Flo (Italian (Italy))",
-                    "voiceURI": "Flo (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Flo (Portuguese (Brazil))",
-                    "voiceURI": "Flo (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Fred",
-                    "voiceURI": "Fred"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Good News",
-                    "voiceURI": "Good News"
-                },
-                {
-                    "default": false,
-                    "lang": "en-AU",
-                    "localService": true,
-                    "name": "Gordon",
-                    "voiceURI": "Gordon"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Grandma (German (Germany))",
-                    "voiceURI": "Grandma (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Grandma (English (United Kingdom))",
-                    "voiceURI": "Grandma (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Grandma (English (United States))",
-                    "voiceURI": "Grandma (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Grandma (Spanish (Spain))",
-                    "voiceURI": "Grandma (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Grandma (Spanish (Mexico))",
-                    "voiceURI": "Grandma (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Grandma (Finnish (Finland))",
-                    "voiceURI": "Grandma (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Grandma (French (Canada))",
-                    "voiceURI": "Grandma (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Grandma (French (France))",
-                    "voiceURI": "Grandma (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Grandma (Italian (Italy))",
-                    "voiceURI": "Grandma (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Grandma (Portuguese (Brazil))",
-                    "voiceURI": "Grandma (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Grandpa (German (Germany))",
-                    "voiceURI": "Grandpa (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Grandpa (English (United Kingdom))",
-                    "voiceURI": "Grandpa (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Grandpa (English (United States))",
-                    "voiceURI": "Grandpa (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Grandpa (Spanish (Spain))",
-                    "voiceURI": "Grandpa (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Grandpa (Spanish (Mexico))",
-                    "voiceURI": "Grandpa (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Grandpa (Finnish (Finland))",
-                    "voiceURI": "Grandpa (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Grandpa (French (Canada))",
-                    "voiceURI": "Grandpa (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Grandpa (French (France))",
-                    "voiceURI": "Grandpa (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Grandpa (Italian (Italy))",
-                    "voiceURI": "Grandpa (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Grandpa (Portuguese (Brazil))",
-                    "voiceURI": "Grandpa (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "ja-JP",
-                    "localService": true,
-                    "name": "Hattori",
-                    "voiceURI": "Hattori"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Helena",
-                    "voiceURI": "Helena"
-                },
-                {
-                    "default": false,
-                    "lang": "ro-RO",
-                    "localService": true,
-                    "name": "Ioana",
-                    "voiceURI": "Ioana"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Jacques",
-                    "voiceURI": "Jacques"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Jester",
-                    "voiceURI": "Jester"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-PT",
-                    "localService": true,
-                    "name": "Joana",
-                    "voiceURI": "Joana"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Junior",
-                    "voiceURI": "Junior"
-                },
-                {
-                    "default": false,
-                    "lang": "th-TH",
-                    "localService": true,
-                    "name": "Kanya",
-                    "voiceURI": "Kanya"
-                },
-                {
-                    "default": false,
-                    "lang": "en-AU",
-                    "localService": true,
-                    "name": "Karen",
-                    "voiceURI": "Karen"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Kathy",
-                    "voiceURI": "Kathy"
-                },
-                {
-                    "default": false,
-                    "lang": "ja-JP",
-                    "localService": true,
-                    "name": "Kyoko",
-                    "voiceURI": "Kyoko"
-                },
-                {
-                    "default": false,
-                    "lang": "hr-HR",
-                    "localService": true,
-                    "name": "Lana",
-                    "voiceURI": "Lana"
-                },
-                {
-                    "default": false,
-                    "lang": "sk-SK",
-                    "localService": true,
-                    "name": "Laura",
-                    "voiceURI": "Laura"
-                },
-                {
-                    "default": false,
-                    "lang": "hi-IN",
-                    "localService": true,
-                    "name": "Lekha",
-                    "voiceURI": "Lekha"
-                },
-                {
-                    "default": false,
-                    "lang": "uk-UA",
-                    "localService": true,
-                    "name": "Lesya",
-                    "voiceURI": "Lesya"
-                },
-                {
-                    "default": false,
-                    "lang": "vi-VN",
-                    "localService": true,
-                    "name": "Linh",
-                    "voiceURI": "Linh"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Luciana",
-                    "voiceURI": "Luciana"
-                },
-                {
-                    "default": false,
-                    "lang": "ar-001",
-                    "localService": true,
-                    "name": "Majed",
-                    "voiceURI": "Majed"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Marie",
-                    "voiceURI": "Marie"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Martha",
-                    "voiceURI": "Martha"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Martin",
-                    "voiceURI": "Martin"
-                },
-                {
-                    "default": false,
-                    "lang": "el-GR",
-                    "localService": true,
-                    "name": "Melina",
-                    "voiceURI": "Melina"
-                },
-                {
-                    "default": false,
-                    "lang": "ru-RU",
-                    "localService": true,
-                    "name": "Milena",
-                    "voiceURI": "Milena"
-                },
-                {
-                    "default": false,
-                    "lang": "en-IE",
-                    "localService": true,
-                    "name": "Moira",
-                    "voiceURI": "Moira"
-                },
-                {
-                    "default": false,
-                    "lang": "ca-ES",
-                    "localService": true,
-                    "name": "Montse",
-                    "voiceURI": "Montse"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Mónica",
-                    "voiceURI": "Mónica"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Nicky",
-                    "voiceURI": "Nicky"
-                },
-                {
-                    "default": false,
-                    "lang": "nb-NO",
-                    "localService": true,
-                    "name": "Nora",
-                    "voiceURI": "Nora"
-                },
-                {
-                    "default": false,
-                    "lang": "ja-JP",
-                    "localService": true,
-                    "name": "O-Ren",
-                    "voiceURI": "O-Ren"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Organ",
-                    "voiceURI": "Organ"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Paulina",
-                    "voiceURI": "Paulina"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Ralph",
-                    "voiceURI": "Ralph"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Reed (German (Germany))",
-                    "voiceURI": "Reed (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Reed (English (United Kingdom))",
-                    "voiceURI": "Reed (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Reed (English (United States))",
-                    "voiceURI": "Reed (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Reed (Spanish (Spain))",
-                    "voiceURI": "Reed (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Reed (Spanish (Mexico))",
-                    "voiceURI": "Reed (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Reed (Finnish (Finland))",
-                    "voiceURI": "Reed (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Reed (French (Canada))",
-                    "voiceURI": "Reed (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Reed (Italian (Italy))",
-                    "voiceURI": "Reed (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Reed (Portuguese (Brazil))",
-                    "voiceURI": "Reed (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-IN",
-                    "localService": true,
-                    "name": "Rishi",
-                    "voiceURI": "Rishi"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Rocko (German (Germany))",
-                    "voiceURI": "Rocko (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Rocko (English (United Kingdom))",
-                    "voiceURI": "Rocko (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Rocko (English (United States))",
-                    "voiceURI": "Rocko (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Rocko (Spanish (Spain))",
-                    "voiceURI": "Rocko (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Rocko (Spanish (Mexico))",
-                    "voiceURI": "Rocko (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Rocko (Finnish (Finland))",
-                    "voiceURI": "Rocko (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Rocko (French (Canada))",
-                    "voiceURI": "Rocko (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Rocko (French (France))",
-                    "voiceURI": "Rocko (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Rocko (Italian (Italy))",
-                    "voiceURI": "Rocko (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Rocko (Portuguese (Brazil))",
-                    "voiceURI": "Rocko (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Sandy (German (Germany))",
-                    "voiceURI": "Sandy (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Sandy (English (United Kingdom))",
-                    "voiceURI": "Sandy (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Sandy (English (United States))",
-                    "voiceURI": "Sandy (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Sandy (Spanish (Spain))",
-                    "voiceURI": "Sandy (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Sandy (Spanish (Mexico))",
-                    "voiceURI": "Sandy (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Sandy (Finnish (Finland))",
-                    "voiceURI": "Sandy (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Sandy (French (Canada))",
-                    "voiceURI": "Sandy (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Sandy (French (France))",
-                    "voiceURI": "Sandy (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Sandy (Italian (Italy))",
-                    "voiceURI": "Sandy (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Sandy (Portuguese (Brazil))",
-                    "voiceURI": "Sandy (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "da-DK",
-                    "localService": true,
-                    "name": "Sara",
-                    "voiceURI": "Sara"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Satu",
-                    "voiceURI": "Satu"
-                },
-                {
-                    "default": false,
-                    "lang": "de-DE",
-                    "localService": true,
-                    "name": "Shelley (German (Germany))",
-                    "voiceURI": "Shelley (German (Germany))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-GB",
-                    "localService": true,
-                    "name": "Shelley (English (United Kingdom))",
-                    "voiceURI": "Shelley (English (United Kingdom))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Shelley (English (United States))",
-                    "voiceURI": "Shelley (English (United States))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-ES",
-                    "localService": true,
-                    "name": "Shelley (Spanish (Spain))",
-                    "voiceURI": "Shelley (Spanish (Spain))"
-                },
-                {
-                    "default": false,
-                    "lang": "es-MX",
-                    "localService": true,
-                    "name": "Shelley (Spanish (Mexico))",
-                    "voiceURI": "Shelley (Spanish (Mexico))"
-                },
-                {
-                    "default": false,
-                    "lang": "fi-FI",
-                    "localService": true,
-                    "name": "Shelley (Finnish (Finland))",
-                    "voiceURI": "Shelley (Finnish (Finland))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-CA",
-                    "localService": true,
-                    "name": "Shelley (French (Canada))",
-                    "voiceURI": "Shelley (French (Canada))"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Shelley (French (France))",
-                    "voiceURI": "Shelley (French (France))"
-                },
-                {
-                    "default": false,
-                    "lang": "it-IT",
-                    "localService": true,
-                    "name": "Shelley (Italian (Italy))",
-                    "voiceURI": "Shelley (Italian (Italy))"
-                },
-                {
-                    "default": false,
-                    "lang": "pt-BR",
-                    "localService": true,
-                    "name": "Shelley (Portuguese (Brazil))",
-                    "voiceURI": "Shelley (Portuguese (Brazil))"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Superstar",
-                    "voiceURI": "Superstar"
-                },
-                {
-                    "default": false,
-                    "lang": "en-ZA",
-                    "localService": true,
-                    "name": "Tessa",
-                    "voiceURI": "Tessa"
-                },
-                {
-                    "default": false,
-                    "lang": "fr-FR",
-                    "localService": true,
-                    "name": "Thomas",
-                    "voiceURI": "Thomas"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Trinoids",
-                    "voiceURI": "Trinoids"
-                },
-                {
-                    "default": false,
-                    "lang": "hu-HU",
-                    "localService": true,
-                    "name": "Tünde",
-                    "voiceURI": "Tünde"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Whisper",
-                    "voiceURI": "Whisper"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Wobble",
-                    "voiceURI": "Wobble"
-                },
-                {
-                    "default": false,
-                    "lang": "nl-NL",
-                    "localService": true,
-                    "name": "Xander",
-                    "voiceURI": "Xander"
-                },
-                {
-                    "default": false,
-                    "lang": "tr-TR",
-                    "localService": true,
-                    "name": "Yelda",
-                    "voiceURI": "Yelda"
-                },
-                {
-                    "default": false,
-                    "lang": "ko-KR",
-                    "localService": true,
-                    "name": "Yuna",
-                    "voiceURI": "Yuna"
-                },
-                {
-                    "default": false,
-                    "lang": "en-US",
-                    "localService": true,
-                    "name": "Zarvox",
-                    "voiceURI": "Zarvox"
-                },
-                {
-                    "default": false,
-                    "lang": "pl-PL",
-                    "localService": true,
-                    "name": "Zosia",
-                    "voiceURI": "Zosia"
-                },
-                {
-                    "default": false,
-                    "lang": "cs-CZ",
-                    "localService": true,
-                    "name": "Zuzana",
-                    "voiceURI": "Zuzana"
-                },
-                {
-                    "default": false,
                     "lang": "de-DE",
                     "localService": false,
                     "name": "Google Deutsch",
@@ -8562,7 +7520,7 @@
                     "state": "denied"
                 },
                 "geolocation": {
-                    "state": "denied"
+                    "state": "prompt"
                 },
                 "notifications": {
                     "state": "prompt"
@@ -8930,22 +7888,10 @@
             }
         },
         "system": {
-            "osType": "mac",
-            "osVersion": "14.7.1",
-            "uaOSVersion": "10.15.7",
+            "osType": "win",
+            "osVersion": "10.0.0",
+            "uaOSVersion": "10.0.0",
             "mediaDevices": [
-                {
-                    "deviceId": "",
-                    "kind": "audioinput",
-                    "label": "",
-                    "groupId": ""
-                },
-                {
-                    "deviceId": "",
-                    "kind": "videoinput",
-                    "label": "",
-                    "groupId": ""
-                },
                 {
                     "deviceId": "",
                     "kind": "audiooutput",
@@ -11950,26 +10896,6 @@
                     "videoCanPlayType": "probably",
                     "mediaSourceTypeSupported": true
                 },
-                "video/mp4; codecs=\"hev1.1.6.L93.90\"": {
-                    "audioCanPlayType": "probably",
-                    "videoCanPlayType": "probably",
-                    "mediaSourceTypeSupported": true
-                },
-                "video/mp4; codecs=\"hev1.1.6.L93.B0\"": {
-                    "audioCanPlayType": "probably",
-                    "videoCanPlayType": "probably",
-                    "mediaSourceTypeSupported": true
-                },
-                "video/mp4; codecs=\"hvc1.1.6.L93.90\"": {
-                    "audioCanPlayType": "probably",
-                    "videoCanPlayType": "probably",
-                    "mediaSourceTypeSupported": true
-                },
-                "video/mp4; codecs=\"hvc1.1.6.L93.B0\"": {
-                    "audioCanPlayType": "probably",
-                    "videoCanPlayType": "probably",
-                    "mediaSourceTypeSupported": true
-                },
                 "video/mp4; codecs=\"mp4a.40.02\"": {
                     "audioCanPlayType": "probably",
                     "videoCanPlayType": "probably",
@@ -12161,437 +11087,111 @@
             },
             "font": {
                 "systemFonts": [
-                    "AVENIR",
-                    "Academy Engraved LET",
-                    "Al Bayan",
-                    "Al Nile",
-                    "Al Tarikh",
-                    "American Typewriter",
-                    "Andale Mono",
-                    "Apple Braille",
-                    "Apple Chancery",
-                    "Apple Color Emoji",
-                    "Apple LiGothic",
-                    "Apple LiSung",
-                    "Apple SD Gothic Neo",
-                    "Apple Symbols",
-                    "AppleGothic",
-                    "AppleMyungjo",
                     "Arial",
                     "Arial Black",
-                    "Arial Hebrew",
-                    "Arial Hebrew Scholar",
                     "Arial Narrow",
-                    "Arial Rounded MT Bold",
-                    "Arial Unicode MS",
-                    "Athelas",
-                    "Avenir",
-                    "Avenir Black",
-                    "Avenir Black Oblique",
-                    "Avenir Book",
-                    "Avenir Heavy",
-                    "Avenir Light",
-                    "Avenir Medium",
-                    "Avenir Next",
-                    "Avenir Next Condensed",
-                    "Avenir Next Condensed Demi Bold",
-                    "Avenir Next Condensed Heavy",
-                    "Avenir Next Condensed Medium",
-                    "Avenir Next Condensed Ultra Light",
-                    "Avenir Next Demi Bold",
-                    "Avenir Next Heavy",
-                    "Avenir Next Medium",
-                    "Avenir Next Ultra Light",
-                    "Ayuthaya",
-                    "BIZ UDGothic",
-                    "BIZ UDMincho",
-                    "Baghdad",
-                    "Bangla MN",
-                    "Bangla Sangam MN",
-                    "Baoli SC",
-                    "Baoli TC",
-                    "Baskerville",
-                    "Beirut",
-                    "Big Caslon",
-                    "BlinkMacSystemFont",
-                    "Bodoni 72",
-                    "Bodoni 72 Oldstyle",
-                    "Bodoni 72 Smallcaps",
-                    "Bodoni Ornaments",
-                    "Bradley Hand",
-                    "Brush Script MT",
-                    "Chalkboard",
-                    "Chalkboard SE",
-                    "Chalkduster",
-                    "Charter",
-                    "Charter Black",
-                    "Cochin",
+                    "Bahnschrift",
+                    "Bahnschrift Light",
+                    "Bahnschrift SemiBold",
+                    "Calibri",
+                    "Calibri Light",
+                    "Cambria",
+                    "Cambria Math",
+                    "Candara",
+                    "Candara Light",
                     "Comic Sans MS",
-                    "Copperplate",
-                    "Corsiva Hebrew",
+                    "Consolas",
+                    "Constantia",
+                    "Corbel",
+                    "Corbel Light",
                     "Courier",
                     "Courier New",
-                    "DIN Alternate",
-                    "DIN Condensed",
-                    "Damascus",
-                    "DecoType Naskh",
-                    "Devanagari MT",
-                    "Devanagari Sangam MN",
-                    "Didot",
-                    "Diwan Kufi",
-                    "Diwan Thuluth",
-                    "Euphemia UCAS",
-                    "Farah",
-                    "Farisi",
-                    "Futura",
-                    "GB18030 Bitmap",
-                    "Galvji",
-                    "Geeza Pro",
-                    "Geneva",
+                    "Ebrima",
+                    "Franklin Gothic",
+                    "Franklin Gothic Heavy",
+                    "Franklin Gothic Medium",
+                    "Gabriola",
+                    "Gadugi",
                     "Georgia",
-                    "Gill Sans",
-                    "Gujarati MT",
-                    "Gujarati Sangam MN",
-                    "GungSeo",
-                    "Gurmukhi MN",
-                    "Gurmukhi MT",
-                    "Gurmukhi Sangam MN",
-                    "Hannotate SC",
-                    "Hannotate TC",
-                    "HanziPen SC",
-                    "HanziPen TC",
-                    "HeadlineA",
-                    "Hei",
-                    "Heiti SC",
-                    "Heiti TC",
                     "Helvetica",
-                    "Helvetica Neue",
-                    "Herculanum",
-                    "Hiragino Kaku Gothic Pro",
-                    "Hiragino Kaku Gothic Pro W3",
-                    "Hiragino Kaku Gothic Pro W6",
-                    "Hiragino Kaku Gothic ProN",
-                    "Hiragino Kaku Gothic ProN W3",
-                    "Hiragino Kaku Gothic ProN W6",
-                    "Hiragino Kaku Gothic Std",
-                    "Hiragino Kaku Gothic Std W8",
-                    "Hiragino Kaku Gothic StdN",
-                    "Hiragino Kaku Gothic StdN W8",
-                    "Hiragino Maru Gothic Pro",
-                    "Hiragino Maru Gothic Pro W4",
-                    "Hiragino Maru Gothic ProN",
-                    "Hiragino Maru Gothic ProN W4",
-                    "Hiragino Mincho Pro",
-                    "Hiragino Mincho Pro W3",
-                    "Hiragino Mincho Pro W6",
-                    "Hiragino Mincho ProN",
-                    "Hiragino Mincho ProN W3",
-                    "Hiragino Mincho ProN W6",
-                    "Hiragino Sans",
-                    "Hiragino Sans CNS",
-                    "Hiragino Sans CNS W3",
-                    "Hiragino Sans CNS W6",
-                    "Hiragino Sans GB",
-                    "Hiragino Sans GB W3",
-                    "Hiragino Sans GB W6",
-                    "Hiragino Sans W0",
-                    "Hiragino Sans W1",
-                    "Hiragino Sans W2",
-                    "Hiragino Sans W3",
-                    "Hiragino Sans W4",
-                    "Hiragino Sans W5",
-                    "Hiragino Sans W6",
-                    "Hiragino Sans W7",
-                    "Hiragino Sans W8",
-                    "Hiragino Sans W9",
-                    "Hoefler Text",
-                    "Hoefler Text Ornaments",
-                    "ITF Devanagari",
-                    "ITF Devanagari Marathi",
+                    "HoloLens MDL2 Assets",
                     "Impact",
-                    "InaiMathi",
-                    "Iowan Old Style",
-                    "Iowan Old Style Black",
-                    "Kai",
-                    "Kailasa",
-                    "Kaiti SC",
-                    "Kaiti TC",
-                    "Kannada MN",
-                    "Kannada Sangam MN",
-                    "Kefa",
-                    "Khmer MN",
-                    "Khmer Sangam MN",
-                    "Klee",
-                    "Klee Demibold",
-                    "Klee Medium",
-                    "Kohinoor Bangla",
-                    "Kohinoor Devanagari",
-                    "Kohinoor Gujarati",
-                    "Kohinoor Telugu",
-                    "Kokonor",
-                    "Krungthep",
-                    "KufiStandardGK",
-                    "LUCIDA GRANDE",
-                    "Lantinghei SC",
-                    "Lantinghei TC",
-                    "Lao MN",
-                    "Lao Sangam MN",
-                    "LiHei Pro",
-                    "LiSong Pro",
-                    "Libian SC",
-                    "Libian TC",
-                    "LingWai SC",
-                    "LingWai TC",
-                    "Lucida Grande",
-                    "Luminari",
-                    "Malayalam MN",
-                    "Malayalam Sangam MN",
-                    "Marion",
-                    "Marker Felt",
-                    "Menlo",
+                    "Ink Free",
+                    "Javanese Text",
+                    "Leelawadee UI",
+                    "Lucida Console",
+                    "Lucida Sans Unicode",
+                    "MS Gothic",
+                    "MS PGothic",
+                    "MS Sans Serif",
+                    "MS Serif",
+                    "MS UI Gothic",
+                    "MV Boli",
+                    "Malgun Gothic",
+                    "Marlett",
+                    "Microsoft Himalaya",
+                    "Microsoft JhengHei",
+                    "Microsoft JhengHei Light",
+                    "Microsoft JhengHei Regular",
+                    "Microsoft JhengHei UI",
+                    "Microsoft JhengHei UI Light",
+                    "Microsoft JhengHei UI Regular",
+                    "Microsoft New Tai Lue",
+                    "Microsoft PhagsPa",
                     "Microsoft Sans Serif",
-                    "Mishafi",
-                    "Mishafi Gold",
-                    "Monaco",
-                    "Mshtakan",
-                    "Mukta Mahee",
-                    "MuktaMahee Regular",
-                    "Muna",
-                    "Myanmar MN",
-                    "Myanmar Sangam MN",
-                    "Nadeem",
-                    "Nanum Brush Script",
-                    "Nanum Gothic",
-                    "Nanum Myeongjo",
-                    "Nanum Pen Script",
-                    "NanumGothic",
-                    "NanumGothic ExtraBold",
-                    "NanumGothicExtraBold",
-                    "NanumMyeongjo",
-                    "New Peninim MT",
-                    "Noteworthy",
-                    "Noto Nastaliq Urdu",
-                    "Noto Sans Adlam",
-                    "Noto Sans Armenian",
-                    "Noto Sans Avestan",
-                    "Noto Sans Bamum",
-                    "Noto Sans Bassa Vah",
-                    "Noto Sans Batak",
-                    "Noto Sans Bhaiksuki",
-                    "Noto Sans Brahmi",
-                    "Noto Sans Buginese",
-                    "Noto Sans Buhid",
-                    "Noto Sans Canadian Aboriginal",
-                    "Noto Sans Carian",
-                    "Noto Sans Caucasian Albanian",
-                    "Noto Sans Chakma",
-                    "Noto Sans Cham",
-                    "Noto Sans Coptic",
-                    "Noto Sans Cuneiform",
-                    "Noto Sans Cypriot",
-                    "Noto Sans Duployan",
-                    "Noto Sans Egyptian Hieroglyphs",
-                    "Noto Sans Elbasan",
-                    "Noto Sans Glagolitic",
-                    "Noto Sans Gothic",
-                    "Noto Sans Hanunoo",
-                    "Noto Sans Hatran",
-                    "Noto Sans Imperial Aramaic",
-                    "Noto Sans Inscriptional Pahlavi",
-                    "Noto Sans Inscriptional Parthian",
-                    "Noto Sans Javanese",
-                    "Noto Sans Kaithi",
-                    "Noto Sans Kannada",
-                    "Noto Sans Kayah Li",
-                    "Noto Sans Kharoshthi",
-                    "Noto Sans Khojki",
-                    "Noto Sans Khudawadi",
-                    "Noto Sans Lepcha",
-                    "Noto Sans Limbu",
-                    "Noto Sans Linear A",
-                    "Noto Sans Linear B",
-                    "Noto Sans Lisu",
-                    "Noto Sans Lycian",
-                    "Noto Sans Lydian",
-                    "Noto Sans Mahajani",
-                    "Noto Sans Mandaic",
-                    "Noto Sans Manichaean",
-                    "Noto Sans Marchen",
-                    "Noto Sans Meetei Mayek",
-                    "Noto Sans Mende Kikakui",
-                    "Noto Sans Meroitic",
-                    "Noto Sans Miao",
-                    "Noto Sans Modi",
-                    "Noto Sans Mongolian",
-                    "Noto Sans Mro",
-                    "Noto Sans Multani",
-                    "Noto Sans Myanmar",
-                    "Noto Sans NKo",
-                    "Noto Sans Nabataean",
-                    "Noto Sans New Tai Lue",
-                    "Noto Sans Newa",
-                    "Noto Sans Ol Chiki",
-                    "Noto Sans Old Hungarian",
-                    "Noto Sans Old Italic",
-                    "Noto Sans Old North Arabian",
-                    "Noto Sans Old Permic",
-                    "Noto Sans Old Persian",
-                    "Noto Sans Old South Arabian",
-                    "Noto Sans Old Turkic",
-                    "Noto Sans Oriya",
-                    "Noto Sans Osage",
-                    "Noto Sans Osmanya",
-                    "Noto Sans Pahawh Hmong",
-                    "Noto Sans Palmyrene",
-                    "Noto Sans Pau Cin Hau",
-                    "Noto Sans PhagsPa",
-                    "Noto Sans Phoenician",
-                    "Noto Sans Psalter Pahlavi",
-                    "Noto Sans Rejang",
-                    "Noto Sans Samaritan",
-                    "Noto Sans Saurashtra",
-                    "Noto Sans Sharada",
-                    "Noto Sans Sora Sompeng",
-                    "Noto Sans Sundanese",
-                    "Noto Sans Syloti Nagri",
-                    "Noto Sans Syriac",
-                    "Noto Sans Tagalog",
-                    "Noto Sans Tagbanwa",
-                    "Noto Sans Tai Le",
-                    "Noto Sans Tai Tham",
-                    "Noto Sans Tai Viet",
-                    "Noto Sans Takri",
-                    "Noto Sans Thaana",
-                    "Noto Sans Tifinagh",
-                    "Noto Sans Tirhuta",
-                    "Noto Sans Ugaritic",
-                    "Noto Sans Vai",
-                    "Noto Sans Warang Citi",
-                    "Noto Sans Yi",
-                    "Noto Serif Ahom",
-                    "Noto Serif Balinese",
-                    "Noto Serif Myanmar",
-                    "OPTIMA",
-                    "OSAKA",
-                    "Optima",
-                    "Oriya MN",
-                    "Oriya Sangam MN",
-                    "Osaka",
-                    "Osaka-Mono",
-                    "PCMyungjo",
-                    "PSL Ornanong Pro",
-                    "PT Mono",
-                    "PT Sans",
-                    "PT Sans Caption",
-                    "PT Sans Narrow",
-                    "PT Serif",
-                    "PT Serif Caption",
-                    "Palatino",
-                    "Papyrus",
-                    "Party LET",
-                    "Phosphate",
-                    "PilGi",
-                    "PingFang HK",
-                    "PingFang SC",
-                    "PingFang TC",
-                    "Plantagenet Cherokee",
-                    "Raanana",
-                    "Rockwell",
-                    "STFangSong",
-                    "STFangsong",
-                    "STHeiti",
-                    "STIX Two Math",
-                    "STIX Two Text",
-                    "STIXGeneral",
-                    "STIXIntegralsD",
-                    "STIXIntegralsSm",
-                    "STIXIntegralsUp",
-                    "STIXIntegralsUpD",
-                    "STIXIntegralsUpSm",
-                    "STIXNonUnicode",
-                    "STIXSizeFiveSym",
-                    "STIXSizeFourSym",
-                    "STIXSizeOneSym",
-                    "STIXSizeThreeSym",
-                    "STIXSizeTwoSym",
-                    "STIXVariants",
-                    "STKaiti",
-                    "STSong",
-                    "STXihei",
-                    "Sana",
-                    "Sathu",
-                    "Savoye LET",
-                    "Seravek",
-                    "Seravek ExtraLight",
-                    "Seravek Light",
-                    "Seravek Medium",
-                    "Shree Devanagari 714",
-                    "SignPainter",
-                    "SignPainter-HouseScript",
-                    "Silom",
-                    "Sinhala MN",
-                    "Sinhala Sangam MN",
-                    "Skia",
-                    "Snell Roundhand",
-                    "Songti SC",
-                    "Songti TC",
-                    "Sukhumvit Set",
-                    "Superclarendon",
+                    "Microsoft Tai Le",
+                    "Microsoft YaHei",
+                    "Microsoft YaHei Light",
+                    "Microsoft YaHei UI",
+                    "Microsoft YaHei UI Light",
+                    "Microsoft Yi Baiti",
+                    "MingLiU-ExtB",
+                    "MingLiU_HKSCS-ExtB",
+                    "Mongolian Baiti",
+                    "Myanmar Text",
+                    "NSimSun",
+                    "Nirmala UI",
+                    "PMingLiU-ExtB",
+                    "Palatino Linotype",
+                    "Segoe MDL2 Assets",
+                    "Segoe Print",
+                    "Segoe Script",
+                    "Segoe UI",
+                    "Segoe UI Black",
+                    "Segoe UI Emoji",
+                    "Segoe UI Historic",
+                    "Segoe UI Light",
+                    "Segoe UI Semibold",
+                    "Segoe UI Symbol",
+                    "SimSun",
+                    "SimSun-ExtB",
+                    "Sitka Banner",
+                    "Sitka Display",
+                    "Sitka Heading",
+                    "Sitka Small",
+                    "Sitka Subheading",
+                    "Sitka Text",
+                    "Sylfaen",
                     "Symbol",
                     "Tahoma",
-                    "Tamil MN",
-                    "Tamil Sangam MN",
-                    "Telugu MN",
-                    "Telugu Sangam MN",
-                    "Thonburi",
                     "Times",
                     "Times New Roman",
-                    "Toppan Bunkyu Gothic",
-                    "Toppan Bunkyu Gothic Regular",
-                    "Toppan Bunkyu Midashi Gothic",
-                    "Toppan Bunkyu Midashi Gothic Extrabold",
-                    "Toppan Bunkyu Midashi Mincho",
-                    "Toppan Bunkyu Midashi Mincho Extrabold",
-                    "Toppan Bunkyu Mincho",
-                    "Toppan Bunkyu Mincho Regular",
-                    "Trattatello",
                     "Trebuchet MS",
-                    "Tsukushi A Round Gothic",
-                    "Tsukushi A Round Gothic Bold",
-                    "Tsukushi A Round Gothic Regular",
-                    "Tsukushi B Round Gothic",
-                    "Tsukushi B Round Gothic Bold",
-                    "Tsukushi B Round Gothic Regular",
                     "Verdana",
-                    "Waseem",
-                    "Wawati SC",
-                    "Wawati TC",
                     "Webdings",
-                    "Weibei SC",
                     "Wingdings",
-                    "Wingdings 2",
-                    "Wingdings 3",
-                    "Xingkai SC",
-                    "Xingkai TC",
-                    "YuGothic",
-                    "YuGothic Bold",
-                    "YuGothic Medium",
-                    "YuKyokasho",
-                    "YuKyokasho Yoko",
-                    "YuMincho",
-                    "YuMincho +36p Kana",
-                    "YuMincho +36p Kana Demibold",
-                    "YuMincho +36p Kana Extrabold",
-                    "YuMincho +36p Kana Medium",
-                    "YuMincho Demibold",
-                    "YuMincho Extrabold",
-                    "YuMincho Medium",
-                    "Yuanti SC",
-                    "Yuanti TC",
-                    "Yuppy SC",
-                    "Yuppy TC",
-                    "Zapf Dingbats",
-                    "Zapfino"
+                    "Yu Gothic",
+                    "Yu Gothic Light",
+                    "Yu Gothic Medium",
+                    "Yu Gothic Regular",
+                    "Yu Gothic UI",
+                    "Yu Gothic UI Light",
+                    "Yu Gothic UI Regular",
+                    "Yu Gothic UI Semibold",
+                    "宋体",
+                    "微软雅黑",
+                    "ＭＳ ゴシック",
+                    "ＭＳ Ｐゴシック"
                 ]
             },
             "colors": {
@@ -12607,8 +11207,8 @@
                 ],
                 "ActiveText": [
                     "0",
-                    "0",
-                    "238"
+                    "102",
+                    "204"
                 ],
                 "AppWorkspace": [
                     "255",
@@ -12626,19 +11226,19 @@
                     "0"
                 ],
                 "ButtonFace": [
-                    "239",
-                    "239",
-                    "239"
+                    "240",
+                    "240",
+                    "240"
                 ],
                 "ButtonHighlight": [
-                    "239",
-                    "239",
-                    "239"
+                    "240",
+                    "240",
+                    "240"
                 ],
                 "ButtonShadow": [
-                    "239",
-                    "239",
-                    "239"
+                    "240",
+                    "240",
+                    "240"
                 ],
                 "ButtonText": [
                     "0",
@@ -12671,21 +11271,19 @@
                     "0"
                 ],
                 "GrayText": [
-                    "128",
-                    "128",
-                    "128"
+                    "109",
+                    "109",
+                    "109"
                 ],
                 "Highlight": [
-                    "128",
-                    "188",
-                    "254",
                     "0",
-                    "6"
+                    "120",
+                    "215"
                 ],
                 "HighlightText": [
-                    "0",
-                    "0",
-                    "0"
+                    "255",
+                    "255",
+                    "255"
                 ],
                 "InactiveBorder": [
                     "0",
@@ -12714,8 +11312,8 @@
                 ],
                 "LinkText": [
                     "0",
-                    "0",
-                    "238"
+                    "102",
+                    "204"
                 ],
                 "Mark": [
                     "255",
@@ -12748,9 +11346,9 @@
                     "0"
                 ],
                 "ThreeDFace": [
-                    "239",
-                    "239",
-                    "239"
+                    "240",
+                    "240",
+                    "240"
                 ],
                 "ThreeDHighlight": [
                     "0",
@@ -12769,8 +11367,8 @@
                 ],
                 "VisitedText": [
                     "0",
-                    "0",
-                    "238"
+                    "102",
+                    "204"
                 ],
                 "Window": [
                     "255",
@@ -12791,181 +11389,55 @@
         },
         "hardware": {
             "cpu": {
-                "arch": "arm",
+                "arch": "x86",
                 "bitness": "64"
             },
             "gpu": {
-                "unmaskedVendor": "Google Inc. (Apple)",
-                "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1 Max, Unspecified Version)",
+                "unmaskedVendor": "Google Inc. (Google)",
+                "unmaskedRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
                 "preferredCanvasFormat": "bgra8unorm",
-                "adapter": {
-                    "default": {
-                        "isFallbackAdapter": false,
-                        "features": [
-                            "depth32float-stencil8",
-                            "rg11b10ufloat-renderable",
-                            "bgra8unorm-storage",
-                            "texture-compression-astc",
-                            "texture-compression-etc2",
-                            "depth-clip-control",
-                            "texture-compression-bc",
-                            "dual-source-blending",
-                            "timestamp-query",
-                            "shader-f16",
-                            "clip-distances",
-                            "float32-filterable",
-                            "indirect-first-instance"
-                        ],
-                        "limits": {
-                            "maxTextureDimension1D": 16384,
-                            "maxTextureDimension2D": 16384,
-                            "maxTextureDimension3D": 2048,
-                            "maxTextureArrayLayers": 2048,
-                            "maxBindGroups": 4,
-                            "maxBindGroupsPlusVertexBuffers": 24,
-                            "maxBindingsPerBindGroup": 1000,
-                            "maxDynamicUniformBuffersPerPipelineLayout": 10,
-                            "maxDynamicStorageBuffersPerPipelineLayout": 8,
-                            "maxSampledTexturesPerShaderStage": 16,
-                            "maxSamplersPerShaderStage": 16,
-                            "maxStorageBuffersPerShaderStage": 10,
-                            "maxStorageTexturesPerShaderStage": 8,
-                            "maxUniformBuffersPerShaderStage": 12,
-                            "maxUniformBufferBindingSize": 65536,
-                            "maxStorageBufferBindingSize": 4294967292,
-                            "minUniformBufferOffsetAlignment": 256,
-                            "minStorageBufferOffsetAlignment": 256,
-                            "maxVertexBuffers": 8,
-                            "maxBufferSize": 4294967296,
-                            "maxVertexAttributes": 30,
-                            "maxVertexBufferArrayStride": 2048,
-                            "maxInterStageShaderComponents": 112,
-                            "maxInterStageShaderVariables": 28,
-                            "maxColorAttachments": 8,
-                            "maxColorAttachmentBytesPerSample": 128,
-                            "maxComputeWorkgroupStorageSize": 32768,
-                            "maxComputeInvocationsPerWorkgroup": 1024,
-                            "maxComputeWorkgroupSizeX": 1024,
-                            "maxComputeWorkgroupSizeY": 1024,
-                            "maxComputeWorkgroupSizeZ": 64,
-                            "maxComputeWorkgroupsPerDimension": 65535
-                        }
-                    },
-                    "low-power": {
-                        "isFallbackAdapter": false,
-                        "features": [
-                            "depth32float-stencil8",
-                            "rg11b10ufloat-renderable",
-                            "bgra8unorm-storage",
-                            "texture-compression-astc",
-                            "texture-compression-etc2",
-                            "depth-clip-control",
-                            "texture-compression-bc",
-                            "dual-source-blending",
-                            "clip-distances",
-                            "timestamp-query",
-                            "shader-f16",
-                            "float32-filterable",
-                            "indirect-first-instance"
-                        ],
-                        "limits": {
-                            "maxTextureDimension1D": 16384,
-                            "maxTextureDimension2D": 16384,
-                            "maxTextureDimension3D": 2048,
-                            "maxTextureArrayLayers": 2048,
-                            "maxBindGroups": 4,
-                            "maxBindGroupsPlusVertexBuffers": 24,
-                            "maxBindingsPerBindGroup": 1000,
-                            "maxDynamicUniformBuffersPerPipelineLayout": 10,
-                            "maxDynamicStorageBuffersPerPipelineLayout": 8,
-                            "maxSampledTexturesPerShaderStage": 16,
-                            "maxSamplersPerShaderStage": 16,
-                            "maxStorageBuffersPerShaderStage": 10,
-                            "maxStorageTexturesPerShaderStage": 8,
-                            "maxUniformBuffersPerShaderStage": 12,
-                            "maxUniformBufferBindingSize": 65536,
-                            "maxStorageBufferBindingSize": 4294967292,
-                            "minUniformBufferOffsetAlignment": 256,
-                            "minStorageBufferOffsetAlignment": 256,
-                            "maxVertexBuffers": 8,
-                            "maxBufferSize": 4294967296,
-                            "maxVertexAttributes": 30,
-                            "maxVertexBufferArrayStride": 2048,
-                            "maxInterStageShaderComponents": 112,
-                            "maxInterStageShaderVariables": 28,
-                            "maxColorAttachments": 8,
-                            "maxColorAttachmentBytesPerSample": 128,
-                            "maxComputeWorkgroupStorageSize": 32768,
-                            "maxComputeInvocationsPerWorkgroup": 1024,
-                            "maxComputeWorkgroupSizeX": 1024,
-                            "maxComputeWorkgroupSizeY": 1024,
-                            "maxComputeWorkgroupSizeZ": 64,
-                            "maxComputeWorkgroupsPerDimension": 65535
-                        }
-                    },
-                    "high-performance": {
-                        "isFallbackAdapter": false,
-                        "features": [
-                            "depth32float-stencil8",
-                            "rg11b10ufloat-renderable",
-                            "bgra8unorm-storage",
-                            "texture-compression-astc",
-                            "texture-compression-etc2",
-                            "depth-clip-control",
-                            "texture-compression-bc",
-                            "dual-source-blending",
-                            "clip-distances",
-                            "shader-f16",
-                            "timestamp-query",
-                            "float32-filterable",
-                            "indirect-first-instance"
-                        ],
-                        "limits": {
-                            "maxTextureDimension1D": 16384,
-                            "maxTextureDimension2D": 16384,
-                            "maxTextureDimension3D": 2048,
-                            "maxTextureArrayLayers": 2048,
-                            "maxBindGroups": 4,
-                            "maxBindGroupsPlusVertexBuffers": 24,
-                            "maxBindingsPerBindGroup": 1000,
-                            "maxDynamicUniformBuffersPerPipelineLayout": 10,
-                            "maxDynamicStorageBuffersPerPipelineLayout": 8,
-                            "maxSampledTexturesPerShaderStage": 16,
-                            "maxSamplersPerShaderStage": 16,
-                            "maxStorageBuffersPerShaderStage": 10,
-                            "maxStorageTexturesPerShaderStage": 8,
-                            "maxUniformBuffersPerShaderStage": 12,
-                            "maxUniformBufferBindingSize": 65536,
-                            "maxStorageBufferBindingSize": 4294967292,
-                            "minUniformBufferOffsetAlignment": 256,
-                            "minStorageBufferOffsetAlignment": 256,
-                            "maxVertexBuffers": 8,
-                            "maxBufferSize": 4294967296,
-                            "maxVertexAttributes": 30,
-                            "maxVertexBufferArrayStride": 2048,
-                            "maxInterStageShaderComponents": 112,
-                            "maxInterStageShaderVariables": 28,
-                            "maxColorAttachments": 8,
-                            "maxColorAttachmentBytesPerSample": 128,
-                            "maxComputeWorkgroupStorageSize": 32768,
-                            "maxComputeInvocationsPerWorkgroup": 1024,
-                            "maxComputeWorkgroupSizeX": 1024,
-                            "maxComputeWorkgroupSizeY": 1024,
-                            "maxComputeWorkgroupSizeZ": 64,
-                            "maxComputeWorkgroupsPerDimension": 65535
-                        }
-                    }
-                }
+                "adapter": {}
+            },
+            "audio": {
+                "AnalyserNode_channelCount": 2,
+                "AnalyserNode_channelCountMode": "max",
+                "AnalyserNode_channelInterpretation": "speakers",
+                "AnalyserNode_context_sampleRate": 44100,
+                "AnalyserNode_fftSize": 2048,
+                "AnalyserNode_frequencyBinCount": 1024,
+                "AnalyserNode_maxDecibels": -30,
+                "AnalyserNode_minDecibels": -100,
+                "AnalyserNode_numberOfInputs": 1,
+                "AnalyserNode_numberOfOutputs": 1,
+                "AnalyserNode_smoothingTimeConstant": 0.8,
+                "AnalyserNode_context_listener_forwardX_maxValue": 3.4028234663852886e+38,
+                "BiquadFilterNode_gain_maxValue": 1541.273681640625,
+                "BiquadFilterNode_frequency_defaultValue": 350,
+                "BiquadFilterNode_frequency_maxValue": 22050,
+                "DynamicsCompressorNode_attack_defaultValue": 0.003000000026077032,
+                "DynamicsCompressorNode_knee_defaultValue": 30,
+                "DynamicsCompressorNode_knee_maxValue": 40,
+                "DynamicsCompressorNode_ratio_defaultValue": 12,
+                "DynamicsCompressorNode_ratio_maxValue": 20,
+                "DynamicsCompressorNode_release_defaultValue": 0.25,
+                "DynamicsCompressorNode_release_maxValue": 1,
+                "DynamicsCompressorNode_threshold_defaultValue": -24,
+                "DynamicsCompressorNode_threshold_minValue": -100,
+                "OscillatorNode_detune_maxValue": 153600,
+                "OscillatorNode_detune_minValue": -153600,
+                "OscillatorNode_frequency_defaultValue": 440,
+                "OscillatorNode_frequency_maxValue": 22050,
+                "OscillatorNode_frequency_minValue": -22050
             },
             "screen": {
-                "availWidth": 1512,
-                "availHeight": 944,
-                "availLeft": 0,
-                "availTop": 38,
+                "availWidth": 1450,
+                "availHeight": 916,
+                "availLeft": 62,
+                "availTop": 0,
                 "width": 1512,
-                "height": 982,
-                "colorDepth": 30,
-                "pixelDepth": 30
+                "height": 916,
+                "colorDepth": 24,
+                "pixelDepth": 24
             },
             "battery": {
                 "charging": true,
@@ -13021,7 +11493,7 @@
                 "Comma": ",",
                 "Period": ".",
                 "Slash": "/",
-                "IntlBackslash": "§"
+                "IntlBackslash": "\\"
             }
         }
     }
