@@ -9,17 +9,17 @@
             "clientRectsFactor": 1.001,
             "textMetricsFactor": 1.001,
             "canvas2d": [
-                1,
+                10,
                 0,
-                0,
-                1,
-                2
+                4,
+                10,
+                10
             ],
             "canvasWebgl": [
-                2,
-                1,
-                1,
-                0,
+                10,
+                7,
+                12,
+                13,
                 1
             ],
             "audio": [
