@@ -73,11 +73,9 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 
 - **Profile Generation**: We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 200,000 real user browser fingerprints available.
 
-    **Contact**:
+  middleschoolstudent@mail.ru
 
-      middleschoolstudent@mail.ru
-
-      https://t.me/middle_student
+  https://t.me/middle_student
 
 - **Capabilities**: To explore what BotBrowser can do, visit our [Features](profiles#features) page.
 - **Building from Source**: If you wish to compile your own version of Chromium with our modifications, follow the instructions [here](build).
