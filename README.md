@@ -71,7 +71,11 @@ We also provide a GUI tool, [BotBrowserConsole](https://github.com/MiddleSchoolS
 
 2. **Profile Generation**: We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 200,000 real user browser fingerprints available.
 
-    **Contact**: middleschoolstudent@mail.ru
+    **Contact**:
+
+      middleschoolstudent@mail.ru
+
+      https://t.me/middle_student
 
 ## Additional Resources
 
