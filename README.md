@@ -40,7 +40,6 @@ We also provide a GUI tool, [BotBrowserConsole](https://github.com/MiddleSchoolS
   - FingerprintJS
   - CreepJS
   - BrowserScan
-  - fv.pro
   - Pixelscan
 - **Major Platforms and Websites:**
   - TikTok
