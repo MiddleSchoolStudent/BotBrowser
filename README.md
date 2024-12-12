@@ -11,14 +11,11 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/e9c0b656-83b0-4be5-986e-d4bc3c04b4b5">
 
 
-## Installation
+## Usage
 
 1. **Download**: Get the installer for your OS from our [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 2. **Profiles**: We provide sample [Profiles](profiles) for demonstration purposes.
-
-## Usage
-
-1. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
+3. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
 
    ```bash
    chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
