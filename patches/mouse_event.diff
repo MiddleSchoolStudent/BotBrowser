@@ -1,0 +1,81 @@
+diff --git a/third_party/blink/renderer/core/events/mouse_event.cc b/third_party/blink/renderer/core/events/mouse_event.cc
+index c6331d7836fb3..a33c243374298 100644
+--- a/third_party/blink/renderer/core/events/mouse_event.cc
++++ b/third_party/blink/renderer/core/events/mouse_event.cc
+@@ -47,6 +47,7 @@
+ #include "third_party/blink/renderer/platform/instrumentation/use_counter.h"
+ #include "third_party/blink/renderer/platform/wtf/math_extras.h"
+
++#include "botbrowser/profile.h"
+ namespace blink {
+
+ namespace {
+@@ -93,6 +94,41 @@ unsigned ButtonsToWebInputEventModifiers(uint16_t buttons) {
+   return modifiers;
+ }
+
++// Inspired by https://github.com/kaliiiiiiiiii/brotector/
++double AdjustScreenYOffset(double originalScreenY) {
++  static double cachedOffset = -1;
++  if (cachedOffset == -1) {
++    cachedOffset = 0;
++
++    const auto& configuredScreenY = BotProfile::Get<double>("fingerprints.browser.window.screenY");
++    const auto& configuredInnerHeight = BotProfile::Get<double>("fingerprints.browser.window.innerHeight");
++    const auto& configuredOuterHeight = BotProfile::Get<double>("fingerprints.browser.window.outerHeight");
++
++    if (configuredScreenY.has_value() && configuredInnerHeight.has_value() && configuredOuterHeight.has_value()) {
++      cachedOffset = configuredScreenY.value();
++
++      const auto* osType = BotProfile::Get<std::string>("fingerprints.system.osType");
++
++      // Adjust offset based on the operating system type and browser window dimensions
++      if (configuredOuterHeight.value() - configuredInnerHeight.value() >= 1) {
++        if (*osType == "mac") {
++          cachedOffset += 125;
++        } else if (*osType == "win") {
++          cachedOffset += 87;
++        } else if (*osType == "linux") {
++          cachedOffset += 119;
++        }
++      }
++
++      // Add a random adjustment within a range of 10
++      cachedOffset -= 10;
++      cachedOffset += rand() % 10;
++    }
++  }
++
++  return originalScreenY + cachedOffset;
++}
++
+ }  // namespace
+
+ MouseEvent* MouseEvent::Create(ScriptState* script_state,
+@@ -144,7 +180,7 @@ MouseEvent::MouseEvent(const AtomicString& event_type,
+                        LocalDOMWindow* fallback_dom_window)
+     : UIEventWithKeyState(event_type, initializer, platform_time_stamp),
+       screen_x_(initializer->screenX()),
+-      screen_y_(initializer->screenY()),
++      screen_y_(AdjustScreenYOffset(initializer->screenY())),
+       movement_delta_(initializer->movementX(), initializer->movementY()),
+       position_type_(synthetic_event_type == kPositionless
+                          ? PositionType::kPositionless
+@@ -301,7 +337,7 @@ void MouseEvent::InitMouseEventInternal(
+                       source_capabilities);
+
+   screen_x_ = screen_x;
+-  screen_y_ = screen_y;
++  screen_y_ = AdjustScreenYOffset(screen_y);
+   button_ = button;
+   buttons_ = buttons;
+   related_target_ = related_target;
+@@ -317,7 +353,7 @@ void MouseEvent::InitCoordinatesForTesting(double screen_x,
+                                            double client_x,
+                                            double client_y) {
+   screen_x_ = screen_x;
+-  screen_y_ = screen_y;
++  screen_y_ = AdjustScreenYOffset(screen_y);
+   InitCoordinates(client_x, client_y);
+ }
+
