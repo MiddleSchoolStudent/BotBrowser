@@ -1,14 +1,14 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('ensure iframe content window width differs from window inner width', async ({
+test("ensure iframe content window width differs from window inner width", async ({
     page,
 }) => {
-    await page.goto('about:blank');
+    await page.goto("about:blank");
 
     // Inspired by Kasada
     const result = await page.evaluate(() => {
         const windowInnerWidth = window.innerWidth;
-        const iframe = document.createElement('iframe');
+        const iframe = document.createElement("iframe");
         document.body.appendChild(iframe);
         return windowInnerWidth === iframe.contentWindow?.innerWidth;
     });
@@ -16,8 +16,8 @@ test('ensure iframe content window width differs from window inner width', async
     await expect(result).toBe(false);
 });
 
-test('canvas rendering consistency', async ({ page }) => {
-    await page.goto('about:blank');
+test("canvas rendering consistency", async ({ page }) => {
+    await page.goto("about:blank");
 
     // Main thread drawing logic
     const drawScript = `(() => {
@@ -81,18 +81,18 @@ test('canvas rendering consistency', async ({ page }) => {
     // Compare both canvases
     const isEqual = await page.evaluate(
         ([mainThreadCanvasData, workerCanvasData]) => {
-            const img1 = document.createElement('img');
-            const img2 = document.createElement('img');
+            const img1 = document.createElement("img");
+            const img2 = document.createElement("img");
 
             img1.src = mainThreadCanvasData;
             img2.src = workerCanvasData;
 
             return new Promise((resolve) => {
                 img1.onload = () => {
-                    const canvas = document.createElement('canvas');
+                    const canvas = document.createElement("canvas");
                     canvas.width = 200;
                     canvas.height = 200;
-                    const ctx = canvas.getContext('2d');
+                    const ctx = canvas.getContext("2d");
 
                     // Draw the first image
                     ctx.drawImage(img1, 0, 0);
@@ -133,18 +133,18 @@ test('canvas rendering consistency', async ({ page }) => {
     await expect(isEqual).toBe(true);
 });
 
-test('hardware concurrency comparison between window and sharedworker', async ({
+test("hardware concurrency comparison between window and sharedworker", async ({
     page,
 }) => {
-    await page.goto('https://google.com');
+    await page.goto("https://google.com");
 
     const concurrencyResult = await page.evaluate(() => {
         return new Promise((resolve) => {
             // Check SharedWorker support
-            if (!('SharedWorker' in window)) {
+            if (!("SharedWorker" in window)) {
                 resolve({
                     supported: false,
-                    error: 'SharedWorker not supported',
+                    error: "SharedWorker not supported",
                 });
                 return;
             }
@@ -166,7 +166,7 @@ test('hardware concurrency comparison between window and sharedworker', async ({
 
             // Convert script to Blob
             const blob = new Blob([swScript], {
-                type: 'application/javascript',
+                type: "application/javascript",
             });
             const swUrl = URL.createObjectURL(blob);
 
@@ -177,7 +177,7 @@ test('hardware concurrency comparison between window and sharedworker', async ({
             const timeoutId = setTimeout(() => {
                 resolve({
                     supported: false,
-                    error: 'Message response timeout',
+                    error: "Message response timeout",
                 });
             }, 5000);
 
@@ -197,7 +197,7 @@ test('hardware concurrency comparison between window and sharedworker', async ({
 
     // Handle test result
     if (!concurrencyResult.supported) {
-        console.warn('SharedWorker test failed:', concurrencyResult.error);
+        console.warn("SharedWorker test failed:", concurrencyResult.error);
         test.skip();
         return;
     }
@@ -206,4 +206,40 @@ test('hardware concurrency comparison between window and sharedworker', async ({
     expect(concurrencyResult.windowConcurrency).toBe(
         concurrencyResult.swConcurrency
     );
+});
+
+test("results of the measureText empty string should be 0", async ({
+    page,
+}) => {
+    await page.goto("about:blank");
+
+    const result = await page.evaluate(() => {
+        const getTextMetricsFloatLie = (context) => {
+            const {
+                    actualBoundingBoxAscent,
+                    actualBoundingBoxDescent,
+                    actualBoundingBoxLeft,
+                    actualBoundingBoxRight,
+                    fontBoundingBoxAscent,
+                    fontBoundingBoxDescent,
+                } = context.measureText("") || {},
+                result = [
+                    actualBoundingBoxAscent,
+                    actualBoundingBoxDescent,
+                    actualBoundingBoxLeft,
+                    actualBoundingBoxRight,
+                    fontBoundingBoxAscent,
+                    fontBoundingBoxDescent,
+                ].find((item) =>
+                    ((_0xfe5247) => _0xfe5247 % 1 != 0)(item || 0)
+                );
+            return result;
+        };
+
+        const canvas = document.createElement("canvas");
+        const context2d = canvas.getContext("2d");
+        return getTextMetricsFloatLie(context2d);
+    });
+
+    await expect(result).toBe(undefined);
 });
