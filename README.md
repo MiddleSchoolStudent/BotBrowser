@@ -36,10 +36,10 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 
 ## Proven Effectiveness Against
 
-- **Antibot Services:**
-  - [Cloudflare](tests/tests/antibots/cloudflare.spec.ts)
-  - [Kasada](tests/tests/antibots/kasada.spec.ts)
-  - [reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)
+- **Leading Antibot Services:**
+  - **Cloudflare** Turnstile and Challenge ([Solver Code](tests/tests/antibots/cloudflare.spec.ts)).
+  - **Kasada** ([Solver Code](tests/tests/antibots/kasada.spec.ts))
+  - **reCAPTCHA** ([Solver Code](tests/tests/antibots/recaptcha.spec.ts))
   - Cloudfront Bot Management (AWS)
   - PerimeterX
   - hCaptcha
@@ -56,7 +56,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - Pixelscan
   - botchecker
   - iphey
-- **Major Platforms and Websites:**
+- **Top Platforms and Websites:**
   - TikTok
   - Yandex
   - Temu
