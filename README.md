@@ -13,12 +13,12 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 
 ## Usage
 
-1. **Download**: Get the installer for your OS from our [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
+1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 2. **Profiles**: We provide sample [Profiles](profiles) for demonstration purposes.
 3. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
 
    ```bash
-   chromium-browser --bot-profile="{path_of_}/chrome130-macarm.enc"
+   chromium --bot-profile="{path_of_}/chrome130-macarm.enc"
    ```
 
     **Tip**: You can use profiles generated for macOS, Windows, or Ubuntu binaries interchangeably, enabling seamless cross-system fingerprint emulation. For example, use a macOS profile on Ubuntu or a Windows profile on macOS without compatibility issues.
@@ -37,13 +37,13 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 ## Proven Effectiveness Against
 
 - **Antibot Services:**
-  - Cloudflare
-  - hCaptcha
-  - nuCAPTCHA
-  - Kasada
+  - [Cloudflare](tests/tests/antibots/cloudflare.spec.ts)
+  - [Kasada](tests/tests/antibots/kasada.spec.ts)
+  - [reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)
   - Cloudfront Bot Management (AWS)
   - PerimeterX
-  - reCAPTCHA
+  - hCaptcha
+  - nuCAPTCHA
   - Akamai Bot Manager
   - DataDome
   - Imperva (Incapsula)
@@ -54,6 +54,8 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - CreepJS
   - BrowserScan
   - Pixelscan
+  - botchecker
+  - iphey
 - **Major Platforms and Websites:**
   - TikTok
   - Yandex
