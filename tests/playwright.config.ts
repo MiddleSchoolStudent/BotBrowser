@@ -23,10 +23,13 @@ export default defineConfig({
         {
             name: 'chromium',
             use: {
-                // headless: false,
+                headless: true,
                 launchOptions: {
                     executablePath: process.env.BROWSER_EXECUTABLE_PATH,
-                    args: [`--bot-profile=${process.env.BOT_PROFILE_PATH}`],
+                    args: [
+                        `--bot-profile=${process.env.BOT_PROFILE_PATH}`,
+                        '--mute-audio',
+                    ],
                 },
             },
         },

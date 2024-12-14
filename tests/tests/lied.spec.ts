@@ -1,14 +1,14 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from './global-setup';
 
-test("ensure iframe content window width differs from window inner width", async ({
+test('ensure iframe content window width differs from window inner width', async ({
     page,
 }) => {
-    await page.goto("about:blank");
+    await page.goto('about:blank');
 
     // Inspired by Kasada
     const result = await page.evaluate(() => {
         const windowInnerWidth = window.innerWidth;
-        const iframe = document.createElement("iframe");
+        const iframe = document.createElement('iframe');
         document.body.appendChild(iframe);
         return windowInnerWidth === iframe.contentWindow?.innerWidth;
     });
@@ -16,8 +16,8 @@ test("ensure iframe content window width differs from window inner width", async
     await expect(result).toBe(false);
 });
 
-test("canvas rendering consistency", async ({ page }) => {
-    await page.goto("about:blank");
+test('canvas rendering consistency', async ({ page }) => {
+    await page.goto('about:blank');
 
     // Main thread drawing logic
     const drawScript = `(() => {
@@ -81,18 +81,18 @@ test("canvas rendering consistency", async ({ page }) => {
     // Compare both canvases
     const isEqual = await page.evaluate(
         ([mainThreadCanvasData, workerCanvasData]) => {
-            const img1 = document.createElement("img");
-            const img2 = document.createElement("img");
+            const img1 = document.createElement('img');
+            const img2 = document.createElement('img');
 
             img1.src = mainThreadCanvasData;
             img2.src = workerCanvasData;
 
             return new Promise((resolve) => {
                 img1.onload = () => {
-                    const canvas = document.createElement("canvas");
+                    const canvas = document.createElement('canvas');
                     canvas.width = 200;
                     canvas.height = 200;
-                    const ctx = canvas.getContext("2d");
+                    const ctx = canvas.getContext('2d');
 
                     // Draw the first image
                     ctx.drawImage(img1, 0, 0);
@@ -100,7 +100,7 @@ test("canvas rendering consistency", async ({ page }) => {
                         0,
                         0,
                         canvas.width,
-                        canvas.height
+                        canvas.height,
                     );
 
                     // Clear and draw the second image
@@ -110,7 +110,7 @@ test("canvas rendering consistency", async ({ page }) => {
                         0,
                         0,
                         canvas.width,
-                        canvas.height
+                        canvas.height,
                     );
 
                     // Compare pixel data
@@ -126,25 +126,25 @@ test("canvas rendering consistency", async ({ page }) => {
                 };
             });
         },
-        [mainThreadCanvasData, workerCanvasData]
+        [mainThreadCanvasData, workerCanvasData],
     );
 
     // Expect the canvases to match
     await expect(isEqual).toBe(true);
 });
 
-test("hardware concurrency comparison between window and sharedworker", async ({
+test('hardware concurrency comparison between window and sharedworker', async ({
     page,
 }) => {
-    await page.goto("https://google.com");
+    await page.goto('https://google.com');
 
     const concurrencyResult = await page.evaluate(() => {
         return new Promise((resolve) => {
             // Check SharedWorker support
-            if (!("SharedWorker" in window)) {
+            if (!('SharedWorker' in window)) {
                 resolve({
                     supported: false,
-                    error: "SharedWorker not supported",
+                    error: 'SharedWorker not supported',
                 });
                 return;
             }
@@ -166,7 +166,7 @@ test("hardware concurrency comparison between window and sharedworker", async ({
 
             // Convert script to Blob
             const blob = new Blob([swScript], {
-                type: "application/javascript",
+                type: 'application/javascript',
             });
             const swUrl = URL.createObjectURL(blob);
 
@@ -177,7 +177,7 @@ test("hardware concurrency comparison between window and sharedworker", async ({
             const timeoutId = setTimeout(() => {
                 resolve({
                     supported: false,
-                    error: "Message response timeout",
+                    error: 'Message response timeout',
                 });
             }, 5000);
 
@@ -197,21 +197,21 @@ test("hardware concurrency comparison between window and sharedworker", async ({
 
     // Handle test result
     if (!concurrencyResult.supported) {
-        console.warn("SharedWorker test failed:", concurrencyResult.error);
+        console.warn('SharedWorker test failed:', concurrencyResult.error);
         test.skip();
         return;
     }
 
     // Assert hardwareConcurrency match
     expect(concurrencyResult.windowConcurrency).toBe(
-        concurrencyResult.swConcurrency
+        concurrencyResult.swConcurrency,
     );
 });
 
-test("results of the measureText empty string should be 0", async ({
+test('results of the measureText empty string should be 0', async ({
     page,
 }) => {
-    await page.goto("about:blank");
+    await page.goto('about:blank');
 
     const result = await page.evaluate(() => {
         const getTextMetricsFloatLie = (context) => {
@@ -222,7 +222,7 @@ test("results of the measureText empty string should be 0", async ({
                     actualBoundingBoxRight,
                     fontBoundingBoxAscent,
                     fontBoundingBoxDescent,
-                } = context.measureText("") || {},
+                } = context.measureText('') || {},
                 result = [
                     actualBoundingBoxAscent,
                     actualBoundingBoxDescent,
@@ -231,15 +231,86 @@ test("results of the measureText empty string should be 0", async ({
                     fontBoundingBoxAscent,
                     fontBoundingBoxDescent,
                 ].find((item) =>
-                    ((_0xfe5247) => _0xfe5247 % 1 != 0)(item || 0)
+                    ((_0xfe5247) => _0xfe5247 % 1 != 0)(item || 0),
                 );
             return result;
         };
 
-        const canvas = document.createElement("canvas");
-        const context2d = canvas.getContext("2d");
+        const canvas = document.createElement('canvas');
+        const context2d = canvas.getContext('2d');
         return getTextMetricsFloatLie(context2d);
     });
 
     await expect(result).toBe(undefined);
+});
+
+test('detect headless userAgent', async ({ page }) => {
+    const userAgent = (
+        await page.evaluate(() => navigator.userAgent)
+    ).toLowerCase();
+
+    expect(
+        userAgent.indexOf('slimerjs') !== -1 ||
+            userAgent.indexOf('scrape') !== -1 ||
+            userAgent.indexOf('phantomjs') !== -1 ||
+            userAgent.indexOf('headless') !== -1 ||
+            userAgent.indexOf('crawl') !== -1 ||
+            userAgent.indexOf('bot') !== -1,
+    ).toBe(false);
+});
+
+test('detect headless properties', async ({ page }) => {
+    const result = await page.evaluate(() => {
+        return (
+            window['__$webdriverAsyncExecutor'] ||
+            window.watinExpressionResult ||
+            window.watinExpressionError ||
+            window.spynner_additional_js_loaded ||
+            window.phantom ||
+            window.OSMJIF ||
+            window.geb ||
+            window.fmget_targets ||
+            window.exposedFn ||
+            window.domAutomationController ||
+            window.domAutomation ||
+            window.Cypress ||
+            window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol ||
+            window.cdc_adoQpoasnfa76pfcZLmcfl_Promise ||
+            window.cdc_adoQpoasnfa76pfcZLmcfl_Array ||
+            window.callSelenium ||
+            window.callPhantom ||
+            window.calledSelenium ||
+            window.calledPhantom ||
+            window.blender ||
+            window.awesomium ||
+            window._WEBDRIVER_ELEM_CACHE ||
+            window._Selenium_IDE_Recorder ||
+            window._phantom ||
+            window.__webdriverFuncgeb ||
+            window.__webdriver_script_function ||
+            window.__webdriver__chr ||
+            window.__selenium_evaluate ||
+            window.__nightmare ||
+            window.__lastWatirPrompt ||
+            window.__lastWatirConfirm ||
+            window.__lastWatirAlert ||
+            navigator.webdriver ||
+            globalThis.__pwInitScripts ||
+            globalThis.__playwright__binding__ ||
+            document['$chrome_asyncScriptInfo'] ||
+            document.__webdriver_unwrapped ||
+            document.__webdriver_script_func ||
+            document.__webdriver_script_fn ||
+            document.__webdriver_evaluate ||
+            document.__selenium_unwrapped ||
+            document.__selenium_evaluate ||
+            document.__selenium_evaluate ||
+            document.__fxdriver_unwrapped ||
+            document.__fxdriver_evaluate ||
+            document.__driver_unwrapped ||
+            document.__driver_evaluate
+        );
+    });
+
+    expect(result).toBe(undefined);
 });

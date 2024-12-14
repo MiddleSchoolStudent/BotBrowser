@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './global-setup';
 
 test('is devtools open', async ({ page }) => {
     await page.goto('about:blank');
