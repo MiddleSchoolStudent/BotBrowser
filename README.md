@@ -38,8 +38,8 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 
 - **Leading Antibot Services:**
   - **[Cloudflare](tests/tests/antibots/cloudflare.spec.ts)**: [📹 Turnstile Test Result](tests/test-results/cloudflare-test-Cloudflare-turnstile-BotBrowser-antibots/video.webm), [📹 Challenge Test Result](tests/test-results/cloudflare-test-Cloudflare-challenge-BotBrowser-antibots/video.webm)
-  - **[Kasada](tests/tests/antibots/kasada.spec.ts)**: [📹 Test Result](tests/test-results/cloudflare-test-Cloudflare-turnstile-BotBrowser-antibots/video.webm)
-  - **[reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)**: [📹 Test Result](tests/test-results/cloudflare-test-Cloudflare-turnstile-BotBrowser-antibots/video.webm)
+  - **[Kasada](tests/tests/antibots/kasada.spec.ts)**: [📹 Test Result](tests/test-results/kasada-test-Kasada-BotBrowser-antibots/video.webm)
+  - **[reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)**: [📹 Test Result](tests/test-results/recaptcha-test-reCAPTCHA-v3-on-antcpt-BotBrowser-antibots/video.webm)
   - Cloudfront Bot Management (AWS)
   - PerimeterX
   - hCaptcha
