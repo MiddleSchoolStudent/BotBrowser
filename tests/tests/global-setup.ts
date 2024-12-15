@@ -1,6 +1,8 @@
 import { test as base } from '@playwright/test';
 import { sleep } from './utils';
 
+base.setTimeout(60_000);
+
 base.beforeEach(async ({ page }) => {
     await page.addInitScript(() => {
         // @ts-expect-error - Playwright binding will cause leak

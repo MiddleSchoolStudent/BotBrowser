@@ -53,7 +53,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - FingerprintJS
   - CreepJS
   - BrowserScan
-  - Pixelscan
+  - **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**  - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/pixelscan-test-pixelscan-BotBrowser-antibots/video.webm)
   - botchecker
   - **[iphey](tests/tests/antibots/iphey.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/iphey-test-iphey-BotBrowser-antibots/video.webm)
   - **[brotector](tests/tests/antibots/brotector.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/brotector-test-Brotector-BotBrowser-antibots/video.webm)
