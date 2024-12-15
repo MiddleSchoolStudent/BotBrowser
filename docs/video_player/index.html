@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Video Player</h1>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const videoPath = params.get('video');
+        if (videoPath) {
+            const videoElement = document.createElement('video');
+            videoElement.setAttribute('controls', 'controls');
+            videoElement.setAttribute('autoplay', 'autoplay');
+
+            const sourceElement = document.createElement('source');
+            sourceElement.setAttribute('src', videoPath);
+            sourceElement.setAttribute('type', 'video/webm');
+
+            videoElement.appendChild(sourceElement);
+            document.body.appendChild(videoElement);
+        }
+    </script>
+</body>
+</html>
