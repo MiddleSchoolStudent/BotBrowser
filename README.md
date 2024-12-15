@@ -51,9 +51,9 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - Adscore
   - ProtectedMedia
   - FingerprintJS
-  - CreepJS
+  - **[CreepJS](tests/tests/antibots/creepjs.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/creepjs-test-creepjs-BotBrowser-antibots/video.webm)
   - BrowserScan
-  - **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**  - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/pixelscan-test-pixelscan-BotBrowser-antibots/video.webm)
+  - **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/pixelscan-test-pixelscan-BotBrowser-antibots/video.webm)
   - botchecker
   - **[iphey](tests/tests/antibots/iphey.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/iphey-test-iphey-BotBrowser-antibots/video.webm)
   - **[brotector](tests/tests/antibots/brotector.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/brotector-test-Brotector-BotBrowser-antibots/video.webm)
