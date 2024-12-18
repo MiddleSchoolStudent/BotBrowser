@@ -1,5 +1,22 @@
 import { expect, test } from '../global-setup';
-import { sleep } from '../utils';
+import { sleep, waitForFrame } from '../utils';
+
+test('test reCAPTCHA v2 on 2captcha', async ({ page }) => {
+    await page.goto('https://2captcha.com/demo/recaptcha-v2');
+
+    const frame = await waitForFrame({
+        page,
+        url: 'https://www.google.com/recaptcha/api2/anchor',
+    });
+
+    await frame
+        .waitForSelector("text=I'm not a robot")
+        .then((el) => el.click());
+
+    expect(
+        await page.waitForFunction(() => Boolean(grecaptcha.getResponse())),
+    ).toBeTruthy();
+});
 
 test('test reCAPTCHA v3 on antcpt', async ({ page }) => {
     test.setTimeout(120_000);
