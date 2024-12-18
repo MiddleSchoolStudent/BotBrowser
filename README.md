@@ -50,7 +50,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - F5 Shape Security
   - Adscore
   - ProtectedMedia
-  - FingerprintJS
+  - **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** - [▶️ Bot Detection Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fingerprintjs-test-fingerprintjs-bot-detection-BotBrowser-antibots/video.webm)
   - **[CreepJS](tests/tests/antibots/creepjs.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/creepjs-test-creepjs-BotBrowser-antibots/video.webm)
   - BrowserScan
   - **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/pixelscan-test-pixelscan-BotBrowser-antibots/video.webm)
