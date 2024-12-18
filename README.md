@@ -38,7 +38,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 
 - **Leading Antibot Services:**
   - **[Cloudflare](tests/tests/antibots/cloudflare.spec.ts)** - [▶️ Turnstile Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/cloudflare-test-Cloudflare-turnstile-BotBrowser-antibots/video.webm), [▶️ Challenge Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/cloudflare-test-Cloudflare-challenge-BotBrowser-antibots/video.webm)
-  - **[Kasada](tests/tests/antibots/kasada.spec.ts)** -  [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/kasada-test-Kasada-BotBrowser-antibots/video.webm)
+  - **[Kasada](tests/tests/antibots/kasada.spec.ts)** -  [▶️ Test Result (kick.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/kasada-test-Kasada-BotBrowser-antibots/video.webm)
   - **[reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/recaptcha-test-reCAPTCHA-v3-on-antcpt-BotBrowser-antibots/video.webm)
   - Cloudfront Bot Management (AWS)
   - PerimeterX
