@@ -37,7 +37,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
 ## Proven Effectiveness Against
 
 - **Leading Antibot Services:**
-  - **[Cloudflare](tests/tests/antibots/cloudflare.spec.ts)** - [▶️ Turnstile Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/cloudflare-test-Cloudflare-turnstile-BotBrowser-antibots/video.webm), [▶️ Challenge Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/cloudflare-test-Cloudflare-challenge-BotBrowser-antibots/video.webm)
+  - **[Cloudflare](tests/tests/antibots/cloudflare.spec.ts)** - [▶️ Test Result (Turnstile)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/cloudflare-test-Cloudflare-turnstile-BotBrowser-antibots/video.webm), [▶️ Test Result (Challenge)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/cloudflare-test-Cloudflare-challenge-BotBrowser-antibots/video.webm)
   - **[Kasada](tests/tests/antibots/kasada.spec.ts)** -  [▶️ Test Result (kick.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/kasada-test-Kasada-BotBrowser-antibots/video.webm)
   - **[reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/recaptcha-test-reCAPTCHA-v3-on-antcpt-BotBrowser-antibots/video.webm)
   - Cloudfront Bot Management (AWS)
@@ -50,7 +50,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - F5 Shape Security
   - Adscore
   - ProtectedMedia
-  - **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** - [▶️ Bot Detection Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fingerprintjs-test-fingerprintjs-bot-detection-BotBrowser-antibots/video.webm)
+  - **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** - [▶️ Test Result (Bot Detection)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fingerprintjs-test-fingerprintjs-bot-detection-BotBrowser-antibots/video.webm)
   - **[CreepJS](tests/tests/antibots/creepjs.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/creepjs-test-creepjs-BotBrowser-antibots/video.webm)
   - BrowserScan
   - **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/pixelscan-test-pixelscan-BotBrowser-antibots/video.webm)
