@@ -52,7 +52,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - ProtectedMedia
   - **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** - [▶️ Test Result (Bot Detection)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fingerprintjs-test-fingerprintjs-bot-detection-BotBrowser-antibots/video.webm)
   - **[CreepJS](tests/tests/antibots/creepjs.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/creepjs-test-creepjs-BotBrowser-antibots/video.webm)
-  - BrowserScan
+  - **[BrowserScan](tests/tests/antibots/browserscan.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/browserscan-test-browserscan-BotBrowser-antibots/video.webm)
   - **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/pixelscan-test-pixelscan-BotBrowser-antibots/video.webm)
   - botchecker
   - **[iphey](tests/tests/antibots/iphey.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/iphey-test-iphey-BotBrowser-antibots/video.webm)
