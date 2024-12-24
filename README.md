@@ -50,6 +50,7 @@ To simplify operations, we provide [BotBrowserConsole](https://github.com/Middle
   - F5 Shape Security
   - Adscore
   - ProtectedMedia
+  - **[Fake Vision](tests/tests/antibots/fvpro.spec.ts)** - [▶️ Test Result (fv.pro)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fvpro-test-fv-pro-BotBrowser-antibots/video.webm)
   - **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** - [▶️ Test Result (Bot Detection)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fingerprintjs-test-fingerprintjs-bot-detection-BotBrowser-antibots/video.webm)
   - **[CreepJS](tests/tests/antibots/creepjs.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/creepjs-test-creepjs-BotBrowser-antibots/video.webm)
   - **[BrowserScan](tests/tests/antibots/browserscan.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/browserscan-test-browserscan-BotBrowser-antibots/video.webm)
