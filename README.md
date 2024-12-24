@@ -4,9 +4,9 @@
 
 ## Introduction
 
-BotBrowser is built by directly modifying Chromium's native C++ source code, creating a genuine browser environment that is nearly impossible for advanced antibot systems to detect. This deep-level modification far outperforms traditional JavaScript or Python-based solutions, delivering unmatched robustness and long-term reliability.
+BotBrowser is built by directly modifying Chromium's native C++ source code to create a true browser environment, making it impossible for advanced antibot systems to detect anomalies. This deep modification is far beyond traditional JavaScript or Python solutions to control browsers via [CDP](https://chromedevtools.github.io/devtools-protocol/), providing exceptional robustness and long-term reliability.
 
-To simplify operations, we provide [BotBrowserConsole](https://github.com/MiddleSchoolStudent/BotBrowser-Console), a user-friendly GUI tool that streamlines multi-account management by easily launching multiple browser instances.
+To simplify operations, we also provide [BotBrowserConsole](https://github.com/MiddleSchoolStudent/BotBrowser-Console), a free and open-source GUI tool that easily launches multiple instances of browsers in different environments to simplify multi account management.
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/e9c0b656-83b0-4be5-986e-d4bc3c04b4b5">
 
