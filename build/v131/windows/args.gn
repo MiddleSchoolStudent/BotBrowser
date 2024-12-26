@@ -1,9 +1,9 @@
 chrome_pgo_phase=0
 cc_wrapper="sccache"
-clang_use_chrome_plugins=false
-disable_fieldtrial_testing_config=true
+clang_use_chrome_plugins=true
+disable_fieldtrial_testing_config=false
 enable_hangout_services_extension=true
-enable_iterator_debugging=false
+enable_iterator_debugging=true
 enable_lens_desktop=true
 enable_mdns=false
 enable_mse_mpeg2ts_stream_parser=true
