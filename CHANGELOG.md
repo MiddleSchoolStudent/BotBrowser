@@ -5,6 +5,26 @@
 
 ---
 
+## [2024-12-25]
+
+### Added
+- **GPU Fingerprinting Simulation:** Implemented support for simulating **GPUAdapter**, **GPUSupportedFeatures**, and **GPULimits** fingerprints.
+- **WebGL Extension Support:** Added fingerprint support for the **MaxDrawBuffers** WebGL extension.
+
+### Changed
+- **args.gn Adjustments:** Modified `args.gn` to allow access to `navigator.getInterestGroupAdAuctionData` and `navigator.cookieDeprecationLabel`, aligning behavior with standard browser environments.
+  [Commit Reference](https://github.com/MiddleSchoolStudent/BotBrowser/commit/e17e1746439d6ddc3d07e621d90aaf78ea847a2d)
+
+### Fixed
+- **WebGL2 Renderer and Vendor Bug:** Fixed an issue where `renderer` and `vendor` could not be retrieved under **WebGL2** environments.
+
+### Improved
+- **WebGL Parameters Simulation:** Inspired by **FakeVision**, refined WebGL parameters simulation to minimize detection risks through more cautious handling.
+  [FakeVision Decompiled Source Code](https://github.com/MiddleSchoolStudent/FakeVision-Reverse)
+
+
+---
+
 ## [2024-12-24]
 ### Fixed
 - Resolved **CDM issue**, enhancing browser environment security.
