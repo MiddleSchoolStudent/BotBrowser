@@ -5,6 +5,18 @@
 
 ---
 
+## [2024-12-26]
+
+### Added
+- **Enhanced GPU Fingerprinting:** Further improved support for **GPUSupportedLimits**, ensuring clear differentiation between **GPUDevice** and **GPUAdapter** data.
+
+### Fixed
+- **CDM Component Download:** Ensured CDM components are downloaded **bypassing proxy settings**, guaranteeing successful downloads regardless of network configuration.
+- **CDM Key System Handling:** Ensured **CDM Key system requests** complete loading before returning results to JavaScript, effectively preventing leakage detection.
+
+
+---
+
 ## [2024-12-25]
 
 ### Added
