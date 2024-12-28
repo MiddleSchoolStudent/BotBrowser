@@ -18,7 +18,7 @@ To simplify operations, we also provide [BotBrowserConsole](https://github.com/M
 3. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
 
    ```bash
-   chromium --bot-profile="{path_of_}/chrome130-macarm.enc"
+   chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
    ```
 
     **Tip**: You can use profiles generated for macOS, Windows, or Ubuntu binaries interchangeably, enabling seamless cross-system fingerprint emulation. For example, use a macOS profile on Ubuntu or a Windows profile on macOS without compatibility issues.
