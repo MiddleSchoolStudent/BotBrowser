@@ -21,9 +21,9 @@ To simplify operations, we also provide [BotBrowserConsole](https://github.com/M
    chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
    ```
 
-    **Tip**: You can use profiles generated for macOS, Windows, or Ubuntu binaries interchangeably, enabling seamless cross-system fingerprint emulation. For example, use a macOS profile on Ubuntu or a Windows profile on macOS without compatibility issues.
+    **Tip: Profiles generated for macOS, Windows, and Ubuntu binaries are cross-compatible, enabling seamless fingerprint emulation across systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS without any compatibility issues.**
 
-    You can also refer to our [Demo](demo) ([Playwright](demo/playwright) or [Puppeteer](demo/puppeteer)) for guidance on integrating BotBrowser with CDP.
+    You can also refer to our [Demo](demo) ([Playwright](demo/playwright), [Puppeteer](demo/puppeteer)) or [tests](tests) for guidance on integrating BotBrowser with CDP.
 
 
 ## Features
@@ -72,7 +72,7 @@ To simplify operations, we also provide [BotBrowserConsole](https://github.com/M
 
 ## Additional Resources
 
-- **Profile Generation**: We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 200,000 real user browser fingerprints available.
+- **Profile Generation**: We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 300,000 real user browser fingerprints available.
 
   **Contact us:**
 
