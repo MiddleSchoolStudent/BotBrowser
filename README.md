@@ -42,11 +42,11 @@ To simplify operations, we also provide [BotBrowserConsole](https://github.com/M
   - **[Kasada](tests/tests/antibots/kasada.spec.ts)** -  [▶️ Test Result (kick.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/kasada-test-Kasada-BotBrowser-antibots/video.webm), [▶️ Test Result (playstation.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/akamai-test-playstation-com-BotBrowser-antibots/video.webm), [▶️ Test Result (wizzair.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/kasada-test-Kasada-wizzair-com--BotBrowser-antibots/video.webm)
   - **[reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)** - [▶️ Test Result](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/recaptcha-test-reCAPTCHA-v3-on-antcpt-BotBrowser-antibots/video.webm)
   - **[PerimeterX](tests/tests/antibots/perimeterx.spec.ts)** - [▶️ Test Result (textnow.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/perimeterx-test-PerimeterX-BotBrowser-antibots/video.webm)
+  - **[Imperva (Incapsula)](tests/tests/antibots/incapsula.spec.ts)** - [▶️ Test Result (copaair.com)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/incapsula-test-Incapsula-copaair-com--BotBrowser-antibots/video.webm)
   - Cloudfront Bot Management (AWS)
   - hCaptcha
   - nuCAPTCHA
   - DataDome
-  - Imperva (Incapsula)
   - F5 Shape Security
   - Adscore
   - ProtectedMedia

@@ -58,7 +58,6 @@ test('test Kasada (wizzair.com)', async ({ page }) => {
     );
 
     const response = await apiSearchResponsePromise;
-    console.log('response status:', response.status());
 
     // If it's 429 it means it was blocked by Kasada
     expect(response.status()).toBe(200);
