@@ -22,7 +22,7 @@ test('is devtools open', async ({ page }) => {
         return isDevtoolsOpen();
     });
 
-    await expect(isDevtoolsOpen).toBe(false);
+    expect(isDevtoolsOpen).toBe(false);
 });
 
 test('PdfOopif feature turned on', async ({ page }) => {

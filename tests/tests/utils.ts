@@ -29,3 +29,14 @@ export async function waitForFrame(
 
     return frame;
 }
+
+export function getDateFormatted(dayDiff = 0) {
+    const today = new Date();
+    today.setDate(today.getDate() + dayDiff);
+
+    return new Intl.DateTimeFormat('lt-LT', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    }).format(today);
+}
