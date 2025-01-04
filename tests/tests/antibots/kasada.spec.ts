@@ -50,15 +50,15 @@ test('test Kasada (kick.com)', async ({ page }) => {
 test('test Kasada (wizzair.com)', async ({ page }) => {
     const tomorrowDate = getDateFormatted(1);
 
-    const apiSearchResponsePromise = page.waitForResponse((response) =>
+    const apiResponsePromise = page.waitForResponse((response) =>
         response.url().endsWith('/Api/search/search'),
     );
     await page.goto(
         `https://wizzair.com/en-gb/booking/select-flight/TIA/BRI/${tomorrowDate}/null/1/0/0/null`,
     );
 
-    const response = await apiSearchResponsePromise;
+    const apiResponse = await apiResponsePromise;
 
     // If it's 429 it means it was blocked by Kasada
-    expect(response.status()).toBe(200);
+    expect(apiResponse.status()).toBe(200);
 });
