@@ -11,6 +11,15 @@
 
 - [System requirements](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#system-requirements)
 - [Install depot_tools](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#install)
+
+   **Tip:** If you want to cross-compile the ARM binary, in this step you need to execute:
+
+   ```bash
+   ./build/linux/sysroot_scripts/install-sysroot.py --arch=arm
+   ```
+
+   Reference Link: [Linux Chromium Arm Recipes](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/chromium_arm.md#installing-the-toolchain)
+
 - [Get the code](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#get-the-code)
 - [Run the hooks](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#run-the-hooks)
 - [Setting up the build](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#setting-up-the-build)
