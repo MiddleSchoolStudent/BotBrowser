@@ -1,5 +1,18 @@
 # BotBrowser
 
+**Friendly reminder: these public profiles are just for demo, everyone has used them many times, it's fine to use them for testing, but don't use them in your business, otherwise your account will be definitely banned.**
+
+We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 300,000 real user browser fingerprints available.
+
+
+  **Contact us:**
+
+  middleschoolstudent@mail.ru
+
+  https://t.me/middle_student
+
+----------
+
 Use this command get BotBrowser to execute using this profile.
 
 ```bash
@@ -13,17 +26,6 @@ node encryptProfile.js
 ```
 
 ------
-
-**Friendly reminder: these public profiles are just for demo, everyone has used them many times, it's fine to use them for testing, but don't use them in your business, otherwise your account will be definitely banned.**
-
-We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 300,000 real user browser fingerprints available.
-
-
-  **Contact us:**
-
-  middleschoolstudent@mail.ru
-
-  https://t.me/middle_student
 
 ## Features
 
