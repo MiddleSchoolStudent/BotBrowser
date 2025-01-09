@@ -1,0 +1,29 @@
+@if (data.title) {
+    <h2 mat-dialog-title>
+        {{ data.title }}
+    </h2>
+}
+
+<mat-dialog-content> {{ data.message }} </mat-dialog-content>
+<mat-dialog-actions>
+    @if (data.defaultCancel) {
+        <button
+            mat-button
+            mat-dialog-close
+            cdkFocusInitial
+            (click)="onCancel()"
+        >
+            {{ data.cancelButtonText || 'Cancel' }}
+        </button>
+        <button mat-button mat-dialog-close (click)="onOk()">
+            {{ data.okButtonText || 'OK' }}
+        </button>
+    } @else {
+        <button mat-button mat-dialog-close (click)="onCancel()">
+            {{ data.cancelButtonText || 'Cancel' }}
+        </button>
+        <button mat-button mat-dialog-close cdkFocusInitial (click)="onOk()">
+            {{ data.okButtonText || 'OK' }}
+        </button>
+    }
+</mat-dialog-actions>

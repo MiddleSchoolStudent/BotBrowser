@@ -1,0 +1,34 @@
+mat-toolbar {
+    span.spacer {
+        padding-left: 1rem;
+    }
+}
+
+table {
+    width: 100%;
+
+    tr {
+        height: 52px;
+
+        td.flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .flex-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 52px;
+                width: 100%;
+
+                .content {
+                    flex: 1;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

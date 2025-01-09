@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Warm up list</h2>
+<mat-dialog-content>
+    <form [formGroup]="warmupForm">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>URLs</mat-label>
+            <textarea matInput formControlName="urls" rows="6"></textarea>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button
+        mat-raised-button
+        color="primary"
+        (click)="onWarmup()"
+        [disabled]="!warmupForm.get('urls')?.value"
+    >
+        Warm up
+    </button>
+    <button mat-raised-button color="accent" (click)="onSave()">Save</button>
+    <button mat-button mat-dialog-close (click)="onCancel()">Close</button>
+</mat-dialog-actions>

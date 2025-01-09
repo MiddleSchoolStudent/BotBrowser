@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Clone browser profile</h2>
+<mat-dialog-content>
+    <p>
+        How many Browser Profiles do you need to clone? Note that only the
+        configuration will be cloned, not the user data.
+    </p>
+    <mat-form-field>
+        <mat-label>Number of clones</mat-label>
+        <input matInput [(ngModel)]="numberOfClones" type="number" />
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button (click)="onOk()" cdkFocusInitial>OK</button>
+</mat-dialog-actions>
