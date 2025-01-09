@@ -5,7 +5,7 @@ module.exports = {
     mode: 'production',
     entry: './src/main.ts',
     output: {
-        filename: 'bot-browser-ui.js',
+        filename: 'botbrowser-ui.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
@@ -15,7 +15,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'bot-browser-ui.html',
+            filename: 'botbrowser-ui.html',
             template: './src/index.html',
             inject: 'body',
         }),
@@ -38,7 +38,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'bot-browser-ui.html',
+            filename: 'botbrowser-ui.html',
             template: './src/index.html',
             inject: 'body',
         }),
