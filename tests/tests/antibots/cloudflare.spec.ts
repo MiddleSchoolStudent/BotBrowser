@@ -1,5 +1,5 @@
 import { expect, test } from '../global-setup';
-import { waitForFrame } from '../utils';
+import { sleep, waitForFrame } from '../utils';
 
 test('test Cloudflare turnstile', async ({ page }) => {
     await page.addInitScript(() => {
@@ -46,5 +46,35 @@ test('test Cloudflare challenge', async ({ page }) => {
 
     expect(
         await page.waitForSelector('text=Captcha is passed successfully!'),
+    ).toBeTruthy();
+});
+
+test('test taxslayer', async ({ page }) => {
+    await page.goto('https://www.taxslayer.com/myaccount/loginprev.aspx');
+
+    // Wait for the frame that src is set to the cloudflare page "https://challenges.cloudflare.com/cdn-cgi/challenge-platform"
+    waitForFrame({
+        page,
+        url: 'https://challenges.cloudflare.com/cdn-cgi/challenge-platform',
+    }).then((frame) => {
+        // click "Verify you are human"
+        frame
+            .waitForSelector('text=Verify you are human')
+            .then((el) => el.click())
+            .catch(() => {});
+    });
+
+    await page
+        .locator('input[name="Username"]')
+        .fill(Math.random().toString(36).substring(2));
+    await page
+        .locator('input[name="Password"]')
+        .fill(Math.random().toString(36).substring(2));
+
+    await sleep(8000);
+    await page.locator('button#login').click();
+
+    expect(
+        await page.waitForSelector('text=Invalid username or password'),
     ).toBeTruthy();
 });
