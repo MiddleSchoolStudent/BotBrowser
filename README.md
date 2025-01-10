@@ -25,30 +25,6 @@ To simplify operations, we also provide [BotBrowserConsole](console), a free and
 
 ---
 
-## Usage
-
-1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
-2. **Profiles**: We provide sample [Profiles](profiles) for demonstration purposes.
-3. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
-
-   ```bash
-   chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
-   ```
-
-    **Tip**: Profiles generated for macOS, Windows, and Ubuntu binaries are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
-
-    You can also refer to our [Demo](demo) ([Playwright](demo/playwright), [Puppeteer](demo/puppeteer)) or [tests](tests) for guidance on integrating BotBrowser with CDP.
-
-4. **Demo Integrations**
-
-    Explore BotBrowser's integration examples with popular automation tools:
-
-  - **[Playwright Demo](demo/playwright)**: Quickly get started with Playwright to automate repetitive browser tasks using BotBrowser.
-  - **[Puppeteer Demo](demo/puppeteer)**: Seamlessly integrate Puppeteer for advanced browser automation and testing.
-  - **[Tests](tests)**: Use our detailed test scripts to explore real-world use cases and implementation examples.
-
----
-
 ## Features
 
 ### Core Features
@@ -86,6 +62,30 @@ BotBrowser provides extensive fingerprint emulation for:
 - Environment: Permissions, FeaturePolicy, SystemFonts, MediaDevices, MimeTypes
 - Visuals: Emoji, Unicode, System Colors
 - Others: Navigator, Window, and more
+
+---
+
+## Usage
+
+1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
+2. **Profiles**: We provide sample [Profiles](profiles) for demonstration purposes.
+3. **Launching BotBrowser**: Use the `--bot-profile` flag to pass profile information at startup:
+
+   ```bash
+   chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
+   ```
+
+    **Tip**: Profiles generated for macOS, Windows, and Ubuntu binaries are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
+
+    You can also refer to our [Demo](demo) ([Playwright](demo/playwright), [Puppeteer](demo/puppeteer)) or [tests](tests) for guidance on integrating BotBrowser with CDP.
+
+4. **Demo Integrations**
+
+    Explore BotBrowser's integration examples with popular automation tools:
+
+  - **[Playwright Demo](demo/playwright)**: Quickly get started with Playwright to automate repetitive browser tasks using BotBrowser.
+  - **[Puppeteer Demo](demo/puppeteer)**: Seamlessly integrate Puppeteer for advanced browser automation and testing.
+  - **[Tests](tests)**: Use our detailed test scripts to explore real-world use cases and implementation examples.
 
 ---
 
