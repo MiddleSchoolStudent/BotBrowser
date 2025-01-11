@@ -150,27 +150,30 @@ BotBrowser has been extensively tested against leading antibot systems. Below ar
 | **ThreatMetrix**                       | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **Adscore**                            | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **ProtectedMedia**                     | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
-| **[Fake Vision](tests/tests/antibots/fvpro.spec.ts)**       | [▶️ fv.pro](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=fvpro-test-fv-pro-BotBrowser-antibots)                                                                                           |
-| **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** | [▶️ Bot Detection](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=fingerprintjs-test-fingerprintjs-bot-detection-BotBrowser-antibots)                                                         |
-| **[CreepJS](tests/tests/antibots/creepjs.spec.ts)**         | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=creepjs-test-creepjs-BotBrowser-antibots)                                                                                            |
-| **[BrowserScan](tests/tests/antibots/browserscan.spec.ts)** | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=browserscan-test-browserscan-BotBrowser-antibots)                                                                                     |
-| **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**     | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=pixelscan-test-pixelscan-BotBrowser-antibots)                                                                                         |
-| **[iphey](tests/tests/antibots/iphey.spec.ts)**             | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=iphey-test-iphey-BotBrowser-antibots)                                                                                               |
-| **[brotector](tests/tests/antibots/brotector.spec.ts)**     | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=brotector-test-Brotector-BotBrowser-antibots)                                                                                       |
+| **[Fake Vision](tests/tests/antibots/fvpro.spec.ts)**       | [▶️ fv.pro](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=fvpro-test-fv-pro)                                                                                           |
+| **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)** | [▶️ Bot Detection](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=fingerprintjs-test-fingerprintjs-bot-detection)                                                         |
+| **[CreepJS](tests/tests/antibots/creepjs.spec.ts)**         | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=creepjs-test-creepjs)                                                                                            |
+| **[BrowserScan](tests/tests/antibots/browserscan.spec.ts)** | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=browserscan-test-browserscan)                                                                                     |
+| **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**     | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=pixelscan-test-pixelscan)                                                                                         |
+| **[iphey](tests/tests/antibots/iphey.spec.ts)**             | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=iphey-test-iphey)                                                                                               |
+| **[brotector](tests/tests/antibots/brotector.spec.ts)**     | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=brotector-test-Brotector)                                                                                       |
 
 ### 🌐 Top Platforms and Websites
 
 The following platforms have been tested:
 
-- **TikTok**
-- **Yandex**
-- **Temu**
-- **LinkedIn**
-- **Ticketmaster**
-- **Shein**
-- **Facebook**
-- **Bet365**
-- ...and many more
+| Service & Scripts | Anti-bot Services | Test Results |
+|------------------|-------------------|--------------|
+| **[Nike](tests/tests/websites/nike.spec.ts)** | F5 Shape Security | ✅ Success  [▶️ Checkout Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-nike-test-nike-com-checkout)  |
+| **TikTok** | Generic Antibot | ✅ Success |
+| **Temu** | F5 Shape Security | ✅ Success |
+| **LinkedIn** | Generic Antibot | ✅ Success |
+| **Ticketmaster** | PerimeterX, FingerprintJS, reCAPTCHA | ✅ Success |
+| **Shein** | F5 Shape Security, FingerprintJS, Forter | ✅ Success |
+| **Facebook** | Generic Antibot | ✅ Success |
+| **Bet365** | Generic Antibot | ✅ Success |
+
+...and many more
 
 
 ---
