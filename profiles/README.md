@@ -1,15 +1,25 @@
 # BotBrowser
 
-**Friendly reminder: these public profiles are just for demo, everyone has used them many times, it's fine to use them for testing, but don't use them in your business, otherwise your account will be definitely banned.**
+## ⚠️ Important Notice About Profiles
 
-We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We have a repository of over 300,000 real user browser fingerprints available.
+### 🚨 Public Profile Warning
+> **Note**: Public demo profiles, while great for testing, are widely circulated and flagged. Using them in production will result in **immediate account bans**. Protect your business by avoiding public profiles.
 
+### 🌟 Premium Profile Service
+> Access our exclusive collection of **300,000+ authentic browser fingerprints** sourced from real users - not algorithmically generated! Each profile is:
+> - ✅ Unique and unused
+> - 🔒 Private and secure
+> - 👤 Based on genuine user data
+> - 🛡️ Safe for production use
 
-  **Contact us:**
+### 📬 Get Premium Profiles
+> For business-grade, pristine profiles that ensure your operations stay undetected:
 
-  middleschoolstudent@mail.ru
+| 📧 Email | [middleschoolstudent@mail.ru](mailto:middleschoolstudent@mail.ru) |
+|---------------|---------|
+| 📱 Telegram | [middle_student](https://t.me/middle_student) |
 
-  https://t.me/middle_student
+*We maintain strict confidentiality and provide fast, professional support for all clients.*
 
 ----------
 
