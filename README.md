@@ -1,4 +1,4 @@
-<h1 align="center">BotBrowser</h1>
+<h1 align="center">🤖 BotBrowser</h1>
 
 <h4 align="center">The Ultimate Solution for Undetectable Automated Browsing 🚀</h4>
 
@@ -15,16 +15,16 @@
 
 # 🌟 Introduction
 
-## 🔮 What is BotBrowser?
+## What is BotBrowser?
 
 BotBrowser is a powerful, cross-platform browser automation tool that revolutionizes how we interact with web automation. By directly modifying Chromium's native C++ source code, it achieves what traditional JavaScript-based CDP ([Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)) solutions can't - true undetectable automation.
 
-## 🎮 Simplified Management
+## Simplified Management
 
 To make your automation journey even smoother, we've created [BotBrowserConsole](console) - a free and open-source GUI tool that puts power at your fingertips:
-- 🚀 Launch multiple browser instances with ease
-- 🌍 Manage different environments seamlessly
-- 👥 Handle multiple accounts efficiently
+- Launch multiple browser instances with ease
+- Manage different environments seamlessly
+- Handle multiple accounts efficiently
 
 ---
 
@@ -38,101 +38,96 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 
 ## 🎯 Core Features
 
-- 🌐 **Cross-Platform Compatibility**
-  > Fully supports Windows, macOS, and Ubuntu, enabling seamless cross-platform use of profiles. Start on one system and continue effortlessly on another. More platforms coming soon!
+- **Cross-Platform Compatibility**
+  > Fully supports Windows, macOS, and Ubuntu, enabling seamless cross-platform use of profiles. Start on one system and continue effortlessly on another.
 
-- 🔄 **Latest Chromium Base** 
+- **Latest Chromium Base**
   > Stays updated with the latest stable Chrome/Chromium versions to ensure compatibility with advanced antibot defenses.
 
-- ⚙️ **Programmatic Control**
+- **Programmatic Control**
   > Leverages CDP for advanced automation through tools like [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer).
 
-- 📈 **Exceptional Success Rate**
+- **Exceptional Success Rate**
   > Achieves an impressive **98%+ success rate**, even against the most advanced antibots under high loads.
 
-- 🏆 **Proven Results**
+- **Proven Results**
   > Backed by real client success stories, enabling the registration of over **350,000 accounts daily** with unmatched efficiency.
 
 ## 🛡️ Advanced Capabilities
 
 ### 🕵️ Stealth and Detection Evasion
 
-- 🎭 **Bypass incognito mode checks**
+- **Bypass incognito mode checks**
   > Ensures undetectable automation even in headless or incognito modes.
 
-- 🔒 **Prevent CDP leaks**
+- **Prevent CDP leaks**
   > Eliminates detection of Chrome DevTools Protocol (CDP) communication.
 
-- 📚 **Customizable browsing history**
+- **Customizable browsing history**
   > Enables realistic, dynamic histories for diverse fingerprinting scenarios.
 
-- 🎨 **Noise injection**
-  > Randomizes 2D canvas, WebGL, and audio fingerprints to avoid detection.
+- **Noise injection**
+  > Randomizes 2D canvas, WebGL, emoji, fonts, and audio fingerprints to avoid detection.
 
-- 💻 **Simulated OS-specific properties**
+- **Simulated OS-specific properties**
   > Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
+
+- **Content Decryption Module (CDM) bypass**
+  > Avoids detection by DRM systems.
 
 ### 🌐 Comprehensive Proxy and Network Control
 
-- 🔌 **Proxy integration**
+- **Proxy integration**
   > Easily configure proxy host, username, and password without relying on CDP.
 
-- 🌍 **Dynamic language and timezone settings**
+- **Dynamic language and timezone settings**
   > Automatically adapt browser environment based on proxy IP for realistic geolocation.
 
-### 🔐 Additional Security and Customization
-
-- 🛡️ **WebRTC leak protection**
+- **WebRTC leak protection**
   > Prevents exposure of real IPs during WebRTC communication.
 
-- 🎮 **Content Decryption Module (CDM) bypass**
-  > Avoids detection by DRM systems.
-
-## 🎯 Fingerprint Spoofing Capabilities
+### 🎯 Fingerprint Spoofing Capabilities
 
 BotBrowser provides comprehensive fingerprint emulation for:
 
-### 🔍 Core Components
-- 🌐 **Browser**: Version, OS, userAgentData
-- 🎨 **Graphics**: WebGL, WebGL2, GPU
-- 💻 **Hardware**: Screen, Battery, Keyboard, CPU
-
-### 🛠️ Environment & System
-- 🔧 **Environment**: Permissions, FeaturePolicy, SystemFonts
-- 📱 **Media**: MediaDevices, MimeTypes
-- 🎨 **Visuals**: Emoji, Unicode, System Colors
-- 🔄 **Others**: Navigator, Window, and more
+- **Browser**: Version, OS, userAgentData
+- **Graphics**: WebGL, WebGL2, GPU
+- **Hardware**: Screen, Battery, Keyboard, CPU
+- **Environment**: Permissions, FeaturePolicy, SystemFonts
+- **Media**: MediaDevices, MimeTypes
+- **Visuals**: Emoji, Unicode, System Colors
+- **Others**: Navigator, Window, and more
 
 ---
 
 # 🚀 Usage
 
-1. 📥 **Download**
+1. **Download**
   > Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-2. 📋 **Profiles**
+2. **Profiles**
   > We provide sample [Profiles](profiles) for demonstration purposes.
 
-3. 🎮 **Launching BotBrowser**
+3. **Launching BotBrowser**
   > Use the `--bot-profile` flag to pass profile information at startup:
-   
+
    ```bash
    chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
    ```
 
-  💡 **Pro Tip**: 
+  💡 **Pro Tip**:
   > Profiles generated for macOS, Windows, and Ubuntu binaries are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
 
-4. 🔗 **Demo Integrations**
+4. **Demo Integrations**
   > Explore BotBrowser's integration examples with popular automation tools:
 
-  - 🎭 **[Playwright Demo](demo/playwright)**
+  - **[Playwright Demo](demo/playwright)**
     > Quickly get started with Playwright to automate repetitive browser tasks using BotBrowser.
-  
-  - 🎪 **[Puppeteer Demo](demo/puppeteer)**
+
+  - **[Puppeteer Demo](demo/puppeteer)**
     > Seamlessly integrate Puppeteer for advanced browser automation and testing.
-  
-  - ✅ **[Tests](tests)**
+
+  - **[Tests](tests)**
     > Use our detailed test scripts to explore real-world use cases and implementation examples.
 
 ---
@@ -188,9 +183,9 @@ The following platforms have been tested:
 
 We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We maintain a repository of over **300,000 real user browser fingerprints** to support your needs.
 
-## 📞 Contact us today:
+**📞 Contact us today:**
 
-| Method      | Details                                          |
+|       |                                           |
 |-------------|--------------------------------------------------|
 | 📧 Email    | [middleschoolstudent@mail.ru](mailto:middleschoolstudent@mail.ru) |
 | 📱 Telegram | [middle_student](https://t.me/middle_student)   |
