@@ -24,8 +24,6 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 - Manage different environments seamlessly
 - Handle multiple accounts efficiently
 
----
-
 <div align="center">
   <img width="800" alt="BotBrowser GUI - Your Command Center" src="https://github.com/user-attachments/assets/e9c0b656-83b0-4be5-986e-d4bc3c04b4b5">
 </div>
@@ -174,6 +172,8 @@ The following platforms have been tested:
 - ...and many more
 
 
+---
+
 
 ## 📚 Additional Resources
 
@@ -188,11 +188,13 @@ We do not provide the private key required to generate new profiles. If you need
 | 📧 Email    | [middleschoolstudent@mail.ru](mailto:middleschoolstudent@mail.ru) |
 | 📱 Telegram | [middle_student](https://t.me/middle_student)   |
 
----
 
 ### 🛠️ Building from Source
 
 If you wish to compile your own version of Chromium with our modifications, follow the instructions provided [here](build).
+
+
+---
 
 ## ⚠️ Disclaimer
 
