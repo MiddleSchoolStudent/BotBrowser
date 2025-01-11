@@ -13,8 +13,6 @@
 
 ---
 
-# 🌟 Introduction
-
 ## What is BotBrowser?
 
 BotBrowser is a powerful, cross-platform browser automation tool that revolutionizes how we interact with web automation. By directly modifying Chromium's native C++ source code, it achieves what traditional JavaScript-based CDP ([Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)) solutions can't - true undetectable automation.
@@ -34,9 +32,9 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 
 ---
 
-# 🚀 Features
+## 🚀 Features
 
-## 🎯 Core Features
+### 🎯 Core Features
 
 - **Cross-Platform Compatibility**
   > Fully supports Windows, macOS, and Ubuntu, enabling seamless cross-platform use of profiles. Start on one system and continue effortlessly on another.
@@ -53,9 +51,9 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 - **Proven Results**
   > Backed by real client success stories, enabling the registration of over **350,000 accounts daily** with unmatched efficiency.
 
-## 🛡️ Advanced Capabilities
+### 🛡️ Advanced Capabilities
 
-### 🕵️ Stealth and Detection Evasion
+#### 🕵️ Stealth and Detection Evasion
 
 - **Bypass incognito mode checks**
   > Ensures undetectable automation even in headless or incognito modes.
@@ -75,7 +73,7 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 - **Content Decryption Module (CDM) bypass**
   > Avoids detection by DRM systems.
 
-### 🌐 Comprehensive Proxy and Network Control
+#### 🌐 Comprehensive Proxy and Network Control
 
 - **Proxy integration**
   > Easily configure proxy host, username, and password without relying on CDP.
@@ -86,7 +84,7 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 - **WebRTC leak protection**
   > Prevents exposure of real IPs during WebRTC communication.
 
-### 🎯 Fingerprint Spoofing Capabilities
+#### 🎯 Fingerprint Spoofing Capabilities
 
 BotBrowser provides comprehensive fingerprint emulation for:
 
@@ -100,7 +98,7 @@ BotBrowser provides comprehensive fingerprint emulation for:
 
 ---
 
-# 🚀 Usage
+## 🚀 Usage
 
 1. **Download**
   > Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
@@ -132,9 +130,9 @@ BotBrowser provides comprehensive fingerprint emulation for:
 
 ---
 
-# 🎯 Proven Effectiveness
+## 🎯 Proven Effectiveness
 
-## 🧪 Code and Video Test Results
+### 🧪 Code and Video Test Results
 
 BotBrowser has been extensively tested against leading antibot systems. Below are detailed test results and video demonstrations:
 
@@ -161,7 +159,7 @@ BotBrowser has been extensively tested against leading antibot systems. Below ar
 | **[iphey](tests/tests/antibots/iphey.spec.ts)**             | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=iphey-test-iphey-BotBrowser-antibots)                                                                                               |
 | **[brotector](tests/tests/antibots/brotector.spec.ts)**     | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=brotector-test-Brotector-BotBrowser-antibots)                                                                                       |
 
-## 🌐 Top Platforms and Websites
+### 🌐 Top Platforms and Websites
 
 The following platforms have been tested:
 
@@ -177,9 +175,9 @@ The following platforms have been tested:
 
 
 
-# 📚 Additional Resources
+## 📚 Additional Resources
 
-## 🔐 Profile Generation
+### 🔐 Profile Generation
 
 We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We maintain a repository of over **300,000 real user browser fingerprints** to support your needs.
 
@@ -192,11 +190,11 @@ We do not provide the private key required to generate new profiles. If you need
 
 ---
 
-## 🛠️ Building from Source
+### 🛠️ Building from Source
 
 If you wish to compile your own version of Chromium with our modifications, follow the instructions provided [here](build).
 
-# ⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 BotBrowser is intended for legitimate use cases that comply with all applicable laws and regulations. Misuse of this tool to violate the terms of service of websites or engage in illegal activities is strictly prohibited.
 
