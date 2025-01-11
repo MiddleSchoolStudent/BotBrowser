@@ -183,9 +183,8 @@ We do not provide the private key required to generate new profiles. If you need
 
 **📞 Contact us today:**
 
-|       |                                           |
-|-------------|--------------------------------------------------|
 | 📧 Email    | [middleschoolstudent@mail.ru](mailto:middleschoolstudent@mail.ru) |
+|-------------|--------------------------------------------------|
 | 📱 Telegram | [middle_student](https://t.me/middle_student)   |
 
 
