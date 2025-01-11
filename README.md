@@ -40,14 +40,11 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 - **Latest Chromium Base**
   > Stays updated with the latest stable Chrome/Chromium versions to ensure compatibility with advanced antibot defenses.
 
-- **Programmatic Control**
-  > Leverages CDP for advanced automation through tools like [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer).
+- **Advanced Programmatic Control**
+  > Dual advantage: Leverages CDP for powerful automation with [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer), while preventing CDP leak detection - perfect balance of control and undetectability.
 
-- **Exceptional Success Rate**
-  > Achieves an impressive **98%+ success rate**, even against the most advanced antibots under high loads.
-
-- **Proven Results**
-  > Backed by real client success stories, enabling the registration of over **350,000 accounts daily** with unmatched efficiency.
+- **Success & Performance**
+  > Real client success stories validate our exceptional performance: **98%+ success rate** against advanced antibots with over **350,000 accounts registered daily**, demonstrating unmatched efficiency and reliability under high loads.
 
 ### 🛡️ Advanced Capabilities
 
@@ -56,14 +53,11 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 - **Bypass incognito mode checks**
   > Ensures undetectable automation even in headless or incognito modes.
 
-- **Prevent CDP leaks**
-  > Eliminates detection of Chrome DevTools Protocol (CDP) communication.
-
 - **Customizable browsing history**
   > Enables realistic, dynamic histories for diverse fingerprinting scenarios.
 
 - **Noise injection**
-  > Randomizes 2D canvas, WebGL, emoji, fonts, and audio fingerprints to avoid detection.
+  > Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints to avoid detection.
 
 - **Simulated OS-specific properties**
   > Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
@@ -105,11 +99,13 @@ BotBrowser provides comprehensive fingerprint emulation for:
   > We provide sample [Profiles](profiles) for demonstration purposes.
 
 3. **Launching BotBrowser**
-  > Use the `--bot-profile` flag to pass profile information at startup:
+  > Simply pass your profile via `--bot-profile` parameter to unlock ultimate browser stealth:
 
    ```bash
    chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
    ```
+
+  > Once launched with this flag, your browser instantly gains complete stealth capabilities - making it invisible to all antibot detection systems while maintaining full automation functionality.
 
   💡 **Pro Tip**:
   > Profiles generated for macOS, Windows, and Ubuntu binaries are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
