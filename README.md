@@ -78,7 +78,7 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 
 #### 🎯 Fingerprint Spoofing Capabilities
 
-BotBrowser provides comprehensive fingerprint emulation for:
+  > BotBrowser provides comprehensive fingerprint emulation for:
 
 - **Browser**: Version, OS, userAgentData
 - **Graphics**: WebGL, WebGL2, GPU
