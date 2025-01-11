@@ -40,3 +40,20 @@ export function getDateFormatted(dayDiff = 0) {
         day: '2-digit',
     }).format(today);
 }
+
+export function clickLocatorWithMouse(page: Page, locator: string) {
+    return page
+        .locator(locator)
+        ?.boundingBox()
+        .then(async (box) => {
+            if (box) {
+                await page.mouse.move(
+                    box.x + box.width / 2,
+                    box.y + box.height / 2,
+                );
+                await page.mouse.down();
+                await sleep(200);
+                await page.mouse.up();
+            }
+        });
+}

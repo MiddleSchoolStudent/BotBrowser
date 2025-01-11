@@ -22,20 +22,6 @@ export default defineConfig({
             name: 'BotBrowser',
             use: {
                 headless: true,
-                launchOptions: {
-                    executablePath: process.env.BROWSER_EXECUTABLE_PATH,
-                    args: [
-                        `--bot-profile=${process.env.BOT_PROFILE_PATH}`,
-                        '--mute-audio',
-                    ],
-                },
-            },
-        },
-        {
-            name: 'BotBrowser-antibots',
-            testDir: './tests/antibots',
-            use: {
-                headless: true,
                 video: 'on',
                 viewport: { width: 1920, height: 1080 },
                 launchOptions: {
