@@ -5,6 +5,20 @@
 
 ---
 
+## [2025-01-17]
+
+### Improved
+- **System Colors Configuration:** Added support for configuring system colors with **RGBA**, enabling more flexible and realistic color rendering.
+
+### Fixed
+- **Stability Bug Fix:** Resolved a crash issue by enabling **MDNS** (`enable_mdns`), ensuring improved stability on certain websites.
+
+### Major Update
+- **Version Release - 132.0.6834.84:** Updated to align with the latest **Chrome version**, ensuring compatibility with the most recent features and security updates.
+
+
+---
+
 ## [2025-01-12]
 
 ### Fixed
