@@ -9,7 +9,7 @@ export async function waitForFrame(
 ) {
     let frame: Frame | undefined;
     while (!frame) {
-        await sleep(1000);
+        await sleep(500);
 
         const frames = options.page.frames();
         for (const f of frames) {
@@ -41,19 +41,22 @@ export function getDateFormatted(dayDiff = 0) {
     }).format(today);
 }
 
-export function clickLocatorWithMouse(page: Page, locator: string) {
+export function clickLocatorWithMouse(page: Page | Frame, locator: string) {
+    const actualPage = 'page' in page ? page.page() : page;
     return page
         .locator(locator)
         ?.boundingBox()
         .then(async (box) => {
+            console.log('locator', locator, box);
+
             if (box) {
-                await page.mouse.move(
+                await actualPage.mouse.move(
                     box.x + box.width / 2,
                     box.y + box.height / 2,
                 );
-                await page.mouse.down();
+                await actualPage.mouse.down();
                 await sleep(200);
-                await page.mouse.up();
+                await actualPage.mouse.up();
             }
         });
 }
