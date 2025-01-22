@@ -50,7 +50,7 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 
 #### 🕵️ Stealth and Detection Evasion
 
-- **Bypass headless and incognito mode checks**: Ensures undetectable automation even in headless or incognito modes.
+- **Bypass headless and incognito checks**: Enables undetectable automation by seamlessly evading detection in both headless and incognito modes.
 
 - **Customizable browsing history**: Enables realistic, dynamic histories for diverse fingerprinting scenarios.
 
@@ -89,33 +89,35 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
 2. **Cross-Platform Profiles**:
-  We provide sample [Profiles](profiles) for demonstration purposes. These profiles are pre-configured for macOS, Windows, and Ubuntu and are **cross-compatible**, allowing seamless fingerprint emulation across different systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
+  We provide sample [Profiles](profiles) for demonstration purposes. These pre-configured profiles for macOS, Windows, and Ubuntu are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, a macOS profile can be used on Ubuntu or a Windows profile on macOS **without compatibility issues**.
 
-3. **Launching BotBrowser**
+3. **Launching BotBrowser**:
 
-   - **CLI**:
-     Pass your profile via the `--bot-profile` parameter:
+    BotBrowser can be launched in three ways:
 
-     ```bash
-     chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
-     ```
+  - **CLI**:
+    Pass your profile via the `--bot-profile` parameter:
 
-   - **[Playwright Demo](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
-     Integrate BotBrowser within automation frameworks with a few lines of code:
+    ```bash
+    chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
+    ```
 
-     ```javascript
-     const browser = await chromium.launch({
-       browser: "chrome",
-       headless: true,
-       executablePath: BOTBROWSER_EXEC_PATH, // Path to the BotBrowser executable
-       args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Path to the bot profile
-     });
+  - **[Playwright Demo](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
+    Integrate BotBrowser within automation frameworks with a few lines of code:
 
-     const page = await browser.newPage();
-     await page.goto("https://www.google.com");
-     ```
+    ```javascript
+    const browser = await chromium.launch({
+      browser: "chrome",
+      headless: true,
+      executablePath: BOTBROWSER_EXEC_PATH, // Path to the BotBrowser executable
+      args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Path to the bot profile
+    });
 
-   - **[BotBrowserConsole](console)**: A free and open-source GUI tool.
+    const page = await browser.newPage();
+    await page.goto("https://www.google.com");
+    ```
+
+  - **[BotBrowserConsole](console)**: A free and open-source GUI tool.
 
 4. **Tests**
   Use our detailed test scripts to explore real-world use cases and implementation examples: **[Tests](tests)**.
