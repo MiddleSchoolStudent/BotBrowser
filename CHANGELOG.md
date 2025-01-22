@@ -5,7 +5,7 @@
 
 ---
 
-## [2025-01-21]
+## [2025-01-22]
 
 ### Improved
 - **MimeTypes Fingerprinting:** Optimized **mimeTypes** fingerprinting by converting them to **ContentType**, followed by parsing `type` and `codecs` separately. This enhancement strengthens mimeTypes matching and reduces detection risks from antifraud techniques, such as those used by **Incapsula**.
