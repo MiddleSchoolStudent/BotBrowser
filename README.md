@@ -50,77 +50,75 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
 
 #### 🕵️ Stealth and Detection Evasion
 
-- **Bypass incognito mode checks**
-  > Ensures undetectable automation even in headless or incognito modes.
+- **Bypass headless and incognito mode checks**: Ensures undetectable automation even in headless or incognito modes.
 
-- **Customizable browsing history**
-  > Enables realistic, dynamic histories for diverse fingerprinting scenarios.
+- **Customizable browsing history**: Enables realistic, dynamic histories for diverse fingerprinting scenarios.
 
-- **Noise injection**
-  > Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints to avoid detection.
+- **Noise injection**: Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints to avoid detection.
 
-- **Simulated OS-specific properties**
-  > Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
+- **Simulated OS-specific properties**: Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
 
-- **Content Decryption Module (CDM) bypass**
-  > Avoids detection by DRM systems.
+- **Chrome feature masking**: Removes Chromium-specific traits, simulating native Chrome with features like AdInterest and CDM for enhanced detection evasion.
+
+- **Comprehensive fingerprint spoofing**:
+
+  | **Category**    | **Details**                                 |
+  |-----------------|---------------------------------------------|
+  | **Browser**     | Version, OS, userAgentData                 |
+  | **Graphics**    | WebGL, WebGL2, GPU                         |
+  | **Hardware**    | Screen, Battery, Keyboard, CPU             |
+  | **Environment** | Permissions, FeaturePolicy, SystemFonts    |
+  | **Media**       | MediaDevices, MimeTypes                    |
+  | **Visuals**     | Emoji, Unicode, System Colors              |
+  | **Others**      | Navigator, Window, and more                |
+
 
 #### 🌐 Comprehensive Proxy and Network Control
 
-- **Proxy integration**
-  > Easily configure proxy host, username, and password without relying on CDP.
+- **Proxy integration**: Easily configure proxy host, username, and password without relying on CDP ([Page.authenticate](https://pptr.dev/api/puppeteer.page.authenticate/)).
 
-- **Dynamic language and timezone settings**
-  > Automatically adapt browser environment based on proxy IP for realistic geolocation.
+- **Dynamic language and timezone settings**: Automatically adapt browser environment based on proxy IP for realistic geolocation.
 
-- **WebRTC leak protection**
-  > Prevents exposure of real IPs during WebRTC communication.
+- **WebRTC leak protection**: Prevents exposure of real IPs during WebRTC communication.
 
-#### 🎯 Fingerprint Spoofing Capabilities
-
-  > BotBrowser provides comprehensive fingerprint emulation for:
-
-- **Browser**: Version, OS, userAgentData
-- **Graphics**: WebGL, WebGL2, GPU
-- **Hardware**: Screen, Battery, Keyboard, CPU
-- **Environment**: Permissions, FeaturePolicy, SystemFonts
-- **Media**: MediaDevices, MimeTypes
-- **Visuals**: Emoji, Unicode, System Colors
-- **Others**: Navigator, Window, and more
 
 ---
 
 ## 🚀 Usage
 
-1. **Download**
-  > Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
+1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-2. **Profiles**
-  > We provide sample [Profiles](profiles) for demonstration purposes.
+2. **Cross-Platform Profiles**:
+  We provide sample [Profiles](profiles) for demonstration purposes. These profiles are pre-configured for macOS, Windows, and Ubuntu and are **cross-compatible**, allowing seamless fingerprint emulation across different systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
 
 3. **Launching BotBrowser**
-  > Simply pass your profile via `--bot-profile` parameter to unlock ultimate browser stealth:
 
-   ```bash
-   chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
-   ```
+   - **CLI**:
+     Pass your profile via the `--bot-profile` parameter:
 
-  > Once launched with this flag, your browser instantly gains complete stealth capabilities - making it invisible to all antibot detection systems while maintaining full automation functionality.
+     ```bash
+     chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
+     ```
 
-  💡 **Pro Tip**:
-  > Profiles generated for macOS, Windows, and Ubuntu binaries are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, you can use a macOS profile on Ubuntu or a Windows profile on macOS **without any compatibility issues**.
+   - **[Playwright Demo](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
+     Integrate BotBrowser within automation frameworks with a few lines of code:
 
-4. **Demo Integrations**
-  > Explore BotBrowser's integration examples with popular automation tools:
+     ```javascript
+     const browser = await chromium.launch({
+       browser: "chrome",
+       headless: true,
+       executablePath: BOTBROWSER_EXEC_PATH, // Path to the BotBrowser executable
+       args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Path to the bot profile
+     });
 
-  - **[Playwright Demo](demo/playwright)**
-    > Quickly get started with Playwright to automate repetitive browser tasks using BotBrowser.
+     const page = await browser.newPage();
+     await page.goto("https://www.google.com");
+     ```
 
-  - **[Puppeteer Demo](demo/puppeteer)**
-    > Seamlessly integrate Puppeteer for advanced browser automation and testing.
+   - **[BotBrowserConsole](console)**: A free and open-source GUI tool.
 
-  - **[Tests](tests)**
-    > Use our detailed test scripts to explore real-world use cases and implementation examples.
+4. **Tests**
+  Use our detailed test scripts to explore real-world use cases and implementation examples: **[Tests](tests)**.
 
 ---
 
