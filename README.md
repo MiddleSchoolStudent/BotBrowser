@@ -102,7 +102,7 @@ To make your automation journey even smoother, we've created [BotBrowserConsole]
     chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
     ```
 
-  - **[Playwright Demo](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
+  - **[Playwright](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
     Integrate BotBrowser within automation frameworks with a few lines of code:
 
     ```javascript
