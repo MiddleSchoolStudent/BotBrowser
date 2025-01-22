@@ -53,7 +53,7 @@ After configuring the `.env` file, you can execute the tests using the Playwrigh
 
 ---
 
-## Important Notes
+## ⚠️ Important Notes
 
 1. **Demonstration Purpose Only**:
    These tests are provided **exclusively for demonstration purposes** to showcase the capabilities of BotBrowser. They serve as proof-of-concept and should not be used for any illegal or unethical purposes.
