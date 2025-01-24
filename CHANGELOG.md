@@ -5,6 +5,17 @@
 
 ---
 
+## [2025-01-24]
+
+### Major Update
+- **GPU Emulation on Headless Servers:** Introduced full emulation of GPU-related fingerprints on devices without dedicated GPUs. This allows **VPS servers (Linux, Windows)** without GPUs to perfectly mimic GPU information, including `navigator.gpu`, `GPUAdapter`, `GPUAdapterInfo`, `GPUDevice`, `WebGLRenderingContext`, and `WebGL2RenderingContext`. This significantly reduces GPU rental costs while bypassing GPU-sensitive antifraud systems, such as the latest **hCaptcha** updates, which began detecting `navigator.gpu`.
+
+### Added
+- **GPUAdapterInfo and WGSLLanguageFeatures Fingerprinting:** Added support for fingerprinting **GPUAdapterInfo** and **WGSLLanguageFeatures**, ensuring comprehensive GPU-related data coverage.
+
+
+---
+
 ## [2025-01-22]
 
 ### Improved
