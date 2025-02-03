@@ -5,6 +5,23 @@
 
 ---
 
+## [2025-02-02]
+
+### Major Upgrade  
+- **Canvas Noise Algorithm Overhaul:**  
+  Completely reworked the **Canvas noise algorithm** by integrating noise injection into **Skia's anti-aliasing process**, significantly reducing the likelihood of detection by advanced antibot systems.
+
+### Fixed  
+- **WebGL Context readPixels Bug Fix:**  
+  Optimized **readPixels** in **WebGL Context** to prevent incorrect noise injection on solid-color images, ensuring accurate rendering.
+
+### Added  
+- **Chrome 132 Test Profiles for Windows & macOS:**  
+  Released **test profiles** for **Chrome 132** on **Windows** and **macOS**, improving compatibility with the latest browser updates.
+
+
+---
+
 ## [2025-01-24]
 
 ### Major Update
