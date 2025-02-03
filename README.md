@@ -15,7 +15,7 @@
 
 ## What is BotBrowser?
 
-BotBrowser is a cross-platform automation tool that redefines web automation. By modifying Chromium's C++ source code, it achieves true undetectable automation beyond the limitations of CDP-based ([Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/)) solutions.
+BotBrowser is a cross-platform automation tool that redefines web automation. By modifying Chromium's C++ source code, it goes beyond the limitations of [CDP](https://chromedevtools.github.io/devtools-protocol/)-based solutions, allowing true undetectable automation.
 
 ## Simplified Management
 
