@@ -5,6 +5,16 @@
 
 ---
 
+## [2025-02-04]
+
+### Improved  
+- **Enhanced Fingerprint Protection in AnalyserNode**  
+  - Added **noise injection** to **AnalyserNode**, making it significantly harder for detection systems to identify synthetic audio processing behavior.
+  - This improvement further strengthens **Web Audio API** fingerprint obfuscation against targeted detection techniques.
+
+
+---
+
 ## [2025-02-02]
 
 ### Major Upgrade  
