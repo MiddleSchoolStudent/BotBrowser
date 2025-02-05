@@ -99,7 +99,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
     Pass your profile via the `--bot-profile` parameter:
 
     ```bash
-    chromium --bot-profile="{path_of_}/chrome131_win11_x64.enc"
+    chromium --no-sandbox --bot-profile="{path_of_}/chrome131_win11_x64.enc"
     ```
 
   - **[Playwright](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
