@@ -28,6 +28,11 @@ async def main():
             ],
         )
         page = await browser.new_page()
+        await page.add_init_script("""
+            delete window.playwrightbinding__;
+            delete window.__pwInitScripts;
+        """)
+
         await page.goto("https://www.google.com")
         await asyncio.Event().wait()
 

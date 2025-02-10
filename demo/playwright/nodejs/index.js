@@ -23,4 +23,11 @@ const browser = await chromium.launch({
 });
 
 const page = await browser.newPage();
+await page.addInitScript(() => {
+  // // @ts-expect-error - Playwright binding will cause leak
+  delete window.playwrightbinding__;
+  // @ts-expect-error - Playwright binding will cause leak
+  delete window.__pwInitScripts;
+});
+
 await page.goto("https://www.google.com");
