@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
-import { getDateFormatted } from '../utils';
+import { getDateFormatted, sleep } from '../utils';
 
-test('test Kasada (kick.com)', async ({ page }) => {
+test('test kick.com', async ({ page }) => {
     await page.goto('https://www.kick.com');
 
     // click on the sign up button
@@ -17,27 +17,33 @@ test('test Kasada (kick.com)', async ({ page }) => {
     // type in random email
     await page
         .locator('input[name="email"]')
-        .fill(
+        .pressSequentially(
             Math.random().toString(36).substring(2) +
                 Math.random().toString(36).substring(2) +
                 '@gmail.com',
+            { delay: 40 },
         );
 
     // type in random birthdate
-    await page.locator('input[name="birthdate"]').fill('1995-01-01');
+    await page
+        .locator('input[name="birthdate"]')
+        .pressSequentially('1995-01-01', { delay: 40 });
 
     // type in random username
     await page
         .locator('input[name="username"]')
-        .fill(Math.random().toString(36).substring(2));
+        .pressSequentially(Math.random().toString(36).substring(2), {
+            delay: 40,
+        });
 
     // type in random password
     await page
         .locator('input[name="password"]')
-        .fill(
+        .pressSequentially(
             Math.random().toString(36).substring(2) +
                 Math.random().toString(36).substring(5) +
                 'AC?_',
+            { delay: 40 },
         );
 
     // click on the sign up button
@@ -47,7 +53,7 @@ test('test Kasada (kick.com)', async ({ page }) => {
     expect(await page.waitForSelector('text=Email Verification')).toBeTruthy();
 });
 
-test('test Kasada (wizzair.com)', async ({ page }) => {
+test('test wizzair.com', async ({ page }) => {
     const tomorrowDate = getDateFormatted(1);
 
     const apiResponsePromise = page.waitForResponse((response) =>
@@ -61,4 +67,78 @@ test('test Kasada (wizzair.com)', async ({ page }) => {
 
     // If it's 429 it means it was blocked by Kasada
     expect(apiResponse.status()).toBe(200);
+});
+
+test('test twitch.tv', async ({ page }) => {
+    // Login
+    await page.goto('https://www.twitch.tv/wv/auth/login');
+    await page
+        .locator('input#login-username')
+        .pressSequentially(Math.random().toString(36).substring(2), {
+            delay: 40,
+        });
+    await page
+        .locator('input#password-input')
+        .pressSequentially(
+            Math.random().toString(36).substring(2) +
+                Math.random().toString(36).substring(5) +
+                'AC?_',
+            { delay: 40 },
+        );
+    await page.keyboard.press('Enter');
+
+    expect(
+        await Promise.race([
+            page.waitForSelector('text=That password was incorrect'),
+            page.waitForSelector('text=This username does not exist'),
+        ]),
+    ).toBeTruthy();
+
+    await sleep(5_000);
+
+    // Register
+    await page.goto('https://www.twitch.tv/wv/auth/signup');
+    await page
+        .locator('input#signup-username')
+        .pressSequentially(Math.random().toString(36).substring(2), {
+            delay: 40,
+        });
+    await page
+        .locator('input#password-input')
+        .pressSequentially(
+            Math.random().toString(36).substring(2) +
+                Math.random().toString(36).substring(5) +
+                'AC?_',
+            { delay: 40 },
+        );
+    await page.selectOption(
+        'select[data-a-target="birthday-month-select"]',
+        '2',
+    );
+    await page.selectOption(
+        'select[data-a-target="birthday-date-input"]',
+        '12',
+    );
+    await page.selectOption(
+        'select[aria-label="Select your birthday year"]',
+        '1994',
+    );
+    await page
+        .locator('button[data-a-target="signup-phone-email-toggle"]')
+        .click();
+    await page
+        .locator('input#email-input')
+        .pressSequentially(
+            Math.random().toString(36).substring(2) +
+                Math.random().toString(36).substring(2) +
+                '@gmail.com',
+            { delay: 40 },
+        );
+    await page
+        .locator('button[data-a-target="passport-signup-button"]')
+        .click();
+
+    expect(
+        await page.locator('text=Enter your verification code').isVisible(),
+    ).toBeTruthy();
 });
