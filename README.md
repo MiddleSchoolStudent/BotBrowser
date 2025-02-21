@@ -89,17 +89,15 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
 2. **Cross-Platform Profiles**:
-  We provide sample [Profiles](profiles) for demonstration purposes. These pre-configured profiles for macOS, Windows, and Ubuntu are **cross-compatible**, enabling seamless fingerprint emulation across systems. For example, a macOS profile can be used on Ubuntu or a Windows profile on macOS **without compatibility issues**.
+  We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system. For example, a macOS profile works on Ubuntu or a Windows profile on macOS **without compatibility issues**.
 
-3. **Launching BotBrowser**:
-
-    BotBrowser can be launched in three ways:
+3. **Launching BotBrowser**: BotBrowser can be launched in three ways:
 
   - **CLI**:
     Pass your profile via the `--bot-profile` parameter:
 
     ```bash
-    chromium --no-sandbox --bot-profile="{path_of_}/chrome131_win11_x64.enc"
+    chromium --no-sandbox --bot-profile="{path_of_}/chrome132_win11_x64.enc"
     ```
 
   - **[Playwright](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
