@@ -23,17 +23,12 @@ export async function createDirectoryIfNotExists(path: string): Promise<void> {
 
 export async function getAppDataPath(subPath?: string): Promise<string> {
     const systemDataPath = await Neutralino.os.getPath('data');
-    const fullPath = [systemDataPath, AppName, subPath]
-        .filter(Boolean)
-        .join('/');
+    const fullPath = [systemDataPath, AppName, subPath].filter(Boolean).join('/');
     await createDirectoryIfNotExists(fullPath);
     return fullPath;
 }
 
-export async function compressFolder(
-    folderPath: string,
-    outputPath: string
-): Promise<void> {
+export async function compressFolder(folderPath: string, outputPath: string): Promise<void> {
     try {
         const osInfo = await Neutralino.computer.getOSInfo();
         const osType = osInfo.name;
@@ -42,19 +37,13 @@ export async function compressFolder(
         if (osType.includes('Linux') || osType.includes('Darwin')) {
             // Extract the parent directory and folder name
             const folderName = folderPath.split('/').pop();
-            const parentPath = folderPath.substring(
-                0,
-                folderPath.lastIndexOf('/')
-            );
+            const parentPath = folderPath.substring(0, folderPath.lastIndexOf('/'));
 
             // Change to the parent directory and zip the folder by its name
             command = `(cd "${parentPath}" && zip -r "${outputPath}" "${folderName}")`;
         } else if (osType.includes('Windows')) {
             // Use PowerShell on Windows
-            const parentPath = folderPath.substring(
-                0,
-                folderPath.lastIndexOf('\\')
-            );
+            const parentPath = folderPath.substring(0, folderPath.lastIndexOf('\\'));
             const folderName = folderPath.split('\\').pop();
             command = `powershell -Command "Set-Location -Path '${parentPath}'; Compress-Archive -Path '${folderName}\\*' -DestinationPath '${outputPath}'"`;
         } else {
@@ -68,10 +57,7 @@ export async function compressFolder(
     }
 }
 
-export async function decompressZip(
-    zipPath: string,
-    outputFolder: string
-): Promise<void> {
+export async function decompressZip(zipPath: string, outputFolder: string): Promise<void> {
     try {
         // Get the OS information
         const osInfo = await Neutralino.computer.getOSInfo();

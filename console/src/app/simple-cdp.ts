@@ -43,11 +43,7 @@ export class SimpleCDP {
         }
     }
 
-    async #sendCommandToTarget(
-        sessionId: string,
-        method: string,
-        params: object = {}
-    ): Promise<any> {
+    async #sendCommandToTarget(sessionId: string, method: string, params: object = {}): Promise<any> {
         return this.#sendCommand('Target.sendMessageToTarget', {
             sessionId,
             message: JSON.stringify({ id: ++this.#messageId, method, params }),
@@ -93,11 +89,7 @@ export class SimpleCDP {
         await this.#sendCommandToTarget(sessionId, 'Page.navigate', { url });
     }
 
-    public async scrollPage(
-        sessionId: string,
-        deltaX: number = 0,
-        deltaY: number = 100
-    ): Promise<void> {
+    public async scrollPage(sessionId: string, deltaX: number = 0, deltaY: number = 100): Promise<void> {
         await this.#sendCommandToTarget(sessionId, 'Input.dispatchMouseEvent', {
             type: 'mouseWheel',
             x: 0,

@@ -1,11 +1,6 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { CommonModule } from '@angular/common';
-import {
-    Component,
-    inject,
-    ViewChild,
-    type AfterViewInit,
-} from '@angular/core';
+import { Component, inject, ViewChild, type AfterViewInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -20,10 +15,7 @@ import { cloneDeep } from 'lodash-es';
 import { v4 as uuidv4 } from 'uuid';
 import { CloneBrowserProfileComponent } from './clone-browser-profile.component';
 import { AppName } from './const';
-import {
-    BrowserProfileStatus,
-    type BrowserProfile,
-} from './data/browser-profile';
+import { BrowserProfileStatus, type BrowserProfile } from './data/browser-profile';
 import { EditBrowserProfileComponent } from './edit-browser-profile.component';
 import { BrowserLauncherService } from './shared/browser-launcher.service';
 import { BrowserProfileService } from './shared/browser-profile.service';
@@ -59,15 +51,7 @@ export class AppComponent implements AfterViewInit {
     readonly #dialog = inject(MatDialog);
     readonly formatDateTime = formatDateTime;
     readonly BrowserProfileStatus = BrowserProfileStatus;
-    readonly displayedColumns = [
-        'select',
-        'name',
-        'group',
-        'status',
-        'lastUsedAt',
-        'updatedAt',
-        'createdAt',
-    ];
+    readonly displayedColumns = ['select', 'name', 'group', 'status', 'lastUsedAt', 'updatedAt', 'createdAt'];
     readonly dataSource = new MatTableDataSource<BrowserProfile>([]);
     readonly selection = new SelectionModel<BrowserProfile>(true, []);
 
@@ -120,9 +104,7 @@ export class AppComponent implements AfterViewInit {
                         newProfile.id = uuidv4();
                         newProfile.createdAt = Date.now();
                         newProfile.updatedAt = Date.now();
-                        return this.#browserProfileService.saveBrowserProfile(
-                            newProfile
-                        );
+                        return this.#browserProfileService.saveBrowserProfile(newProfile);
                     })
                 );
 
@@ -131,15 +113,11 @@ export class AppComponent implements AfterViewInit {
     }
 
     async exportProfile(browserProfile: BrowserProfile): Promise<void> {
-        const entry = await Neutralino.os.showSaveDialog(
-            'Export browser profile',
-            { filters: [{ name: 'Zip', extensions: ['zip'] }] }
-        );
+        const entry = await Neutralino.os.showSaveDialog('Export browser profile', {
+            filters: [{ name: 'Zip', extensions: ['zip'] }],
+        });
 
-        const browserProfilePath =
-            await this.#browserProfileService.getBrowserProfilePath(
-                browserProfile
-            );
+        const browserProfilePath = await this.#browserProfileService.getBrowserProfilePath(browserProfile);
         await compressFolder(browserProfilePath, entry);
     }
 
@@ -156,15 +134,13 @@ export class AppComponent implements AfterViewInit {
     }
 
     async importProfile(): Promise<void> {
-        const entry = await Neutralino.os.showOpenDialog(
-            'Import a browser profile',
-            { filters: [{ name: 'Zip', extensions: ['zip'] }] }
-        );
+        const entry = await Neutralino.os.showOpenDialog('Import a browser profile', {
+            filters: [{ name: 'Zip', extensions: ['zip'] }],
+        });
 
         if (!entry?.[0]) return;
 
-        const browserProfilePath =
-            await this.#browserProfileService.getBasePath();
+        const browserProfilePath = await this.#browserProfileService.getBasePath();
         await decompressZip(entry[0], browserProfilePath);
         await this.refreshProfiles();
     }
@@ -177,8 +153,7 @@ export class AppComponent implements AfterViewInit {
         this.#dialog
             .open(ConfirmDialogComponent, {
                 data: {
-                    message:
-                        'Are you sure you want to delete the selected profiles?',
+                    message: 'Are you sure you want to delete the selected profiles?',
                 },
             })
             .afterClosed()
@@ -203,25 +178,18 @@ export class AppComponent implements AfterViewInit {
             .subscribe(async (result: boolean) => {
                 if (!result) return;
 
-                await this.#browserProfileService.deleteBrowserProfiles([
-                    browserProfile.id,
-                ]);
+                await this.#browserProfileService.deleteBrowserProfiles([browserProfile.id]);
                 await this.refreshProfiles();
             });
     }
 
     async refreshProfiles(): Promise<void> {
-        const profiles =
-            await this.#browserProfileService.getAllBrowserProfiles();
-        const selectedIds = this.selection.selected.map(
-            (profile) => profile.id
-        );
+        const profiles = await this.#browserProfileService.getAllBrowserProfiles();
+        const selectedIds = this.selection.selected.map((profile) => profile.id);
         this.dataSource.data = profiles;
 
         this.selection.clear();
-        this.selection.select(
-            ...profiles.filter((profile) => selectedIds.includes(profile.id))
-        );
+        this.selection.select(...profiles.filter((profile) => selectedIds.includes(profile.id)));
     }
 
     async ngAfterViewInit(): Promise<void> {

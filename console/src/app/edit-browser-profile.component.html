@@ -7,12 +7,7 @@
                 <ng-template matStepLabel>Basic information</ng-template>
                 <mat-form-field>
                     <mat-label>Name</mat-label>
-                    <input
-                        matInput
-                        placeholder="Profile name"
-                        formControlName="profileName"
-                        required
-                    />
+                    <input matInput placeholder="Profile name" formControlName="profileName" required />
                     <mat-error
                         *ngIf="
                             basicInfoFormGroup.get('profileName')?.invalid &&
@@ -31,14 +26,8 @@
                         formControlName="groupName"
                         [matAutocomplete]="groupNameAuto"
                     />
-                    <mat-autocomplete
-                        autoActiveFirstOption
-                        #groupNameAuto="matAutocomplete"
-                    >
-                        @for (
-                            groupName of filteredGroupNames | async;
-                            track groupName
-                        ) {
+                    <mat-autocomplete autoActiveFirstOption #groupNameAuto="matAutocomplete">
+                        @for (groupName of filteredGroupNames | async; track groupName) {
                             <mat-option [value]="groupName">
                                 {{ groupName }}
                             </mat-option>
@@ -49,11 +38,7 @@
                 @if (true) {
                     <mat-form-field>
                         <mat-label>Description</mat-label>
-                        <textarea
-                            matInput
-                            formControlName="description"
-                            placeholder="Type a description"
-                        ></textarea>
+                        <textarea matInput formControlName="description" placeholder="Type a description"></textarea>
                     </mat-form-field>
                 }
 
@@ -66,28 +51,21 @@
         <!-- Import profile -->
         @if (true) {
             <mat-step [stepControl]="botProfileInfoGroup">
-                @if (
-                    botProfileBasicInfo &&
-                    !botProfileBasicInfo.isEncryptedProfile
-                ) {
+                @if (botProfileBasicInfo && !botProfileBasicInfo.isEncryptedProfile) {
                     <div>
                         <p>Version: {{ botProfileBasicInfo.version }}</p>
                         <p>User Agent: {{ botProfileBasicInfo.userAgent }}</p>
                     </div>
                 }
 
-                <mat-error *ngIf="!botProfileInfoGroup?.value?.content">
-                    Bot Profile is required.
-                </mat-error>
+                <mat-error *ngIf="!botProfileInfoGroup?.value?.content"> Bot Profile is required. </mat-error>
 
                 <form [formGroup]="botProfileInfoGroup">
                     <ng-template matStepLabel>
                         {{ isEdit ? 'Replace Bot profile' : 'Bot profile' }}
                     </ng-template>
                     <mat-label>Select a bot profile:</mat-label>
-                    <button mat-button (click)="chooseFile()">
-                        Choose File
-                    </button>
+                    <button mat-button (click)="chooseFile()">Choose File</button>
                     <div>
                         <button mat-button matStepperNext>Next</button>
                     </div>
@@ -101,29 +79,17 @@
                 <ng-template matStepLabel>Proxy information</ng-template>
                 <mat-form-field>
                     <mat-label>Proxy</mat-label>
-                    <input
-                        matInput
-                        placeholder="host:port"
-                        formControlName="proxyHost"
-                    />
+                    <input matInput placeholder="host:port" formControlName="proxyHost" />
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Username</mat-label>
-                    <input
-                        matInput
-                        placeholder="Proxy user name"
-                        formControlName="username"
-                    />
+                    <input matInput placeholder="Proxy user name" formControlName="username" />
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Password</mat-label>
-                    <input
-                        matInput
-                        placeholder="Proxy password"
-                        formControlName="password"
-                    />
+                    <input matInput placeholder="Proxy password" formControlName="password" />
                 </mat-form-field>
                 <div>
                     <button mat-button matStepperNext>Next</button>
@@ -145,14 +111,8 @@
                             formControlName="locale"
                             [matAutocomplete]="localeAuto"
                         />
-                        <mat-autocomplete
-                            autoActiveFirstOption
-                            #localeAuto="matAutocomplete"
-                        >
-                            @for (
-                                option of filteredLocales | async;
-                                track option
-                            ) {
+                        <mat-autocomplete autoActiveFirstOption #localeAuto="matAutocomplete">
+                            @for (option of filteredLocales | async; track option) {
                                 <mat-option [value]="option">
                                     {{ option }}
                                 </mat-option>
@@ -160,10 +120,7 @@
                         </mat-autocomplete>
                     </mat-form-field>
 
-                    @if (
-                        botProfileBasicInfo &&
-                        !botProfileBasicInfo.isEncryptedProfile
-                    ) {
+                    @if (botProfileBasicInfo && !botProfileBasicInfo.isEncryptedProfile) {
                         <mat-form-field>
                             <mat-label>Timezone</mat-label>
                             <input
@@ -172,14 +129,8 @@
                                 formControlName="timezone"
                                 [matAutocomplete]="timezoneAuto"
                             />
-                            <mat-autocomplete
-                                autoActiveFirstOption
-                                #timezoneAuto="matAutocomplete"
-                            >
-                                @for (
-                                    option of filteredTimezones | async;
-                                    track option
-                                ) {
+                            <mat-autocomplete autoActiveFirstOption #timezoneAuto="matAutocomplete">
+                                @for (option of filteredTimezones | async; track option) {
                                     <mat-option [value]="option">
                                         {{ option }}
                                     </mat-option>
@@ -188,69 +139,42 @@
                         </mat-form-field>
 
                         <p>
-                            <mat-checkbox
-                                formControlName="disableConsoleMessage"
-                            >
-                                Prevent CDP detection
-                            </mat-checkbox>
+                            <mat-checkbox formControlName="disableConsoleMessage"> Prevent CDP detection </mat-checkbox>
                         </p>
 
                         <p>
-                            <mat-checkbox formControlName="noisesCanvas2d">
-                                Add noise to 2D canvas
-                            </mat-checkbox>
+                            <mat-checkbox formControlName="noisesCanvas2d"> Add noise to 2D canvas </mat-checkbox>
                         </p>
 
                         <p>
-                            <mat-checkbox formControlName="noisesCanvasWebgl">
-                                Add noise to WebGL canvas
-                            </mat-checkbox>
+                            <mat-checkbox formControlName="noisesCanvasWebgl"> Add noise to WebGL canvas </mat-checkbox>
                         </p>
 
                         <p>
-                            <mat-checkbox
-                                formControlName="noisesClientRectsFactor"
-                            >
+                            <mat-checkbox formControlName="noisesClientRectsFactor">
                                 Add noise to DOM rects
                             </mat-checkbox>
                         </p>
 
                         <p>
-                            <mat-checkbox
-                                formControlName="noisesTextMetricsFactor"
-                            >
+                            <mat-checkbox formControlName="noisesTextMetricsFactor">
                                 Add noise to text metrics
                             </mat-checkbox>
                         </p>
 
                         <p>
-                            <mat-checkbox formControlName="noisesAudio">
-                                Add noise to audio
-                            </mat-checkbox>
+                            <mat-checkbox formControlName="noisesAudio"> Add noise to audio </mat-checkbox>
                         </p>
                     }
 
                     <mat-form-field>
-                        <mat-label
-                            >Path of the BotBrowser executable
-                            (optional)</mat-label
-                        >
-                        <input
-                            matInput
-                            formControlName="botBrowserBinaryPath"
-                        />
+                        <mat-label>Path of the BotBrowser executable (optional)</mat-label>
+                        <input matInput formControlName="botBrowserBinaryPath" />
 
                         <mat-error
-                            *ngIf="
-                                variablesInfoGroup.get('botBrowserBinaryPath')
-                                    ?.errors?.invalidBotBrowserPath
-                            "
+                            *ngIf="variablesInfoGroup.get('botBrowserBinaryPath')?.errors?.invalidBotBrowserPath"
                         >
-                            {{
-                                variablesInfoGroup.getError(
-                                    'invalidBotBrowserPath'
-                                )
-                            }}
+                            {{ variablesInfoGroup.getError('invalidBotBrowserPath') }}
                         </mat-error>
                     </mat-form-field>
                 </form>
@@ -260,12 +184,7 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button
-        mat-button
-        [mat-dialog-close]="true"
-        cdkFocusInitial
-        (click)="onConfirmClick()"
-    >
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onConfirmClick()">
         {{ isEdit ? 'Save' : 'Create' }}
     </button>
 </mat-dialog-actions>

@@ -8,12 +8,7 @@
     </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button
-        mat-raised-button
-        color="primary"
-        (click)="onWarmup()"
-        [disabled]="!warmupForm.get('urls')?.value"
-    >
+    <button mat-raised-button color="primary" (click)="onWarmup()" [disabled]="!warmupForm.get('urls')?.value">
         Warm up
     </button>
     <button mat-raised-button color="accent" (click)="onSave()">Save</button>

@@ -45,9 +45,7 @@ export const BrowserProfileStatusText = {
     [BrowserProfileStatus.StopFailed]: 'Stop Failed',
 };
 
-export function getBrowserProfileStatusText(
-    status: BrowserProfileStatus
-): string {
+export function getBrowserProfileStatusText(status: BrowserProfileStatus): string {
     return BrowserProfileStatusText[status];
 }
 

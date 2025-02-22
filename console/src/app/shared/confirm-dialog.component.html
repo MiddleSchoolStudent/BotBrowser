@@ -7,12 +7,7 @@
 <mat-dialog-content> {{ data.message }} </mat-dialog-content>
 <mat-dialog-actions>
     @if (data.defaultCancel) {
-        <button
-            mat-button
-            mat-dialog-close
-            cdkFocusInitial
-            (click)="onCancel()"
-        >
+        <button mat-button mat-dialog-close cdkFocusInitial (click)="onCancel()">
             {{ data.cancelButtonText || 'Cancel' }}
         </button>
         <button mat-button mat-dialog-close (click)="onOk()">

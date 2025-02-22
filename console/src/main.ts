@@ -6,6 +6,4 @@ import * as Neutralino from '@neutralinojs/lib';
 Neutralino.init();
 Neutralino.events.on('windowClose', () => Neutralino.app.exit());
 
-bootstrapApplication(AppComponent, appConfig).catch((err) =>
-    console.error(err)
-);
+bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));

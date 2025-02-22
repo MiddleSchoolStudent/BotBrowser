@@ -5,11 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import * as Neutralino from '@neutralinojs/lib';
 import { cloneDeep } from 'lodash-es';
 import { AppName } from '../const';
-import {
-    BrowserProfileStatus,
-    getBrowserProfileStatusText,
-    type BrowserProfile,
-} from '../data/browser-profile';
+import { BrowserProfileStatus, getBrowserProfileStatusText, type BrowserProfile } from '../data/browser-profile';
 import { SimpleCDP } from '../simple-cdp';
 import { createDirectoryIfNotExists, sleep } from '../utils';
 import { AlertDialogComponent } from './alert-dialog.component';
@@ -42,17 +38,12 @@ export class BrowserLauncherService {
                         const wsURL = match?.[0];
 
                         if (wsURL) {
-                            const runningInfo = Array.from(
-                                this.#runningStatuses.values()
-                            ).find(
-                                (info) =>
-                                    info.spawnProcessInfo?.id === evt.detail.id
+                            const runningInfo = Array.from(this.#runningStatuses.values()).find(
+                                (info) => info.spawnProcessInfo?.id === evt.detail.id
                             );
 
                             if (!runningInfo) {
-                                throw new Error(
-                                    `No running info found for id: ${evt.detail.id}`
-                                );
+                                throw new Error(`No running info found for id: ${evt.detail.id}`);
                             }
 
                             runningInfo.resolver?.resolve(wsURL);
@@ -60,19 +51,13 @@ export class BrowserLauncherService {
                     }
                     break;
                 case 'exit':
-                    console.log(
-                        `process terminated with exit code: ${evt.detail.data} id: ${evt.detail.id}`
-                    );
+                    console.log(`process terminated with exit code: ${evt.detail.data} id: ${evt.detail.id}`);
 
-                    const runningInfo = Array.from(
-                        this.#runningStatuses.values()
-                    ).find(
+                    const runningInfo = Array.from(this.#runningStatuses.values()).find(
                         (info) => info.spawnProcessInfo?.id === evt.detail.id
                     );
                     if (!runningInfo) {
-                        throw new Error(
-                            `No running info found for id: ${evt.detail.id}`
-                        );
+                        throw new Error(`No running info found for id: ${evt.detail.id}`);
                     }
 
                     runningInfo.status = BrowserProfileStatus.Idle;
@@ -96,39 +81,26 @@ export class BrowserLauncherService {
         return result;
     }
 
-    getRunningStatus(
-        browserProfile: string | BrowserProfile
-    ): BrowserProfileStatus {
-        const id =
-            typeof browserProfile === 'string'
-                ? browserProfile
-                : browserProfile.id;
-        return (
-            this.#runningStatuses.get(id)?.status ?? BrowserProfileStatus.Idle
-        );
+    getRunningStatus(browserProfile: string | BrowserProfile): BrowserProfileStatus {
+        const id = typeof browserProfile === 'string' ? browserProfile : browserProfile.id;
+        return this.#runningStatuses.get(id)?.status ?? BrowserProfileStatus.Idle;
     }
 
     getRunningStatusText(browserProfile: string | BrowserProfile): string {
-        return getBrowserProfileStatusText(
-            this.getRunningStatus(browserProfile)
-        );
+        return getBrowserProfileStatusText(this.getRunningStatus(browserProfile));
     }
 
     async run(browserProfile: BrowserProfile, warmup = false): Promise<void> {
         const osInfo = await Neutralino.computer.getOSInfo();
         const osType = osInfo.name;
 
-        if (
-            this.getRunningStatus(browserProfile) !== BrowserProfileStatus.Idle
-        ) {
+        if (this.getRunningStatus(browserProfile) !== BrowserProfileStatus.Idle) {
             throw new Error('The profile is already running');
         }
 
         let botProfileObject: any | undefined;
         try {
-            botProfileObject = JSON.parse(
-                browserProfile.botProfileInfo.content ?? ''
-            );
+            botProfileObject = JSON.parse(browserProfile.botProfileInfo.content ?? '');
         } catch (err) {
             console.error('Error parsing bot profile content: ', err);
         }
@@ -165,8 +137,7 @@ export class BrowserLauncherService {
         if (!browserProfile.variablesInfo.noisesAudio) {
             delete variables.audio;
         }
-        variables.disableConsoleMessage =
-            browserProfile.variablesInfo.disableConsoleMessage ?? false;
+        variables.disableConsoleMessage = browserProfile.variablesInfo.disableConsoleMessage ?? false;
 
         if (browserProfile.proxyInfo?.proxyHost) {
             const proxyConfig = {
@@ -190,19 +161,13 @@ export class BrowserLauncherService {
         const botProfilesBasePath = `${sysTempPath}/${AppName}/bot-profiles`;
         await createDirectoryIfNotExists(botProfilesBasePath);
         const botProfilePath = `${botProfilesBasePath}/${browserProfile.id}.json`;
-        await Neutralino.filesystem.writeFile(
-            botProfilePath,
-            botProfileContent
-        );
+        await Neutralino.filesystem.writeFile(botProfilePath, botProfileContent);
 
         // Save browser profile
         browserProfile.lastUsedAt = Date.now();
         await this.#browserProfileService.saveBrowserProfile(browserProfile);
 
-        const browserProfilePath =
-            await this.#browserProfileService.getBrowserProfilePath(
-                browserProfile
-            );
+        const browserProfilePath = await this.#browserProfileService.getBrowserProfilePath(browserProfile);
         const userDataDirPath = `${browserProfilePath}/user-data-dir`;
         const diskCacheDirPath = `${sysTempPath}/${AppName}/disk-cache-dir/${browserProfile.id}`;
 
@@ -275,18 +240,13 @@ export class BrowserLauncherService {
             });
         }
 
-        const proc = await Neutralino.os.spawnProcess(
-            `${execPath} ${args.join(' ')} about:blank`
-        );
+        const proc = await Neutralino.os.spawnProcess(`${execPath} ${args.join(' ')} about:blank`);
         runningInfo.spawnProcessInfo = proc;
 
         this.#runningStatuses.set(browserProfile.id, runningInfo);
 
         if (warmup) {
-            console.log(
-                'Waiting for WS URL, browserProfile.id: ',
-                browserProfile.id
-            );
+            console.log('Waiting for WS URL, browserProfile.id: ', browserProfile.id);
             const wsURL = await runningInfo.resolver.promise;
             console.log('We got WS URL: ', wsURL);
 
@@ -296,9 +256,7 @@ export class BrowserLauncherService {
                 const targets = await simpleCDP.getTargets();
                 console.log('Targets: ', targets);
                 const pageTarget = targets.find((t) => t.type === 'page');
-                const sessionId = await simpleCDP.attachToTarget(
-                    pageTarget.targetId
-                );
+                const sessionId = await simpleCDP.attachToTarget(pageTarget.targetId);
                 console.log('Session ID: ', sessionId);
 
                 for (const warmupUrl of warmupUrls) {
@@ -313,10 +271,7 @@ export class BrowserLauncherService {
     }
 
     async stop(browserProfile: BrowserProfile): Promise<void> {
-        if (
-            this.getRunningStatus(browserProfile) !==
-            BrowserProfileStatus.Running
-        ) {
+        if (this.getRunningStatus(browserProfile) !== BrowserProfileStatus.Running) {
             throw new Error('The profile is not running');
         }
 
@@ -326,9 +281,6 @@ export class BrowserLauncherService {
         }
 
         runningInfo.status = BrowserProfileStatus.Stopping;
-        await Neutralino.os.updateSpawnedProcess(
-            runningInfo.spawnProcessInfo.id,
-            'exit'
-        );
+        await Neutralino.os.updateSpawnedProcess(runningInfo.spawnProcessInfo.id, 'exit');
     }
 }

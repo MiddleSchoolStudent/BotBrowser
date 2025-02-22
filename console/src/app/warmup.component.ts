@@ -1,16 +1,6 @@
 import { Component, inject } from '@angular/core';
-import {
-    FormBuilder,
-    FormGroup,
-    Validators,
-    ReactiveFormsModule,
-} from '@angular/forms';
-import {
-    MatDialogRef,
-    MatDialogModule,
-    MatDialog,
-    MAT_DIALOG_DATA,
-} from '@angular/material/dialog';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogRef, MatDialogModule, MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -23,14 +13,7 @@ import { BrowserProfileService } from './shared/browser-profile.service';
 @Component({
     selector: 'app-warmup-list',
     standalone: true,
-    imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-    ],
+    imports: [CommonModule, ReactiveFormsModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule],
     templateUrl: './warmup.component.html',
     styleUrls: ['./warmup.component.scss'],
 })

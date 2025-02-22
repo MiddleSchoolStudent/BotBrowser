@@ -12,12 +12,7 @@ import {
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {
-    MAT_DIALOG_DATA,
-    MatDialog,
-    MatDialogModule,
-    MatDialogRef,
-} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -25,10 +20,7 @@ import * as Neutralino from '@neutralinojs/lib';
 import { compact, shuffle } from 'lodash-es';
 import { map, startWith, type Observable } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
-import {
-    tryParseBotProfile,
-    type BotProfileBasicInfo,
-} from './data/bot-profile';
+import { tryParseBotProfile, type BotProfileBasicInfo } from './data/bot-profile';
 import {
     BrowserProfileStatus,
     type BasicInfo,
@@ -49,9 +41,7 @@ import { ConfirmDialogComponent } from './shared/confirm-dialog.component';
  * @param osType Operating system type: 'Darwin' | 'Windows' | 'Linux'
  * @returns ValidatorFn
  */
-export function botBrowserPathValidator(
-    osType: 'Darwin' | 'Windows' | 'Linux'
-): ValidatorFn {
+export function botBrowserPathValidator(osType: 'Darwin' | 'Windows' | 'Linux'): ValidatorFn {
     return (group: AbstractControl): ValidationErrors | null => {
         const botBrowserBinaryPathControl = group.get('botBrowserBinaryPath');
 
@@ -70,8 +60,7 @@ export function botBrowserPathValidator(
             case 'Darwin': // macOS
                 if (!botBrowserBinaryPath.endsWith('.app')) {
                     error = {
-                        invalidBotBrowserPath:
-                            'On macOS, path must end with .app',
+                        invalidBotBrowserPath: 'On macOS, path must end with .app',
                     };
                 }
                 break;
@@ -79,8 +68,7 @@ export function botBrowserPathValidator(
             case 'Windows': // Windows
                 if (!botBrowserBinaryPath.endsWith('.exe')) {
                     error = {
-                        invalidBotBrowserPath:
-                            'On Windows, path must end with .exe',
+                        invalidBotBrowserPath: 'On Windows, path must end with .exe',
                     };
                 }
                 break;
@@ -88,8 +76,7 @@ export function botBrowserPathValidator(
             case 'Linux': // Linux
                 if (botBrowserBinaryPath !== 'chromium') {
                     error = {
-                        invalidBotBrowserPath:
-                            'On Linux, path must be "chromium"',
+                        invalidBotBrowserPath: 'On Linux, path must be "chromium"',
                     };
                 }
                 break;
@@ -150,9 +137,7 @@ export class EditBrowserProfileComponent implements OnInit {
         startWith(this.basicInfoFormGroup.value),
         map((value) => {
             const filterValue = value.groupName?.toLowerCase();
-            return this.#groupNames.filter((option) =>
-                option.toLowerCase().includes(filterValue || '')
-            );
+            return this.#groupNames.filter((option) => option.toLowerCase().includes(filterValue || ''));
         })
     );
 
@@ -177,37 +162,25 @@ export class EditBrowserProfileComponent implements OnInit {
     botProfileBasicInfo: BotProfileBasicInfo | null = null;
 
     constructor() {
-        this.#localeOptions = Array.from(
-            new Set(
-                ((localesJson as any).default as any[]).map((e) => e.locale)
-            )
-        );
+        this.#localeOptions = Array.from(new Set(((localesJson as any).default as any[]).map((e) => e.locale)));
 
-        this.#timezoneOptions = Array.from(
-            new Set((timezonesJson as any).default as string[])
-        );
+        this.#timezoneOptions = Array.from(new Set((timezonesJson as any).default as string[]));
 
         if (this.#injectedData) {
             this.isEdit = true;
 
-            const status = this.#browserLauncherService.getRunningStatus(
-                this.#injectedData
-            );
+            const status = this.#browserLauncherService.getRunningStatus(this.#injectedData);
             if (status !== BrowserProfileStatus.Idle) {
                 throw new Error('Cannot edit a running profile');
             }
 
             if (this.#injectedData.botProfileInfo.content) {
-                this.botProfileBasicInfo = tryParseBotProfile(
-                    this.#injectedData.botProfileInfo.content
-                );
+                this.botProfileBasicInfo = tryParseBotProfile(this.#injectedData.botProfileInfo.content);
             }
         }
 
         this.#browserProfileService.getAllBrowserProfiles().then((profiles) => {
-            this.#groupNames = compact(
-                profiles.map((profile) => profile.basicInfo.groupName)
-            );
+            this.#groupNames = compact(profiles.map((profile) => profile.basicInfo.groupName));
         });
     }
 
@@ -226,56 +199,34 @@ export class EditBrowserProfileComponent implements OnInit {
         // Initialize the FormGroup with default values and the custom validator
         this.variablesInfoGroup = this.#formBuilder.group<VariablesInfo>(
             {
-                botBrowserBinaryPath:
-                    this.#injectedData?.variablesInfo.botBrowserBinaryPath,
+                botBrowserBinaryPath: this.#injectedData?.variablesInfo.botBrowserBinaryPath,
                 locale: this.#injectedData?.variablesInfo.locale ?? 'en-US',
-                noisesCanvas2d:
-                    this.#injectedData?.variablesInfo.noisesCanvas2d ?? true,
-                noisesClientRectsFactor:
-                    this.#injectedData?.variablesInfo.noisesClientRectsFactor ??
-                    true,
-                noisesCanvasWebgl:
-                    this.#injectedData?.variablesInfo.noisesCanvasWebgl ?? true,
-                noisesTextMetricsFactor:
-                    this.#injectedData?.variablesInfo.noisesTextMetricsFactor ??
-                    true,
-                noisesAudio:
-                    this.#injectedData?.variablesInfo.noisesAudio ?? true,
-                timezone:
-                    this.#injectedData?.variablesInfo.timezone ??
-                    'America/New_York',
-                disableConsoleMessage:
-                    this.#injectedData?.variablesInfo.disableConsoleMessage ??
-                    true,
+                noisesCanvas2d: this.#injectedData?.variablesInfo.noisesCanvas2d ?? true,
+                noisesClientRectsFactor: this.#injectedData?.variablesInfo.noisesClientRectsFactor ?? true,
+                noisesCanvasWebgl: this.#injectedData?.variablesInfo.noisesCanvasWebgl ?? true,
+                noisesTextMetricsFactor: this.#injectedData?.variablesInfo.noisesTextMetricsFactor ?? true,
+                noisesAudio: this.#injectedData?.variablesInfo.noisesAudio ?? true,
+                timezone: this.#injectedData?.variablesInfo.timezone ?? 'America/New_York',
+                disableConsoleMessage: this.#injectedData?.variablesInfo.disableConsoleMessage ?? true,
             },
             { validators: botBrowserPathValidator(osType) }
         );
 
-        this.filteredLocales = this.variablesInfoGroup
-            .get('locale')
-            ?.valueChanges.pipe(
-                startWith(this.variablesInfoGroup.get<string>('locale')?.value),
-                map((value) => {
-                    const filterValue = value.toLowerCase();
-                    return this.#localeOptions.filter((option) =>
-                        option.toLowerCase().includes(filterValue)
-                    );
-                })
-            ) as Observable<string[]>;
+        this.filteredLocales = this.variablesInfoGroup.get('locale')?.valueChanges.pipe(
+            startWith(this.variablesInfoGroup.get<string>('locale')?.value),
+            map((value) => {
+                const filterValue = value.toLowerCase();
+                return this.#localeOptions.filter((option) => option.toLowerCase().includes(filterValue));
+            })
+        ) as Observable<string[]>;
 
-        this.filteredTimezones = this.variablesInfoGroup
-            .get('timezone')
-            ?.valueChanges.pipe(
-                startWith(
-                    this.variablesInfoGroup.get<string>('timezone')?.value
-                ),
-                map((value) => {
-                    const filterValue = value.toLowerCase();
-                    return this.#timezoneOptions.filter((option) =>
-                        option.toLowerCase().includes(filterValue)
-                    );
-                })
-            ) as Observable<string[]>;
+        this.filteredTimezones = this.variablesInfoGroup.get('timezone')?.valueChanges.pipe(
+            startWith(this.variablesInfoGroup.get<string>('timezone')?.value),
+            map((value) => {
+                const filterValue = value.toLowerCase();
+                return this.#timezoneOptions.filter((option) => option.toLowerCase().includes(filterValue));
+            })
+        ) as Observable<string[]>;
     }
 
     async chooseFile(): Promise<void> {
@@ -340,12 +291,9 @@ export class EditBrowserProfileComponent implements OnInit {
             variablesInfo: this.variablesInfoGroup.value,
             variableValues:
                 this.#injectedData?.variableValues ||
-                (this.botProfileBasicInfo &&
-                !this.botProfileBasicInfo.isEncryptedProfile
+                (this.botProfileBasicInfo && !this.botProfileBasicInfo.isEncryptedProfile
                     ? {
-                          storageQuotaInBytes:
-                              590000000000 +
-                              Math.floor(Math.random() * 9000000000),
+                          storageQuotaInBytes: 590000000000 + Math.floor(Math.random() * 9000000000),
                           noises: {
                               clientRectsFactor: 1.0 + Math.random() * 0.004,
                               textMetricsFactor: 1.0 + Math.random() * 0.004,
