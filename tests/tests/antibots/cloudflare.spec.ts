@@ -18,13 +18,9 @@ test('test Cloudflare turnstile', async ({ page }) => {
     });
 
     // click "Verify you are human"
-    await frame
-        .waitForSelector('text=Verify you are human')
-        .then((el) => el.click());
+    await frame.waitForSelector('text=Verify you are human').then((el) => el.click());
 
-    expect(
-        await frame.waitForSelector('span#success-text >> text=Success!'),
-    ).toBeTruthy();
+    expect(await frame.waitForSelector('span#success-text >> text=Success!')).toBeTruthy();
 });
 
 test('test Cloudflare challenge', async ({ page }) => {
@@ -38,15 +34,11 @@ test('test Cloudflare challenge', async ({ page }) => {
 
     // click "Verify you are human"
     await Promise.race([
-        page
-            .waitForSelector('text=Verify you are human')
-            .then((el) => el.click()),
+        page.waitForSelector('text=Verify you are human').then((el) => el.click()),
         page.waitForSelector('text=Captcha is passed successfully!'),
     ]);
 
-    expect(
-        await page.waitForSelector('text=Captcha is passed successfully!'),
-    ).toBeTruthy();
+    expect(await page.waitForSelector('text=Captcha is passed successfully!')).toBeTruthy();
 });
 
 test('test taxslayer', async ({ page }) => {
@@ -64,17 +56,11 @@ test('test taxslayer', async ({ page }) => {
             .catch(() => {});
     });
 
-    await page
-        .locator('input[name="Username"]')
-        .fill(Math.random().toString(36).substring(2));
-    await page
-        .locator('input[name="Password"]')
-        .fill(Math.random().toString(36).substring(2));
+    await page.locator('input[name="Username"]').fill(Math.random().toString(36).substring(2));
+    await page.locator('input[name="Password"]').fill(Math.random().toString(36).substring(2));
 
     await sleep(8000);
     await page.locator('button#login').click();
 
-    expect(
-        await page.waitForSelector('text=Invalid username or password'),
-    ).toBeTruthy();
+    expect(await page.waitForSelector('text=Invalid username or password')).toBeTruthy();
 });

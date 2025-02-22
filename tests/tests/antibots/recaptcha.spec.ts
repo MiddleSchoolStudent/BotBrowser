@@ -9,27 +9,19 @@ test('test reCAPTCHA v2 on 2captcha', async ({ page }) => {
         url: 'https://www.google.com/recaptcha/api2/anchor',
     });
 
-    await frame
-        .waitForSelector("text=I'm not a robot")
-        .then((el) => el.click());
+    await frame.waitForSelector("text=I'm not a robot").then((el) => el.click());
 
-    expect(
-        await page.waitForFunction(() => Boolean(grecaptcha.getResponse())),
-    ).toBeTruthy();
+    expect(await page.waitForFunction(() => Boolean(grecaptcha.getResponse()))).toBeTruthy();
 });
 
 test('test reCAPTCHA v3 on antcpt', async ({ page }) => {
     test.setTimeout(120_000);
 
-    await page
-        .goto('https://antcpt.com/score_detector/', { timeout: 60_000 })
-        .catch(() => {});
+    await page.goto('https://antcpt.com/score_detector/', { timeout: 60_000 }).catch(() => {});
 
     let score: number = 0;
     for (let n = 0; n < 10; n++) {
-        const yourScoreText = await page
-            .locator('text=Your score is:')
-            .innerText();
+        const yourScoreText = await page.locator('text=Your score is:').innerText();
         score = parseFloat(yourScoreText.match(/(0\.\d)/)![0]!);
 
         if (score < 0.5) {

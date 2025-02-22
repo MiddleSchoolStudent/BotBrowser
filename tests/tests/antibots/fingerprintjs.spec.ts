@@ -6,6 +6,6 @@ test('test fingerprintjs bot detection', async ({ page }) => {
     expect(
         await page.waitForSelector('h2 >> text=You are not a bot', {
             timeout: 20_000,
-        }),
+        })
     ).toBeTruthy();
 });

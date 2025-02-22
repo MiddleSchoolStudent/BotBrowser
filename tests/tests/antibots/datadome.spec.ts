@@ -5,7 +5,7 @@ test('test shutterstock.com', async ({ page }) => {
     await page.goto('https://www.shutterstock.com/search');
 
     const apiResponsePromise = page.waitForResponse((response) =>
-        response.url().endsWith('/search/nature.json?term=nature'),
+        response.url().endsWith('/search/nature.json?term=nature')
     );
 
     await page.locator('input#search-bar').fill('nature');
@@ -15,8 +15,7 @@ test('test shutterstock.com', async ({ page }) => {
     expect(apiResponse.status()).toBe(200);
     const apiResponseJson = await apiResponse.json();
     expect(
-        apiResponseJson.botProps.isGoodBot === false &&
-            apiResponseJson.botProps.isSuspectedBadBot === false,
+        apiResponseJson.botProps.isGoodBot === false && apiResponseJson.botProps.isSuspectedBadBot === false
     ).toBeTruthy();
 
     await sleep(5000);

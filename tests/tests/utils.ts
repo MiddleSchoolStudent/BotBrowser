@@ -4,9 +4,7 @@ export function sleep(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function waitForFrame(
-    options: { page: Page; url: string } | { page: Page; title: string },
-) {
+export async function waitForFrame(options: { page: Page; url: string } | { page: Page; title: string }) {
     let frame: Frame | undefined;
     while (!frame) {
         await sleep(500);
@@ -50,10 +48,7 @@ export function clickLocatorWithMouse(page: Page | Frame, locator: string) {
             console.log('locator', locator, box);
 
             if (box) {
-                await actualPage.mouse.move(
-                    box.x + box.width / 2,
-                    box.y + box.height / 2,
-                );
+                await actualPage.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
                 await actualPage.mouse.down();
                 await sleep(200);
                 await actualPage.mouse.up();

@@ -26,15 +26,10 @@ test('is devtools open', async ({ page }) => {
 });
 
 test('PdfOopif feature turned on', async ({ page }) => {
-    await page.goto(
-        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
-    );
+    await page.goto('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf');
 
     const embededPdf = await page.evaluate(() => {
-        return (
-            document.querySelector('body embed')?.getAttribute('type') ===
-            'application/pdf'
-        );
+        return document.querySelector('body embed')?.getAttribute('type') === 'application/pdf';
     });
 
     expect(embededPdf).toBe(true);

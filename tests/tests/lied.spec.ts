@@ -1,8 +1,6 @@
 import { test, expect } from './global-setup';
 
-test('ensure iframe content window width differs from window inner width', async ({
-    page,
-}) => {
+test('ensure iframe content window width differs from window inner width', async ({ page }) => {
     await page.goto('about:blank');
 
     // Inspired by Kasada
@@ -96,22 +94,12 @@ test('canvas rendering consistency', async ({ page }) => {
 
                     // Draw the first image
                     ctx.drawImage(img1, 0, 0);
-                    const data1 = ctx.getImageData(
-                        0,
-                        0,
-                        canvas.width,
-                        canvas.height,
-                    );
+                    const data1 = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
                     // Clear and draw the second image
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
                     ctx.drawImage(img2, 0, 0);
-                    const data2 = ctx.getImageData(
-                        0,
-                        0,
-                        canvas.width,
-                        canvas.height,
-                    );
+                    const data2 = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
                     // Compare pixel data
                     if (data1.data.length !== data2.data.length) resolve(false);
@@ -126,16 +114,14 @@ test('canvas rendering consistency', async ({ page }) => {
                 };
             });
         },
-        [mainThreadCanvasData, workerCanvasData],
+        [mainThreadCanvasData, workerCanvasData]
     );
 
     // Expect the canvases to match
     await expect(isEqual).toBe(true);
 });
 
-test('hardware concurrency comparison between window and sharedworker', async ({
-    page,
-}) => {
+test('hardware concurrency comparison between window and sharedworker', async ({ page }) => {
     await page.goto('https://google.com');
 
     const concurrencyResult = await page.evaluate(() => {
@@ -203,14 +189,10 @@ test('hardware concurrency comparison between window and sharedworker', async ({
     }
 
     // Assert hardwareConcurrency match
-    expect(concurrencyResult.windowConcurrency).toBe(
-        concurrencyResult.swConcurrency,
-    );
+    expect(concurrencyResult.windowConcurrency).toBe(concurrencyResult.swConcurrency);
 });
 
-test('results of the measureText empty string should be 0', async ({
-    page,
-}) => {
+test('results of the measureText empty string should be 0', async ({ page }) => {
     await page.goto('about:blank');
 
     const result = await page.evaluate(() => {
@@ -230,9 +212,7 @@ test('results of the measureText empty string should be 0', async ({
                     actualBoundingBoxRight,
                     fontBoundingBoxAscent,
                     fontBoundingBoxDescent,
-                ].find((item) =>
-                    ((_0xfe5247) => _0xfe5247 % 1 != 0)(item || 0),
-                );
+                ].find((item) => ((_0xfe5247) => _0xfe5247 % 1 != 0)(item || 0));
             return result;
         };
 
@@ -245,9 +225,7 @@ test('results of the measureText empty string should be 0', async ({
 });
 
 test('detect headless userAgent', async ({ page }) => {
-    const userAgent = (
-        await page.evaluate(() => navigator.userAgent)
-    ).toLowerCase();
+    const userAgent = (await page.evaluate(() => navigator.userAgent)).toLowerCase();
 
     expect(
         userAgent.indexOf('slimerjs') !== -1 ||
@@ -255,7 +233,7 @@ test('detect headless userAgent', async ({ page }) => {
             userAgent.indexOf('phantomjs') !== -1 ||
             userAgent.indexOf('headless') !== -1 ||
             userAgent.indexOf('crawl') !== -1 ||
-            userAgent.indexOf('bot') !== -1,
+            userAgent.indexOf('bot') !== -1
     ).toBe(false);
 });
 
