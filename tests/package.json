@@ -9,11 +9,11 @@
     "author": "",
     "description": "",
     "devDependencies": {
-        "@playwright/test": "^1.49.1",
-        "@types/node": "^22.10.1"
+        "@playwright/test": "^1.50.1",
+        "@types/node": "^22.13.5"
     },
     "dependencies": {
         "dotenv": "^16.4.7",
-        "prettier": "^3.4.2"
+        "prettier": "^3.5.2"
     }
 }
