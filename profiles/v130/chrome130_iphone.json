@@ -1,36 +1,5 @@
 {
     "profileVersion": "1.1.2",
-    "variables": {
-        "storageQuotaInBytes": 596797550999,
-        "newPageRandomHistory": false,
-        "keepPagesActive": false,
-        "disableConsoleMessage": true,
-        "noises": {
-            "clientRectsFactor": 1.001,
-            "textMetricsFactor": 1.001,
-            "canvas2d": [
-                10,
-                0,
-                4,
-                10,
-                10
-            ],
-            "canvasWebgl": [
-                10,
-                7,
-                12,
-                13,
-                1
-            ],
-            "audio": [
-                0.01,
-                0.03,
-                0.01,
-                0.04,
-                0.02
-            ]
-        }
-    },
     "fingerprints": {
         "browser": {
             "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/130.0.6723.90 Mobile/15E148 Safari/604.1",
