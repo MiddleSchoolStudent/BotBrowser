@@ -5,10 +5,37 @@
 
 ---
 
+## [2025-02-23]
+
+### Added
+- **GPU Simulation Toggle for Headless Devices**
+  - Introduced a new **toggle** that determines whether to simulate **GPU** based on the presence of a graphical interface, preventing failures on devices without GPU support.
+
+- **CSS Fingerprint Protection**
+  - Added fingerprint support for `CSSValueID::kSelecteditem` and `CSSValueID::kSelecteditemtext` to enhance detection evasion.
+
+### Fixed
+- **Prevent Local Video File Leaks**
+  - Modified **FileVideoCaptureDevice** to ensure that opening local video files does not expose detectable traces to websites.
+
+- **Mitigated Accept-Language Header Leaks in Automation Frameworks**
+  - Addressed a leakage issue where automation frameworks like **Playwright** set a default **Accept-Language** header, which could be detected by **Adscore**.
+  - **CDP-based fingerprint modification is now restricted** to ensure stable antibot evasion when using **BotBrowser** with **CDP**.
+
+### Improved
+- **Enhanced 2D Canvas Fingerprint Evasion**
+  - Implemented a **new Skia-based anti-aliasing technique**, modifying the rendering algorithm at the lowest level to make detection nearly impossible.
+
+- **Advanced Audio Fingerprinting Protection**
+  - Redesigned **audio noise injection** for **RealtimeAnalyser** and **ChannelData**, using a more stealthy approach to prevent **browserscan** from detecting noise leaks.
+
+
+---
+
 ## [2025-02-04]
 
-### Improved  
-- **Enhanced Fingerprint Protection in AnalyserNode**  
+### Improved
+- **Enhanced Fingerprint Protection in AnalyserNode**
   - Added **noise injection** to **AnalyserNode**, making it significantly harder for detection systems to identify synthetic audio processing behavior.
   - This improvement further strengthens **Web Audio API** fingerprint obfuscation against targeted detection techniques.
 
@@ -17,16 +44,16 @@
 
 ## [2025-02-02]
 
-### Major Upgrade  
-- **Canvas Noise Algorithm Overhaul:**  
+### Major Upgrade
+- **Canvas Noise Algorithm Overhaul:**
   Completely reworked the **Canvas noise algorithm** by integrating noise injection into **Skia's anti-aliasing process**, significantly reducing the likelihood of detection by advanced antibot systems.
 
-### Fixed  
-- **WebGL Context readPixels Bug Fix:**  
+### Fixed
+- **WebGL Context readPixels Bug Fix:**
   Optimized **readPixels** in **WebGL Context** to prevent incorrect noise injection on solid-color images, ensuring accurate rendering.
 
-### Added  
-- **Chrome 132 Test Profiles for Windows & macOS:**  
+### Added
+- **Chrome 132 Test Profiles for Windows & macOS:**
   Released **test profiles** for **Chrome 132** on **Windows** and **macOS**, improving compatibility with the latest browser updates.
 
 
