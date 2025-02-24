@@ -14,6 +14,17 @@
 - **CSS Fingerprint Protection**
   - Added fingerprint support for `CSSValueID::kSelecteditem` and `CSSValueID::kSelecteditemtext` to enhance detection evasion.
 
+- **Blocked Local Port Scanning via WebSocket & Image Requests**
+  - Prevented websites from scanning **local ports** using **WebSocket** or **Image requests** to detect automation-related services.
+  - Blocked common ports associated with debugging and remote access:
+    - `7070, 7071` (Remote debugging)
+    - `3389` (RDP)
+    - `5938, 5939` (TeamViewer)
+    - `9222` (Chrome DevTools)
+    - `6139, 6239, 6339` (Remote access)
+    - `9839, 9939` (Remote debugging)
+    - `5900, 5901` (VNC)
+
 ### Fixed
 - **Prevent Local Video File Leaks**
   - Modified **FileVideoCaptureDevice** to ensure that opening local video files does not expose detectable traces to websites.
