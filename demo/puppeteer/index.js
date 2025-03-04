@@ -19,7 +19,6 @@ const browser = await puppeteer.launch({
     "--disable-blink-features=AutomationControlled",
     "--disable-audio-output",
     `--bot-profile=${BOT_PROFILE_PATH}`,
-    // '--headless="new"',
   ],
 });
 
