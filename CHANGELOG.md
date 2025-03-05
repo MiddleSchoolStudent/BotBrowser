@@ -3,6 +3,26 @@
 ## [Unreleased]
 - Chromium Extension fingerprint spoofing. [#3](https://github.com/MiddleSchoolStudent/BotBrowser/issues/3)
 
+
+---
+
+## [2025-03-04]
+
+### Improved
+- **GPU Emulation Performance Optimization**
+  - Improved GPU simulation to run smoother in headless mode, reducing stutters and ensuring more stable performance.
+
+- **Large Window Simulation on Small Screens**
+  - Enabled simulation of larger browser windows on smaller screens, allowing mouse actions to interact with elements beyond the physical screen boundaries.
+
+- **Removed CrashReporter**
+  - Disabled Chromium's **CrashReporter** to prevent potential data leakage and improve performance.
+
+### Fixed
+- **Enhanced device_scale_factor Handling**
+  - Fixed issues with incorrect `device_scale_factor` handling, preventing antifraud systems from detecting Retina screen anomalies through ultra-thin (0.5px) line rendering.
+
+
 ---
 
 ## [2025-02-23]
