@@ -3,6 +3,13 @@
 ## [Unreleased]
 - Chromium Extension fingerprint spoofing. [#3](https://github.com/MiddleSchoolStudent/BotBrowser/issues/3)
 
+---
+
+## [2025-03-10]
+
+### Improved
+- **Bypassing the Latest Kasada Detection**
+  - Updated core logic to successfully evade the latest **Kasada** detection techniques, ensuring uninterrupted automation.
 
 ---
 
