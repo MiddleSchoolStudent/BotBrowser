@@ -88,7 +88,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-  > For MacOS Binary, you may need to run this command: `xattr -rd com.apple.quarantine Chromium.app`
+  - For MacOS Binary, you may need to run this command: `xattr -rd com.apple.quarantine Chromium.app`
 
 2. **Cross-Platform Profiles**:
   We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system. For example, a macOS profile works on Ubuntu or a Windows profile on macOS **without compatibility issues**.
