@@ -88,6 +88,8 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
+  > For MacOS Binary, you may need to run this command: `xattr -rd com.apple.quarantine Chromium.app`
+
 2. **Cross-Platform Profiles**:
   We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system. For example, a macOS profile works on Ubuntu or a Windows profile on macOS **without compatibility issues**.
 
@@ -97,7 +99,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
     Pass your profile via the `--bot-profile` parameter:
 
     ```bash
-    chromium --no-sandbox --bot-profile="{path_of_}/chrome132_win11_x64.enc"
+    chromium --no-sandbox --bot-profile="{absolute_path_of_}/chrome132_win11_x64.enc"
     ```
 
   - **[Playwright](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
@@ -107,8 +109,8 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
     const browser = await chromium.launch({
       browser: "chrome",
       headless: true,
-      executablePath: BOTBROWSER_EXEC_PATH, // Path to the BotBrowser executable
-      args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Path to the bot profile
+      executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
+      args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute path to the bot profile
     });
 
     const page = await browser.newPage();
@@ -179,7 +181,7 @@ The following platforms have been tested:
 
 ### 🔐 Profile Generation
 
-We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We maintain a repository of over **300,000 real user browser fingerprints** to support your needs.
+We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We maintain over **300,000 real user browser fingerprints** to support your needs.
 
 **📞 Contact us today:**
 
