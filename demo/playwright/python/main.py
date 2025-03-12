@@ -29,13 +29,13 @@ async def main():
         )
         page = await browser.new_page()
 
-        # Avoid playwright detection
+        # Remove Playwright's bindings to avoid detection.
         await page.add_init_script("""
-            delete window.playwrightbinding__;
+            delete window.__playwright__binding__;
             delete window.__pwInitScripts;
         """)
 
-        await page.goto("https://www.google.com")
+        await page.goto("https://abrahamjuliot.github.io/creepjs/")
         await asyncio.Event().wait()
 
 asyncio.run(main())

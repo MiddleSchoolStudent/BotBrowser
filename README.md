@@ -96,14 +96,14 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 3. **Launching BotBrowser**: BotBrowser can be launched in three ways:
 
   - **CLI**:
-    Pass your profile via the `--bot-profile` parameter:
+    Pass your profile via the `--bot-profile` parameter, use the absolute path:
 
     ```bash
     chromium --no-sandbox --bot-profile="{absolute_path_of_}/chrome132_win11_x64.enc"
     ```
 
   - **[Playwright](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
-    Integrate BotBrowser within automation frameworks with a few lines of code:
+    Integrate BotBrowser within automation frameworks with a few lines:
 
     ```javascript
     const browser = await chromium.launch({
@@ -114,7 +114,13 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
     });
 
     const page = await browser.newPage();
-    await page.goto("https://www.google.com");
+
+    // Remove Playwright's bindings to avoid detection.
+    await page.addInitScript(() => {
+      delete window.__playwright__binding__;
+      delete window.__pwInitScripts;
+    });
+    await page.goto("https://abrahamjuliot.github.io/creepjs/");
     ```
 
   - **[BotBrowserConsole](console)**: A free and open-source GUI tool.

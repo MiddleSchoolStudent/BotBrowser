@@ -13,7 +13,7 @@ base.beforeEach(async ({ page }) => {
 });
 
 base.afterEach(async () => {
-    await sleep(3_000); // sleep for 3 seconds for better video recording
+    await sleep(8_000); // sleep for 8 seconds for better video recording
 });
 
 export * from '@playwright/test';

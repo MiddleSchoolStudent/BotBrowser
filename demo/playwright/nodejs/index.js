@@ -21,11 +21,11 @@ const browser = await chromium.launch({
 });
 
 const page = await browser.newPage();
+
+// Remove Playwright's bindings to avoid detection.
 await page.addInitScript(() => {
-  // // @ts-expect-error - Playwright binding will cause leak
-  delete window.playwrightbinding__;
-  // @ts-expect-error - Playwright binding will cause leak
+  delete window.__playwright__binding__;
   delete window.__pwInitScripts;
 });
 
-await page.goto("https://www.google.com");
+await page.goto("https://abrahamjuliot.github.io/creepjs/");
