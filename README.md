@@ -107,7 +107,6 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
     ```javascript
     const browser = await chromium.launch({
-      browser: "chrome",
       headless: true,
       executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
       args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute path to the bot profile
