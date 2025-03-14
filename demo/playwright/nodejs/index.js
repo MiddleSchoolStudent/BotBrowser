@@ -1,11 +1,11 @@
 import { chromium } from "playwright";
 
-const CHROMIUM_EXEC_PATH = process.env.CHROMIUM_EXEC_PATH; // Absolute path to the BotBrowser executable
+const BOTBROWSER_EXEC_PATH = process.env.BOTBROWSER_EXEC_PATH; // Absolute path to the BotBrowser executable
 const BOT_PROFILE_PATH = process.env.BOT_PROFILE_PATH; // Absolute path to the profile
 
 const browser = await chromium.launch({
   browser: "chrome",
-  executablePath: CHROMIUM_EXEC_PATH,
+  executablePath: BOTBROWSER_EXEC_PATH,
   headless: false, // Set to true for production
   ignoreDefaultArgs: [
     "--disable-crash-reporter",

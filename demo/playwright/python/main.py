@@ -3,17 +3,17 @@ import os
 
 from playwright.async_api import async_playwright
 
-CHROMIUM_EXEC_PATH: str = os.getenv("CHROMIUM_EXEC_PATH", "") # Absolute path to the BotBrowser executable
+BOTBROWSER_EXEC_PATH: str = os.getenv("BOTBROWSER_EXEC_PATH", "") # Absolute path to the BotBrowser executable
 BOT_PROFILE_PATH: str = os.getenv("BOT_PROFILE_PATH", "") # Absolute path to the profile
 
-if not CHROMIUM_EXEC_PATH or not BOT_PROFILE_PATH:
-    raise ValueError("Both CHROMIUM_EXEC_PATH and BOT_PROFILE_PATH environment variables must be set.")
+if not BOTBROWSER_EXEC_PATH or not BOT_PROFILE_PATH:
+    raise ValueError("Both BOTBROWSER_EXEC_PATH and BOT_PROFILE_PATH environment variables must be set.")
 
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch_persistent_context(
             user_data_dir="./user_data",
-            executable_path=CHROMIUM_EXEC_PATH,
+            executable_path=BOTBROWSER_EXEC_PATH,
             headless=False, # Set to True for production
             ignore_default_args=[
                 "--disable-crash-reporter",
