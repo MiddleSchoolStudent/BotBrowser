@@ -12,18 +12,18 @@ Based on the [playwright test](https://playwright.dev/docs/writing-tests), this 
    Add the following configurations to the `.env` file in the root directory of the project:
 
     ```bash
-    BROWSER_EXECUTABLE_PATH=/path/to/botbrowser/executable
+    BOTBROWSER_EXEC_PATH=/path/to/botbrowser/executable
     BOT_PROFILE_PATH=/path/to/bot/profile.enc
     ```
 
 2. **Example Configuration**:
 
     ```bash
-    BROWSER_EXECUTABLE_PATH=/usr/local/bin/chromium
+    BOTBROWSER_EXEC_PATH=/usr/local/bin/chromium
     BOT_PROFILE_PATH=/home/user/bot_profiles/chrome131_win11_x64.enc
     ```
 
-3. Ensure the paths are correctly set for your environment. The `BROWSER_EXECUTABLE_PATH` points to the BotBrowser executable, and `BOT_PROFILE_PATH` points to a valid BotBrowser profile.
+3. Ensure the paths are correctly set for your environment. The `BOTBROWSER_EXEC_PATH` points to the BotBrowser executable, and `BOT_PROFILE_PATH` points to a valid BotBrowser profile.
 
 ---
 

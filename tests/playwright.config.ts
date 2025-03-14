@@ -25,7 +25,7 @@ export default defineConfig({
                 video: 'on',
                 viewport: { width: 1920, height: 1080 },
                 launchOptions: {
-                    executablePath: process.env.BROWSER_EXECUTABLE_PATH,
+                    executablePath: process.env.BOTBROWSER_EXEC_PATH,
                     args: [`--bot-profile=${process.env.BOT_PROFILE_PATH}`, '--mute-audio'],
                 },
             },
