@@ -7548,10 +7548,7 @@
                 "hardwareConcurrency": 4,
                 "maxTouchPoints": 5,
                 "deviceMemory": null,
-                "languages": [
-                    "ru",
-                    "en"
-                ],
+                "languages": ["en-US"],
                 "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/130.0.6723.90 Mobile/15E148 Safari/604.1"
             },
             "window": {
