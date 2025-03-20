@@ -5,6 +5,21 @@
 
 ---
 
+
+## [2025-03-20]
+
+### Improved
+- **Upgraded to Chromium 134.0.6998.95**
+  - Synced to the latest **Chromium 134.0.6998.95**, improving stealth and compatibility with modern web environments.
+  - Enhances detection resistance by aligning with the newest Chrome updates.
+
+### Fixed
+- **Stability Improvements & Bug Fixes**
+  - Resolved several critical bugs to prevent unexpected browser crashes.
+  - Improved overall performance and reliability.
+
+---
+
 ## [2025-03-10]
 
 ### Improved
