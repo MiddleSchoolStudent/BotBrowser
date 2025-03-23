@@ -26,6 +26,16 @@
             <mat-icon>delete</mat-icon>
             Delete Profiles
         </button>
+         <!-- Export CSV -->
+        <button mat-button (click)="exportToCSV()">
+            <mat-icon>file_download</mat-icon>
+            Export CSV
+        </button>
+        <!-- import profiles from CSV -->
+        <button mat-button (click)="importProfilesFromCSV()">
+            <mat-icon>file_upload</mat-icon>
+            Import CSV
+        </button>
     </mat-toolbar>
 
     <table mat-table [dataSource]="dataSource" matSort>

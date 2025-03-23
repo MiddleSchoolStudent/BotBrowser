@@ -15,7 +15,7 @@ import { cloneDeep } from 'lodash-es';
 import { v4 as uuidv4 } from 'uuid';
 import { CloneBrowserProfileComponent } from './clone-browser-profile.component';
 import { AppName } from './const';
-import { BrowserProfileStatus, type BrowserProfile } from './data/browser-profile';
+import { BrowserProfileStatus, type BrowserProfile, type ProxyInfo } from './data/browser-profile';
 import { EditBrowserProfileComponent } from './edit-browser-profile.component';
 import { BrowserLauncherService } from './shared/browser-launcher.service';
 import { BrowserProfileService } from './shared/browser-profile.service';
@@ -57,7 +57,7 @@ export class AppComponent implements AfterViewInit {
 
     @ViewChild(MatSort) sort!: MatSort;
 
-    constructor() {}
+    constructor() { }
 
     newProfile(): void {
         this.#dialog
@@ -243,6 +243,170 @@ export class AppComponent implements AfterViewInit {
             return `${this.isAllSelected ? 'deselect' : 'select'} all`;
         }
         return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row`;
+    }
+
+    exportToCSV(): void {
+        const headers = ['name', 'group', 'description', 'bot_profile', 'proxy', 'executable_path', 'warm_up_urls', 'locale'];
+
+        const rows = (this.selection.selected.length > 0 ? this.selection.selected : this.dataSource.data).map(
+            (profile) => ({
+                name: profile.basicInfo?.profileName || '',
+                group: profile.basicInfo?.groupName || '',
+                description: profile.basicInfo?.description || '',
+                bot_profile: profile.botProfileInfo?.filename || '',
+                proxy: this.formatProxy(profile.proxyInfo),
+                executable_path: profile.variablesInfo?.botBrowserBinaryPath || '',
+                warm_up_urls: profile.warmupUrls || '',
+                locale: profile.variablesInfo?.locale || '',
+            })
+        );
+
+        const csvContent = [
+            headers.join(','),
+            ...rows.map((row) => headers.map((header) => `${row[header as keyof typeof row] || ''}`).join(',')),
+        ].join('\n');
+
+        const defaultFilename = 'profiles.csv';
+        Neutralino.os
+            .showSaveDialog('Save CSV File', {
+                defaultPath: defaultFilename,
+                filters: [{ name: 'CSV', extensions: ['csv'] }, { name: 'All files', extensions: ['*'] }],
+            })
+            .then((filePath) => {
+                if (!filePath) {
+                    console.warn('Save operation was canceled.');
+                    return;
+                }
+
+                Neutralino.filesystem
+                    .writeFile(filePath, csvContent)
+                    .then(() => {
+                        console.log(`CSV file saved successfully at ${filePath}`);
+                        Neutralino.os.showMessageBox('Success', 'CSV file has been successfully exported!');
+                    })
+                    .catch((err) => {
+                        console.error('Failed to save CSV file:', err);
+                        Neutralino.os.showMessageBox('Error', 'Failed to export CSV file. Please check the logs!');
+                    });
+            })
+            .catch((err) => {
+                console.error('Failed to show save dialog:', err);
+                Neutralino.os.showMessageBox('Error', 'Unable to display the save dialog. Please check the logs!');
+            });
+    }
+
+    async importProfilesFromCSV(): Promise<void> {
+        const entry = await Neutralino.os.showOpenDialog('Import profiles from CSV', {
+            filters: [{ name: 'CSV', extensions: ['csv'] }],
+        });
+
+        if (!entry?.[0]) {
+            console.warn('No file selected for import.');
+            return;
+        }
+
+        const filePath = entry[0];
+
+        try {
+            const fileContent = await Neutralino.filesystem.readFile(filePath);
+            const lines = fileContent.split('\n').filter((line) => line.trim() !== '');
+
+            if (lines.length <= 1) {
+                console.warn('CSV file is empty or only contains headers.');
+                Neutralino.os.showMessageBox('Warning', 'The CSV file is empty or only contains headers. Please check the file content!');
+                return;
+            }
+
+            const headers = lines[0]?.split(',').map((header) => header.trim()) || [];
+            const data = lines.slice(1).map((line) => {
+                const values = line.split(',').map((value) => value.trim());
+                return headers.reduce((obj: any, header, index) => {
+                    obj[header] = values[index] || '';
+                    return obj;
+                }, {});
+            });
+
+            const profiles = data.map(async (row: any) => {
+                const { name, group, description, bot_profile, proxy, executable_path, warm_up_urls, locale } = row;
+
+                let username = null;
+                let password = null;
+                let proxyHostValue = null;
+
+                if (proxy) {
+                    if (proxy.includes('@')) {
+                        [username, password] = proxy.split('@')[0]?.split(':') || [null, null];
+                        proxyHostValue = proxy.split('@')[1];
+                    } else {
+                        proxyHostValue = proxy;
+                    }
+                }
+
+                let botProfileContent = '';
+                if (bot_profile) {
+                    try {
+                        botProfileContent = await Neutralino.filesystem.readFile(bot_profile);
+                    } catch (error) {
+                        console.error(`Failed to read bot profile file: ${bot_profile}`, error);
+                        botProfileContent = '';
+                    }
+                }
+
+                const variablesInfo = {
+                    botBrowserBinaryPath: executable_path || '',
+                    locale: locale || 'en-US',
+                    noisesCanvas2d: true,
+                    noisesClientRectsFactor: true,
+                    noisesCanvasWebgl: true,
+                    noisesTextMetricsFactor: true,
+                    noisesAudio: true,
+                    timezone: 'America/New_York',
+                    disableConsoleMessage: true,
+                };
+
+                const newProfile: BrowserProfile = {
+                    id: uuidv4(),
+                    basicInfo: {
+                        profileName: name || '',
+                        groupName: group || '',
+                        description: description || '',
+                    },
+                    botProfileInfo: {
+                        filename: bot_profile || '',
+                        content: botProfileContent,
+                    },
+                    proxyInfo: {
+                        proxyHost: proxyHostValue || '',
+                        username: username || '',
+                        password: password || '',
+                    },
+                    variablesInfo,
+                    variableValues: {},
+                    warmupUrls: warm_up_urls || '',
+                    createdAt: Date.now(),
+                    updatedAt: Date.now(),
+                };
+
+                return newProfile;
+            });
+
+            const resolvedProfiles = await Promise.all(profiles);
+
+            await Promise.all(resolvedProfiles.map((profile) => this.#browserProfileService.saveBrowserProfile(profile)));
+            await this.refreshProfiles();
+            Neutralino.os.showMessageBox('Success', 'CSV file has been successfully imported!' );
+        } catch (error) {
+            console.error('Failed to import profiles from CSV:', error);
+            Neutralino.os.showMessageBox('Error', 'Failed to import CSV file. Please check the logs!' );
+        }
+    }
+
+    private formatProxy(proxy: Partial<ProxyInfo> | undefined): string {
+        if (!proxy) return '';
+        const { username, password, proxyHost } = proxy;
+
+        const credentials = [username, password].filter(Boolean).join(':');
+        return [credentials, proxyHost].filter(Boolean).join('@');
     }
 
     async runBrowserProfile(browserProfile: BrowserProfile): Promise<void> {
