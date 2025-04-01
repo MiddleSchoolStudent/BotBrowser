@@ -5,6 +5,45 @@
 
 ---
 
+## [2025-03-31]
+
+### Improved
+- **Faster Profile Loading**
+  - Optimized the profile loading logic to significantly reduce load time and improve overall performance.
+
+- **JavaScript Stack Limit Alignment**
+  - Adjusted JavaScript stack limit to match official Chrome behavior exactly, improving parity and reducing detection risk.
+
+- **Unified NaN Conversion Logic Across Architectures**
+  - Ensured consistent `NaN` bit-level structure across both **x86** and **ARM**, avoiding architecture-specific fingerprint leaks.
+  - Prevents antifraud systems from detecting x86-based emulation of ARM devices.
+
+### Added
+- **Notification API Normalization Across Platforms**
+  - Standardized the behavior of the `Notification` API on different operating systems, closing a detection vector used by **DataDome**.
+
+- **Chromium 134: `CustomizableSelect` Runtime Feature Support**
+  - Added OS-specific behavior simulation for the experimental `CustomizableSelect` runtime feature, collected from profiles.
+
+- **Advanced matchMedia Fingerprint Control (hCaptcha / DataDome Bypass)**
+  - Introduced fine-grained, profile-based control of `matchMedia()` output.
+  - Successfully bypasses **hCaptcha** and **DataDome** fingerprint checks that rely on subtle media query inconsistencies.
+
+- **New GPU Fingerprint Fields**
+  - Added support for new `GPUAdapter` and `GPUDevice` fingerprint fields to enhance hardware-level spoofing accuracy.
+
+### Removed
+- **Scrollbar Width Spoofing**
+  - Removed static 17px scrollbar width simulation, which proved unnecessary after extensive testing.
+  - Thanks to community feedback for identifying its low fingerprinting value.
+
+### Fixed
+- **mimeTypes Fingerprint Handling**
+  - Fixed a long-standing issue where important `mimeTypes` were missed during processing, improving detection resistance.
+
+
+---
+
 
 ## [2025-03-20]
 
