@@ -135,13 +135,15 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ## 🎯 Proven Effectiveness
 
+⚠️ **Disclaimer** 
+
+These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool—such as violating website terms of service or engaging in unlawful activities-is strictly prohibited.**
+
+
 ### 🧪 Code and Video Test Results
 
 BotBrowser has been extensively tested against leading antibot systems. Below are detailed test results and video demonstrations:
 
-⚠️ **Disclaimer**:  
-
-These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool—such as violating website terms of service or engaging in unlawful activities-is strictly prohibited.**
 
 
 | Service & Scripts                                                  | Test Results                                                                                                                                                                                                                                                                       |
