@@ -52,8 +52,6 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 - **Bypass headless and incognito checks**: Enables undetectable automation by seamlessly evading detection in both headless and incognito modes.
 
-- **Customizable browsing history**: Enables realistic, dynamic histories for diverse fingerprinting scenarios.
-
 - **Noise injection**: Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints to avoid detection.
 
 - **Simulated OS-specific properties**: Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
@@ -69,7 +67,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
   | **Hardware**    | Screen, Battery, Keyboard, CPU             |
   | **Environment** | Permissions, FeaturePolicy, SystemFonts    |
   | **Media**       | MediaDevices, MimeTypes                    |
-  | **Visuals**     | Emoji, Unicode, System Colors              |
+  | **Visuals**     | Emoji, Unicode, System Colors, MatchMedia  |
   | **Others**      | Navigator, Window, and more                |
 
 
@@ -88,11 +86,13 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-  - ⚠️ For MacOS Binary, if you get this error: `"Chromium" is damaged and can't be opened`, you may need to run this command:
+  - ⚠️ For MacOS Binary, if you encounter the error: `"Chromium" is damaged and can't be opened`, you may need to run this command:
 
     ```bash
     xattr -rd com.apple.quarantine Chromium.app
     ```
+
+  - ⚠️ For Windows Binary, if you encounter the error `STATUS_ACCESS_VIOLATION`, it may be resolved by adding the `--no-sandbox` flag when launching the application.
 
 2. **Cross-Platform Profiles**:
   We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system. For example, a macOS profile works on Ubuntu or a Windows profile on macOS **without compatibility issues**.
@@ -153,7 +153,6 @@ BotBrowser has been extensively tested against leading antibot systems. Below ar
 | **[Accertify](tests/tests/antibots/accertify.spec.ts)**            | [▶️ grubhub.com](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=perimeterx-test-grubhub)                                                                       |
 | **[Forter](tests/tests/antibots/forter.spec.ts)**                  | [▶️ grubhub.com](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=perimeterx-test-grubhub)                                                                       |
 | **[Adscore](tests/tests/antibots/adscore.spec.ts)**                | [▶️ Test Video](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=adscore-test-adscore)                                                                                          |
-| **Cloudfront Bot Management (AWS)**                                | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **ThreatMetrix**                                                   | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **ProtectedMedia**                                                 | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **[Fake Vision](tests/tests/antibots/fvpro.spec.ts)**              | [▶️ fv.pro](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=fvpro-test-fv-pro)                                                                                           |

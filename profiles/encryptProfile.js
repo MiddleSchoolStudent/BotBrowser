@@ -7,11 +7,6 @@ const fs = require("fs");
     "utf-8"
   );
   const profileObj = JSON.parse(profileContent);
-
-  // Додати термін придатності через 7 днів
-  const currentDate = new Date();
-  currentDate.setDate(currentDate.getDate() + 7);
-  profileObj.profileExpires = currentDate.getTime();
   profileContent = JSON.stringify(profileObj);
 
   // Згенеруйте випадковий aeskey і зашифруйте Profile
