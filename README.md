@@ -139,6 +139,11 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 BotBrowser has been extensively tested against leading antibot systems. Below are detailed test results and video demonstrations:
 
+⚠️ **Disclaimer**:  
+
+These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool—such as violating website terms of service or engaging in unlawful activities-is strictly prohibited.**
+
+
 | Service & Scripts                                                  | Test Results                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **[Cloudflare](tests/tests/antibots/cloudflare.spec.ts)**          | [▶️ Turnstile](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=cloudflare-turnstile), [▶️ Challenge](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=cloudflare-challenge), [▶️ taxslayer.com](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=cloudflare-taxslayer) |
@@ -208,10 +213,6 @@ If you wish to compile your own version of Chromium with our modifications, foll
 ## ⚠️ Disclaimer
 
 BotBrowser is intended for legitimate use cases that comply with all applicable laws and regulations. Misuse of this tool to violate the terms of service of websites or engage in illegal activities is strictly prohibited.
-
----
-
-Antibots are making the world worse.
 
 ---
 
