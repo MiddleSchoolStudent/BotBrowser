@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { sleep } from '../utils';
 
-test('test shutterstock.com', async ({ page }) => {
+test('shutterstock', async ({ page }) => {
     await page.goto('https://www.shutterstock.com/search');
 
     const apiResponsePromise = page.waitForResponse((response) =>

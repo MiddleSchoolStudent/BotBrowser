@@ -1,6 +1,6 @@
 import { expect, test } from '../global-setup';
 
-test('test playstation.com', async ({ page }) => {
+test('playstation', async ({ page }) => {
     await page.goto('https://www.playstation.com/en-us/');
     await page.locator('button >> text=Sign In').click();
 

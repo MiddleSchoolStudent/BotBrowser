@@ -1,7 +1,7 @@
 import { ElementHandle, expect, test } from '../global-setup';
-import { clickLocatorWithMouse } from '../utils';
+import { clickLocatorWithMouse, sleep } from '../utils';
 
-test('test hcaptcha epicgames', async ({ page }) => {
+test('epicgames', async ({ page }) => {
     await page.goto(`https://epicgames.com/id/login`);
     const apiResponsePromise = page.waitForResponse(
         (response) =>
@@ -27,7 +27,7 @@ test('test hcaptcha epicgames', async ({ page }) => {
     expect((await apiResponse.json()).errorCode).toBe('errors.com.epicgames.account.invalid_account_credentials');
 });
 
-test('test hcaptcha discord', async ({ page }) => {
+test('discord', async ({ page }) => {
     await page.goto(`https://discord.com/login`);
     await page
         .locator('input[name="email"]')
@@ -60,4 +60,35 @@ test('test hcaptcha discord', async ({ page }) => {
 
     const apiResponse = await apiResponsePromise;
     expect((await apiResponse.json()).code).toBe(50035);
+});
+
+test('steam', async ({ page }) => {
+    const email = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2) + '@gmail.com';
+    await page.goto(`https://store.steampowered.com/join`);
+    await page.locator('input[name="email"]').pressSequentially(email, { delay: 100 });
+    await page.keyboard.press('Tab');
+    await page.locator('input[name="reenter_email"]').pressSequentially(email, {
+        delay: 100,
+    });
+
+    await page.locator('input#i_agree_check').click();
+
+    const captchaIframe = (await page.waitForSelector(
+        'iframe[src^="https://newassets.hcaptcha.com/captcha/v1"][style*="width"]'
+    )) as ElementHandle<HTMLIFrameElement>;
+    const captchaFrame = (await captchaIframe.contentFrame())!;
+    await clickLocatorWithMouse(captchaFrame, 'div#checkbox');
+    console.log('Captcha clicked');
+
+    await sleep(10000);
+    await page.locator('button#createAccountButton').click();
+
+    const apiResponsePromise = page.waitForResponse(
+        (response) =>
+            response.request().method() === 'POST' &&
+            response.url().startsWith('https://store.steampowered.com/join/ajaxcheckemailverified')
+    );
+
+    const apiResponse = await apiResponsePromise;
+    expect((await apiResponse.json()).success).toBe(36);
 });

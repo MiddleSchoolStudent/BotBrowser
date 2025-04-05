@@ -1,6 +1,6 @@
 import { expect, test } from '../global-setup';
 
-test('test fingerprintjs bot detection', async ({ page }) => {
+test('botdetection', async ({ page }) => {
     await page.goto('https://fingerprint.com/products/bot-detection/');
 
     expect(

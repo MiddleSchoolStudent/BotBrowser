@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { sleep, waitForFrame } from '../utils';
 
-test('test reCAPTCHA v2 on 2captcha', async ({ page }) => {
+test('v2', async ({ page }) => {
     await page.goto('https://2captcha.com/demo/recaptcha-v2');
 
     const frame = await waitForFrame({
@@ -14,7 +14,7 @@ test('test reCAPTCHA v2 on 2captcha', async ({ page }) => {
     expect(await page.waitForFunction(() => Boolean(grecaptcha.getResponse()))).toBeTruthy();
 });
 
-test('test reCAPTCHA v3 on antcpt', async ({ page }) => {
+test('v3', async ({ page }) => {
     test.setTimeout(120_000);
 
     await page.goto('https://antcpt.com/score_detector/', { timeout: 60_000 }).catch(() => {});

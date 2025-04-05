@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { sleep } from '../utils';
 
-test('test Brotector', async ({ page }) => {
+test('Brotector', async ({ page }) => {
     await page.goto('https://kaliiiiiiiiii.github.io/brotector/?crash=false');
 
     // Move the mouse on the page and Brotector will detect something

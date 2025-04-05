@@ -1,6 +1,6 @@
 import { expect, test } from '../global-setup';
 
-test('test pixelscan', async ({ page }) => {
+test('pixelscan', async ({ page }) => {
     await page.goto('https://pixelscan.net/');
 
     expect(

@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { getDateFormatted } from '../utils';
 
-test('test Incapsula (copaair.com)', async ({ page }) => {
+test('copaair', async ({ page }) => {
     const tomorrowDate = getDateFormatted(1);
 
     const apiResponsePromise = page.waitForResponse((response) =>

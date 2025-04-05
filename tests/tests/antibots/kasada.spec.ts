@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { getDateFormatted, sleep } from '../utils';
 
-test('test kick.com', async ({ page }) => {
+test('kick', async ({ page }) => {
     await page.goto('https://www.kick.com');
 
     // click on the sign up button
@@ -42,7 +42,7 @@ test('test kick.com', async ({ page }) => {
     expect(await page.waitForSelector('text=Email Verification')).toBeTruthy();
 });
 
-test('test wizzair.com', async ({ page }) => {
+test('wizzair', async ({ page }) => {
     const tomorrowDate = getDateFormatted(1);
 
     const apiResponsePromise = page.waitForResponse((response) => response.url().endsWith('/Api/search/search'));
@@ -54,7 +54,7 @@ test('test wizzair.com', async ({ page }) => {
     expect(apiResponse.status()).toBe(200);
 });
 
-test('test twitch.tv', async ({ page }) => {
+test('twitch', async ({ page }) => {
     // Login
     await page.goto('https://www.twitch.tv/wv/auth/login');
     await page.locator('input#login-username').pressSequentially(Math.random().toString(36).substring(2), {

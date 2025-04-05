@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { sleep, waitForFrame } from '../utils';
 
-test('test Cloudflare turnstile', async ({ page }) => {
+test('turnstile', async ({ page }) => {
     await page.addInitScript(() => {
         const originalAttachShadow = Element.prototype.attachShadow;
         Element.prototype.attachShadow = function (init) {
@@ -23,7 +23,7 @@ test('test Cloudflare turnstile', async ({ page }) => {
     expect(await frame.waitForSelector('span#success-text >> text=Success!')).toBeTruthy();
 });
 
-test('test Cloudflare challenge', async ({ page }) => {
+test('challenge', async ({ page }) => {
     await page.goto('https://2captcha.com/demo/cloudflare-turnstile');
     await page.locator('a >> text=Cloudflare Challenge').click();
 
@@ -41,7 +41,7 @@ test('test Cloudflare challenge', async ({ page }) => {
     expect(await page.waitForSelector('text=Captcha is passed successfully!')).toBeTruthy();
 });
 
-test('test taxslayer', async ({ page }) => {
+test('taxslayer', async ({ page }) => {
     await page.goto('https://www.taxslayer.com/myaccount/loginprev.aspx');
 
     // Wait for the frame that src is set to the cloudflare page "https://challenges.cloudflare.com/cdn-cgi/challenge-platform"

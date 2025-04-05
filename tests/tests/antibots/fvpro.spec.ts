@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { sleep } from '../utils';
 
-test('test fv.pro', async ({ page }) => {
+test('fvpro', async ({ page }) => {
     test.setTimeout(60_000);
 
     await page.goto('https://fv.pro');

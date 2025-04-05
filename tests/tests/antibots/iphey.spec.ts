@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { sleep } from '../utils';
 
-test('test iphey', async ({ page }) => {
+test('iphey', async ({ page }) => {
     await page.goto('https://iphey.com');
     await sleep(20_000);
 
