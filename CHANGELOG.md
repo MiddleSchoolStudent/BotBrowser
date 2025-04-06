@@ -5,6 +5,16 @@
 
 ---
 
+## [2025-04-06]
+
+### Improved
+- **Upgraded to Chromium 135**
+  - Synchronized BotBrowser with the latest **Chromium 135**, ensuring full compatibility with the most recent Chrome version.
+  - This upgrade improves stealth, fingerprint parity, and long-term maintenance as Chrome evolves.
+
+
+---
+
 ## [2025-03-31]
 
 ### Improved
