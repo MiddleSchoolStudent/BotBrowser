@@ -179,7 +179,8 @@ The following platforms have been tested:
 |------------------|-------------------|--------------|
 | **[Nike](tests/tests/websites/nike.spec.ts)** | F5 Shape Security | ✅ Success  [▶️ Checkout Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-nike-nike-checkout)  |
 | **TikTok** | Generic Antibot | ✅ Success |
-| **Temu** | F5 Shape Security | ✅ Success |
+| **[Walmart](tests/tests/websites/walmart.spec.ts)** | PerimeterX | ✅ Success [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-walmart-walmart) |
+| **[Temu](tests/tests/websites/temu.spec.ts)** | F5 Shape Security | ✅ Success [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-temu-temu) |
 | **LinkedIn** | Generic Antibot | ✅ Success |
 | **Ticketmaster** | PerimeterX, FingerprintJS, reCAPTCHA | ✅ Success |
 | **Shein** | F5 Shape Security, FingerprintJS, Forter | ✅ Success |
