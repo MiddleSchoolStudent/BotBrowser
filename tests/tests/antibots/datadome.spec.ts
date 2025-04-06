@@ -20,3 +20,10 @@ test('shutterstock', async ({ page }) => {
 
     await sleep(5000);
 });
+
+test('seatgeek', async ({ page }) => {
+    await page.goto(
+        'https://seatgeek.com/lady-gaga-tickets/new-york-new-york-madison-square-garden-2025-09-06-8-pm/concert/17460509'
+    );
+    await expect(page.locator('span[role="heading"]').textContent()).resolves.toMatch(/How many tickets/);
+});
