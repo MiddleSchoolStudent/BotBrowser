@@ -137,7 +137,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ⚠️ **Disclaimer**
 
-These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool—such as violating website terms of service or engaging in unlawful activities-is strictly prohibited.**
+These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool - such as violating website terms of service or engaging in unlawful activities - is strictly prohibited.**
 
 
 ### 🧪 Code and Video Test Results
