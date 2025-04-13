@@ -5,6 +5,31 @@
 
 ---
 
+## [2025-04-13]
+
+### Added
+- **Proxy, Timezone, Locale Support via Profile**
+  - You can now configure `proxy`, `username`, `password`, `timezone`, and `locale` directly through the **profile**, removing the need for CDP-based injection.
+
+- **JavaScript Stack Limit Control**
+  - Fine-tuned the JS stack depth to closely match official Chrome’s behavior.
+  - Helps bypass antifraud systems that rely on deep recursive call stack fingerprinting.
+
+### Improved
+- **Advanced matchMedia CSS Fingerprint Handling**
+  - Upgraded CSS-related matchMedia control to better simulate complex media conditions under real environments.
+  - Enhances stealth against modern anti-scraping and antifraud strategies.
+
+### Fixed
+- **GPU Limits Mismatch on Ubuntu**
+  - Resolved an inconsistency where GPUAdapter and GPUDevice limits didn’t align with the profile values on Ubuntu.
+
+- **WebGL Extension and Parameter Bugs**
+  - Fixed a bug where `getSupportedExtensions()` could fail or return incorrect parameters in edge cases, improving WebGL fingerprint integrity.
+
+
+---
+
 ## [2025-04-06]
 
 ### Improved

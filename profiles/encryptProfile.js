@@ -3,7 +3,7 @@ const fs = require("fs");
 
 (async () => {
   let profileContent = await fs.promises.readFile(
-    "demo-macarmchip.json",
+    "chrome135_mac_arm64.json",
     "utf-8"
   );
   const profileObj = JSON.parse(profileContent);
@@ -30,7 +30,7 @@ const fs = require("fs");
     .toString("base64");
 
   await fs.promises.writeFile(
-    "demo-macarmchip.enc",
+    "chrome135_mac_arm64.enc",
     JSON.stringify({
       key: rsaEncryptedAESInfo,
       profile: aesEncryptedProfile,
