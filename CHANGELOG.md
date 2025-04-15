@@ -5,6 +5,25 @@
 
 ---
 
+## [2025-04-15]
+
+### Added
+- **Android Fingerprint Emulation**
+  - Introduced high-fidelity **Android fingerprint simulation** that successfully bypasses detection by advanced antifraud systems.
+  - Includes a fully prepared **Android profile** for testing and demonstration.
+
+### Fixed
+- **CSS vs Client Hint Inconsistency**
+  - Resolved discrepancies between **sec-ch headers** (like `viewport`, `device-memory`) and JavaScript-detected CSS features (e.g., `inverted-colors`, `prefers-reduced-motion`, `prefers-reduced-transparency`) when using `matchMedia()`.
+
+- **Web Share API Support for Android**
+  - Fixed Web Share API availability to correctly reflect **Android device behavior** in supported environments.
+
+- **navigator.plugins OS-Specific Simulation**
+  - Refined plugin emulation logic to more precisely match different OS fingerprint behaviors via `navigator.plugins`.
+
+---
+
 ## [2025-04-13]
 
 ### Added
