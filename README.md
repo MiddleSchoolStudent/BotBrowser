@@ -95,9 +95,11 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
   - ⚠️ For Windows Binary, if you encounter the error `STATUS_ACCESS_VIOLATION`, it may be resolved by adding the `--no-sandbox` flag when launching the application.
 
 2. **Cross-Platform Profiles**:
-  We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system. For example, a macOS profile works on Ubuntu or a Windows profile on macOS **without compatibility issues**.
+  We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system.
+  
+  - 🔥 For instance, a _macOS profile_ works in Ubuntu, a _Windows profile_ works in macOS, similarly an _Android profile_ can be fully emulated in macOS / Windows / Ubuntu and bypass antibots checking **without compatibility issues**.
 
-3. **Launching BotBrowser**: BotBrowser can be launched in three ways:
+4. **Launching BotBrowser**: BotBrowser can be launched in three ways:
 
   - **CLI**:
     Pass your profile via the `--bot-profile` parameter, use the absolute path:
