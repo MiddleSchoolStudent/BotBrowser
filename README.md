@@ -34,16 +34,16 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ### 🎯 Core Features
 
-- **Cross-Platform Compatibility**
+ **Cross-Platform Compatibility**
   > Fully supports Windows, macOS, and Ubuntu, enabling seamless cross-platform use of profiles. Start on one system and continue effortlessly on another.
 
-- **Latest Chromium Base**
+ **Latest Chromium Base**
   > Stays updated with the latest stable Chrome/Chromium versions to ensure compatibility with advanced antibot defenses.
 
-- **Advanced Programmatic Control**
+ **Advanced Programmatic Control**
   > Dual advantage: Leverages CDP for powerful automation with [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer), while preventing CDP leak detection - perfect balance of control and undetectability.
 
-- **Success & Performance**
+ **Success & Performance**
   > Real client success stories validate our exceptional performance: **98%+ success rate** against advanced antibots with over **350,000 accounts registered daily**, demonstrating unmatched efficiency and reliability under high loads.
 
 ### 🛡️ Advanced Capabilities
