@@ -41,7 +41,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
   > Always aligned with the newest stable Chromium release, ensuring cutting‑edge compatibility with today's most advanced antibot defenses.
 
  **Unlimited Android Emulation**
-  > Emulate Android devices (metrics, UA, touch & sensors) flawlessly and undetectably. [▶️ iphey test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android), [▶️ pixelscan text](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)
+  > Emulate Android devices (metrics, UA, touch & sensors) flawlessly and undetectably. [▶️ iphey test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android), [▶️ pixelscan test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)
 
  **Advanced Programmatic Control**
   > Harness CDP through [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer) alongside deep C++ modifications that block CDP leak detection, delivering both powerful automation and rock‑solid stealth.
