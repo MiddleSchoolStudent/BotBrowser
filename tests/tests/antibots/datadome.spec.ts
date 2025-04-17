@@ -27,3 +27,29 @@ test('seatgeek', async ({ page }) => {
     );
     await expect(page.locator('span[role="heading"]').textContent()).resolves.toMatch(/How many tickets/);
 });
+
+test('hermes', async ({ page }) => {
+    await page.goto('https://www.hermes.com/us/en/');
+
+    await page.locator('button#onetrust-accept-btn-handler').click();
+    await sleep(5000);
+    await page.locator('span >> text=Hats and gloves').click();
+    await sleep(5000);
+    await page.locator('h-image-resizer').nth(0).click();
+    await sleep(5000);
+    await page.locator('button >> text=Add to cart').click();
+    await sleep(5000);
+
+    // id="variant-item-H242034N_0256-size"
+    const variantItems = await page.locator('input[id^="variant-item-"]').all();
+    if (variantItems.length > 0) {
+        await variantItems[0].click();
+        await sleep(5000);
+        await page.locator('button >> text=Add to cart').click();
+        await sleep(5000);
+    }
+
+    await page.locator('button >> text=View cart').click();
+
+    await sleep(5_000);
+});
