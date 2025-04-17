@@ -34,8 +34,8 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ### 🎯 Core Features
 
- **Cross-Platform Compatibility**
-  > Full support for Windows, macOS, and Ubuntu. Profiles are portable-start your automation on one OS and pick up seamlessly on another.
+ **Cross-Platform OS Simulation**  
+  > Use distinct cross-platform profiles to emulate Windows, macOS, Ubuntu, or Android on any host.
 
  **Latest Chromium Base**
   > Always aligned with the newest stable Chromium release, ensuring cutting‑edge compatibility with today's most advanced antibot defenses.
