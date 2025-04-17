@@ -35,16 +35,19 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 ### 🎯 Core Features
 
  **Cross-Platform Compatibility**
-  > Fully supports Windows, macOS, and Ubuntu, enabling seamless cross-platform use of profiles. Start on one system and continue effortlessly on another.
+  > Full support for Windows, macOS, and Ubuntu. Profiles are portable-start your automation on one OS and pick up seamlessly on another.
 
  **Latest Chromium Base**
-  > Stays updated with the latest stable Chrome/Chromium versions to ensure compatibility with advanced antibot defenses.
+  > Always aligned with the newest stable Chromium release, ensuring cutting‑edge compatibility with today's most advanced antibot defenses.
+
+ **Unlimited Android Emulation**
+  > Emulate Android devices (metrics, UA, touch & sensors) flawlessly and undetectably. [▶️ iphey test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android), [▶️ pixelscan text](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)
 
  **Advanced Programmatic Control**
-  > Dual advantage: Leverages CDP for powerful automation with [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer), while preventing CDP leak detection - perfect balance of control and undetectability.
+  > Harness CDP through [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer) alongside deep C++ modifications that block CDP leak detection, delivering both powerful automation and rock‑solid stealth.
 
  **Success & Performance**
-  > Real client success stories validate our exceptional performance: **98%+ success rate** against advanced antibots with over **350,000 accounts registered daily**, demonstrating unmatched efficiency and reliability under high loads.
+  > Proven **98%+ success** against sophisticated antibot measures, powering over 350,000 daily account registrations with exceptional stability and speed under heavy loads.
 
 ### 🛡️ Advanced Capabilities
 
@@ -168,8 +171,8 @@ BotBrowser has been extensively tested against leading antibot systems. Below ar
 | **[FingerprintJS](tests/tests/antibots/fingerprintjs.spec.ts)**    | [▶️ Bot Detection](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-fingerprintjs-botdetection)                                                         |
 | **[CreepJS](tests/tests/antibots/creepjs.spec.ts)**                | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs)                                                                                            |
 | **[BrowserScan](tests/tests/antibots/browserscan.spec.ts)**        | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-browserscan-browserscan)                                                                                     |
-| **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan)                                                                                         |
-| **[iphey](tests/tests/antibots/iphey.spec.ts)**                    | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey)                                                                                               |
+| **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan), [▶️ Android Profile](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)                                                                                         |
+| **[iphey](tests/tests/antibots/iphey.spec.ts)**                    | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey), [▶️ Android Profile](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android)                                                                                               |
 | **[deviceandbrowserinfo](tests/tests/antibots/deviceandbrowserinfo.spec.ts)**     | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-deviceandbrowserinfo-deviceandbrowserinfo)                                                                                               |
 | **[brotector](tests/tests/antibots/brotector.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-brotector-brotector)                                                                                       |
 
