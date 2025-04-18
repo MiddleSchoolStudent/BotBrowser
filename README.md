@@ -35,7 +35,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 ### 🎯 Core Features
 
  **Cross-Platform OS Simulation**  
-  > Use distinct cross-platform profiles to emulate Windows, macOS, Ubuntu, or Android on any host—undetectable even in headless mode.
+  > Use distinct cross-platform profiles to emulate Windows, macOS, Ubuntu, or Android on any host-undetectable even in **headless** mode.
 
  **Latest Chromium Base**
   > Always aligned with the newest stable Chromium release, ensuring cutting‑edge compatibility with today's most advanced antibot defenses.
