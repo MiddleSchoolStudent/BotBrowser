@@ -35,13 +35,13 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 ### 🎯 Core Features
 
  **Cross-Platform OS Simulation**  
-  > Use distinct cross-platform profiles to emulate Windows, macOS, Ubuntu, or Android on any host.
+  > Use distinct cross-platform profiles to emulate Windows, macOS, Ubuntu, or Android on any host—undetectable even in headless mode.
 
  **Latest Chromium Base**
   > Always aligned with the newest stable Chromium release, ensuring cutting‑edge compatibility with today's most advanced antibot defenses.
 
- **Unlimited Android Emulation**
-  > Emulate Android devices (metrics, UA, touch & sensors) flawlessly and undetectably. [▶️ creepjs test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs-Android), [▶️ iphey test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android), [▶️ pixelscan test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)
+ **Unlimited Android Chrome Emulation**
+  > Emulate Android devices (metrics, UA, touch & sensors, etc.) flawlessly and undetectably. [▶️ creepjs test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs-Android), [▶️ iphey test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android), [▶️ pixelscan test](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)
 
  **Advanced Programmatic Control**
   > Harness CDP through [Playwright](demo/playwright) and [Puppeteer](demo/puppeteer) alongside deep C++ modifications that block CDP leak detection, delivering both powerful automation and rock‑solid stealth.
@@ -142,7 +142,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ⚠️ **Disclaimer**
 
-These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool - such as violating website terms of service or engaging in unlawful activities - is strictly prohibited.**
+These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool-such as violating website terms of service or engaging in unlawful activities-is strictly prohibited.**
 
 
 ### 🧪 Code and Video Test Results
