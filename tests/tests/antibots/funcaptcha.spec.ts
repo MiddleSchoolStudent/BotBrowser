@@ -35,6 +35,21 @@ test('blizzard', async ({ page }) => {
         url: 'https://blizzard-api.arkoselabs.com/fc/assets/ec-game-core',
     });
     await fcFrame.locator('button[data-theme="home.verifyButton"]').click();
+    await page.locator('div.step-icon--success').waitFor({ state: 'visible' });
+});
 
-    await expect(page.locator('div.step-icon--success')).toBeVisible({ timeout: 60_000 });
+test('roblox', async ({ page }) => {
+    await page.goto(`https://www.roblox.com/`);
+    await page.locator('select#MonthDropdown').selectOption('Jan');
+    await page.locator('select#DayDropdown').selectOption('01');
+    await page.locator('select#YearDropdown').selectOption('1998');
+    await page.locator('input#signup-username').pressSequentially(Math.random().toString(36).substring(5), {
+        delay: 20,
+    });
+    await page.locator('input#signup-password').pressSequentially(Math.random().toString(36).substring(5) + 'AC_?', {
+        delay: 20,
+    });
+
+    await page.locator('button#signup-button').click();
+    await page.waitForNavigation({ url: 'https://www.roblox.com/home' });
 });
