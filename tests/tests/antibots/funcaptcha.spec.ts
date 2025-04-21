@@ -35,7 +35,7 @@ test('blizzard', async ({ page }) => {
         url: 'https://blizzard-api.arkoselabs.com/fc/assets/ec-game-core',
     });
     await fcFrame.locator('button[data-theme="home.verifyButton"]').click();
-    await page.locator('div.step-icon--success').waitFor({ state: 'visible' });
+    await page.waitForSelector('div.step-icon--success');
 });
 
 test('roblox', async ({ page }) => {
