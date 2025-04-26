@@ -89,18 +89,18 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-  - ⚠️ For MacOS Binary, if you encounter the error: `"Chromium" is damaged and can't be opened`, you may need to run this command:
+    ⚠️ For MacOS Binary, if you encounter the error: `"Chromium" is damaged and can't be opened`, you may need to run this command:
 
     ```bash
     xattr -rd com.apple.quarantine Chromium.app
     ```
 
-  - ⚠️ For Windows Binary, if you encounter the error `STATUS_ACCESS_VIOLATION`, it may be resolved by adding the `--no-sandbox` flag when launching the application.
+    ⚠️ For Windows Binary, if you encounter the error `STATUS_ACCESS_VIOLATION`, it may be resolved by adding the `--no-sandbox` flag when launching the application.
 
 2. **Cross-Platform Profiles**:
   We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system.
 
-  - 🔥 For instance, a _macOS profile_ works in Ubuntu, a _Windows profile_ works in macOS, similarly an _Android profile_ can be fully emulated in macOS / Windows / Ubuntu and bypass antibots checking **without compatibility issues**.
+    🔥 For instance, a _macOS profile_ works in Ubuntu, a _Windows profile_ works in macOS, similarly an _Android profile_ can be fully emulated in macOS / Windows / Ubuntu and bypass antibots checking **without compatibility issues**.
 
 4. **Launching BotBrowser**: BotBrowser can be launched in three ways:
 
