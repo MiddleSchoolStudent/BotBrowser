@@ -140,9 +140,9 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ## 🎯 Proven Effectiveness
 
-⚠️ **Disclaimer**
+⚠️ **DISCLAIMER**
 
-These test scripts are provided for educational purposes and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse of these tests or the tool-such as violating website terms of service or engaging in unlawful activities-is strictly prohibited.**
+These test scripts are provided for **educational purposes** and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse**-such as violating website terms of service or engaging in unlawful activities-**is strictly prohibited.**
 
 
 ### 🧪 Code and Video Test Results
@@ -161,7 +161,7 @@ BotBrowser has been extensively tested against leading antibot systems. Below ar
 | **[PerimeterX](tests/tests/antibots/perimeterx.spec.ts)**          | [▶️ TextNow](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-textnow), [▶️ Grubhub](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-grubhub)                                                                                     |
 | **[Imperva (Incapsula)](tests/tests/antibots/incapsula.spec.ts)**  | [▶️ CopaAir](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-incapsula-copaair)                                                                       |
 | **[DataDome](tests/tests/antibots/datadome.spec.ts)**              | [▶️ ShutterStock](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-shutterstock), [▶️ SeatGeek](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-seatgeek), [▶️ Hermes](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-hermes)                                                                           |
-| **[hCaptcha](tests/tests/antibots/hcaptcha.spec.ts)**              | [▶️ EpicGames](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-epicgames), [▶️ Discord](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-discord), [▶️ Steam](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-steam)                                                                       |
+| **[hCaptcha](tests/tests/antibots/hcaptcha.spec.ts)**              | [▶️ EpicGames](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-epicgames), [▶️ Discord](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-discord), [▶️ Steam](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-steam), [▶️ RiotGames](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-roitgames)                                                                       |
 | **[FunCaptcha](tests/tests/antibots/funcaptcha.spec.ts)**              | [▶️ Blizzard](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-funcaptcha-blizzard), [▶️ Roblox](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-funcaptcha-roblox)                                                                       |
 | **[Accertify](tests/tests/antibots/accertify.spec.ts)**            | [▶️ Grubhub](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-grubhub)                                                                       |
 | **[Forter](tests/tests/antibots/forter.spec.ts)**                  | [▶️ Grubhub](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-grubhub)                                                                       |
@@ -219,9 +219,9 @@ If you wish to compile your own version of Chromium with our modifications, foll
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ DISCLAIMER
 
-BotBrowser is intended for legitimate use cases that comply with all applicable laws and regulations. Misuse of this tool to violate the terms of service of websites or engage in illegal activities is strictly prohibited.
+**BotBrowser** is intended for **legitimate use cases** that comply with all applicable **laws and regulations**. **Misuse** of this tool to violate the **terms of service** of websites or engage in **illegal activities** is strictly prohibited.
 
 ---
 

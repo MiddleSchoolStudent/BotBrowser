@@ -92,3 +92,61 @@ test('steam', async ({ page }) => {
     const apiResponse = await apiResponsePromise;
     expect((await apiResponse.json()).success).toBe(36);
 });
+
+test('riotgames', async ({ page }) => {
+    const username = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
+    const email = username + '@gmail.com';
+    const password = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5) + 'AC?_';
+
+    // Login
+    await page.goto(`https://www.riotgames.com/en`);
+    await page.locator('a[data-testid="riotbar:account:button-login"]').click();
+    await page.locator('input[name="username"]').pressSequentially(username, { delay: 20 });
+    await page.keyboard.press('Tab');
+    await page.locator('input[name="password"]').pressSequentially(password, {
+        delay: 20,
+    });
+    await page.keyboard.press('Enter');
+    await page.waitForSelector('p[data-testid="error-message"] >> text=Your username or password may be incorrect');
+
+    // Register
+    await page.locator('a[href^="https://auth.riotgames.com/authorize"]').click();
+    await page.locator('input[data-testid="riot-signup-email"]').pressSequentially(email, {
+        delay: 20,
+    });
+    await page.keyboard.press('Enter');
+
+    await page.locator('input[name="birth_date_month"]').pressSequentially('01', {
+        delay: 20,
+    });
+    await page.locator('input[name="birth_date_day"]').pressSequentially('01', {
+        delay: 20,
+    });
+    await page.locator('input[name="birth_date_year"]').pressSequentially('1998', {
+        delay: 20,
+    });
+    await page.keyboard.press('Enter');
+
+    await page.locator('input[data-testid="riot-signup-username"]').pressSequentially(username, {
+        delay: 20,
+    });
+    await page.keyboard.press('Enter');
+
+    await page.locator('input[name="password"]').pressSequentially(password, {
+        delay: 20,
+    });
+    await page.locator('input[name="password-confirm"]').pressSequentially(password, {
+        delay: 20,
+    });
+    await page.keyboard.press('Enter');
+
+    await sleep(5_000);
+    const tosElem = await page.waitForSelector('div#tos-scrollable-area');
+    const tosElemBox = await tosElem.boundingBox();
+    await page.mouse.move(tosElemBox!.x + tosElemBox!.width / 2, tosElemBox!.y + tosElemBox!.height / 2);
+    await page.mouse.wheel(0, 2000);
+    await page.locator('input[id="tos-checkbox"]').click();
+    await page.locator('button[data-testid="btn-accept-tos"]').click();
+
+    await page.waitForNavigation({ url: 'https://www.riotgames.com/en' });
+});
