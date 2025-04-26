@@ -188,7 +188,7 @@ The following platforms have been tested:
 | **[Walmart](tests/tests/websites/walmart.spec.ts)** | PerimeterX | ✅ Success [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-walmart-walmart) |
 | **[Temu](tests/tests/websites/temu.spec.ts)** | F5 Shape Security | ✅ Success [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-temu-temu) |
 | **LinkedIn** | Generic Antibot | ✅ Success |
-| **Ticketmaster** | PerimeterX, FingerprintJS, reCAPTCHA | ✅ Success  [▶️ Checkout Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-ticketmaster-checkout) |
+| **[TicketMaster](tests/tests/websites/ticketmaster.spec.ts)** | PerimeterX, FingerprintJS, reCAPTCHA | ✅ Success  [▶️ Checkout Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-ticketmaster-checkout) |
 | **Shein** | F5 Shape Security, FingerprintJS, Forter | ✅ Success |
 | **Facebook** | FunCaptcha    | ✅ Success |
 | **Bet365** | Generic Antibot | ✅ Success |
