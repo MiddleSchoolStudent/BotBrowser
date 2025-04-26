@@ -28,3 +28,14 @@ test('playstation', async ({ page }) => {
 
     expect(await responseWaiter).toBeTruthy();
 });
+
+test('stubhub', async ({ page }) => {
+    const apiResponsePromise = page.waitForResponse(
+        (response) =>
+            response.request().method() === 'POST' &&
+            response.url().startsWith('https://www.stubhub.com/Browse/VenueMap/GetMapAvailabilityAndPrices/')
+    );
+    await page.goto('https://www.stubhub.com/nate-bargatze-new-york-tickets-9-26-2025/event/156893777/?quantity=2');
+
+    expect(await apiResponsePromise).toBeTruthy();
+});
