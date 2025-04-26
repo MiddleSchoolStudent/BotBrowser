@@ -6,10 +6,23 @@
   <a href="https://github.com/MiddleSchoolStudent/BotBrowser/releases">
     <img src="https://img.shields.io/github/v/release/MiddleSchoolStudent/BotBrowser?style=flat-square" alt="Latest Release">
   </a>
+  <a href="https://github.com/MiddleSchoolStudent/BotBrowser/commits/main/">
+    <img src="https://img.shields.io/github/commit-activity/m/MiddleSchoolStudent/BotBrowser?style=flat-square" alt="Commit Activity">
+  </a>
   <a href="https://github.com/MiddleSchoolStudent/BotBrowser/issues">
     <img src="https://img.shields.io/github/issues/MiddleSchoolStudent/BotBrowser?style=flat-square" alt="Issues">
   </a>
+  <a href="https://github.com/MiddleSchoolStudent/BotBrowser/fork">
+    <img src="https://img.shields.io/github/forks/MiddleSchoolStudent/BotBrowser?style=flat-square" alt="GitHub Forks">
+  </a>
+  <a href="https://github.com/MiddleSchoolStudent/BotBrowser">
+    <img src="https://img.shields.io/github/stars/MiddleSchoolStudent/BotBrowser" alt="GitHub Stars">
+  </a>
 </p>
+
+<div align="center">
+  <img width="600" alt="BotBrowser GUI - Your Command Center" src="https://github.com/user-attachments/assets/e9c0b656-83b0-4be5-986e-d4bc3c04b4b5">
+</div>
 
 ---
 
@@ -24,15 +37,10 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 - Seamlessly manage different environments
 - Efficiently handle multiple accounts
 
-<div align="center">
-  <img width="800" alt="BotBrowser GUI - Your Command Center" src="https://github.com/user-attachments/assets/e9c0b656-83b0-4be5-986e-d4bc3c04b4b5">
-</div>
 
 ---
 
-## 🚀 Features
-
-### 🎯 Core Features
+## 🚀 Core Features
 
  **Cross-Platform OS Simulation**
   > Use distinct cross-platform profiles to emulate Windows, macOS, Ubuntu, or Android on any host-undetectable even in **headless** mode.
@@ -49,43 +57,35 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
  **Success & Performance**
   > Proven **98%+ success** against sophisticated antibot measures, powering over 350,000 daily account registrations with exceptional stability and speed under heavy loads.
 
-### 🛡️ Advanced Capabilities
+## 🛡️ Advanced Capabilities
 
-#### 🕵️ Stealth and Detection Evasion
+- [x] **Bypass headless and incognito checks**: Enables undetectable automation by seamlessly evading detection in both headless and incognito modes.
 
-- **Bypass headless and incognito checks**: Enables undetectable automation by seamlessly evading detection in both headless and incognito modes.
+- [x] **Noise injection**: Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints.
 
-- **Noise injection**: Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints to avoid detection.
+- [x] **Simulated OS-specific properties**: Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
 
-- **Simulated OS-specific properties**: Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
+- [x] **Chrome feature masking**: Removes Chromium-specific traits, simulating native Chrome with features like ADInterest and CDM for enhanced detection evasion.
 
-- **Chrome feature masking**: Removes Chromium-specific traits, simulating native Chrome with features like AdInterest and CDM for enhanced detection evasion.
+- [x] **WebRTC leak protection**: Prevents exposure of real IPs during WebRTC communication.
 
-- **Comprehensive fingerprint spoofing**:
+- [x] **Comprehensive fingerprints spoofing**:
 
-  | **Category**    | **Details**                                 |
-  |-----------------|---------------------------------------------|
-  | **Browser**     | Version, OS, userAgentData                 |
-  | **Graphics**    | WebGL, WebGL2, GPU                         |
-  | **Hardware**    | Screen, Battery, Keyboard, CPU             |
-  | **Environment** | Permissions, FeaturePolicy, SystemFonts    |
-  | **Media**       | MediaDevices, MimeTypes                    |
-  | **Visuals**     | Emoji, Unicode, System Colors, MatchMedia  |
-  | **Others**      | Navigator, Window, and more                |
+| Category        | Details |
+|-----------------|---------|
+| **Browser**     | Version, userAgentData, userAgent |
+| **OS**          | Windows, macOS, Ubuntu, Android simulation |
+| **Navigator**   | Languages, Plugins, Permissions, Battery, Keyboard |
+| **Graphics**    | WebGL, WebGL2, GPUAdapter, GPUDevice |
+| **Hardware**    | Screen, CPU, System Fonts, System Colors |
+| **Media**       | MediaDevices, MimeTypes, AudioContext |
+| **Other**       | Emoji, Unicode, matchMedia control |
 
-
-#### 🌐 Comprehensive Proxy and Network Control
-
-- **Proxy integration**: Easily configure proxy host, username, and password without relying on CDP ([Page.authenticate](https://pptr.dev/api/puppeteer.page.authenticate/)).
-
-- **Dynamic language and timezone settings**: Automatically adapt browser environment based on proxy IP for realistic geolocation.
-
-- **WebRTC leak protection**: Prevents exposure of real IPs during WebRTC communication.
 
 
 ---
 
-## 🚀 Usage
+## 🚀 Getting Started
 
 1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
@@ -133,21 +133,16 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
   - **[BotBrowserConsole](console)**: A free and open-source GUI tool.
 
-4. **Tests**
-  Use our detailed test scripts to explore real-world use cases and implementation examples: **[Tests](tests)**.
-
 ---
 
 ## 🎯 Proven Effectiveness
 
+Use our detailed test scripts to explore real-world use cases and implementation examples: **[Tests](tests)**.
+
+
 ⚠️ **DISCLAIMER**
 
 These test scripts are provided for **educational purposes** and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse**-such as violating website terms of service or engaging in unlawful activities-**is strictly prohibited.**
-
-
-### 🧪 Code and Video Test Results
-
-BotBrowser has been extensively tested against leading antibot systems. Below are detailed test results and video demonstrations:
 
 
 
@@ -177,9 +172,7 @@ BotBrowser has been extensively tested against leading antibot systems. Below ar
 | **[device&browserinfo](tests/tests/antibots/deviceandbrowserinfo.spec.ts)**     | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-deviceandbrowserinfo-deviceandbrowserinfo)                                                                                               |
 | **[brotector](tests/tests/antibots/brotector.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-brotector-brotector)                                                                                       |
 
-### 🌐 Top Platforms and Websites
 
-The following platforms have been tested:
 
 | Service & Scripts | Anti-bot Services | Test Results |
 |------------------|-------------------|--------------|
@@ -201,18 +194,17 @@ The following platforms have been tested:
 
 ## 📚 Additional Resources
 
-### 🔐 Profile Generation
+### Profile Generation
 
 We do not provide the private key required to generate new profiles. If you need additional profiles, please contact us directly. We maintain over **300,000 real user browser fingerprints** to support your needs.
 
-**📞 Contact us today:**
 
 | 📧 Email    | [middleschoolstudent@mail.ru](mailto:middleschoolstudent@mail.ru) |
 |-------------|--------------------------------------------------|
 | 📱 Telegram | [middle_student](https://t.me/middle_student)   |
 
 
-### 🛠️ Building from Source
+### 🛠Building from Source
 
 If you wish to compile your own version of Chromium with our modifications, follow the instructions provided [here](build).
 
@@ -222,14 +214,3 @@ If you wish to compile your own version of Chromium with our modifications, foll
 ## ⚠️ DISCLAIMER
 
 **BotBrowser** is intended for **legitimate use cases** that comply with all applicable **laws and regulations**. **Misuse** of this tool to violate the **terms of service** of websites or engage in **illegal activities** is strictly prohibited.
-
----
-
-<p align="center">
-  <a href="https://github.com/MiddleSchoolStudent/BotBrowser">
-    <img src="https://img.shields.io/github/stars/MiddleSchoolStudent/BotBrowser?style=social" alt="GitHub Stars">
-  </a>
-  <a href="https://github.com/MiddleSchoolStudent/BotBrowser/fork">
-    <img src="https://img.shields.io/github/forks/MiddleSchoolStudent/BotBrowser?style=social" alt="GitHub Forks">
-  </a>
-</p>
