@@ -1,78 +1,92 @@
-# BotBrowser
+# BotBrowser Profiles
 
 ## ⚠️ Important Notice About Profiles
 
 ### 🚨 Public Profile Warning
-> **Note**: Public demo profiles, while great for testing, are widely circulated and flagged. Using them in production will result in **immediate account bans**. Protect your business by avoiding public profiles.
+> **Note**: Public demo profiles are suitable for testing only.
+> Using them in production environments **will result in immediate account bans** because they are widely circulated and easily flagged.
+> Protect your business by using private, authentic profiles.
 
 ### 🌟 Premium Profile Service
-> Access our exclusive collection of **300,000+ authentic browser fingerprints** sourced from real users - not algorithmically generated! Each profile is:
-> - ✅ Unique and unused
+> Access our exclusive pool of **300,000+ authentic browser fingerprints** sourced from real users (not algorithm-generated). Each profile is:
+> - ✅ Unique and never reused
 > - 🔒 Private and secure
-> - 👤 Based on genuine user data
-> - 🛡️ Safe for production use
+> - 👤 Based on genuine device/browser data
+> - 🛡️ Safe for production and scalable automation
 
-### 📬 Get Premium Profiles
-> For business-grade, pristine profiles that ensure your operations stay undetected:
-
+### 📬 How to Get Premium Profiles
 | 📧 Email | [middleschoolstudent@mail.ru](mailto:middleschoolstudent@mail.ru) |
-|---------------|---------|
+|----------|-----------------------------------------------------------|
 | 📱 Telegram | [middle_student](https://t.me/middle_student) |
 
-*We maintain strict confidentiality and provide fast, professional support for all clients.*
+*We ensure fast delivery, confidentiality, and professional support for all clients.*
 
-----------
+---
 
-Use this command get BotBrowser to execute using this profile.
+## 📚 How to Use Profiles
 
-```bash
-chromium-browser --bot-profile="{path_of_}/chrome128-macarm.enc"
-```
-
-This command use to generate the encrypted Profile.
+**Launch BotBrowser with a Profile:**
 
 ```bash
-node encryptProfile.js
+chromium --bot-profile="{absolute_path_of_}/chrome135_win11_x64.enc"
 ```
 
-------
+---
 
-## Features
+## 📖 Important: Customize Your Profile Configurations
 
-### Unique capabilities
+Starting from 2025, BotBrowser now supports **full environment customization directly inside profiles** — including proxy, timezone, screen size, device pixel ratio, and more.
 
-- [x] bypass Incognito mode checks
-- [x] Avoid CDP leaks and bypass all detection
-- [x] Customize page history to ensure fingerprint diversity
-- [x] Keeps the page Active, even if it loses focus. Ensure that multiple pages remain active
-- [x] Setting Proxy host, username, password without using CDP
-- [x] Customizable language / time zone based on Proxy's IP
-- [x] Handle WebRTC leaks
-- [x] Noise on 2d canvas / webgl
-- [x] Audio fingerprinting Noise
-- [x] Scroll bar width
-- [x] CDM detection bypass
+👉 **Please read** [`profile-configs.md`](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md) **for full configuration options.**
 
-### Fingerprints covered
+You no longer need CDP to set these fields manually!
 
-- [x] Browser version
-- [x] OS
-- [x] userAgentData
-- [x] webgl
-- [x] webgl2
-- [x] navigator
-- [x] window
-- [x] voices
-- [x] permissions
-- [x] featurePolicy
-- [x] gpu
-- [x] emoji
-- [x] unicode
-- [x] mediaDevices
-- [x] mimeTypes
-- [x] systemFonts
-- [x] cpu
-- [x] screen
-- [x] battery
-- [x] keyboard
-- [x] system colors
+---
+
+## ✨ Major Features (Updated 2025)
+
+### 🛠️ Unique Capabilities
+
+- [x] **Bypass Incognito mode checks**
+- [x] **Avoid CDP leaks** — native CDP fingerprint protection
+- [x] **Custom page history** — enhance fingerprint realism
+- [x] **Keep pages active** even when they lose focus
+- [x] **Set proxy (host, username, password) directly via profile**
+- [x] **Set language and timezone** based on proxy or manually
+- [x] **WebRTC leak protection**
+- [x] **Canvas / WebGL noise injection**
+- [x] **Audio fingerprinting noise** (enhanced to bypass FunCaptcha)
+- [x] **Control scroll bar width**
+- [x] **Bypass CDM (Content Decryption Module) detection**
+- [x] **Customizable remote-debugging-address** (bind to 0.0.0.0 for Scraping APIs)
+- [x] **Full window/screen size control via profile**
+- [x] **Advanced matchMedia simulation** — bypass complex CSS feature detection
+- [x] **Android fingerprint simulation** — real mobile device behavior emulation
+- [x] **Precision GPU and WebGL parameter spoofing**
+
+---
+
+### 🧐 Fingerprints Covered
+
+| Category        | Details |
+|-----------------|---------|
+| **Browser**     | Version, userAgentData, userAgent |
+| **OS**          | Windows, macOS, Ubuntu, Android simulation |
+| **Navigator**   | Languages, Plugins, Permissions, Battery, Keyboard |
+| **Graphics**    | WebGL, WebGL2, GPUAdapter, GPUDevice |
+| **Hardware**    | Screen, CPU, System Fonts, System Colors |
+| **Media**       | MediaDevices, MimeTypes, AudioContext |
+| **Other**       | Emoji, Unicode, matchMedia control |
+
+---
+
+## 📌 Best Practices
+
+- Use **private profiles** for any production traffic.
+- Set realistic **screen size, devicePixelRatio, proxy settings** inside your profile.
+- Use updated **Android profiles** for mobile-specific operations.
+- Regularly update your profiles to stay synchronized with Chrome’s latest versions.
+
+---
+
+BotBrowser profiles — giving you total control over your fingerprint. 🚀
