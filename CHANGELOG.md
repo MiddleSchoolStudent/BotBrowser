@@ -5,6 +5,66 @@
 
 ---
 
+## [2025-04-26]
+
+### Improved
+- **Audio Fingerprint Noise Simulation**
+  - Further optimized audio noise generation to better simulate realistic audio fingerprints, successfully bypassing detection by **FunCaptcha**.
+
+### Fixed
+- **mimeTypes Fingerprint Handling**
+  - Fixed an issue in MIME type processing to improve stealth against advanced antifraud systems relying on precise mimeTypes validation.
+
+### Added
+- **Custom Remote Debugging Address Support**
+  - Enhanced the `--remote-debugging-address` flag to allow binding to custom IP addresses like `0.0.0.0`, making BotBrowser better suited for building Scraping APIs.
+
+- **Profile-Based Window and Screen Size Control**
+  - Added support for fully configuring **window size**, **screen size**, **device pixel ratio**, and related properties directly in the **Profile**, without needing to rely on CDP.
+  - This new config overrides `--window-size`, `--window-position`, and similar flags.
+
+Example:
+```json
+{
+    "configs": {
+        "locale": "en-US",
+        "timezone": "America/New_York",
+        "proxy": {
+            "server": "proxy.example.com:8080",
+            "username": "user",
+            "password": "pass"
+        },
+        "languages": [
+            "en-US",
+            "ru-RU"
+        ],
+        "skipWindowAndScreenSizes": false, // =true, ignore this setting and you can use CDP to control the window size
+        "window": {
+            "innerWidth": 1203,
+            "innerHeight": 743,
+            "outerWidth": 1203,
+            "outerHeight": 830,
+            "screenX": 43,
+            "screenY": 79,
+            "devicePixelRatio": 2
+        },
+        "screen": {
+            "availWidth": 1512,
+            "availHeight": 944,
+            "availLeft": 0,
+            "availTop": 38,
+            "width": 1512,
+            "height": 982,
+            "colorDepth": 30,
+            "pixelDepth": 30
+        }
+    }
+}
+```
+
+
+---
+
 ## [2025-04-15]
 
 ### Added
