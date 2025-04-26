@@ -1,7 +1,7 @@
 import { expect, test } from '../global-setup';
 import { clickLocatorWithMouse, sleep } from '../utils';
 
-test('nike-checkout', async ({ page }) => {
+test('checkout', async ({ page }) => {
     await page.goto(`https://www.nike.com/t/field-general-womens-shoes-SDTBm0k1/FZ5593-103`);
 
     const removeRipple = async () => {
