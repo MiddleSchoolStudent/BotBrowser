@@ -95,7 +95,3 @@ You no longer need CDP to set these fields manually!
 - Set realistic **screen size, devicePixelRatio, proxy settings** inside your profile.
 - Use updated **Android profiles** for mobile-specific operations.
 - Regularly update your profiles to stay synchronized with Chrome’s latest versions.
-
----
-
-BotBrowser profiles — giving you total control over your fingerprint. 🚀
