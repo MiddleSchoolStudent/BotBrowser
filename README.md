@@ -204,7 +204,7 @@ We do not provide the private key required to generate new profiles. If you need
 | 📱 Telegram | [middle_student](https://t.me/middle_student)   |
 
 
-### 🛠Building from Source
+### Building from Source
 
 If you wish to compile your own version of Chromium with our modifications, follow the instructions provided [here](build).
 
