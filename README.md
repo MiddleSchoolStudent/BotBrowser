@@ -28,7 +28,7 @@
 
 ## What is BotBrowser?
 
-BotBrowser is a cross-platform automation tool that redefines web automation. By modifying Chromium's C++ source code, it goes beyond the limitations of [CDP](https://chromedevtools.github.io/devtools-protocol/)-based solutions, allowing true undetectable automation.
+BotBrowser is a cross-platform stealth browser designed to defeat modern antifraud and antibot detection systems. By directly modifying Chromium's C++ source code, BotBrowser eliminates the fingerprint leaks and automation traces left behind by [CDP](https://chromedevtools.github.io/devtools-protocol/)-based solutions, enabling true undetectable browsing and automation.
 
 ## Simplified Management
 
@@ -100,7 +100,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 2. **Cross-Platform Profiles**:
   We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system.
 
-    🔥 For instance, a _macOS profile_ works in Ubuntu, a _Windows profile_ works in macOS, similarly an _Android profile_ can be fully emulated in macOS / Windows / Ubuntu and bypass antibots checking **without compatibility issues**.
+    > 🔥 For instance, a _macOS profile_ works in Ubuntu, a _Windows profile_ works in macOS, similarly an _Android profile_ can be fully emulated in macOS / Windows / Ubuntu and bypass antibots checking **without compatibility issues**.
 
 4. **Launching BotBrowser**: BotBrowser can be launched in three ways:
 
