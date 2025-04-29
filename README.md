@@ -28,7 +28,7 @@
 
 ## What is BotBrowser?
 
-BotBrowser is a cross-platform stealth browser designed to defeat modern antifraud and antibot detection systems. By directly modifying Chromium's C++ source code, BotBrowser eliminates the fingerprint leaks and automation traces left behind by [CDP](https://chromedevtools.github.io/devtools-protocol/)-based solutions, enabling true undetectable browsing and automation.
+BotBrowser is a cross-platform stealth browser designed to defeat modern antibot systems. By directly modifying Chromium's C++ source code, BotBrowser eliminates the fingerprint leaks and automation traces left behind by [CDP](https://chromedevtools.github.io/devtools-protocol/)-based solutions, enabling true undetectable browsing and automation.
 
 ## Simplified Management
 
