@@ -87,51 +87,99 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ## 🚀 Getting Started
 
-1. **Download**: Get the installer for your OS from [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
+### Download & Installation
 
-    ⚠️ For MacOS Binary, if you encounter the error: `"Chromium" is damaged and can't be opened`, you may need to run this command:
+1. **Download Installer**  
+   Get the BotBrowser installer for your OS from the [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-    ```bash
-    xattr -rd com.apple.quarantine Chromium.app
-    ```
+2. **macOS**  
+   - Open the downloaded `.dmg` file.  
+   - Drag `Chromium.app` into your Applications folder or any desired location.  
+   - If you see the error:
+     ```
+     "Chromium" is damaged and can't be opened
+     ```  
+     Run:
+     ```bash
+     xattr -rd com.apple.quarantine /Applications/Chromium.app
+     ```
 
-    ⚠️ For Windows Binary, if you encounter the error `STATUS_ACCESS_VIOLATION`, it may be resolved by adding the `--no-sandbox` flag when launching the application.
+3. **Windows**  
+   - Extract the downloaded `.7z` archive.  
+   - Run `chrome.exe` from the extracted folder.  
+   - If you encounter `STATUS_ACCESS_VIOLATION`, launch with [--no-sandbox](https://peter.sh/experiments/chromium-command-line-switches/#no-sandbox).
 
-2. **Cross-Platform Profiles**:
-  We offer demo [Profiles](profiles) for demonstration purposes. They are **cross-compatible**, allowing seamless fingerprint emulation on any system.
+4. **Ubuntu**  
+   - Install via `dpkg`:
+     ```bash
+     sudo dpkg -i botbrowser_<version>_amd64.deb
+     ```  
+   - If dependencies are missing, run:
+     ```bash
+     sudo apt-get install -f
+     ```
 
-    > 🔥 For instance, a _macOS profile_ works in Ubuntu, a _Windows profile_ works in macOS, similarly an _Android profile_ can be fully emulated in macOS / Windows / Ubuntu and bypass antibots checking **without compatibility issues**.
+### Profiles Configuration
 
-4. **Launching BotBrowser**: BotBrowser can be launched in three ways:
+- **Demo Profiles**: located in the [profiles](profiles) directory of the repository.
+- **Cross-Platform**:  
+  🔥 A *macOS profile* works on Ubuntu; a *Windows profile* works on macOS; an *Android profile* can be fully emulated on macOS, Windows, and Ubuntu.  
+  > **Note**: All profiles are encrypted. Always use the **absolute path** to the `.enc` file.
+- **Usage Tips**:  
+  - Ensure your profile file is readable (check permissions).  
+  - For more configuration options, see the [profile-configs guide](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md).
 
-  - **CLI**:
-    Pass your profile via the `--bot-profile` parameter, use the absolute path:
+### Quick Start Examples
 
-    ```bash
-    chromium --bot-profile="{absolute_path_of_}/chrome135_win11_x64.enc"
-    ```
+#### 1. CLI
 
-  - **[Playwright](demo/playwright) / [Puppeteer Demo](demo/puppeteer)**:
-    Integrate BotBrowser within automation frameworks with a few lines:
+Launch BotBrowser with a profile:
 
-    ```javascript
-    const browser = await chromium.launch({
-      headless: true,
-      executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
-      args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute path to the bot profile
-    });
+```bash
+chromium --bot-profile="/absolute/path/to/chrome135_win11_x64.enc"
+```
 
-    const page = await browser.newPage();
+#### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
 
-    // Remove Playwright's bindings to avoid detection.
-    await page.addInitScript(() => {
-      delete window.__playwright__binding__;
-      delete window.__pwInitScripts;
-    });
-    await page.goto("https://abrahamjuliot.github.io/creepjs/");
-    ```
+Integrate in a script:
 
-  - **[BotBrowserConsole](console)**: A free and open-source GUI tool.
+```javascript
+const browser = await chromium.launch({
+  headless: true,
+  executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
+  args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute path to the bot profile
+});
+
+const page = await browser.newPage();
+
+// Remove Playwright's bindings to avoid detection.
+await page.addInitScript(() => {
+  delete window.__playwright__binding__;
+  delete window.__pwInitScripts;
+});
+await page.goto("https://abrahamjuliot.github.io/creepjs/");
+```
+
+#### 3. [BotBrowserConsole](console) (GUI)
+
+Use the open-source GUI to select your profile and start browsing without code.
+
+### 🐞 Debugging & FAQs
+
+| Issue                             | Solution                                                                                         |
+| --------------------------------- | ------------------------------------------------------------------------------------------------ |
+| "Chromium" is damaged…            | Run `xattr -rd com.apple.quarantine /Applications/Chromium.app`                                  |
+| STATUS_ACCESS_VIOLATION           | Add `--no-sandbox` flag when launching                                                           |
+| Profile file permission errors    | Ensure `.enc` file has read permissions (`chmod 644`)                                            |
+| BotBrowser won’t start or crashes | Check that your OS and Chromium version match the build; update BotBrowser to the latest release |
+
+### 💡 Tips
+
+- Always use **absolute paths** for both the executable and the profile.  
+- Keep BotBrowser updated by re-downloading after each release.  
+- If you customize profiles, back up the original encrypted files.  
+- For advanced users, combine multiple flags (e.g., `--no-sandbox`, `--disable-gpu`) to improve stability.
+
 
 ---
 
