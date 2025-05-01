@@ -90,34 +90,34 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 ### Download & Installation
 
 1. **Download Installer**  
-   Get the BotBrowser installer for your OS from the [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
+  Get the BotBrowser installer for your OS from the [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
 2. **macOS**  
-   - Open the downloaded `.dmg` file.  
-   - Drag `Chromium.app` into your Applications folder or any desired location.  
-   - If you see the error:
-     ```
-     "Chromium" is damaged and can't be opened
-     ```  
-     Run:
-     ```bash
-     xattr -rd com.apple.quarantine /Applications/Chromium.app
-     ```
+- Open the downloaded `.dmg` file.  
+- Drag `Chromium.app` into your Applications folder or any desired location.  
+- If you see the error:
+   ```
+   "Chromium" is damaged and can't be opened
+   ```  
+   Run:
+   ```bash
+   xattr -rd com.apple.quarantine /Applications/Chromium.app
+   ```
 
 3. **Windows**  
-   - Extract the downloaded `.7z` archive.  
-   - Run `chrome.exe` from the extracted folder.  
-   - If you encounter `STATUS_ACCESS_VIOLATION`, launch with [--no-sandbox](https://peter.sh/experiments/chromium-command-line-switches/#no-sandbox).
+- Extract the downloaded `.7z` archive.  
+- Run `chrome.exe` from the extracted folder.  
+- If you encounter `STATUS_ACCESS_VIOLATION`, launch with [--no-sandbox](https://peter.sh/experiments/chromium-command-line-switches/#no-sandbox).
 
 4. **Ubuntu**  
-   - Install via `dpkg`:
-     ```bash
-     sudo dpkg -i botbrowser_<version>_amd64.deb
-     ```  
-   - If dependencies are missing, run:
-     ```bash
-     sudo apt-get install -f
-     ```
+- Install via `dpkg`:
+   ```bash
+   sudo dpkg -i botbrowser_<version>_amd64.deb
+   ```  
+- If dependencies are missing, run:
+   ```bash
+   sudo apt-get install -f
+   ```
 
 ### Profiles Configuration
 
