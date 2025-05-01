@@ -141,8 +141,6 @@ chromium --bot-profile="/absolute/path/to/chrome135_win11_x64.enc"
 
 #### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
 
-Integrate in a script:
-
 ```javascript
 const browser = await chromium.launch({
   headless: true,
