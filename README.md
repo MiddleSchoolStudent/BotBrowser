@@ -229,7 +229,7 @@ These test scripts are provided for **educational purposes** and to demonstrate 
 | **LinkedIn** | Generic Antibot | ✅ Success |
 | **[TicketMaster](tests/tests/websites/ticketmaster.spec.ts)** | PerimeterX, FingerprintJS, reCAPTCHA | ✅ Success  [▶️ Checkout Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-ticketmaster-checkout) |
 | **Shein** | F5 Shape Security, FingerprintJS, Forter | ✅ Success |
-| **Facebook** | FunCaptcha    | ✅ Success |
+| **Facebook** | FunCaptcha, reCAPTCHA    | ✅ Success |
 | **Bet365** | Generic Antibot | ✅ Success |
 
 ...and many more
