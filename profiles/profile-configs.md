@@ -89,7 +89,7 @@ Controls screen properties exposed by `window.screen`.
 }
 ```
 
-⚠️ Open the `.enc` file and put `configs` before `key`, being careful to keep it in json format:
+⚠️ Open the `.enc` file and put `configs` before `key`, being careful to keep it in JSON format:
 
 <img width="758" alt="image" src="https://github.com/user-attachments/assets/e34b1557-d7cd-4257-b709-b76ec1b0409b" />
 
