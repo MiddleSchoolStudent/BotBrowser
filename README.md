@@ -176,7 +176,7 @@ Use the open-source GUI to select your profile and start browsing without code.
 - Always use **absolute paths** for both the executable and the profile.  
 - Keep BotBrowser updated by re-downloading after each release.  
 - If you customize profiles, back up the original encrypted files.  
-- For advanced users, combine multiple flags (e.g., `--no-sandbox`, `--disable-gpu`) to improve stability.
+- For advanced users, combine multiple flags (e.g., `--no-sandbox`) to improve stability.
 
 
 ---
