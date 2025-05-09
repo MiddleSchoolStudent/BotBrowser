@@ -34,11 +34,33 @@ By using a profile, BotBrowser can launch sessions that mimic real human devices
 
 ### 📚 How to Use Profiles
 
-**Launch BotBrowser with a Profile:**
+#### 1. CLI
+
+Launch BotBrowser with a profile:
 
 ```bash
-chromium --bot-profile="{absolute_path_of_}/chrome135_win11_x64.enc"
+chromium --bot-profile="/absolute/path/to/chrome135_win11_x64.enc"
 ```
+
+#### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
+
+```javascript
+const browser = await chromium.launch({
+  headless: true,
+  executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
+  args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute path to the bot profile
+});
+
+const page = await browser.newPage();
+
+// Remove Playwright's bindings to avoid detection.
+await page.addInitScript(() => {
+  delete window.__playwright__binding__;
+  delete window.__pwInitScripts;
+});
+await page.goto("https://abrahamjuliot.github.io/creepjs/");
+```
+
 
 ---
 
