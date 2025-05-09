@@ -1,0 +1,104 @@
+diff --git a/media/capture/video/video_capture_device_descriptor.cc b/media/capture/video/video_capture_device_descriptor.cc
+index c619e994b0de1..ce064c7e0801a 100644
+--- a/media/capture/video/video_capture_device_descriptor.cc
++++ b/media/capture/video/video_capture_device_descriptor.cc
+@@ -8,6 +8,14 @@
+ 
+ #include "base/strings/string_util.h"
+ 
++#include "base/command_line.h"
++#include "media/base/media_switches.h"
++
+ namespace media {
+ namespace {
+ std::string TrimDisplayName(const std::string& display_name) {
+@@ -18,6 +26,22 @@ std::string TrimDisplayName(const std::string& display_name) {
+ }
+ }  // namespace
+ 
++// Generates a random model ID in the format "XXXX:XXXX", where X is an uppercase hexadecimal digit.
++std::string GenerateRandomModelId() {
++  // Lambda function to generate a random 4-digit hexadecimal segment.
++  auto GetRandomSegment = []() -> std::string {
++      // Generate a random 16-bit number using a secure random generator.
++      uint16_t random_value = static_cast<uint16_t>(base::RandUint64() & 0xFFFF);
++      // Format the random value as a 4-digit uppercase hexadecimal string.
++      char buffer[5] = {0};
++      std::snprintf(buffer, sizeof(buffer), "%04X", random_value);
++      return std::string(buffer);
++  };
++
++  // Combine two random segments with a colon separator.
++  return GetRandomSegment() + ":" + GetRandomSegment();
++}
++
+ VideoCaptureDeviceDescriptor::VideoCaptureDeviceDescriptor()
+     : facing(VideoFacingMode::MEDIA_VIDEO_FACING_NONE),
+       capture_api(VideoCaptureApi::UNKNOWN),
+@@ -34,7 +58,9 @@ VideoCaptureDeviceDescriptor::VideoCaptureDeviceDescriptor(
+       capture_api(capture_api),
+       transport_type(transport_type),
+       display_name_(TrimDisplayName(display_name)),
+-      control_support_(control_support) {}
++      control_support_(control_support) {
++  PostConstruct();
++}
+ 
+ VideoCaptureDeviceDescriptor::VideoCaptureDeviceDescriptor(
+     const std::string& display_name,
+@@ -52,7 +78,49 @@ VideoCaptureDeviceDescriptor::VideoCaptureDeviceDescriptor(
+       capture_api(capture_api),
+       transport_type(transport_type),
+       display_name_(TrimDisplayName(display_name)),
+-      control_support_(control_support) {}
++      control_support_(control_support) {
++  PostConstruct();
++}
++
++void VideoCaptureDeviceDescriptor::PostConstruct() {
++  const base::CommandLine* command_line = base::CommandLine::ForCurrentProcess();
++  bool use_fake_camera =
++      command_line->HasSwitch(switches::kUseFakeDeviceForMediaStream);
++  bool use_file_camera =
++      command_line->HasSwitch(switches::kUseFileForFakeVideoCapture);
++
++  if (use_fake_camera || use_file_camera) {
++    if (botbrowser::gSpoofedOSWindows) {
++      fake_display_name_ = "Integrated Webcam";
++      fake_model_id_ = GenerateRandomModelId();
++    } else if (botbrowser::gSpoofedOSMac) {
++      fake_display_name_ = "FaceTime HD Camera";
++      fake_model_id_ = GenerateRandomModelId();
++    } else if (botbrowser::gSpoofedOSLinux) {
++      fake_display_name_ = "Integrated Camera";
++      fake_model_id_ = GenerateRandomModelId();
++    } else if (botbrowser::gSpoofedOSChromeOS) {
++      fake_display_name_ = "Camera";
++      fake_model_id_ = GenerateRandomModelId();
++    } else if (botbrowser::gSpoofedOSAndroid) {
++      fake_display_name_ = "Front Camera";
++    } else if (botbrowser::gSpoofedOSiOS) {
++      fake_display_name_ = "Front Camera";
++    } else {
++      fake_display_name_ = "Camera";
++      fake_model_id_ = GenerateRandomModelId();
++    }
++
++    if (!fake_model_id_.empty())
++      fake_display_name_ = fake_display_name_ + " (" + fake_model_id_ + ")";
++  }
++}
+ 
+ VideoCaptureDeviceDescriptor::~VideoCaptureDeviceDescriptor() = default;
+ 
+@@ -110,6 +178,10 @@ const char* VideoCaptureDeviceDescriptor::GetCaptureApiTypeString() const {
+ }
+ 
+ std::string VideoCaptureDeviceDescriptor::GetNameAndModel() const {
++  if (!fake_display_name_.empty()) {
++    return fake_display_name_;
++  }
++
+   if (model_id.empty())
+     return display_name_;
+   return display_name_ + " (" + model_id + ')';
