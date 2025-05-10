@@ -55,45 +55,54 @@ Controls screen properties exposed by `window.screen`.
 ## ✨ Example Profile `configs` Block
 
 ```json
-{
-  "configs": {
-    "locale": "en-US",
-    "timezone": "America/New_York",
-    "languages": ["en-US", "ru-RU"],
-    "proxy": {
-      "server": "proxy.example.com:8080",
-      "username": "user",
-      "password": "pass"
-    },
-    "skipWindowAndScreenSizes": false,
-    "window": {
-      "innerWidth": 1203,
-      "innerHeight": 743,
-      "outerWidth": 1203,
-      "outerHeight": 830,
-      "screenX": 43,
-      "screenY": 79,
-      "devicePixelRatio": 2
-    },
-    "screen": {
-      "availWidth": 1512,
-      "availHeight": 944,
-      "availLeft": 0,
-      "availTop": 38,
-      "width": 1512,
-      "height": 982,
-      "colorDepth": 30,
-      "pixelDepth": 30
-    }
+"configs": {
+  "locale": "en-US",
+  "timezone": "America/New_York",
+  "languages": ["en-US", "ru-RU"],
+  "proxy": {
+    "server": "proxy.example.com:8080",
+    "username": "user",
+    "password": "pass"
+  },
+  "skipWindowAndScreenSizes": false,
+  "window": {
+    "innerWidth": 1203,
+    "innerHeight": 743,
+    "outerWidth": 1203,
+    "outerHeight": 830,
+    "screenX": 43,
+    "screenY": 79,
+    "devicePixelRatio": 2
+  },
+  "screen": {
+    "availWidth": 1512,
+    "availHeight": 944,
+    "availLeft": 0,
+    "availTop": 38,
+    "width": 1512,
+    "height": 982,
+    "colorDepth": 30,
+    "pixelDepth": 30
   }
 }
 ```
 
-⚠️ Open the `.enc` file and put `configs` before `key`, being careful to keep it in JSON format:
+⚠️ Open the `.enc` file and place the `configs` block before the `key` block, keeping the entire .enc file in JSON format:
 
 <img width="758" alt="image" src="https://github.com/user-attachments/assets/e34b1557-d7cd-4257-b709-b76ec1b0409b" />
 
+---
 
+⚠️ Eventually, your modified .enc should have this structure:
+
+```json
+{
+  "configs": {},
+  "key": {},
+  "version": {},
+  "profile": {}
+}
+```
 
 
 
