@@ -4,7 +4,7 @@ import os
 from playwright.async_api import async_playwright
 
 BOTBROWSER_EXEC_PATH: str = os.getenv("BOTBROWSER_EXEC_PATH", "") # Absolute path to the BotBrowser executable
-BOT_PROFILE_PATH: str = os.getenv("BOT_PROFILE_PATH", "") # Absolute path to the profile
+BOT_PROFILE_PATH: str = os.getenv("BOT_PROFILE_PATH", "") # Absolute or relative path to the profile
 
 if not BOTBROWSER_EXEC_PATH or not BOT_PROFILE_PATH:
     raise ValueError("Both BOTBROWSER_EXEC_PATH and BOT_PROFILE_PATH environment variables must be set.")
