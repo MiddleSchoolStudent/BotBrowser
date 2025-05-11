@@ -136,7 +136,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 Launch BotBrowser with a profile:
 
 ```bash
-chromium --bot-profile="/absolute/path/to/chrome135_win11_x64.enc"
+chromium --bot-profile="/path/to/chrome135_win11_x64.enc"
 ```
 
 #### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
@@ -145,7 +145,7 @@ chromium --bot-profile="/absolute/path/to/chrome135_win11_x64.enc"
 const browser = await chromium.launch({
   headless: true,
   executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
-  args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute path to the bot profile
+  args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute or relative path to the bot profile
 });
 
 const page = await browser.newPage();
@@ -166,17 +166,10 @@ Use the open-source GUI to select your profile and start browsing without code.
 
 | Issue                             | Solution                                                                                         |
 | --------------------------------- | ------------------------------------------------------------------------------------------------ |
-| "Chromium" is damaged…            | Run `xattr -rd com.apple.quarantine /Applications/Chromium.app`                                  |
+| "Chromium" is damaged             | Run `xattr -rd com.apple.quarantine /Applications/Chromium.app`                                  |
 | STATUS_ACCESS_VIOLATION           | Add `--no-sandbox` flag when launching                                                           |
 | Profile file permission errors    | Ensure `.enc` file has read permissions (`chmod 644`)                                            |
 | BotBrowser won’t start or crashes | Check that your OS and Chromium version match the build; update BotBrowser to the latest release |
-
-### 💡 Tips
-
-- Always use **absolute paths** for both the executable and the profile.  
-- Keep BotBrowser updated by re-downloading after each release.  
-- If you customize profiles, back up the original encrypted files.  
-- For advanced users, combine multiple flags (e.g., `--no-sandbox`) to improve stability.
 
 
 ---
