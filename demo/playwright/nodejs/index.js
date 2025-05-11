@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 
 const BOTBROWSER_EXEC_PATH = process.env.BOTBROWSER_EXEC_PATH; // Absolute path to the BotBrowser executable
-const BOT_PROFILE_PATH = process.env.BOT_PROFILE_PATH; // Absolute path to the profile
+const BOT_PROFILE_PATH = process.env.BOT_PROFILE_PATH; // Absolute or relative path to the profile
 
 const browser = await chromium.launch({
   executablePath: BOTBROWSER_EXEC_PATH,
