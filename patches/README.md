@@ -187,6 +187,6 @@ Directory tree for patches_v2/136.0.7103.49:
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ DISCLAIMER
 
-The code snippets and patches provided here are for **demonstration purposes only**. They come **as-is**, without any warranty—explicit or implied. BotBrowser and its authors are **not responsible** for any misuse, data loss, or legal claims arising from the application of these examples. Unauthorized distribution or modification of our private core beyond this showcase is strictly prohibited.
+The code snippets and patches provided here are for **demonstration purposes only**. They come **as-is**, without any warranty-explicit or implied. BotBrowser and its authors are **not responsible** for any misuse, data loss, or legal claims arising from the application of these examples. Unauthorized distribution or modification of our private core beyond this showcase is strictly prohibited.
