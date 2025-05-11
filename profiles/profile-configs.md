@@ -13,6 +13,8 @@ This document explains how to configure custom browser properties inside a **Bot
 | `autoTimezone` | Enable or disable automatic timezone detection. | `true` |
 | `timezone` | Timezone name for the browser session. | `"America/New_York"` |
 | `languages` | Array of accepted languages (HTTP Accept-Language and navigator.languages). | `["en-US", "ru-RU"]` |
+| `colorScheme` | Preferred color scheme for the browser. Can be set to `'light'` or `'dark'`. | `"light"` |
+
 
 ### Proxy Settings
 | Field | Description | Example |
