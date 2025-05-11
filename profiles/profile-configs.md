@@ -10,6 +10,7 @@ This document explains how to configure custom browser properties inside a **Bot
 | Field | Description | Example |
 |:-----|:------------|:--------|
 | `locale` | Browser locale setting. | `"en-US"` |
+| `autoTimezone` | Enable or disable automatic timezone detection. | `true` |
 | `timezone` | Timezone name for the browser session. | `"America/New_York"` |
 | `languages` | Array of accepted languages (HTTP Accept-Language and navigator.languages). | `["en-US", "ru-RU"]` |
 
@@ -57,6 +58,7 @@ Controls screen properties exposed by `window.screen`.
 ```json
 "configs": {
   "locale": "en-US",
+  "autoTimezone": true,
   "timezone": "America/New_York",
   "languages": ["en-US", "ru-RU"],
   "proxy": {
