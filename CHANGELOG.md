@@ -5,6 +5,37 @@
 
 ---
 
+## [2025-05-10]
+
+### Added
+- **Auto Timezone via IP Lookup**  
+  - Introduced built-in IP geolocation detection based on proxy exit IP, allowing automatic adjustment of timezone and location.  
+  - Controlled via the `configs.autoTimezone` flag (enabled by default). See [profile-configs.md](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md) for details.
+
+- **Theme Control via `configs.colorScheme`**  
+  - Users can now specify browser color scheme (`dark` or `light`) through profile configuration. If omitted, the profile's native scheme is used.
+
+### Improved
+- **Bot-Profile Validation**  
+  - Improved error handling when launching with a missing or invalid `--bot-profile` path. The browser will now exit with a clear message.
+
+- **Relative Path Support**  
+  - `--bot-profile` now supports relative paths in addition to absolute paths, simplifying multi-environment usage.
+
+- **Default Font Simulation**  
+  - Embedded Windows, macOS, and Android system font libraries.  
+  - Allows simulating native font environments across platforms (e.g. load macOS fonts on Ubuntu), preventing rendering mismatches and fingerprint leaks.
+
+- **matchMedia Hardened in WebPreferences**  
+  - Improved injection of matchMedia parameters directly into WebPreferences for greater reliability and fingerprint consistency.  
+  - Fixes occasional race conditions where matchMedia simulation failed to load.
+
+- **System UI Font Emulation**  
+  - Enhanced simulation of OS-specific UI fonts like `kSmallCaption`, `kMenu`, and `kStatusBar` across Windows, macOS, and Linux for stronger OS fingerprint fidelity.
+
+
+---
+
 ## [2025-05-01]
 
 ### Improved
