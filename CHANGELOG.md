@@ -5,7 +5,7 @@
 
 ---
 
-## [2025-05-10]
+## [2025-05-13]
 
 ### Added
 - **Auto Timezone via IP Lookup**  
@@ -32,6 +32,10 @@
 
 - **System UI Font Emulation**  
   - Enhanced simulation of OS-specific UI fonts like `kSmallCaption`, `kMenu`, and `kStatusBar` across Windows, macOS, and Linux for stronger OS fingerprint fidelity.
+
+### Fixed
+- **Stack Overflow Crash in Renderer**  
+  Fixed an issue where certain websites caused rendering process crashes due to JavaScript stack overflows.
 
 
 ---
