@@ -1,8 +1,11 @@
 # 🛠️ BotBrowser Patch Examples
 
-> 🚧 These patches are just a tiny glimpse under the hood. BotBrowser’s full core remains proprietary and battle-tested against real-world antibots.
+> 🚧 These patches are just a small glimpse into BotBrowser’s internals. The full core remains private and proven against real-world antibot systems.
 
-BotBrowser is 100% our own IP-every line of core C++ comes from scratch, with **no borrowed open-source or closed-source code**. We’ve open-sourced only the GUI [BotBrowserConsole](https://github.com/MiddleSchoolStudent/BotBrowser/tree/main/console) to let you launch and manage sessions safely. All core engine patches shown here are a minimal subset, published solely to illustrate key techniques without exposing our full toolbox.
+BotBrowser is **100% proprietary** - built entirely on top of **Chromium**, with **no third-party code** involved.
+
+Only the GUI ([BotBrowserConsole](https://github.com/MiddleSchoolStudent/BotBrowser/tree/main/console)) is open-sourced.  
+The patches here are **select examples**, published to illustrate techniques without exposing the full engine.
 
 ---
 
