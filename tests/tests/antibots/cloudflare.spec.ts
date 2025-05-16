@@ -64,3 +64,23 @@ test('taxslayer', async ({ page }) => {
 
     expect(await page.waitForSelector('text=Invalid username or password')).toBeTruthy();
 });
+
+test('chegg', async ({ page }) => {
+    await page.goto('https://www.chegg.com/login');
+    await page.locator('a >> text=Sign up').click();
+    await sleep(2_000);
+    await page
+        .locator('input[name="email"]')
+        .pressSequentially(Math.random().toString(36).substring(2) + '@gmail.com', {
+            delay: 20,
+        });
+    await sleep(2_000);
+    await page.keyboard.press('Enter');
+    await page.locator('input#code').pressSequentially('123456', {
+        delay: 20,
+    });
+    await sleep(2_000);
+    await page.keyboard.press('Enter');
+    await sleep(2_000);
+    await page.locator('span[data-error-code="invalid-code"]').waitFor({ state: 'visible' });
+});
