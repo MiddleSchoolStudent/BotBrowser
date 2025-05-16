@@ -89,31 +89,31 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ### Download & Installation
 
-1. **Download Installer**  
+1. **Download Installer**
   Get the BotBrowser installer for your OS from the [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-2. **macOS**  
-- Open the downloaded `.dmg` file.  
-- Drag `Chromium.app` into your Applications folder or any desired location.  
+2. **macOS**
+- Open the downloaded `.dmg` file.
+- Drag `Chromium.app` into your Applications folder or any desired location.
 - If you see the error:
    ```
    "Chromium" is damaged and can't be opened
-   ```  
+   ```
    Run:
    ```bash
    xattr -rd com.apple.quarantine /Applications/Chromium.app
    ```
 
-3. **Windows**  
-- Extract the downloaded `.7z` archive.  
-- Run `chrome.exe` from the extracted folder.  
+3. **Windows**
+- Extract the downloaded `.7z` archive.
+- Run `chrome.exe` from the extracted folder.
 - If you encounter `STATUS_ACCESS_VIOLATION`, launch with [--no-sandbox](https://peter.sh/experiments/chromium-command-line-switches/#no-sandbox).
 
-4. **Ubuntu**  
+4. **Ubuntu**
 - Install via `dpkg`:
    ```bash
    sudo dpkg -i botbrowser_<version>_amd64.deb
-   ```  
+   ```
 - If dependencies are missing, run:
    ```bash
    sudo apt-get install -f
@@ -123,10 +123,10 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 - **Demo Profiles**: located in the [profiles](profiles) directory of the repository.
 - **Cross-Platform**:
-  
-  🔥 A *macOS profile* works on Ubuntu; a *Windows profile* works on macOS; an *Android profile* can be fully emulated on macOS, Windows, and Ubuntu.  
-- **Usage Tips**:  
-  - Ensure your profile file is readable (check permissions).  
+
+  🔥 A *macOS profile* works on Ubuntu; a *Windows profile* works on macOS; an *Android profile* can be fully emulated on macOS, Windows, and Ubuntu.
+- **Usage Tips**:
+  - Ensure your profile file is readable (check permissions).
   - For more configuration options, see the [profile-configs guide](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md).
 
 ### Quick Start Examples
@@ -194,7 +194,7 @@ These test scripts are provided for **educational purposes** and to demonstrate 
 | **[reCAPTCHA](tests/tests/antibots/recaptcha.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-recaptcha-v3)                                                                                 |
 | **[PerimeterX](tests/tests/antibots/perimeterx.spec.ts)**          | [▶️ TextNow](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-textnow), [▶️ Grubhub](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-grubhub)                                                                                     |
 | **[Imperva (Incapsula)](tests/tests/antibots/incapsula.spec.ts)**  | [▶️ CopaAir](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-incapsula-copaair)                                                                       |
-| **[DataDome](tests/tests/antibots/datadome.spec.ts)**              | [▶️ ShutterStock](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-shutterstock), [▶️ SeatGeek](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-seatgeek), [▶️ Hermes](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-hermes)                                                                           |
+| **[DataDome](tests/tests/antibots/datadome.spec.ts)**              | [▶️ ShutterStock](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-shutterstock), [▶️ SeatGeek](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-seatgeek), [▶️ Hermes](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-hermes), [▶️ SoundCloud](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-datadome-soundcloud)                                                                           |
 | **[hCaptcha](tests/tests/antibots/hcaptcha.spec.ts)**              | [▶️ EpicGames](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-epicgames), [▶️ Discord](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-discord), [▶️ Steam](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-steam), [▶️ RiotGames](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-hcaptcha-riotgames)                                                                       |
 | **[FunCaptcha](tests/tests/antibots/funcaptcha.spec.ts)**          | [▶️ Blizzard](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-funcaptcha-blizzard), [▶️ Roblox](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-funcaptcha-roblox), [▶️ Hotmail](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-funcaptcha-hotmail)                                                                       |
 | **[Accertify](tests/tests/antibots/accertify.spec.ts)**            | [▶️ Grubhub](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-perimeterx-grubhub)                                                                       |

@@ -53,3 +53,33 @@ test('hermes', async ({ page }) => {
 
     await sleep(5_000);
 });
+
+test('soundcloud', async ({ page }) => {
+    await page.goto('https://soundcloud.com/');
+    await page.locator('div.frontHero__signin > button[aria-label="Create a SoundCloud account"]').click();
+    await sleep(3_000);
+    const authFrameLocator = page.frameLocator('iframe[src*="secure.soundcloud.com/web-auth"]');
+    await authFrameLocator
+        .locator('input[name="email"]')
+        .pressSequentially(Math.random().toString(36).substring(2) + '@gmail.com', {
+            delay: 20,
+        });
+    await page.keyboard.press('Enter');
+    await sleep(3_000);
+    await authFrameLocator
+        .locator('input[name="password"]')
+        .pressSequentially(Math.random().toString(36).substring(2) + '_AC+', {
+            delay: 20,
+        });
+    await page.keyboard.press('Enter');
+    await sleep(3_000);
+    await authFrameLocator.locator('input[name="age"]').pressSequentially('21', {
+        delay: 20,
+    });
+    await authFrameLocator.locator('select[name="gender"]').selectOption({
+        value: 'female',
+    });
+    await sleep(3_000);
+    await page.keyboard.press('Enter');
+    await authFrameLocator.locator('div.email-verification-page').waitFor({ state: 'visible' });
+});
