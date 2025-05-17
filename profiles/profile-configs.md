@@ -4,6 +4,17 @@ This document explains how to configure custom browser properties inside a **Bot
 
 ---
 
+## ⚠️ How to Apply Configuration
+
+All configurations are embedded in the `configs` field inside your profile JSON structure.
+
+> 💡 **Important Note:** BotBrowser only accepts profile input as a file. While you may want to pass a profile via shell command (e.g., `--bot-profile=<(echo '{"x": 1}')`), this is **not** supported due to CLI argument length and file descriptor limitations.
+>
+> ✅ **Best practice:** Build your profile JSON dynamically in your code, write it to a temporary file (e.g., `/tmp/myprofile.json`), and pass the path to `--bot-profile`. The file can be deleted afterward.
+
+
+---
+
 ## 🛠️ Configurable Fields
 
 ### General Settings
@@ -123,3 +134,4 @@ Controls screen properties exposed by `window.screen`.
 - Always adjust **window size** and **screen size** together to avoid suspicious fingerprint gaps.
 - Set a realistic **devicePixelRatio** based on the system being emulated (e.g., 2 for macOS Retina, 1 for standard monitors).
 - Always define proxy credentials if using authenticated proxies to avoid connection leaks.
+- 🗂️ If you're generating a profile in code, **save it as a temporary file** (e.g., `/tmp/myprofile.json`) and pass the file path via `--bot-profile`. Avoid piping large JSON blobs via `echo`, as this is unsupported and unstable.
