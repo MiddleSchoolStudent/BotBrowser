@@ -74,6 +74,7 @@ Controls screen properties exposed by `window.screen`.
   "autoTimezone": true,
   "timezone": "America/New_York",
   "languages": ["en-US", "ru-RU"],
+  "colorScheme": "light",
   "proxy": {
     "server": "proxy.example.com:8080",
     "username": "user",
