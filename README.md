@@ -136,7 +136,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 Launch BotBrowser with a profile:
 
 ```bash
-chromium --bot-profile="/path/to/chrome135_win11_x64.enc"
+chromium --bot-profile="/path/to/chrome136_win11_x64.enc"
 ```
 
 #### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
