@@ -37,7 +37,7 @@ All configurations are embedded in the `configs` field inside your profile JSON 
 ### Window and Screen Settings
 | Field | Description | Example |
 |:-----|:------------|:--------|
-| `skipWindowAndScreenSizes` | If `true`, BotBrowser ignores window/screen overrides and allows CDP to control them. If `false`, BotBrowser uses profile values. In headful mode, this value defaults to `true`. | `false` |
+| `skipWindowAndScreenSizes` | If `true`, BotBrowser ignores window/screen overrides and allows CDP to control them. If `false`, BotBrowser uses profile values. ⚠️ In headful mode, this value defaults to `true`. | `false` |
 
 #### `window` Object
 Controls browser window dimensions and positioning.
