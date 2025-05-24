@@ -14,7 +14,7 @@ test('botdetection', async ({ page }) => {
 test('playground', async ({ page }) => {
     await page.goto('https://demo.fingerprint.com/playground');
 
-    await sleep(5_000);
+    await sleep(2_000);
     for (let i = 0; i < 20; i++) {
         await page.mouse.wheel(0, 50);
         await sleep(300);
