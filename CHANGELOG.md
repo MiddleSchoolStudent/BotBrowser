@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## [2025-05-23]
+
+### Major Update
+- **WebRTC Fingerprinting Refactor & Media Simulation**
+  - Fully rewrote internal WebRTC logic to eliminate local IP leaks.
+  - Now simulates `candidate` IPs using public IPv4 and IPv6 from proxy.
+  - Reads all simulation data from profile and mimics realistic `audio/video` media capabilities.
+  - Result: BotBrowser now scores **A+ / 100%** on CreepJS! 🎉
+    ▶️ [View Demo](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs)
+
+### Added
+- **IP GEO Auto Geolocation**
+  - Automatically simulates geolocation using proxy IP's geo data — no need for manual location overrides.
+
+- **Incognito Extension Support**
+  - Extensions are now enabled by default even in incognito mode and inside Playwright/Puppeteer contexts.
+
+- **Build Metadata in chrome://version**
+  - Added "BotBrowser Build Date" display in internal `chrome://version` for easy version tracking.
+
+### Fixed
+- **Kasada Fingerprint Leak Patch**
+  - Fixed a critical fingerprint that was detectable by the latest Kasada release.
+
+- **Permissions Simulation Overhaul**
+  - Refactored permission handling for more accurate simulation (e.g., notifications, geolocation, mic).
+
+- **WebRTC Consistency on New Tabs**
+  - WebRTC + IP GEO now re-sync when opening new tabs, ensuring consistent fingerprints.
+
+### Improved
+- **Google API Request Blocking**
+  - Blocked several Google internal endpoints to prevent metadata or activity leakage.
+
+---
+
 ## [Unreleased]
 - Chromium Extension fingerprint spoofing. [#3](https://github.com/MiddleSchoolStudent/BotBrowser/issues/3)
 
@@ -8,33 +44,33 @@
 ## [2025-05-13]
 
 ### Added
-- **Auto Timezone via IP Lookup**  
-  - Introduced built-in IP geolocation detection based on proxy exit IP, allowing automatic adjustment of timezone and location.  
+- **Auto Timezone via IP Lookup**
+  - Introduced built-in IP geolocation detection based on proxy exit IP, allowing automatic adjustment of timezone and location.
   - Controlled via the `configs.autoTimezone` flag (enabled by default). See [profile-configs.md](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md) for details.
 
-- **Theme Control via `configs.colorScheme`**  
+- **Theme Control via `configs.colorScheme`**
   - Users can now specify browser color scheme (`dark` or `light`) through profile configuration. If omitted, the profile's native scheme is used.
 
 ### Improved
-- **Bot-Profile Validation**  
+- **Bot-Profile Validation**
   - Improved error handling when launching with a missing or invalid `--bot-profile` path. The browser will now exit with a clear message.
 
-- **Relative Path Support**  
+- **Relative Path Support**
   - `--bot-profile` now supports relative paths in addition to absolute paths, simplifying multi-environment usage.
 
-- **Default Font Simulation**  
-  - Embedded Windows, macOS, and Android system font libraries.  
+- **Default Font Simulation**
+  - Embedded Windows, macOS, and Android system font libraries.
   - Allows simulating native font environments across platforms (e.g. load macOS fonts on Ubuntu), preventing rendering mismatches and fingerprint leaks.
 
-- **matchMedia Hardened in WebPreferences**  
-  - Improved injection of matchMedia parameters directly into WebPreferences for greater reliability and fingerprint consistency.  
+- **matchMedia Hardened in WebPreferences**
+  - Improved injection of matchMedia parameters directly into WebPreferences for greater reliability and fingerprint consistency.
   - Fixes occasional race conditions where matchMedia simulation failed to load.
 
-- **System UI Font Emulation**  
+- **System UI Font Emulation**
   - Enhanced simulation of OS-specific UI fonts like `kSmallCaption`, `kMenu`, and `kStatusBar` across Windows, macOS, and Linux for stronger OS fingerprint fidelity.
 
 ### Fixed
-- **Stack Overflow Crash in Renderer**  
+- **Stack Overflow Crash in Renderer**
   Fixed an issue where certain websites caused rendering process crashes due to JavaScript stack overflows.
 
 
