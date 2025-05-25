@@ -148,7 +148,7 @@ chrome.exe \
 /Applications/Chromium.app/Contents/MacOS/Chromium \
   --no-sandbox \
   --user-data-dir="$(mktemp -d)" \
-  --bot-profile="/path/to/chrome136_mac.enc"
+  --bot-profile="/path/to/chrome136_win11_x64.enc"
 ```
 
 **Ubuntu/Linux**
@@ -157,7 +157,7 @@ chrome.exe \
 chromium-browser \
   --no-sandbox \
   --user-data-dir="$(mktemp -d)" \
-  --bot-profile="/path/to/chrome136_ubuntu.enc"
+  --bot-profile="/path/to/chrome136_win11_x64.enc"
 ```
 
 > Use `--user-data-dir` with a unique temporary folder to avoid conflicts with any running Chromium instances. It ensures BotBrowser launches cleanly without interfering with your normal browser profiles.
