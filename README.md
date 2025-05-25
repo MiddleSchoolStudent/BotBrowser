@@ -92,7 +92,12 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 1. **Download Installer**
   Get the BotBrowser installer for your OS from the [Releases](https://github.com/MiddleSchoolStudent/BotBrowser/releases) page.
 
-2. **macOS**
+2. **Windows**
+- Extract the downloaded `.7z` archive.
+- Run `chrome.exe` from the extracted folder.
+- If you encounter `STATUS_ACCESS_VIOLATION`, launch with [--no-sandbox](https://peter.sh/experiments/chromium-command-line-switches/#no-sandbox).
+
+3. **macOS**
 - Open the downloaded `.dmg` file.
 - Drag `Chromium.app` into your Applications folder or any desired location.
 - If you see the error:
@@ -103,11 +108,6 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
    ```bash
    xattr -rd com.apple.quarantine /Applications/Chromium.app
    ```
-
-3. **Windows**
-- Extract the downloaded `.7z` archive.
-- Run `chrome.exe` from the extracted folder.
-- If you encounter `STATUS_ACCESS_VIOLATION`, launch with [--no-sandbox](https://peter.sh/experiments/chromium-command-line-switches/#no-sandbox).
 
 4. **Ubuntu**
 - Install via `dpkg`:
@@ -151,7 +151,7 @@ chrome.exe \
   --bot-profile="/path/to/chrome136_win11_x64.enc"
 ```
 
-**Ubuntu/Linux**
+**Ubuntu**
 
 ```bash
 chromium-browser \
