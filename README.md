@@ -131,13 +131,38 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 ### Quick Start Examples
 
-#### 1. CLI
+#### 1. CLI (Windows / macOS / Ubuntu)
 
-Launch BotBrowser with a profile:
+**Windows (CMD)**
+
+```cmd
+chrome.exe \
+  --no-sandbox \
+  --user-data-dir="%TEMP%\\botprofile_%RANDOM%" \
+  --bot-profile="C:\\path\\to\\chrome136_win11_x64.enc"
+```
+
+**macOS**
 
 ```bash
-chromium --bot-profile="/path/to/chrome136_win11_x64.enc"
+/Applications/Chromium.app/Contents/MacOS/Chromium \
+  --no-sandbox \
+  --user-data-dir="$(mktemp -d)" \
+  --bot-profile="/path/to/chrome136_mac.enc"
 ```
+
+**Ubuntu/Linux**
+
+```bash
+chromium-browser \
+  --no-sandbox \
+  --user-data-dir="$(mktemp -d)" \
+  --bot-profile="/path/to/chrome136_ubuntu.enc"
+```
+
+> Use `--user-data-dir` with a unique temporary folder to avoid conflicts with any running Chromium instances. It ensures BotBrowser launches cleanly without interfering with your normal browser profiles.
+
+
 
 #### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
 
