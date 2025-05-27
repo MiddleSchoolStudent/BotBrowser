@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [2025-05-23]
+## [2025-05-25]
 
 ### Major Update
 - **WebRTC Fingerprinting Refactor & Media Simulation**
