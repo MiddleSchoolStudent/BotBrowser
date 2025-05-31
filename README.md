@@ -187,14 +187,53 @@ await page.goto("https://abrahamjuliot.github.io/creepjs/");
 
 Use the open-source GUI to select your profile and start browsing without code.
 
+#### 4. Docker (Cross-platform)
+
+**Configuration:**
+- **Profile**: Place your `.enc` file in `./profiles/` and update the filename in `docker-compose.yml`
+- **Port**: Default is `9222`, change in `docker-compose.yml` if needed
+- **Volumes**: Browser data persists in `./user-data-dir/`
+
+**Quick Start:**
+```bash
+# Build and start the container
+docker-compose up --build
+```
+
+**Connecting to BotBrowser:**
+
+1. **Chrome DevTools (Browser)**
+   ```
+   Open Chrome/Chromium and navigate to: chrome://inspect
+   Click "Configure..." and add: localhost:9222
+   Your BotBrowser instance will appear under "Remote Target"
+   ```
+
+2. **Automation Scripts (WebSocket)**
+   ```javascript
+   // Playwright
+   const browser = await chromium.connectOverCDT('ws://localhost:9222');
+
+   // Puppeteer
+   const browser = await puppeteer.connect({
+     browserWSEndpoint: 'ws://localhost:9222'
+   });
+   ```
+
+> **Note:** The Docker version runs in headless mode by default. User data and profiles are mounted as volumes for persistence between container restarts.
+
+
 ### 🐞 Debugging & FAQs
 
-| Issue                             | Solution                                                                                         |
-| --------------------------------- | ------------------------------------------------------------------------------------------------ |
-| "Chromium" is damaged             | Run `xattr -rd com.apple.quarantine /Applications/Chromium.app`                                  |
-| STATUS_ACCESS_VIOLATION           | Add `--no-sandbox` flag when launching                                                           |
-| Profile file permission errors    | Ensure `.enc` file has read permissions (`chmod 644`)                                            |
-| BotBrowser won’t start or crashes | Check that your OS and Chromium version match the build; update BotBrowser to the latest release |
+| Issue | Solution |
+|-------|----------|
+| **"Chromium" is damaged** (macOS) | Run `xattr -rd com.apple.quarantine /Applications/Chromium.app` |
+| **STATUS_ACCESS_VIOLATION** (Windows) | Add `--no-sandbox` flag when launching |
+| **Profile file permission errors** | Ensure `.enc` file has read permissions (`chmod 644`) |
+| **BotBrowser won't start or crashes** | Check that your OS and Chromium version match the build; update BotBrowser to the latest release |
+| **Docker container won't start** | Ensure `.enc` profile file exists in `./profiles/` directory and filename matches `docker-compose.yml` |
+| **Can't connect to Docker instance** | Verify port 9222 is not occupied by another process, check `docker-compose logs` for errors |
+
 
 
 ---

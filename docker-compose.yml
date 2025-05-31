@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  botbrowser:
+    build: .
+    image: botbrowser:slim-final
+    container_name: botbrowser-slim
+    platform: linux/amd64
+
+    # Map DevTools port
+    ports:
+      - "9222:9222"
+
+    # Mount profiles and user data directories
+    volumes:
+      - ./profiles:/botbrowser/profiles:ro
+      - ./user-data-dir:/botbrowser/user-data-dir
+
+    # Pass browser args via environment variables
+    environment:
+      - CHROME_ARGS=--user-data-dir=/botbrowser/user-data-dir --bot-profile=/botbrowser/profiles/chrome136_mac_arm64.enc
+
+    # Add init to handle zombie processes
+    init: true
+
+    restart: unless-stopped
