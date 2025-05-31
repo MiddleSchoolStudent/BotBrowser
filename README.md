@@ -217,7 +217,7 @@ docker-compose up --build
    ```javascript
    // Playwright
    const browser = await chromium.connectOverCDT('ws://localhost:9222');
-   
+
    // Puppeteer
    const browser = await puppeteer.connect({
      browserWSEndpoint: 'ws://localhost:9222'
@@ -274,6 +274,7 @@ These test scripts are provided for **educational purposes** and to demonstrate 
 | **[Adscore](tests/tests/antibots/adscore.spec.ts)**                | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-adscore-adscore)                                                                                          |
 | **[MTCaptcha](tests/tests/antibots/mtcaptcha.spec.ts)**            | [▶️ Invisible Captcha](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-mtcaptcha-invisiblecaptcha)                                                                                          |
 | **[FriendlyCaptcha](tests/tests/antibots/friendlycaptcha.spec.ts)**  | [▶️ Captcha Demo](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-friendlycaptcha-captchademo)                                                                                          |
+| **[YandexCaptcha](tests/tests/antibots/yandexcaptcha.spec.ts)**  | [▶️ SmartCaptcha](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-yandexcaptcha-smartcaptcha)                                                                                          |
 | **ThreatMetrix**                                                   | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **ProtectedMedia**                                                 | 🚧 Coming Soon                                                                                                                                                                                                                                                                            |
 | **[Fake Vision](tests/tests/antibots/fvpro.spec.ts)**              | [▶️ FakeVision](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-fvpro-fvpro)                                                                                           |
@@ -283,6 +284,7 @@ These test scripts are provided for **educational purposes** and to demonstrate 
 | **[Pixelscan](tests/tests/antibots/pixelscan.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan), [▶️ Android Profile](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)                                                                                         |
 | **[iphey](tests/tests/antibots/iphey.spec.ts)**                    | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey), [▶️ Android Profile](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android)                                                                                               |
 | **[device&browserinfo](tests/tests/antibots/deviceandbrowserinfo.spec.ts)**     | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-deviceandbrowserinfo-deviceandbrowserinfo)                                                                                               |
+| **[FingerprintScan](tests/tests/antibots/fingerprintscan.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-fingerprintscan-fingerprintscan)                                                                                       |
 | **[brotector](tests/tests/antibots/brotector.spec.ts)**            | [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-brotector-brotector)                                                                                       |
 
 
