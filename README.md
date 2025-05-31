@@ -187,7 +187,7 @@ await page.goto("https://abrahamjuliot.github.io/creepjs/");
 
 Use the open-source GUI to select your profile and start browsing without code.
 
-#### 4. Docker (Cross-platform)
+### 🐳 Docker Deployment
 
 **Configuration:**
 - **Profile**: Place your `.enc` file in `./profiles/` and update the filename in `docker-compose.yml`
@@ -213,7 +213,7 @@ docker-compose up --build
    ```javascript
    // Playwright
    const browser = await chromium.connectOverCDT('ws://localhost:9222');
-
+   
    // Puppeteer
    const browser = await puppeteer.connect({
      browserWSEndpoint: 'ws://localhost:9222'
