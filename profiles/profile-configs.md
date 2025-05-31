@@ -109,7 +109,7 @@ Controls screen properties exposed by `window.screen`.
 
 ---
 
-⚠️ Eventually, your modified .enc should have this structure:
+⚠️ Eventually, your modified `.enc` profile should have this structure:
 
 ```json
 {
