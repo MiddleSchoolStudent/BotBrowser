@@ -129,6 +129,8 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
   - Ensure your profile file is readable (check permissions).
   - For more configuration options, see the [profile-configs guide](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md).
 
+---
+
 ### Quick Start Examples
 
 #### 1. CLI (Windows / macOS / Ubuntu)
@@ -187,6 +189,8 @@ await page.goto("https://abrahamjuliot.github.io/creepjs/");
 
 Use the open-source GUI to select your profile and start browsing without code.
 
+---
+
 ### 🐳 Docker Deployment
 
 **Configuration:**
@@ -221,6 +225,9 @@ docker-compose up --build
    ```
 
 > **Note:** The Docker version runs in headless mode by default. User data and profiles are mounted as volumes for persistence between container restarts.
+
+
+---
 
 
 ### 🐞 Debugging & FAQs
