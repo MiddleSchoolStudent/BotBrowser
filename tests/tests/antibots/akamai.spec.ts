@@ -39,3 +39,15 @@ test('stubhub', async ({ page }) => {
 
     expect(await apiResponsePromise).toBeTruthy();
 });
+
+test('aircanada', async ({ page }) => {
+    await page.goto('https://www.aircanada.com/home/us/en/aco/flights');
+    await page.waitForTimeout(5000); // Wait for the page to load completely
+    await page.goto(
+        'https://www.aircanada.com/booking/us/en/aco/search?org0=NYC&dest0=YTO&orgType0=C&destType0=C&departureDate0=28%2F12%2F2025&adt=1&yth=0&chd=0&inf=0&ins=0&marketCode=DOM&tripType=OneWay&isFlexible=false'
+    );
+    await page.locator('abc-tab-button span.departure-date >> text=Sun Dec 28').waitFor({
+        state: 'visible',
+        timeout: 30000,
+    });
+});
