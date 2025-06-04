@@ -287,7 +287,7 @@ These test scripts are provided for **educational purposes** and to demonstrate 
 
 
 
-| Service & Scripts | Anti-bot Services | Test Results |
+| Service & Scripts | Antibot Services | Test Results |
 |------------------|-------------------|--------------|
 | **[Nike](tests/tests/websites/nike.spec.ts)** | F5 Shape Security | ✅ Success  [▶️ Checkout Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-nike-checkout)  |
 | **TikTok** | Generic Antibot | ✅ Success |
