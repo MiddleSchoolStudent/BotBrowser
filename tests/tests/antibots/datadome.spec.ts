@@ -1,5 +1,5 @@
 import { expect, test } from '../global-setup';
-import { sleep } from '../utils';
+import { generateRandomEmail, generateRandomPassword, sleep } from '../utils';
 
 test('shutterstock', async ({ page }) => {
     await page.goto('https://www.shutterstock.com/search');
@@ -59,18 +59,14 @@ test('soundcloud', async ({ page }) => {
     await page.locator('div.frontHero__signin > button[aria-label="Create a SoundCloud account"]').click();
     await sleep(3_000);
     const authFrameLocator = page.frameLocator('iframe[src*="secure.soundcloud.com/web-auth"]');
-    await authFrameLocator
-        .locator('input[name="email"]')
-        .pressSequentially(Math.random().toString(36).substring(2) + '@gmail.com', {
-            delay: 20,
-        });
+    await authFrameLocator.locator('input[name="email"]').pressSequentially(generateRandomEmail(), {
+        delay: 20,
+    });
     await page.keyboard.press('Enter');
     await sleep(3_000);
-    await authFrameLocator
-        .locator('input[name="password"]')
-        .pressSequentially(Math.random().toString(36).substring(2) + '_AC+', {
-            delay: 20,
-        });
+    await authFrameLocator.locator('input[name="password"]').pressSequentially(generateRandomPassword(), {
+        delay: 20,
+    });
     await page.keyboard.press('Enter');
     await sleep(3_000);
     await authFrameLocator.locator('input[name="age"]').pressSequentially('21', {

@@ -1,5 +1,5 @@
 import { expect, test } from '../global-setup';
-import { sleep, waitForFrame } from '../utils';
+import { generateRandomEmail, generateRandomPassword, generateRandomUsername, sleep, waitForFrame } from '../utils';
 
 test('turnstile', async ({ page }) => {
     await page.addInitScript(() => {
@@ -56,8 +56,8 @@ test('taxslayer', async ({ page }) => {
             .catch(() => {});
     });
 
-    await page.locator('input[name="Username"]').fill(Math.random().toString(36).substring(2));
-    await page.locator('input[name="Password"]').fill(Math.random().toString(36).substring(2));
+    await page.locator('input[name="Username"]').fill(generateRandomUsername());
+    await page.locator('input[name="Password"]').fill(generateRandomPassword());
 
     await sleep(8000);
     await page.locator('button#login').click();
@@ -69,11 +69,9 @@ test('chegg', async ({ page }) => {
     await page.goto('https://www.chegg.com/login');
     await page.locator('a >> text=Sign up').click();
     await sleep(2_000);
-    await page
-        .locator('input[name="email"]')
-        .pressSequentially(Math.random().toString(36).substring(2) + '@gmail.com', {
-            delay: 20,
-        });
+    await page.locator('input[name="email"]').pressSequentially(generateRandomEmail(), {
+        delay: 20,
+    });
     await sleep(2_000);
     await page.keyboard.press('Enter');
     await page.locator('input#code').pressSequentially('123456', {
@@ -96,7 +94,7 @@ test('bookdemo', async ({ page }) => {
     await page.locator('input#Phone').pressSequentially('+380346558760', {
         delay: 100,
     });
-    await page.locator('input#Email').pressSequentially('fpkgklqep1231291@gmail.com', {
+    await page.locator('input#Email').pressSequentially(generateRandomEmail(), {
         delay: 100,
     });
     await page.locator('input#Company').pressSequentially('Cloudflare Inc', {

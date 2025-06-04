@@ -1,5 +1,11 @@
 import { ElementHandle, expect, test } from '../global-setup';
-import { clickLocatorWithMouse, sleep } from '../utils';
+import {
+    clickLocatorWithMouse,
+    generateRandomEmail,
+    generateRandomPassword,
+    generateRandomUsername,
+    sleep,
+} from '../utils';
 
 test('epicgames', async ({ page }) => {
     await page.goto(`https://epicgames.com/id/login`);
@@ -9,18 +15,11 @@ test('epicgames', async ({ page }) => {
             response.url().startsWith('https://www.epicgames.com/id/api/login')
     );
     await page.locator('input#email').focus();
-    await page
-        .locator('input#email')
-        .pressSequentially(
-            Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2) + '@gmail.com',
-            { delay: 20 }
-        );
+    await page.locator('input#email').pressSequentially(generateRandomEmail(), { delay: 20 });
     await page.keyboard.press('Tab');
-    await page
-        .locator('input#password')
-        .pressSequentially(Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5) + 'AC?_', {
-            delay: 20,
-        });
+    await page.locator('input#password').pressSequentially(generateRandomPassword(), {
+        delay: 20,
+    });
     await page.keyboard.press('Enter');
 
     const apiResponse = await apiResponsePromise;
@@ -29,18 +28,11 @@ test('epicgames', async ({ page }) => {
 
 test('discord', async ({ page }) => {
     await page.goto(`https://discord.com/login`);
-    await page
-        .locator('input[name="email"]')
-        .pressSequentially(
-            Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2) + '@gmail.com',
-            { delay: 20 }
-        );
+    await page.locator('input[name="email"]').pressSequentially(generateRandomEmail(), { delay: 20 });
     await page.keyboard.press('Tab');
-    await page
-        .locator('input[name="password"]')
-        .pressSequentially(Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5) + 'AC?_', {
-            delay: 20,
-        });
+    await page.locator('input[name="password"]').pressSequentially(generateRandomPassword(), {
+        delay: 20,
+    });
     await page.keyboard.press('Enter');
 
     console.log('Waiting for captcha frame');
@@ -63,7 +55,7 @@ test('discord', async ({ page }) => {
 });
 
 test('steam', async ({ page }) => {
-    const email = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2) + '@gmail.com';
+    const email = generateRandomEmail();
     await page.goto(`https://store.steampowered.com/join`);
     await page.locator('input[name="email"]').pressSequentially(email, { delay: 100 });
     await page.keyboard.press('Tab');
@@ -94,9 +86,9 @@ test('steam', async ({ page }) => {
 });
 
 test('riotgames', async ({ page }) => {
-    const username = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
-    const email = username + '@gmail.com';
-    const password = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5) + 'AC?_';
+    const username = generateRandomUsername();
+    const email = generateRandomEmail();
+    const password = generateRandomPassword();
 
     // Login
     await page.goto(`https://www.riotgames.com/en`);

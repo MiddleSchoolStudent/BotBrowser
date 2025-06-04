@@ -55,3 +55,15 @@ export function clickLocatorWithMouse(page: Page | Frame, locator: string) {
             }
         });
 }
+
+export function generateRandomUsername() {
+    return Math.random().toString(36).substring(2).replace(/^\d+/g, '') + Math.random().toString(36).substring(2);
+}
+
+export function generateRandomEmail() {
+    return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2) + '@gmail.com';
+}
+
+export function generateRandomPassword() {
+    return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5) + 'AC?_';
+}

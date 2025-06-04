@@ -1,5 +1,5 @@
 import { expect, test } from '../global-setup';
-import { getDateFormatted, sleep } from '../utils';
+import { generateRandomEmail, generateRandomPassword, getDateFormatted, sleep } from '../utils';
 
 test('southwest', async ({ page }) => {
     const tomorrowDate = getDateFormatted(1);
@@ -21,7 +21,7 @@ test('target', async ({ page }) => {
     await page.goto('https://www.target.com/');
     await page.locator('a#account-sign-in').click();
     await page.locator('button >> text=Sign in or create account').click();
-    await page.locator('input#username').pressSequentially(Math.random().toString(36).substring(2) + '@gmail.com', {
+    await page.locator('input#username').pressSequentially(generateRandomEmail(), {
         delay: 20,
     });
     await page.keyboard.press('Enter');
@@ -40,7 +40,7 @@ test('target', async ({ page }) => {
         { delay: 20 }
     );
     await page.locator('input#password-checkbox').click();
-    await page.locator('input#password').pressSequentially(Math.random().toString(36).substring(2) + 'AC?_', {
+    await page.locator('input#password').pressSequentially(generateRandomPassword(), {
         delay: 20,
     });
     await sleep(2000);
