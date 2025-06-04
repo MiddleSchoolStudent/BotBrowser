@@ -84,3 +84,37 @@ test('chegg', async ({ page }) => {
     await sleep(2_000);
     await page.locator('span[data-error-code="invalid-code"]').waitFor({ state: 'visible' });
 });
+
+test('bookdemo', async ({ page }) => {
+    await page.goto('https://www.cloudflare.com/en-ca/lp/dg/brand/bot-protection/');
+    await page.locator('input#FirstName').pressSequentially('Василина', {
+        delay: 100,
+    });
+    await page.locator('input#LastName').pressSequentially('Шкуро', {
+        delay: 100,
+    });
+    await page.locator('input#Phone').pressSequentially('+380346558760', {
+        delay: 100,
+    });
+    await page.locator('input#Email').pressSequentially('fpkgklqep1231291@gmail.com', {
+        delay: 100,
+    });
+    await page.locator('input#Company').pressSequentially('Cloudflare Inc', {
+        delay: 100,
+    });
+    await page.locator('input#react-select-2-input').pressSequentially('C-Level', {
+        delay: 100,
+    });
+    await page.keyboard.press('Enter');
+    await page.locator('input#react-select-3-input').pressSequentially('DevOps', {
+        delay: 100,
+    });
+    await page.keyboard.press('Enter');
+    await page.locator('input#react-select-4-input').pressSequentially('United States', {
+        delay: 100,
+    });
+    await page.keyboard.press('Enter');
+    await page.locator('button >> text=BOOK A DEMO').click();
+    await page.locator('h2 >> text=Thank You').waitFor({ state: 'visible' });
+    await page.evaluate(() => window.scrollTo(0, 0));
+});
