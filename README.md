@@ -138,10 +138,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 **Windows (CMD)**
 
 ```cmd
-chrome.exe \
-  --no-sandbox \
-  --user-data-dir="%TEMP%\\botprofile_%RANDOM%" \
-  --bot-profile="C:\\path\\to\\chrome136_win11_x64.enc"
+chrome.exe --no-sandbox --bot-profile="C:\\path\\to\\chrome136_win11_x64.enc" --user-data-dir="%TEMP%\\botprofile_%RANDOM%"
 ```
 
 **macOS**
