@@ -57,7 +57,10 @@ export function clickLocatorWithMouse(page: Page | Frame, locator: string) {
 }
 
 export function generateRandomUsername() {
-    return Math.random().toString(36).substring(2).replace(/^\d+/g, '') + Math.random().toString(36).substring(2);
+    return (
+        Math.random().toString(36).substring(2).replace(/\d+/g, '') +
+        Math.random().toString(36).substring(2).replace(/\d+/g, '')
+    );
 }
 
 export function generateRandomEmail() {
