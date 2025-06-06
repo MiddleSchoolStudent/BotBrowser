@@ -1,3 +1,5 @@
+import { Cursor } from 'ghost-cursor-playwright';
+import assert from 'node:assert';
 import { Frame, Page } from 'playwright-core';
 
 export function sleep(ms: number) {
@@ -67,6 +69,15 @@ export function generateRandomEmail() {
     return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2) + '@gmail.com';
 }
 
-export function generateRandomPassword() {
-    return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5) + 'AC?_';
+export function generateRandomPassword(length = 15) {
+    return (
+        (Math.random().toString(36).substring(2) + Math.random().toString(36).substring(5)).substring(0, length - 4) +
+        'AC?_'
+    );
+}
+
+export async function clickWithCursor(cursor: Cursor, selector: string) {
+    const boundingBox = await cursor.page.locator(selector).boundingBox();
+    assert(boundingBox, `Bounding box for selector "${selector}" should not be null`);
+    await cursor.actions.click({ target: boundingBox, waitBeforeClick: [100, 200] });
 }

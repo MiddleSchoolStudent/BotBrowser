@@ -2,7 +2,6 @@ import { test } from '../global-setup';
 import { generateRandomEmail, generateRandomPassword, generateRandomUsername } from '../utils';
 
 test('signup', async ({ page }) => {
-    await test.setTimeout(0);
     await page.goto('https://www.instagram.com/accounts/emailsignup/');
     await page.locator('input[name="emailOrPhone"]').pressSequentially(generateRandomEmail(), {
         delay: 100,

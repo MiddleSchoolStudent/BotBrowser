@@ -291,7 +291,7 @@ These test scripts are provided for **educational purposes** and to **demonstrat
 |------------------|-------------------|--------------|
 | **[Nike](tests/tests/websites/nike.spec.ts)** | F5 Shape Security | ✅ Success  [▶️ Checkout Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-nike-checkout)  |
 | **[Instagram](tests/tests/websites/instagram.spec.ts)** | Generic Antibot | ✅ Success  [▶️ Signup Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-instagram-signup)  |
-| **TikTok** | Generic Antibot | ✅ Success |
+| **[TikTok](tests/tests/websites/tiktok.spec.ts)** | TiktokVM | ✅ Success [▶️ Signup Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-tiktok-signup) |
 | **[Walmart](tests/tests/websites/walmart.spec.ts)** | PerimeterX | ✅ Success [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-walmart-walmart) |
 | **[Temu](tests/tests/websites/temu.spec.ts)** | F5 Shape Security | ✅ Success [▶️ Test Video](//middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=websites-temu-temu) |
 | **LinkedIn** | Generic Antibot | ✅ Success |
