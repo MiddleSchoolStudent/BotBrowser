@@ -79,3 +79,8 @@ test('soundcloud', async ({ page }) => {
     await page.keyboard.press('Enter');
     await authFrameLocator.locator('div.email-verification-page').waitFor({ state: 'visible' });
 });
+
+test('paypal', async ({ page }) => {
+    await page.goto('https://www.paypal.com/unifiedonboarding/entry?country.x=US&locale.x=en_US');
+    await page.locator('h2 >> text=Create a business account').waitFor({ state: 'visible' });
+});
