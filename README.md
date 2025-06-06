@@ -249,7 +249,7 @@ Use our detailed test scripts to explore real-world use cases and implementation
 
 ⚠️ **DISCLAIMER**
 
-These test scripts are provided for **educational purposes** and to demonstrate the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse**-such as violating website terms of service or engaging in unlawful activities-**is strictly prohibited.**
+These test scripts are provided for **educational purposes** and to **demonstrate** the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations.  **Any misuse**-such as violating website terms of service or engaging in unlawful activities-**is strictly prohibited.**
 
 
 
@@ -327,4 +327,4 @@ If you wish to compile your own version of Chromium with our modifications, foll
 
 ## ⚠️ DISCLAIMER
 
-**BotBrowser** is intended for **legitimate use cases** that comply with all applicable **laws and regulations**. **Misuse** of this tool to violate the **terms of service** of websites or engage in **illegal activities** is strictly prohibited.
+**BotBrowser** is intended for **legitimate use cases** that comply with all applicable **laws and regulations**. **Misuse** of this tool to violate the **terms of service** of websites or engage in illegal activities **is strictly prohibited**.
