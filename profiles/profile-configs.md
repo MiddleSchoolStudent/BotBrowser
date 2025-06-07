@@ -113,10 +113,10 @@ Controls screen properties exposed by `window.screen`.
 
 ```json
 {
-  "configs": {},
-  "key": {},
-  "version": {},
-  "profile": {}
+  "configs": { ... },
+  "key": { ... },
+  "version": { ... },
+  "profile": { ... }
 }
 ```
 
