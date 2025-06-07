@@ -125,9 +125,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 - **Cross-Platform**:
 
   > 🔥 A *macOS profile* works on Ubuntu; a *Windows profile* works on macOS; an *Android profile* can be fully emulated on macOS, Windows, and Ubuntu.
-- **Usage Tips**:
-  - Ensure your profile file is readable (check permissions).
-  - For more configuration options, see the [profile-configs guide](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md).
+- **Configuration Options**: see the [📚 profile-configs guide](https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md).
 
 ---
 
