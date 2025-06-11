@@ -34,7 +34,7 @@ These test scripts are provided for **educational purposes** and to **demonstrat
 
 3. **Verify** both paths:
    - `BOTBROWSER_EXEC_PATH` → BotBrowser executable
-   - `BOT_PROFILE_PATH` → Encrypted BotBrowser profile
+   - `BOT_PROFILE_PATH` → BotBrowser profile
 
 ---
 
@@ -69,6 +69,6 @@ npx playwright show-report  # (Optional) Generate a detailed HTML report
 
 This project utilizes the following open-source libraries:
 
-- [ghost-cursor](https://www.npmjs.com/package/ghost-cursor)
 - [dotenv](https://www.npmjs.com/package/dotenv)
+- [ghost-cursor](https://www.npmjs.com/package/ghost-cursor)
 - [ghost-cursor-playwright](https://www.npmjs.com/package/ghost-cursor-playwright)
