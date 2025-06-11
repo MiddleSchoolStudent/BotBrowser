@@ -22,7 +22,7 @@ All configurations are embedded in the `configs` field inside your profile JSON 
 |:-----|:------------|:--------|
 | `locale` | Browser locale setting. | `"en-US"` |
 | `autoTimezone` | Enable or disable automatic timezone detection. | `true` |
-| `timezone` | Timezone name for the browser session. | `"America/New_York"` |
+| `timezone` | Timezone name for the browser session, with `autoTimezone` you don't need to set this. | `"America/New_York"` |
 | `languages` | Array of accepted languages (HTTP Accept-Language and navigator.languages). | `["en-US", "ru-RU"]` |
 | `colorScheme` | Preferred color scheme for the browser. Can be set to `'light'` or `'dark'`. | `"light"` |
 
