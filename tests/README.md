@@ -1,66 +1,66 @@
-# BotBrowser-tests
 
-Based on the [playwright test](https://playwright.dev/docs/writing-tests), this repository demonstrates the testing capabilities of BotBrowser.
+# 🚀 BotBrowser-tests
 
----
+> 📢 Showcase how BotBrowser powers real-world automation tests with [Playwright](https://playwright.dev/docs/writing-tests).
 
-## Getting Started
-
-### Step 1: Set Up the Environment
-
-1. **Create a `.env` File**:
-   Add the following configurations to the `.env` file in the root directory of the project:
-
-    ```bash
-    BOTBROWSER_EXEC_PATH=/path/to/botbrowser/executable
-    BOT_PROFILE_PATH=/path/to/bot/profile.enc
-    ```
-
-2. **Example Configuration**:
-
-    ```bash
-    BOTBROWSER_EXEC_PATH=/usr/local/bin/chromium
-    BOT_PROFILE_PATH=/home/user/bot_profiles/chrome131_win11_x64.enc
-    ```
-
-3. Ensure the paths are correctly set for your environment. The `BOTBROWSER_EXEC_PATH` points to the BotBrowser executable, and `BOT_PROFILE_PATH` points to a valid BotBrowser profile.
+All tests in this repo run under **Sticky Rotating Residential IPs** to mimic genuine user behavior.  
+If you’re blocked when using data-center proxies, switch to **Sticky Rotating Residential IPs**.
 
 ---
 
-### Step 2: Run the Tests
+⚠️ **DISCLAIMER**
 
-After configuring the `.env` file, you can execute the tests using the Playwright test runner. Follow these steps:
+These test scripts are provided for **educational purposes** and to **demonstrate** the capabilities of BotBrowser. They are intended solely for **legal use cases** that comply with all applicable laws and regulations. **Any misuse**—such as violating website terms of service or engaging in unlawful activities—**is strictly prohibited.**
 
-1. Install the required dependencies:
+---
 
-    ```bash
-    npm install
-    ```
+## 🔧 Getting Started
 
-    ***
+### 1. Prepare Your Environment
 
-2. Run the tests:
+1. **Create a `.env` file** in the project root:
 
-    ```bash
-    npx playwright test
-    ```
+   ```bash
+   BOTBROWSER_EXEC_PATH=/absolute/path/to/botbrowser
+   BOT_PROFILE_PATH=/absolute/path/to/bot-profile.enc
+   ```
 
-3. View the test results:
-   The results will be displayed directly in the terminal. You can also generate a detailed HTML report with:
-    ```bash
-    npx playwright show-report
-    ```
+2. **Example**:
+
+   ```bash
+   BOTBROWSER_EXEC_PATH=/usr/local/bin/chromium
+   BOT_PROFILE_PATH=/home/user/bot_profiles/chrome137_win11_x64.enc
+   ```
+
+3. **Verify** both paths:
+   - `BOTBROWSER_EXEC_PATH` → BotBrowser executable  
+   - `BOT_PROFILE_PATH` → Encrypted BotBrowser profile
+
+---
+
+### 2. Install & Run Tests
+
+```bash
+npm install           # Install dependencies
+npx playwright test   # Execute all tests
+npx playwright show-report  # (Optional) Generate a detailed HTML report
+```
 
 ---
 
 ## ⚠️ Important Notes
 
-1. **Demonstration Purpose Only**:
-   These tests are provided **exclusively for demonstration purposes** to showcase the capabilities of BotBrowser. They serve as proof-of-concept and should not be used for any illegal or unethical purposes.
+1. **Demo-only tests** — these are proof-of-concept scripts to illustrate BotBrowser’s capabilities.  
+2. **No Responsibility Assumed** — this project does not assume responsibility for any misuse of these tests. Users must comply with relevant laws and target sites’ terms of service.
 
-2. **No Responsibility Assumed**:
-   This project does not assume responsibility for any misuse of the provided tests. Users must ensure they comply with applicable laws and terms of service.
+| 🛑 Blocks with Data-Center Proxies? | 🔄 Use Sticky-Session Rotating Residential IPs |
+|-------------------------------------|-----------------------------------------------|
 
 ---
 
-For further assistance, refer to the [Playwright documentation](https://playwright.dev/docs/writing-tests).
+## 📖 Further Reading
+
+- Playwright docs: https://playwright.dev/docs/writing-tests  
+- BotBrowser profiles & configs: https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md  
+
+
