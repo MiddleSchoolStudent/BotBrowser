@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## [2025-06-10]
+
+### Major Update
+- **Upgraded to Chromium 137**
+  - Synced BotBrowser with the latest **Chromium 137** core, ensuring compatibility with new browser features, performance improvements, and security patches.
+
+### Major Improvement
+- **Headless GPU Simulation on Linux without XDISPLAY**
+  - Linux builds no longer require an active `XDISPLAY` to simulate GPU in headless mode.
+  - Provides true GPU acceleration and fingerprint accuracy in pure CLI environments.
+
+---
+
 ## [2025-05-25]
 
 ### Major Update
