@@ -7,9 +7,9 @@
   - Synced BotBrowser with the latest **Chromium 137** core, ensuring compatibility with new browser features, performance improvements, and security patches.
 
 ### Major Improvement
-- **Headless GPU Simulation on Linux without XDISPLAY**
-  - Linux builds no longer require an active `XDISPLAY` to simulate GPU in headless mode.
-  - Provides true GPU acceleration and fingerprint accuracy in pure CLI environments.
+- **GPU Simulation Without Hardware or XDISPLAY**
+  - Linux builds can now simulate GPU capabilities purely in software, without any physical GPU or X server.
+  - Fully functional in headless mode with no `XDISPLAY` required, delivering accurate GPU fingerprints and hardware-accelerated rendering in CLI environments.
 
 ---
 
