@@ -81,3 +81,39 @@ export async function clickWithCursor(cursor: Cursor, selector: string) {
     assert(boundingBox, `Bounding box for selector "${selector}" should not be null`);
     await cursor.actions.click({ target: boundingBox, waitBeforeClick: [100, 200] });
 }
+
+export async function enableMouseMovementOverlay(page: Page) {
+    await page.addInitScript(() => {
+        window.addEventListener('DOMContentLoaded', () => {
+            const canvas = Object.assign(document.createElement('canvas'), {
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+            Object.assign(canvas.style, {
+                userSelect: 'none',
+                pointerEvents: 'none',
+                position: 'fixed',
+                left: '0',
+                top: '0',
+                width: '100vw',
+                height: '100vh',
+                zIndex: Number.MAX_SAFE_INTEGER.toString(),
+            });
+            document.body.appendChild(canvas);
+
+            const cxt = canvas.getContext('2d');
+            if (!cxt) return;
+
+            const drawCircle = (x: number, y: number, r: number, color: string) => {
+                cxt.fillStyle = color;
+                cxt.beginPath();
+                cxt.arc(x, y, r, 0, 2 * Math.PI);
+                cxt.fill();
+            };
+
+            document.addEventListener('mousemove', (e) => drawCircle(e.clientX, e.clientY, 3, 'red'));
+            document.addEventListener('mousedown', (e) => drawCircle(e.clientX, e.clientY, 8, 'green'));
+            document.addEventListener('mouseup', (e) => drawCircle(e.clientX, e.clientY, 5, 'yellow'));
+        });
+    });
+}

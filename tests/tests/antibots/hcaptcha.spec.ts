@@ -1,6 +1,9 @@
+import { createCursor } from 'ghost-cursor-playwright';
 import { ElementHandle, expect, test } from '../global-setup';
 import {
     clickLocatorWithMouse,
+    clickWithCursor,
+    enableMouseMovementOverlay,
     generateRandomEmail,
     generateRandomPassword,
     generateRandomUsername,
@@ -141,4 +144,35 @@ test('riotgames', async ({ page }) => {
     await page.locator('button[data-testid="btn-accept-tos"]').click();
 
     await page.waitForNavigation({ url: 'https://www.riotgames.com/en' });
+});
+
+test('titan22', async ({ page }) => {
+    test.setTimeout(120_000);
+
+    const cursor = await createCursor(page);
+
+    await enableMouseMovementOverlay(page);
+    await page.goto('https://titan22.com/account/register');
+
+    await sleep(1000);
+    await clickWithCursor(cursor, 'input#FirstName');
+    await page.keyboard.type(generateRandomUsername(), { delay: 50 });
+
+    await sleep(1500);
+    await clickWithCursor(cursor, 'input#LastName');
+    await page.keyboard.type(generateRandomUsername(), { delay: 50 });
+
+    await sleep(1500);
+    await clickWithCursor(cursor, 'input#Email');
+    await page.keyboard.type(generateRandomEmail(), { delay: 50 });
+
+    await sleep(1500);
+    await clickWithCursor(cursor, 'input#CreatePassword');
+    await page.keyboard.type(generateRandomPassword(), { delay: 50 });
+
+    await sleep(1500);
+    await clickWithCursor(cursor, 'input[id="customer[accepts_terms]"]');
+
+    await clickWithCursor(cursor, 'button[type="submit"]');
+    await page.locator('a.account-button[href*="/account"]').waitFor({ state: 'visible' });
 });

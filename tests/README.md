@@ -3,7 +3,7 @@
 
 > 📢 Showcase how BotBrowser powers real-world automation tests with [Playwright](https://playwright.dev/docs/writing-tests).
 
-All tests in this repo run under **Sticky Rotating Residential IPs** to mimic genuine user behavior.  
+All tests in this repo run under **Sticky Rotating Residential IPs** to mimic genuine user behavior.
 If you’re blocked when using data-center proxies, switch to **Sticky Rotating Residential IPs**.
 
 ---
@@ -33,7 +33,7 @@ These test scripts are provided for **educational purposes** and to **demonstrat
    ```
 
 3. **Verify** both paths:
-   - `BOTBROWSER_EXEC_PATH` → BotBrowser executable  
+   - `BOTBROWSER_EXEC_PATH` → BotBrowser executable
    - `BOT_PROFILE_PATH` → Encrypted BotBrowser profile
 
 ---
@@ -50,7 +50,7 @@ npx playwright show-report  # (Optional) Generate a detailed HTML report
 
 ## ⚠️ Important Notes
 
-1. **Demo-only tests** — these are proof-of-concept scripts to illustrate BotBrowser’s capabilities.  
+1. **Demo-only tests** — these are proof-of-concept scripts to illustrate BotBrowser’s capabilities.
 2. **No Responsibility Assumed** — this project does not assume responsibility for any misuse of these tests. Users must comply with relevant laws and target sites’ terms of service.
 
 | 🛑 Blocks with Data-Center Proxies? | 🔄 Use Sticky-Session Rotating Residential IPs |
@@ -60,7 +60,15 @@ npx playwright show-report  # (Optional) Generate a detailed HTML report
 
 ## 📖 Further Reading
 
-- Playwright docs: https://playwright.dev/docs/writing-tests  
-- BotBrowser profiles & configs: https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md  
+- Playwright docs: https://playwright.dev/docs/writing-tests
+- BotBrowser profiles & configs: https://github.com/MiddleSchoolStudent/BotBrowser/blob/main/profiles/profile-configs.md
 
+---
 
+## 🙏 Acknowledgements
+
+This project utilizes the following open-source libraries:
+
+- [ghost-cursor](https://www.npmjs.com/package/ghost-cursor)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [ghost-cursor-playwright](https://www.npmjs.com/package/ghost-cursor-playwright)
