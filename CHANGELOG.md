@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [2025-06-15]
+
+### Improved  
+- **On-Demand Proxy Geo & Timezone Fetch**  
+  - Shifted proxy geolocation, timezone, and public IP retrieval from browser startup to page load via a request interceptor.  
+  - Eliminates startup delays while proxy is initializing and enables each `BrowserContext` to use a different proxy seamlessly for scraping tasks.
+
+
+---
+
 ## [2025-06-10]
 
 ### Major Update
