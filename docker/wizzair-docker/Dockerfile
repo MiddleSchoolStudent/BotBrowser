@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY botbrowser_20250616_137.0.7151.104_amd64.deb .
-RUN dpkg -i botbrowser_20250616_137.0.7151.104_amd64.deb || apt-get install -f -y
+COPY botbrowser_*.deb .
+RUN dpkg -i botbrowser_*.deb || apt-get install -f -y
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt

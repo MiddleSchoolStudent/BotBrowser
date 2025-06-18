@@ -9,7 +9,7 @@ services:
 
     environment:
       - BOTBROWSER_EXEC_PATH=/usr/bin/chromium-browser-stable
-      - BOT_PROFILE_PATH=/app/profile/chrome137_mac_arm64.enc
+      - BOT_PROFILE_PATH=/app/profile/your-profile.enc
 
     volumes:
       - ./profile:/app/profile
