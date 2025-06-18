@@ -11,10 +11,10 @@ By using a profile, BotBrowser can launch sessions that mimic real human devices
 
 ### ⚠️ Important Notice About Profiles
 
-#### 🚨 Public Profile Warning
-> **Note**: Public demo profiles are suitable for testing only.
-> Using them in production environments **will result in immediate account bans** because they are widely circulated and easily flagged.
-> Protect your business by using private, authentic profiles.
+#### 🚨 Demo Profile Warning
+> **Note**: Public demo profiles are for limited-time testing only.  
+> Using them in production environments **will result in immediate account bans**, as they’re widely circulated and easily flagged.  
+>  🔒 Protect your operations by using Premium, authentic profiles with proper access controls.  
 
 #### 🌟 Premium Profile Service
 > Access our exclusive pool of **300,000+ authentic browser fingerprints** sourced from real users (not algorithm-generated). Each profile is:
