@@ -188,7 +188,7 @@ Use the open-source GUI to select your profile and start browsing without code.
 
 ### 🐳 Docker Deployment
 
-For a complete Docker setup and usage guide, please see [docker/README.md](docker/README.md).
+For a complete Docker setup and usage guide, please see [docker/README.md](docker/).
 
 
 ---
