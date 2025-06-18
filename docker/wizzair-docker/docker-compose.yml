@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  botbrowser:
+    build:
+      context: .
+    platform: linux/amd64
+    container_name: wizzair-botbrowser-service
+
+    environment:
+      - BOTBROWSER_EXEC_PATH=/usr/bin/chromium-browser-stable
+      - BOT_PROFILE_PATH=/app/profile/chrome137_mac_arm64.enc
+
+    volumes:
+      - ./profile:/app/profile
+      - ./flight_data:/app/flight_data
+      - ./screenshots:/app/screenshots
+
+    stdin_open: true
+    tty: true
