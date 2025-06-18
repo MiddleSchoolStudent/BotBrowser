@@ -1,6 +1,6 @@
 # Docker Deployment
 
-> Spin up BotBrowser quickly with Docker.
+> 🔥 Spin up BotBrowser quickly with Docker.
 
 This guide explains how to deploy BotBrowser using Docker and Docker Compose.
 
