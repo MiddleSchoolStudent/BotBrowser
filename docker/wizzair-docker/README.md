@@ -1,25 +1,15 @@
 # WizzAir Docker Project
 
----
+## ⚠️ **DISCLAIMER**
+
+This Docker project is provided for **educational purposes** and to **demonstrate** the capabilities of BotBrowser. It is intended solely for **legal use cases** that comply with all applicable laws and regulations. **Any misuse**-such as violating website terms of service or engaging in unlawful activities-**is strictly prohibited.**
+
 
 ## Project Overview
 
-> ⚠️ **DISCLAIMER**
->
-> This Docker project is provided for **educational purposes** and to **demonstrate** the capabilities of BotBrowser. It is intended solely for **legal use cases** that comply with all applicable laws and regulations. **Any misuse**—such as violating website terms of service or engaging in unlawful activities—**is strictly prohibited.**
+This repository contains a Docker setup for scraping WizzAir flight prices using BotBrowser and Playwright, which runs a Python script (`main.py`) inside a Docker container that:
 
-
-The `wizzair-docker` project runs a Python script (`main.py`) inside a Docker container that:
-
-This repository contains a Docker setup for scraping WizzAir flight prices using BotBrowser and Playwright.
-
----
-
-## Project Overview
-
-The `wizzair-docker` project runs a Python script (`main.py`) inside a Docker container that:
-
-1. Launches BotBrowser in headless mode—**no XDISPLAY or GPU required**, yet fully simulates a desktop environment.
+1. Launches BotBrowser in headless mode-**no XDISPLAY or GPU required**, yet fully simulates a desktop environment.
 2. Navigates WizzAir’s booking page over a date range.
 3. Intercepts API responses to gather flight data.
 4. Saves JSON files to `flight_data/` and screenshots to `screenshots/`.
