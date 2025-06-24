@@ -63,7 +63,7 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 - [x] **Noise injection**: Randomizes 2D canvas, WebGL, emoji, fonts, text metrics, and audio fingerprints.
 
-- [x] **Simulated OS-specific properties**: Adjusts scrollbar width, BarcodeDetector, and system-specific settings for enhanced authenticity.
+- [x] **Simulated OS-specific properties**: Adjusts scrollbar, BarcodeDetector, and system-specific settings for enhanced authenticity.
 
 - [x] **Chrome feature masking**: Removes Chromium-specific traits, simulating native Chrome with features like ADInterest and CDM for enhanced detection evasion.
 
@@ -74,10 +74,10 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 | Category        | Details |
 |-----------------|---------|
 | **Browser**     | Version, userAgentData, userAgent |
-| **OS**          | Windows, macOS, Ubuntu, Android simulation |
+| **OS**          | Windows, macOS, Ubuntu, Android simulation, Fonts, Colors |
 | **Navigator**   | Languages, Plugins, Permissions, Battery, Keyboard |
 | **Graphics**    | WebGL, WebGL2, GPUAdapter, GPUDevice |
-| **Hardware**    | Screen, CPU, System Fonts, System Colors |
+| **Hardware**    | Screen, CPU |
 | **Media**       | MediaDevices, MimeTypes, AudioContext |
 | **Other**       | Emoji, Unicode, matchMedia control |
 
