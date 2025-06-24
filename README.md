@@ -184,9 +184,8 @@ await page.goto("https://abrahamjuliot.github.io/creepjs/");
 
 Use the open-source GUI to select your profile and start browsing without code.
 
----
 
-### 🐳 Docker Deployment
+#### 4. 🐳 Docker Deployment
 
 For a complete Docker setup and usage guide, please see [docker/README.md](docker/).
 
