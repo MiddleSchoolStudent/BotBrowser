@@ -62,8 +62,7 @@ This repository contains a Docker setup for scraping WizzAir flight prices using
 ## main.py at a Glance
 
 * Reads `BOTBROWSER_EXEC_PATH` and `BOT_PROFILE_PATH` from the environment.
-* Launches Playwright with evasion flags.
-* Iterates dates (2025-08-16 to 2025-09-16 by default).
+* Iterates dates.
 * Saves API response JSON and a screenshot per date.
 
 *Modify the date range or URLs directly in `main.py`.*
