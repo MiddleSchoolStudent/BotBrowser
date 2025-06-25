@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  botbrowser:
+    build:
+      context: .
+    platform: linux/amd64
+    container_name: cloudflare-botbrowser-service
+
+    environment:
+      - BOTBROWSER_EXEC_PATH=/usr/bin/chromium-browser-stable
+      - BOT_PROFILE_PATH=/app/profile/your-profile.enc
+
+    volumes:
+      - ./profile:/app/profile
+      - ./screenshots:/app/screenshots
+
+    stdin_open: true
+    tty: true

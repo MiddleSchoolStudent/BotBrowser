@@ -143,4 +143,5 @@ For other issues, see the main README or open a GitHub issue.
 
 | Example Directory | Description                        |
 | ----------------- | ---------------------------------- |
+| **[Cloudflare](cloudflare-docker)** | Submit Cloudflare demo booking |
 | **[Wizzair](wizzair-docker)** | Scraping flight prices with Docker |
