@@ -65,11 +65,11 @@ export function clickLocatorWithMouse(page: Page | Frame, locator: string) {
         });
 }
 
-export function generateRandomUsername() {
+export function generateRandomUsername(length = 15) {
     return (
         Math.random().toString(36).substring(2).replace(/\d+/g, '') +
         Math.random().toString(36).substring(2).replace(/\d+/g, '')
-    );
+    ).substring(0, length);
 }
 
 export function generateRandomEmail() {

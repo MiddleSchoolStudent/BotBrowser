@@ -2,9 +2,9 @@
 
 ## [2025-06-15]
 
-### Improved  
-- **On-Demand Proxy Geo & Timezone Fetch**  
-  - Shifted proxy geolocation, timezone, and public IP retrieval from browser startup to page load via a request interceptor.  
+### Improved
+- **On-Demand Proxy Geo & Timezone Fetch**
+  - Shifted proxy geolocation, timezone, and public IP retrieval from browser startup to page load via a request interceptor.
   - Eliminates startup delays while proxy is initializing and enables each `BrowserContext` to use a different proxy seamlessly for scraping tasks.
 
 
@@ -31,7 +31,7 @@
   - Now simulates `candidate` IPs using public IPv4 and IPv6 from proxy.
   - Reads all simulation data from profile and mimics realistic `audio/video` media capabilities.
   - Result: BotBrowser now scores **A+ / 100%** on CreepJS! 🎉
-    ▶️ [View Demo](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs)
+    ▶️ [View Demo](https://botswin.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs)
 
 ### Added
 - **IP GEO Auto Geolocation**
@@ -499,4 +499,4 @@ Example:
 - Resolved **CDM issue**, enhancing browser environment security.
 
 ### Added
-- Successfully bypassed **[Fake Vision](https://fv.pro)** detection mechanisms, improving undetectable browsing capabilities. [Test Code](tests/tests/antibots/fvpro.spec.ts), [▶️ Test Result (fv.pro)](https://middleschoolstudent.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fvpro-test-fv-pro-BotBrowser-antibots/video.webm)
+- Successfully bypassed **[Fake Vision](https://fv.pro)** detection mechanisms, improving undetectable browsing capabilities. [Test Code](tests/tests/antibots/fvpro.spec.ts), [▶️ Test Result (fv.pro)](https://botswin.github.io/BotBrowser/video_player/index.html?video=https://raw.githubusercontent.com/MiddleSchoolStudent/BotBrowser/main/tests/test-results/fvpro-test-fv-pro-BotBrowser-antibots/video.webm)

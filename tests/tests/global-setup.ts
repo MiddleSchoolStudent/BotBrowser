@@ -9,6 +9,8 @@ base.beforeEach(async ({ page }) => {
         delete window.__playwright__binding__;
         // @ts-expect-error - Playwright binding will cause leak
         delete window.__pwInitScripts;
+        // @ts-expect-error - Playwright builtins will cause leak
+        delete window.__playwright_builtins__;
     });
 });
 
