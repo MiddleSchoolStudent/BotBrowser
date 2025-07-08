@@ -111,12 +111,20 @@ Controls screen properties exposed by `window.screen`.
 
 ⚠️ Eventually, your modified `.enc` profile should have this structure:
 
-```json
+```json5
 {
-  "configs": { ... },
-  "key": { ... },
-  "version": { ... },
-  "profile": { ... }
+  "configs": {
+    // ...
+  },
+  "key": {
+    // ...
+  },
+  "version": {
+    // ...
+  },
+  "profile": {
+    // ...
+  }
 }
 ```
 
