@@ -65,8 +65,6 @@ Streamline your automation with [BotBrowserConsole](console), a free and open-so
 
 - [x] **Simulated OS-specific properties**: Adjusts scrollbar, BarcodeDetector, and system-specific settings for enhanced authenticity.
 
-- [x] **Chrome feature masking**: Removes Chromium-specific traits, simulating native Chrome with features like ADInterest and CDM for enhanced detection evasion.
-
 - [x] **WebRTC leak protection**: Prevents exposure of real IPs during WebRTC communication.
 
 - [x] **Comprehensive fingerprints spoofing**:
