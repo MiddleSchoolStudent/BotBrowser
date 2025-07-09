@@ -155,9 +155,8 @@ chromium-browser \
   --bot-profile="/path/to/chrome136_win11_x64.enc"
 ```
 
-> Use `--user-data-dir` with a unique temporary folder to avoid conflicts with any running Chromium instances. It ensures BotBrowser launches cleanly without interfering with your normal browser profiles.
-
-
+> Use `--user-data-dir` with a unique temporary folder to avoid conflicts with any running Chromium instances. It ensures BotBrowser launches cleanly without interfering with your normal browser profiles.  
+> Use `--proxy-server`, `--proxy-username`, `--proxy-password` to connect to a proxy server, we support http, https, socks5 protocol.
 
 #### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
 
@@ -165,7 +164,12 @@ chromium-browser \
 const browser = await chromium.launch({
   headless: true,
   executablePath: BOTBROWSER_EXEC_PATH, // Absolute path to the BotBrowser executable
-  args: [`--bot-profile=${BOT_PROFILE_PATH}`], // Absolute or relative path to the bot profile
+  args: [
+    `--bot-profile=${BOT_PROFILE_PATH}`, // Absolute or relative path to the bot profile
+    '--proxy-server="socks5://127.0.0.1"',
+    '--proxy-username=""',
+    '--proxy-password=""',
+  ],
 });
 
 const page = await browser.newPage();
