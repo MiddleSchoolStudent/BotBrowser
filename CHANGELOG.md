@@ -1,5 +1,139 @@
 # CHANGELOG
 
+## [2025-07-09]
+
+### Added
+1. **SOCKS5 Proxy Authentication**  
+   Support for SOCKS5 proxies with username/password to secure authentication.
+
+2. **Proxy Credentials CLI Flags**  
+   New `--proxy-username` and `--proxy-password` flags allow passing credentials at startup, eliminating the need to embed them in profiles.
+
+3. **Bot Cookies Flag**  
+   Added `--bot-cookies` startup parameter to load cookies from a file or inline specification at launch.
+
+4. **Real/Noise Config Toggles**  
+   (https://github.com/botswin/BotBrowser/issues/44) Completed support for toggling fingerprint vectors between `real` and `noise` modes via profile configs.
+
+### Improved
+5. **Proxy IP & WebRTC Refactor**  
+   Overhauled the logic for retrieving and spoofing proxy exit IPs in automation contexts, ensuring reliable public-IP simulation in WebRTC and preventing leaks.
+
+6. **autoTimezone Consistency**  
+   Fixed cases where automatic timezone detection (`configs.autoTimezone`) did not apply, ensuring accurate time and locale behavior.
+
+7. **WebGL Version Forgery**  
+   Now forges both `shadingLanguageVersion` and `version` in WebGL and WebGL2 contexts to avoid fingerprint signature checks.
+
+8. **Imperva Strict Mode Compatibility**  
+   Adjusted noise injection to satisfy Imperva’s strict fingerprint detection without false positives.
+
+9. **configs.languages Fix**  
+   Ensured `configs.languages` array applies correctly to HTTP `Accept-Language` headers and `navigator.languages`.
+
+10. **Relative Path Support for --bot-profile**  
+    Fixed issue preventing relative file paths from working with `--bot-profile`, improving CLI flexibility.
+
+11. **User-Data-Dir Mount Stability**  
+    Resolved intermittent failures mounting the specified `--user-data-dir` directory for profile persistence.
+
+12. **WebGL Extension Parameter Refactor**  
+    Reorganized extraction and spoofing logic for WebGL/WebGL2 extension parameters to bypass FingerprintJS Pro checks.
+
+13. **Cross-Platform Feature Toggles**  
+    Added granular OS-specific toggles for features like audio latency on Windows, macOS, and Android, avoiding "browser tampering" flags in FPJS Pro.
+
+14. **System Default Fonts Optimization**  
+    Updated default font families per OS (Windows: Times New Roman; macOS: Times; Android: Times New Roman), defeating advanced font-based detection in Default Fonts, Emoji, and MathML tests.
+
+### Fixed
+15. **Screenshot Clip Respect**  
+    Fixed a bug where `Page.captureScreenshot` clip parameters were ignored when using profile-defined window and screen sizes.
+
+---
+
+### Example `configs` Snippet
+
+```json5
+{
+  "configs": {
+    // Browser locale
+    "locale": "en-US",
+
+    // Accept-Language header values
+    "languages": ["en-US"],
+
+    // Color scheme: 'light' or 'dark'
+    "colorScheme": "light",
+
+    // Proxy settings: hostname:port, with optional basic auth
+    "proxy": {
+      "server": "1.2.3.4:8080",
+      "username": "",
+      "password": ""
+    },
+
+    // Disable GUI scaling based on device scale factor (ignore DevicePixelRatio for UI scaling)
+    "disableDeviceScaleFactorOnGUI": false,
+
+    // timezone: 'auto' = based on IP; 'real' = system timezone; any other string = custom
+    "timezone": "auto",
+
+    // location: 'auto' = based on IP; 'real' = system (GPS) location;
+    // object = custom coordinates
+    "location": "auto", // or "real" or { latitude: 8.8566, longitude: 2.3522 }
+
+    // window: 'profile' = use profile’s dimensions;
+    // 'real' = use system window size;
+    // object = custom dimensions
+    "window": "profile", // or "real" or { innerWidth: 1280, innerHeight: 720, outerWidth: 1280, outerHeight: 760, screenX: 100, screenY: 50, devicePixelRatio: 1 }
+
+    // screen: 'profile' = use profile’s screen metrics;
+    // 'real' = use system screen metrics;
+    // object = custom metrics
+    "screen": "profile", // or "real" or { width: 1280, height: 720, colorDepth: 24, pixelDepth: 24 }
+
+    // WebRTC: 'profile' = profile’s settings; 'real' = native; 'disabled' = no WebRTC
+    "webrtc": "profile",
+
+    // Fonts: 'profile' = profile’s embedded list; 'real' = system-installed fonts
+    "fonts": "profile",
+
+    // WebGL: 'profile' = profile’s parameters; 'real' = system implementation; 'disabled' = off
+    "webgl": "profile",
+
+    // WebGPU: same semantics as WebGL
+    "webgpu": "profile",
+
+    // Media devices: 'profile' = fake camera/mic devices; 'real' = actual system devices
+    "mediaDevices": "profile",
+
+    // Speech voices: 'profile' = profile’s synthetic voices; 'real' = system voices
+    "speechVoices": "profile",
+
+    // noiseCanvas: true adds subtle noise to Canvas fingerprint; false disables it
+    "noiseCanvas": true,
+
+    // noiseWebglImage: true adds noise to WebGL image fingerprint; false disables it
+    "noiseWebglImage": true,
+
+    // noiseAudioContext: true adds noise to AudioContext fingerprint; false disables it
+    "noiseAudioContext": true,
+
+    // noiseClientRects: true adds noise to clientRects fingerprint; false disables it
+    "noiseClientRects": false,
+
+    // noiseTextRects: true adds noise to TextRects fingerprint; false disables it
+    "noiseTextRects": true
+  }
+}
+
+
+```
+
+---
+
+
 ## [2025-06-15]
 
 ### Improved
