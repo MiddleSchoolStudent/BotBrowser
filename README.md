@@ -155,7 +155,7 @@ chromium-browser \
   --bot-profile="/path/to/chrome136_win11_x64.enc"
 ```
 
-> Use `--user-data-dir` with a unique temporary folder to avoid conflicts with any running Chromium instances. It ensures BotBrowser launches cleanly without interfering with your normal browser profiles.
+> Use `--user-data-dir` with a unique temporary folder to avoid conflicts with any running Chromium instances. It ensures BotBrowser launches cleanly without interfering with your normal browser profiles.  
 > Use `--proxy-server`, `--proxy-username`, `--proxy-password` to connect to a proxy server, we support http, https, socks5 protocol.
 
 #### 2. [Playwright](demo/playwright) / [Puppeteer](demo/puppeteer) Demos
