@@ -28,6 +28,8 @@ Start with this launch to establish a clean baseline before adding extra overrid
 
 Font availability and rendering behavior differ across operating systems, locales, and installations. Font metrics, glyph shapes, and sub-pixel positioning all vary across platforms. BotBrowser provides consistent font behavior through built-in font bundles and cross-platform rendering at the browser engine level.
 
+Safari-family profiles also preserve profile-backed local font behavior, generic font defaults, and platform-appropriate emoji fallback when they run across supported hosts.
+
 ---
 
 <a id="configuration"></a>

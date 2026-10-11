@@ -190,6 +190,8 @@ Consistent Chrome-compatible behaviors and standardized API responses.
 **Widevine CDM Integration (ENT Tier2):**
 > Note: BotBrowser does not distribute proprietary modules (e.g., Widevine). End users must obtain playback components via official channels.
 
+Use [`--bot-widevine`](CLI_FLAGS.md#flag-bot-widevine) to select the per-context license-challenge policy. Supported modes are `stub`, `send`, `block`, and `no-cdm`; the active profile and entitlement determine which modes are available.
+
 ---
 
 <a id="device-platform-emulation"></a>

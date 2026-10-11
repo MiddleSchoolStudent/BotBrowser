@@ -23,6 +23,19 @@ Widevine is Google's Digital Rights Management (DRM) system used by streaming se
 
 DRM capability reporting varies across platforms. The order of `MediaKeySystemAccess` results and the specific configurations supported differ by OS. BotBrowser ensures that DRM capability results are consistent with the profile's platform identity.
 
+### License-challenge policy
+
+Use `--bot-widevine` when a BrowserContext needs an explicit policy for Widevine license challenges:
+
+```bash
+--bot-widevine=stub     # Profile-backed default policy
+--bot-widevine=send     # Allow the normal challenge when supported
+--bot-widevine=block    # Suppress license requests
+--bot-widevine=no-cdm   # Disable CDM exposure for the context
+```
+
+The policy is entitlement and profile dependent. Apply it before the first page or worker starts. `stub` is the default when the profile enables the Widevine capability.
+
 ---
 
 <a id="how-it-works"></a>

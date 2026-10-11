@@ -2,6 +2,17 @@
 
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
+## [2026-10-10]
+### Major
+- **Chromium Core -> 154.0.8037.59**: Updated the BotBrowser 154 release line with the latest validated maintenance changes.
+- **Chromium Core -> 155.0.8059.12**: Updated the BotBrowser 155 release line with the latest validated maintenance changes.
+
+### New
+- **Per-Context Widevine Policy (`--bot-widevine`)**: Added entitled controls for Widevine license-challenge handling with `stub`, `send`, `block`, and `no-cdm` modes.
+
+### Improvements
+- **Safari/WebKit Font Consistency**: Improved profile-backed local font handling, generic font defaults, and emoji fallback consistency for Safari-family workflows.
+
 ## [2026-10-06]
 ### Improvements
 - **Startup Identity Readiness**: Improved first-page startup behavior so profile-backed geographic identity is ready before dependent navigation work begins.

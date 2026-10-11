@@ -129,6 +129,7 @@ Each entry shows availability and the primary guide. The guide documents startup
 - [`--bot-noise-client-rects`](#flag-bot-noise-client-rects) (Core): [Font Fingerprinting](docs/guides/fingerprint/FONT.md)
 - [`--bot-noise-text-rects`](#flag-bot-noise-text-rects) (Core): [Font Fingerprinting](docs/guides/fingerprint/FONT.md)
 - [`--bot-speech-voices`](#flag-bot-speech-voices) (Core): [Speech Synthesis](docs/guides/fingerprint/SPEECH_SYNTHESIS.md)
+- [`--bot-widevine`](#flag-bot-widevine) (ENT Tier2): [Widevine DRM Setup](docs/guides/platform/WIDEVINE_DRM_SETUP.md)
 - [`--bot-media-devices`](#flag-bot-media-devices) (Core): [Media Devices Privacy](docs/guides/fingerprint/MEDIA_DEVICES.md)
 - [`--bot-media-types`](#flag-bot-media-types) (Core): [MIME and Codec](docs/guides/fingerprint/MIME_CODEC.md)
 - [`--bot-noise-seed`](#flag-bot-noise-seed) (ENT Tier2): [Noise Seed Reproducibility](docs/guides/fingerprint/NOISE_SEED_REPRODUCIBILITY.md)
@@ -797,6 +798,8 @@ BotBrowser auto-generates matching `navigator.userAgentData` (brands, fullVersio
 <a id="flag-bot-config-webrtc"></a>
 <a id="flag-bot-webrtc"></a>
 - `--bot-webrtc=profile`: WebRTC: profile (use profile), real (native), disabled (off). Guide: [WebRTC Leak Prevention](docs/guides/network/WEBRTC_LEAK_PREVENTION.md).
+<a id="flag-bot-widevine"></a>
+- `--bot-widevine=stub|send|block|no-cdm` (ENT Tier2): Select the per-context Widevine license-challenge policy. `stub` is the default profile-backed mode, `send` permits the normal challenge when supported, `block` suppresses license requests, and `no-cdm` disables CDM exposure for the context. Guide: [Widevine DRM Setup](docs/guides/platform/WIDEVINE_DRM_SETUP.md).
 
 <a id="behavior--protection-toggles"></a>
 ### Behavior & Protection Toggles
