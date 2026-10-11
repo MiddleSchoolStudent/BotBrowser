@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-- **BotBrowser 154.0.8037.59 or newer** with a matching profile package.
+- **BotBrowser 154.0.8037.99 or newer** with a matching profile package.
 - **A QUIC proxy** that supports standard CONNECT and MASQUE CONNECT-UDP.
 - **Proxy credentials** when the proxy requires Basic authentication.
 - **BotBrowser ENT Tier3** for per-context routing with `BotBrowser.setBrowserContextFlags`.
