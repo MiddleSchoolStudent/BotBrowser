@@ -20,7 +20,7 @@ The W3C, the organization that sets web standards, has published guidance specif
 
 ---
 
-## Apple WebKit (Safari)
+## WebKit-Based Browsers
 
 **Source:** [WebKit Tracking Prevention Policy](https://webkit.org/tracking-prevention-policy/)
 
@@ -195,7 +195,7 @@ Unlike cookies, this data cannot be cleared, reset, or blocked through standard 
 | Authority | Classification | Action |
 |-----------|---------------|--------|
 | **W3C** | Privacy threat | Published mitigation guidance for web specs |
-| **Apple WebKit** | Covert tracking | Actively prevents in Safari |
+| **WebKit-based browsers** | Covert tracking | Actively prevent cross-site tracking |
 | **Mozilla** | Tracking technique | Blocks by default in Firefox |
 | **Google Chrome** | Passive fingerprinting | Reducing via Privacy Sandbox |
 | **ICO (UK)** | Unfair tracking | Called Google's policy reversal "irresponsible"; drafting binding guidance |

@@ -11,7 +11,7 @@
 - **Per-Context Widevine Policy (`--bot-widevine`)**: Added entitled controls for Widevine license-challenge handling with `stub`, `send`, `block`, and `no-cdm` modes.
 
 ### Improvements
-- **Safari/WebKit Font Consistency**: Improved profile-backed local font handling, generic font defaults, and emoji fallback consistency for Safari-family workflows.
+- **WebKit Font Consistency**: Improved profile-backed local font handling, generic font defaults, and emoji fallback consistency for WebKit-family workflows.
 
 ## [2026-10-06]
 ### Improvements

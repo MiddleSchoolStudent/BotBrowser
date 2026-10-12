@@ -38,7 +38,7 @@ This guide covers what BotBrowser protects, why the technique is classified as a
 Major standards bodies, browser vendors, and regulatory authorities have classified browser fingerprinting as a privacy threat:
 
 - **W3C** published [mitigation guidance](https://www.w3.org/TR/fingerprinting-guidance/) stating that fingerprinting "allows for tracking of activity without clear or effective user controls."
-- **Apple WebKit** classifies fingerprinting as [covert tracking](https://webkit.org/tracking-prevention-policy/) and actively works to prevent it in Safari.
+- **WebKit-based browsers** classify fingerprinting as [covert tracking](https://webkit.org/tracking-prevention-policy/) and actively work to prevent cross-site tracking.
 - **Mozilla** treats fingerprinting scripts as tracking and [blocks them by default](https://wiki.mozilla.org/Security/Anti_tracking_policy) in Firefox.
 - **Google Chrome** acknowledges fingerprinting as a passive tracking risk and has been [reducing fingerprint surface area](https://privacysandbox.google.com/protections/user-agent) through User-Agent Reduction and Privacy Sandbox.
 - **UK ICO** called fingerprinting "[not a fair means of tracking](https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/12/our-response-to-google-s-policy-change-on-fingerprinting/)" and described Google's decision to permit it as "irresponsible."
