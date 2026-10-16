@@ -84,10 +84,10 @@ BotBrowser addresses cross-platform font consistency through built-in font libra
 - Font availability and enumeration results match what the target OS would report.
 
 **Rendering engine:**
-- Built-in rendering produces consistent glyph rasterization regardless of the host operating system.
-- Built-in text shaping ensures identical text layout, ligature handling, and complex script rendering across platforms.
+- Built-in rendering aligns glyph output with the profile's target platform; pixel-level rasterization differences can remain.
+- Built-in text shaping aligns text layout, ligature handling, and complex script rendering across supported platforms; some layout measurements can differ.
 
-**Result:** A Windows profile running on a Linux server produces identical font metrics, glyph rendering, and font enumeration results as it would on actual Windows hardware. DOM text renders exclusively from the embedded font bundles, so layouts never fall through to host fonts.
+**Result:** Profile-backed font inventory and rendering controls support cross-platform consistency without guaranteeing identical output for every text measurement or glyph. Keep `--bot-fonts=profile` for profile font policy; `expand` permits host font fallback, and `real` uses host-system fonts.
 
 <a id="fontface-fallback"></a>
 

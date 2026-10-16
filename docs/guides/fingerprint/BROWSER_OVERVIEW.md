@@ -79,7 +79,7 @@ BotBrowser provides protection across every major fingerprint surface. Each area
 BotBrowser addresses fingerprint tracking through browser engine level protection rather than JavaScript injection:
 
 - **Deterministic noise.** Canvas, WebGL, AudioContext, and other rendering surfaces receive controlled noise that remains consistent within a session while varying across sessions.
-- **Cross-platform consistency.** A profile designed for one operating system produces identical fingerprint values on any host OS, using built-in font libraries and text shaping.
+- **Cross-platform consistency.** Built-in font libraries and text shaping align profile-backed signals across supported hosts. Text layout and glyph rendering can retain platform-specific differences; see [Font Fingerprinting](FONT.md).
 - **Complete surface coverage.** Navigator properties, screen dimensions, speech synthesis voices, WebAuthn capabilities, and other API surfaces are controlled through the profile system.
 - **Privacy-first design.** All protection operates at the browser engine level, through native API paths, not JavaScript injection or page-context modifications.
 

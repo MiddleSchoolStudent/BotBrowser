@@ -223,7 +223,7 @@ Advanced font rendering with consistent results across hosts.
 - Multi-language support (CJK/RTL/emoji)
 - Platform-specific font metrics
 - Consistent text measurement across workers
-- DOM text renders exclusively from the embedded Windows/macOS font bundles (Linux requires ENT Tier1; Android requires PRO) so layouts never fall through to host fonts
+- Profile font mode uses embedded Windows/macOS font bundles (Linux requires ENT Tier1; Android requires PRO). `--bot-fonts=expand` permits host font fallback, while `--bot-fonts=real` uses host-system fonts.
 
 > **Implementation Detail:** Low-level rendering paths in Skia (2D/Canvas) and HarfBuzz (text shaping) are tuned to align metrics and glyph shaping across OS targets. Targeted WebGL/WebGPU parameter controls keep visual output stable across contexts.
 

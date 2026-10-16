@@ -61,7 +61,7 @@ The noise seed affects Canvas 2D, WebGL, WebGPU, text metrics, and other surface
 
 ### Cross-Platform Consistency
 
-When a profile is loaded, BotBrowser uses its built-in font libraries and rendering engine to produce identical Canvas output regardless of the host operating system. A Windows profile running on a Linux server produces the same Canvas fingerprint as it would on a Windows machine.
+When a profile is loaded, BotBrowser uses its built-in font libraries and rendering engine to align Canvas output across supported hosts. Text glyph rasterization can retain platform-specific pixel differences, so compare the exact profile and host combination when pixel equality is required. See [Font Fingerprinting](FONT.md).
 
 <a id="canvas-color-spaces"></a>
 

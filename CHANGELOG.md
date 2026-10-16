@@ -2,6 +2,25 @@
 
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
+## [2026-10-16]
+### Major
+- **Chromium Core -> 154.0.8037.99**: Synchronized the BotBrowser 154 release line with the validated profile and network fixes.
+- **Chromium Core -> 155.0.8059.80**: Updated the BotBrowser 155 release line with the upstream network-service stability fix and the latest validated maintenance changes.
+- **Chromium Core -> 156.0.8078.4**: Released the BotBrowser 156 line with the validated port, profile, and request-integrity changes.
+
+### New
+- **Profile-Carried Request Integrity**: Added exact platform-and-version seed resolution for associated-domain requests, with profile-provided seed support for released versions.
+- **Full-Version Integrity Matching**: Navigation, prefetch, and renderer contexts now use the same platform and full-version identity when resolving integrity data.
+
+### Improvements
+- **Proxy and QUIC Reliability**: Improved SOCKS5/QUIC routing across the 154, 155, and 156 release lines, including IPv4 preference, exit-IP lookup handling, and more reliable first-response behavior for supported proxy paths.
+- **Language and Font Consistency**: Refined explicit language and Intl locale handling together with profile-backed font fallback behavior across the 155 and 156 release lines.
+- **Browser-Family Capability Contracts**: Validated profile-family behavior across Window and Worker surfaces, CSS feature responses, geometry, media capability reporting, and browser API shape consistency.
+- **Browser-Family Surface Drift Controls**: Added validation contracts to keep documented globals, prototypes, Worker interfaces, and feature inventories aligned as the Chromium release lines advance.
+- **WebKit-Family Behavior Alignment**: Corrected profile-specific CSS overflow behavior, post-quantum WebCrypto usage reporting, system-font alias resolution, and platform geometry handling across the 155 and 156 release lines.
+- **V8Log Full-Mode Stability**: Prevented optimized-frame source capture in full V8 logging from terminating the renderer, preserving diagnostic logging while keeping page execution alive.
+- **156 Porting Alignment**: Completed dependency cleanup and cross-version behavior alignment for the 156 release line.
+
 ## [2026-10-10]
 ### Major
 - **Chromium Core -> 154.0.8037.99**: Updated the BotBrowser 154 release line with the latest validated maintenance changes.
