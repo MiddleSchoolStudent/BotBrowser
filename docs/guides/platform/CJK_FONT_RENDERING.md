@@ -28,7 +28,7 @@ Use this as a minimal baseline, then apply the cjk font rendering configuration 
 
 CJK (Chinese, Japanese, Korean) characters present unique challenges for cross-platform consistency. These writing systems use thousands of distinct glyphs with complex shaping rules. Each operating system ships different CJK fonts with different metrics, different fallback chains, and different rendering behaviors. Text measurement results can vary significantly across platforms.
 
-BotBrowser's cross-platform font engine addresses this by including embedded CJK font bundles and normalizing text shaping through a built-in shaping engine. The goal is consistent CJK glyph metrics and Canvas text output across Windows, macOS, and Linux hosts.
+BotBrowser can reduce these differences with profile-backed CJK font bundles and the font-rendering integrations available to the active profile and host. The resulting metrics depend on the profile's target platform, host support, and fallback policy; cross-host parity is a supported goal for eligible configurations, not a guarantee for every profile or rendering surface.
 
 ---
 
@@ -36,9 +36,9 @@ BotBrowser's cross-platform font engine addresses this by including embedded CJK
 
 ## How It Works
 
-BotBrowser includes the correct CJK font families in its embedded font bundles for each target platform. When a profile specifies a Windows identity, the browser uses the matching Windows CJK fonts regardless of the host OS.
+BotBrowser uses the CJK fonts available in the profile's embedded bundle when the profile and host support that mode. A Windows-target profile does not by itself make every host behave like Windows: cross-platform profile portability for Linux hosts requires ENT Tier1, and Android font support is PRO. Fallback can also change the result: `--bot-fonts=profile` keeps the profile inventory authoritative, `--bot-fonts=expand` permits host-system fallback, and `--bot-fonts=real` uses system fonts without profile font protection.
 
-Built-in text shaping and rendering engines produce consistent CJK output across hosts. The embedded font bundles ensure that font fallback follows the same chain on every platform, covering all CJK text rendering surfaces including Canvas.
+Supported text-rendering paths integrate platform font fallback and shaping controls, but coverage is not identical across every CJK surface or host. Canvas and DOM measurements should therefore be verified with the exact profile, host, entitlement, and font mode used in production.
 
 ---
 
@@ -94,7 +94,7 @@ To verify CJK font consistency:
 
 1. Launch BotBrowser with the same profile on different host operating systems (Windows, macOS, Linux).
 2. Visit a CJK-heavy site or a fingerprint testing tool such as [BrowserLeaks](https://browserleaks.com/) or [CreepJS](https://abrahamjuliot.github.io/creepjs/).
-3. Confirm that CJK text rendering metrics are identical across all hosts, matching the profile's target platform.
+3. Compare CJK text metrics on the exact hosts and profile modes you plan to use. Treat matching output as configuration-specific evidence; do not assume it generalizes to other hosts, profiles, font modes, or rendering surfaces.
 
 ---
 

@@ -69,7 +69,7 @@ All engineering focuses on privacy research, cross-platform tracking-resistance 
 
 ### Cross-Platform Fingerprint Protection
 
-- Single profile, every host OS: identical UA, screen metrics, touch surfaces, fonts, and device APIs on Windows, macOS, Linux (ENT Tier1), Android (PRO), WebView (ENT Tier3), and WebKit-family profile bundles (ENT Tier4) for consistent browser identity across environments.
+- Single profile, multiple hosts: profile-backed UA, screen metrics, touch surfaces, fonts, and device APIs for consistent browser identity across Windows, macOS, Linux (ENT Tier1), Android (PRO), WebView (ENT Tier3), and WebKit-family profile bundles (ENT Tier4). Text layout and glyph rendering can retain platform-specific differences; see [Font Fingerprinting](docs/guides/fingerprint/FONT.md).
 - Built-in configuration handles touch simulation, device metrics, and locale/timezone detection from the proxy IP while still allowing CLI overrides when privacy experiments require them.
 - Quick demos: [▶️ CreepJS Android](//botswin.github.io/BotBrowser/video_player/index.html?video=antibots-creepjs-creepjs-Android) • [▶️ Iphey](//botswin.github.io/BotBrowser/video_player/index.html?video=antibots-iphey-iphey-Android) • [▶️ Pixelscan](//botswin.github.io/BotBrowser/video_player/index.html?video=antibots-pixelscan-pixelscan-Android)
 
