@@ -43,7 +43,7 @@ case "$OS" in
   Darwin)
     case "$ARCH" in
       arm64)  ASSET_PATTERN="mac_arm64.dmg" ;;
-      x86_64) ASSET_PATTERN="mac_x86_64.dmg" ;;
+      x86_64) ASSET_PATTERN="mac_x(86_64|64)\.dmg" ;;
       *) echo "Error: Unsupported architecture: $ARCH"; exit 1 ;;
     esac
     echo "Platform: macOS ${ARCH}"
