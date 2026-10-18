@@ -284,4 +284,4 @@ PAC can select SOCKS5 routes for TCP traffic. QUIC/STUN UDP behavior still follo
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/docs/network/proxy-configuration/)

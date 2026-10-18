@@ -238,4 +238,4 @@ Add to cron for periodic checks:
 
 ---
 
-**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/en/blog/docker-deployment-guide/)
+**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/docs/deployment/docker-deployment/)

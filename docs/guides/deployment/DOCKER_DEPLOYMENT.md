@@ -291,4 +291,4 @@ docker run -d --shm-size=2g botbrowser:latest ...
 
 ---
 
-**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/en/blog/docker-deployment-guide/)
+**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/docs/deployment/docker-deployment/)

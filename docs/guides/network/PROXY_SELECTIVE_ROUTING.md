@@ -196,4 +196,4 @@ This uses semicolon-separated patterns with wildcard support. It is simpler than
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/docs/network/proxy-configuration/)

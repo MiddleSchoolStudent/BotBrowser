@@ -240,4 +240,4 @@ Trusted user focus on an editable field reduces `visualViewport.height` while ke
 
 ---
 
-**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/en/blog/cross-platform-browser-profiles/)
+**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/docs/platform/cross-platform-profiles/)

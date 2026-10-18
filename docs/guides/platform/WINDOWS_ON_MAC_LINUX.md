@@ -116,4 +116,4 @@ await client.send("BotBrowser.setBrowserContextFlags", {
 
 ---
 
-**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/en/blog/cross-platform-browser-profiles/)
+**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/docs/platform/cross-platform-profiles/)
