@@ -145,4 +145,4 @@ BotBrowser controls all screen and window properties at the browser engine level
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Screen and Window Fingerprinting: Display Tracking](https://botbrowser.io/en/blog/screen-window-fingerprinting/)

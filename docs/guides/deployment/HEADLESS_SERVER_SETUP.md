@@ -238,4 +238,4 @@ Add to cron for periodic checks:
 
 ---
 
-**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/en/blog/docker-deployment-guide/)
+**Related BotBrowser blog:** [Headless Browser Setup on Ubuntu Servers](https://botbrowser.io/en/blog/headless-server-setup/)

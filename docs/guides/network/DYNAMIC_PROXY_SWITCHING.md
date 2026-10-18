@@ -185,4 +185,4 @@ await client.send("BotBrowser.setBrowserContextProxy", {
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [Dynamic proxy switching for separate browser contexts](https://botbrowser.io/en/blog/dynamic-proxy-switching/)

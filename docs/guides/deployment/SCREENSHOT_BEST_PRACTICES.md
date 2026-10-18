@@ -219,4 +219,4 @@ await element.screenshot({ path: "element.png" });
 
 ---
 
-**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/en/blog/docker-deployment-guide/)
+**Related BotBrowser blog:** [Reliable Screenshot Capture in Headless Browsers](https://botbrowser.io/en/blog/screenshot-best-practices/)

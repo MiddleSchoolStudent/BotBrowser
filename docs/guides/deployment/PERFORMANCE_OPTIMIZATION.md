@@ -288,4 +288,4 @@ chromium-browser \
 
 ---
 
-**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/en/blog/docker-deployment-guide/)
+**Related BotBrowser blog:** [Browser Automation Performance: Optimization Guide for Scale](https://botbrowser.io/en/blog/performance-optimization/)

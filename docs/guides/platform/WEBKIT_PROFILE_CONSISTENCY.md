@@ -48,4 +48,4 @@ For WebKit-family mobile profile workflows, add `--bot-mobile-keyboard` when edi
 
 ---
 
-**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/en/blog/cross-platform-browser-profiles/)
+**Related BotBrowser blog:** [WebKit-Family Profile Consistency Across Browser Signals](https://botbrowser.io/en/blog/webkit-safari-family-profile-consistency/)

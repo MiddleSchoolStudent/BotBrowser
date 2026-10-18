@@ -230,4 +230,4 @@ To verify FPS control is active:
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Frame Rate Fingerprinting: Refresh Rate and Video Timing](https://botbrowser.io/en/blog/fps-control/)

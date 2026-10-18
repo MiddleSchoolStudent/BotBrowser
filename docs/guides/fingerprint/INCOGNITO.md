@@ -130,4 +130,4 @@ To verify that regular and incognito modes produce identical fingerprints:
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Why Incognito Mode Does Not Protect Against Fingerprinting](https://botbrowser.io/en/blog/incognito-detection/)

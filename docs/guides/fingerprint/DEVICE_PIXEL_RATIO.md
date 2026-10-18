@@ -113,4 +113,4 @@ Use the same mode for the main browser and a per-context profile when they repre
 
 ---
 
-**Related BotBrowser blog:** [Screen Window Fingerprinting](https://botbrowser.io/en/blog/screen-window-fingerprinting/)
+**Related BotBrowser blog:** [Device Pixel Ratio Policy with --bot-dpr](https://botbrowser.io/en/blog/device-pixel-ratio-policy/)

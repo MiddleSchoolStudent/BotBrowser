@@ -275,4 +275,4 @@ See [UDP over SOCKS5](UDP_OVER_SOCKS5.md) for the full per-context UDP policy.
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [Per-context proxy: route ownership for separate browser work](https://botbrowser.io/en/blog/per-context-proxy/)

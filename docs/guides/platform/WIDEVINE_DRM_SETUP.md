@@ -164,4 +164,4 @@ To verify DRM protection is working correctly:
 
 ---
 
-**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/en/blog/cross-platform-browser-profiles/)
+**Related BotBrowser blog:** [What Is Widevine DRM? Headless Browser Setup and Privacy](https://botbrowser.io/en/blog/widevine-drm-setup/)

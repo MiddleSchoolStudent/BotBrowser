@@ -114,4 +114,4 @@ Profile-backed browser-family consistency covers CSS interface shape, supported 
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [CSS Fingerprinting: How Stylesheets Track You](https://botbrowser.io/en/blog/css-based-fingerprinting/)

@@ -116,4 +116,4 @@ To verify protection is active:
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Audio Fingerprinting Explained: How AudioContext Tracks You](https://botbrowser.io/en/blog/audio-fingerprinting/)

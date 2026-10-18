@@ -241,4 +241,4 @@ await page.goto("https://example.com");
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [Timezone, Locale, and Language in Browser APIs](https://botbrowser.io/en/blog/timezone-locale-language/)

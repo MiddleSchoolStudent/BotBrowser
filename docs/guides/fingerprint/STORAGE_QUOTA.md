@@ -129,4 +129,4 @@ To verify storage and memory protection is active:
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Memory and Storage Signals in Browser Profiles](https://botbrowser.io/en/blog/storage-quota-fingerprinting/)

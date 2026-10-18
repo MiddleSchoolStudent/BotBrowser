@@ -340,4 +340,4 @@ Expected. Different software rasterizers produce different pixel output for the 
 
 ---
 
-**Related BotBrowser blog:** [Docker Deployment Guide](https://botbrowser.io/en/blog/docker-deployment-guide/)
+**Related BotBrowser blog:** [Mesa llvmpipe vs SwiftShader for Chromium on Linux](https://botbrowser.io/en/blog/mesa-llvmpipe-vs-swiftshader-chromium-linux/)

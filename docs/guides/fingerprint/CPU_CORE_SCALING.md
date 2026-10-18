@@ -123,4 +123,4 @@ Each browser instance is constrained independently based on its profile. A 4-cor
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [How navigator.hardwareConcurrency Exposes Your Real CPU Core Count](https://botbrowser.io/en/blog/cpu-core-scaling/)

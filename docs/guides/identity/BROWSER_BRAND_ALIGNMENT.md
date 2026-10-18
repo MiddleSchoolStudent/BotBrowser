@@ -219,4 +219,4 @@ const page2 = await ctx2.newPage();
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [Browser Brand Mismatches in Chrome, Edge, and Brave](https://botbrowser.io/en/blog/browser-brand-switching/)

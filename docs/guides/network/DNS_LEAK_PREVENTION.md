@@ -156,4 +156,4 @@ To verify the selected path, inspect the browser's network diagnostics or the pr
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [DNS Leak Prevention: Resolver Paths, Proxies, and Leak Tests](https://botbrowser.io/en/blog/dns-leak-prevention/)

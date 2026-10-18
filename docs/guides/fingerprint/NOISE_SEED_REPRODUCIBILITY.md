@@ -178,4 +178,4 @@ To verify noise seed reproducibility:
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Noise Seed Reproducibility for Repeatable Fingerprint Runs](https://botbrowser.io/en/blog/noise-seed-reproducibility/)

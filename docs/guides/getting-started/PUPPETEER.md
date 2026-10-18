@@ -133,4 +133,4 @@ await cdp.send("BotBrowser.setCustomHeaders", {
 
 ---
 
-**Related BotBrowser blog:** [Botbrowser Launcher Guide](https://botbrowser.io/en/blog/botbrowser-launcher-guide/)
+**Related BotBrowser blog:** [Puppeteer + BotBrowser: Launch and Profile Pitfalls](https://botbrowser.io/en/blog/getting-started-puppeteer/)

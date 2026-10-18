@@ -142,4 +142,4 @@ To verify protection is active:
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [JavaScript Stack Depth: A Browser Privacy Signal](https://botbrowser.io/en/blog/stack-depth-fingerprinting/)

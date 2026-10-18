@@ -321,4 +321,4 @@ for (const loc of locations) {
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [Multi-Account Browser Isolation: Independent Identity Settings](https://botbrowser.io/en/blog/multi-account-browser-isolation/)

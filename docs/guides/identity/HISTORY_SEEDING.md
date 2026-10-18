@@ -175,4 +175,4 @@ await page.goto("https://example.com");
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [Browsing History Seeding: Session vs Global History](https://botbrowser.io/en/blog/history-injection/)

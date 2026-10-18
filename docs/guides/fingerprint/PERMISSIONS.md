@@ -86,4 +86,4 @@ Profile-backed keyboard behavior follows the same rule. It is available only whe
 
 ---
 
-**Related BotBrowser blog:** [What Is Browser Fingerprinting](https://botbrowser.io/en/blog/what-is-browser-fingerprinting/)
+**Related BotBrowser blog:** [Browser Permission Fingerprinting: Privacy and Consistency](https://botbrowser.io/en/blog/browser-permission-fingerprinting/)

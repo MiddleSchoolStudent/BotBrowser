@@ -196,4 +196,4 @@ const browser = await chromium.launch({
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [User-Agent and Client Hints: Keeping One Identity Consistent](https://botbrowser.io/en/blog/custom-user-agent/)

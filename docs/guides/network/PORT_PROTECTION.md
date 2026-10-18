@@ -112,4 +112,4 @@ chromium-browser \
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [Browser Port Scanning Protection for Localhost Services](https://botbrowser.io/en/blog/port-protection/)

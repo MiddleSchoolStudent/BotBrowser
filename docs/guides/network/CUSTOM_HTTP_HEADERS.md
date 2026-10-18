@@ -212,4 +212,4 @@ await client.send("BotBrowser.setBrowserContextFlags", {
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [Custom HTTP Headers in BotBrowser: Flag, Profile or CDP](https://botbrowser.io/en/blog/custom-http-headers/)

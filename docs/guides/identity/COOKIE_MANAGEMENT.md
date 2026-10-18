@@ -296,4 +296,4 @@ args.push(`--bot-cookies='${JSON.stringify(cookies)}'`);
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [Browser Cookie Management for Multi-Identity Workflows](https://botbrowser.io/en/blog/cookie-management/)

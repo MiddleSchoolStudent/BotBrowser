@@ -173,4 +173,4 @@ const browser = await chromium.launch({
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
+**Related BotBrowser blog:** [Bookmark Injection: Pre-Populate Browser Bookmarks](https://botbrowser.io/en/blog/bookmark-injection/)

@@ -189,4 +189,4 @@ const page = await ctx.newPage();
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)
+**Related BotBrowser blog:** [UDP over SOCKS5: Private QUIC and WebRTC Routing](https://botbrowser.io/en/blog/udp-over-socks5/)
