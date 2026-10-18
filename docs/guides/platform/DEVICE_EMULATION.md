@@ -283,4 +283,4 @@ To verify device emulation is working correctly:
 
 ---
 
-**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/docs/platform/cross-platform-profiles/)
+**Related BotBrowser blog:** [Cross Platform Browser Profiles](https://botbrowser.io/en/blog/cross-platform-browser-profiles/)

@@ -145,4 +145,4 @@ await client.send("BotBrowser.setBrowserContextFlags", {
 
 ---
 
-**Related BotBrowser blog:** [Getting Started Playwright](https://botbrowser.io/docs/getting-started/playwright/)
+**Related BotBrowser blog:** [Getting Started Playwright](https://botbrowser.io/en/blog/getting-started-playwright/)

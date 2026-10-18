@@ -148,4 +148,4 @@ If city-level mapping is not precise enough for your use case, keep GeoIP for ba
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/docs/network/proxy-configuration/)
+**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)

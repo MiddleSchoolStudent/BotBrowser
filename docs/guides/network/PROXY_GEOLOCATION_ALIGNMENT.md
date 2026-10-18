@@ -140,4 +140,4 @@ Use per-context proxy assignment. See [Per-Context Proxy](PER_CONTEXT_PROXY.md).
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/docs/network/proxy-configuration/)
+**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)

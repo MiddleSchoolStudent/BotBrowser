@@ -172,4 +172,4 @@ BotBrowser provides protection across all performance and timing surfaces: opera
 
 ---
 
-**Related BotBrowser blog:** [Performance Optimization](https://botbrowser.io/docs/deployment/performance-optimization/)
+**Related BotBrowser blog:** [Performance Optimization](https://botbrowser.io/en/blog/performance-optimization/)

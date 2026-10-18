@@ -103,4 +103,4 @@ Use [UDP over SOCKS5](UDP_OVER_SOCKS5.md) when the proxy endpoint uses SOCKS5 UD
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/docs/network/proxy-configuration/)
+**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)

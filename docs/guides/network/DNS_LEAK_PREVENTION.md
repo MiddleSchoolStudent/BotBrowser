@@ -156,4 +156,4 @@ To verify the selected path, inspect the browser's network diagnostics or the pr
 
 ---
 
-**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/docs/network/proxy-configuration/)
+**Related BotBrowser blog:** [Proxy Configuration](https://botbrowser.io/en/blog/proxy-configuration/)

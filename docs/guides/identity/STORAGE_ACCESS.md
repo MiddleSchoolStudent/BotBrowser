@@ -166,4 +166,4 @@ Handle extracted data responsibly:
 
 ---
 
-**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/docs/getting-started/profile-management/)
+**Related BotBrowser blog:** [Profile Management](https://botbrowser.io/en/blog/profile-management/)
