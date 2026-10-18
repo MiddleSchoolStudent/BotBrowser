@@ -93,3 +93,7 @@ Include the exact browser version, proxy protocol, redacted launch arguments, lo
 ---
 
 **[Legal Disclaimer & Terms of Use](https://github.com/botswin/BotBrowser/blob/main/DISCLAIMER.md) • [Responsible Use Guidelines](https://github.com/botswin/BotBrowser/blob/main/RESPONSIBLE_USE.md)**. BotBrowser is for authorized fingerprint protection and privacy research only.
+
+---
+
+**Related BotBrowser blog:** [IPv4 and IPv6 Proxy Consistency in Browser Workflows](https://botbrowser.io/en/blog/ipv4-ipv6-proxy-consistency/)
