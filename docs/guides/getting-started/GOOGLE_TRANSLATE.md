@@ -131,4 +131,4 @@ Page translation sends the text needed by the translation service to Google's se
 
 ---
 
-**Related BotBrowser blog:** [Botbrowser Launcher Guide](https://botbrowser.io/en/blog/botbrowser-launcher-guide/)
+**Related BotBrowser blog:** [Google Translate Page Translation with BotBrowser](https://botbrowser.io/en/blog/google-translate-page-translation/)

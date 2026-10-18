@@ -234,4 +234,4 @@ console.log("Verification complete. Review the screenshots.");
 
 ---
 
-**Related BotBrowser blog:** [Botbrowser Launcher Guide](https://botbrowser.io/en/blog/botbrowser-launcher-guide/)
+**Related BotBrowser blog:** [Browser Interaction Validation After Browser and Profile Changes](https://botbrowser.io/en/blog/browser-interaction-validation/)

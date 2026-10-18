@@ -310,6 +310,7 @@ BotBrowser's engine is built in-house on top of Chromium, with no forks or exter
 ### Documentation
 
 - [Guides](docs/guides/README.md) - Setup and troubleshooting by workflow
+- [Research blog](https://botbrowser.io/blog/) - Deep dives on fingerprint surfaces, proxy configuration, and deployment practices
 - [llms.txt](llms.txt) - Indexed entry point for LLMs (project summary plus links to core docs and guides)
 - [Installation Guide](INSTALLATION.md) - Platform-specific setup, Docker deployment, troubleshooting
 - [Advanced Features](ADVANCED_FEATURES.md) - Architecture and design details

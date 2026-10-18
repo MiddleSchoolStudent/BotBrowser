@@ -318,4 +318,4 @@ For the full list of CDP commands you can send via `chrome.debugger.sendCommand(
 
 ---
 
-**Related BotBrowser blog:** [Botbrowser Launcher Guide](https://botbrowser.io/en/blog/botbrowser-launcher-guide/)
+**Related BotBrowser blog:** [Bot Script Automation](https://botbrowser.io/en/blog/bot-script-automation/)

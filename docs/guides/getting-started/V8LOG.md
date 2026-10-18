@@ -135,4 +135,4 @@ await browser.close();
 
 ---
 
-**Related BotBrowser blog:** [Botbrowser Launcher Guide](https://botbrowser.io/en/blog/botbrowser-launcher-guide/)
+**Related BotBrowser blog:** [V8Log Forensics: Runtime Evidence for Privacy Validation](https://botbrowser.io/en/blog/v8log-diagnostics/)

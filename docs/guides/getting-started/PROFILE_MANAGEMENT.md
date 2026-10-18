@@ -286,4 +286,4 @@ Platform compatibility tiers:
 
 ---
 
-**Related BotBrowser blog:** [Botbrowser Launcher Guide](https://botbrowser.io/en/blog/botbrowser-launcher-guide/)
+**Related BotBrowser blog:** [BotBrowser Profiles: Formats, Rotation, and Common Failures](https://botbrowser.io/en/blog/profile-management/)
