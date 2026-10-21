@@ -252,6 +252,18 @@ chromium-browser \
     --user-data-dir="$(mktemp -d)"
 ```
 
+### Debian vs Ubuntu for headless browser performance
+
+The distribution name is not the variable that decides headless performance; the Mesa version is. BotBrowser ships one Linux binary for both, and the rendering backend it selects comes from the installed GL/Vulkan stack, so a Debian 12 host with Mesa 22.3 and an Ubuntu 22.04 host with Mesa 23.2 land on the same software-rendering path and measure within noise of each other.
+
+What actually differs:
+
+- **Ubuntu 22.04** ships Mesa 23.2, whose Vulkan coverage is too small for ANGLE's WebGL2 path on bare metal. Stay on the default auto-detection (llvmpipe via ANGLE GL) and do not pin `--use-angle=vulkan --enable-features=Vulkan,...`.
+- **Ubuntu 24.04 and later** ship Mesa 24.0 or newer, whose Vulkan coverage includes the extensions ANGLE needs, so lavapipe becomes usable on bare metal.
+- **Debian 11/12** is supported and behaves like the Ubuntu release with the same Mesa generation. Debian 11 (Mesa 20/21) is the weakest option; Debian 12 is the practical floor.
+
+Pick the release that gives you the newer Mesa, install the same `libnss3`/`libgbm1`/`libgtk-3-0` set as on Ubuntu, and keep BotBrowser's default backend selection. Backend benchmarks, flags to remove, and per-path measurements are in [Linux GPU Backend Selection](LINUX_GPU_BACKEND.md).
+
 ---
 
 <a id="troubleshooting"></a>

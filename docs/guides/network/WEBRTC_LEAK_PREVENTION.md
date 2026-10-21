@@ -53,6 +53,29 @@ BotBrowser implements protection at the browser engine level:
 
 **ICE Candidate Control.** ICE candidates present a consistent network topology. Local IP addresses are not exposed through `RTCPeerConnection` events.
 
+<a id="why-no-loopback-candidates-appear"></a>
+#### Why no loopback (127.0.0.1 / ::1) candidates appear
+
+You cannot disable loopback candidates with a flag, because BotBrowser never emits them to page JavaScript. Stock Chromium gathers a host candidate for every local interface, and that list includes loopback when ICE gathering runs without a proxy or with `iceTransportPolicy: "all"`. BotBrowser generates the candidate list from the profile's network identity instead: host candidates carry the declared proxy addresses, and loopback, link-local, and private interface addresses are not part of that list. Chrome's mDNS candidate obfuscation (`<uuid>.local`) plays no role here, because there is no local address left to obfuscate.
+
+Verify it from page JavaScript by gathering candidates on a page that is already behind the proxy:
+
+```javascript
+const pc = new RTCPeerConnection({ iceServers: [] });
+pc.createDataChannel("probe");
+const seen = new Set();
+pc.onicecandidate = e => {
+  if (!e.candidate) return;
+  seen.add(e.candidate.candidate);
+};
+await pc.setLocalDescription(await pc.createOffer());
+await new Promise(r => setTimeout(r, 3000));
+console.log([...seen].join("\n"));
+console.log("loopback leaked:", /(^| )127\.\d+\.\d+\.\d+|(^| )::1( |$)/.test([...seen].join(" ")));
+```
+
+If `loopback leaked` prints `true`, the page is not running with the proxy you expect. Socket-level scan probes are a separate concern and are covered by [Port Protection](PORT_PROTECTION.md).
+
 **STUN/TURN Consistency.** STUN and TURN responses reflect your configured network identity. When combined with UDP-over-SOCKS5 (ENT Tier3), STUN probes themselves are tunneled through the proxy.
 
 When a proxy has only one public address family, declare the unavailable family with `--proxy-ip=ipv4_none,<ipv6>` or `--proxy-ip=<ipv4>,ipv6_none`. This keeps WebRTC candidate handling aligned with the declared proxy identity.
