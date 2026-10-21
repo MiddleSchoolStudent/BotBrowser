@@ -145,4 +145,4 @@ To verify protection is active:
 
 ---
 
-**Related BotBrowser blog:** [Font Fingerprinting](https://botbrowser.io/en/blog/font-fingerprinting/)
+**Related BotBrowser blog:** [Font fingerprinting across platforms](https://botbrowser.io/en/blog/font-fingerprinting/)

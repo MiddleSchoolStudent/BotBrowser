@@ -36,4 +36,4 @@ For Widevine CDM setup, playback configuration, and platform-specific details, s
 
 ---
 
-**Related BotBrowser blog:** [Drm Fingerprinting](https://botbrowser.io/en/blog/drm-fingerprinting/)
+**Related BotBrowser blog:** [DRM fingerprinting and EME queries](https://botbrowser.io/en/blog/drm-fingerprinting/)

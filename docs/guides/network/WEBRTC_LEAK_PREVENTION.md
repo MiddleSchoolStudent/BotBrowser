@@ -207,4 +207,4 @@ To verify protection is active, visit [BrowserLeaks WebRTC test](https://browser
 
 ---
 
-**Related BotBrowser blog:** [Webrtc Network Identity Privacy](https://botbrowser.io/en/blog/webrtc-network-identity-privacy/)
+**Related BotBrowser blog:** [WebRTC network identity and privacy](https://botbrowser.io/en/blog/webrtc-network-identity-privacy/)

@@ -160,4 +160,4 @@ Compare two launches of the same profile rather than one page against itself. Wi
 
 ---
 
-**Related BotBrowser blog:** [Canvas Fingerprinting](https://botbrowser.io/en/blog/canvas-fingerprinting/)
+**Related BotBrowser blog:** [Canvas fingerprinting: how it works and what helps](https://botbrowser.io/en/blog/canvas-fingerprinting/)

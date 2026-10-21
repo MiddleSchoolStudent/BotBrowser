@@ -136,4 +136,4 @@ To verify protection is active:
 
 ---
 
-**Related BotBrowser blog:** [Webgl Fingerprinting](https://botbrowser.io/en/blog/webgl-fingerprinting/)
+**Related BotBrowser blog:** [WebGL fingerprinting and `WEBGL_debug_renderer_info`](https://botbrowser.io/en/blog/webgl-fingerprinting/)

@@ -144,4 +144,4 @@ chromium-browser \
 
 ---
 
-**Related BotBrowser blog:** [Webgpu Fingerprinting](https://botbrowser.io/en/blog/webgpu-fingerprinting/)
+**Related BotBrowser blog:** [WebGPU fingerprinting and GPU tracking](https://botbrowser.io/en/blog/webgpu-fingerprinting/)
