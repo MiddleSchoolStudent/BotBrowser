@@ -21,7 +21,7 @@
 
 ### 1. Create a bot script
 
-Save the following as `my-script.js`:
+To create a bot script, save a plain JavaScript file anywhere on disk. It needs no package or bundler; the only requirement is that it may call the `chrome.debugger` API. Save the following as `my-script.js`:
 
 ```javascript
 console.log("Bot script loaded.");
@@ -43,6 +43,8 @@ if (typeof chrome !== "undefined" && chrome.debugger) {
 ```
 
 ### 2. Launch BotBrowser with the script
+
+To launch BotBrowser with the script, pass `--bot-profile` and `--bot-script` on the same command line. The script executes immediately after startup, before the first navigation finishes.
 
 ```bash
 # Windows
@@ -71,7 +73,7 @@ The process-level script runs once when BotBrowser starts. Creating additional B
 
 ## How It Works
 
-The `--bot-script` flag tells BotBrowser to execute a JavaScript file in a privileged, non-extension context immediately after startup. This context provides:
+The `--bot-script` flag tells BotBrowser to execute a JavaScript file in a privileged, non-extension context immediately after startup, so the code runs before any page script. That context provides:
 
 1. **Full `chrome.debugger` API access.** You can attach to any browser target (page, iframe, service worker) and send Chrome DevTools Protocol (CDP) commands directly.
 
@@ -90,6 +92,8 @@ The `--bot-script` flag tells BotBrowser to execute a JavaScript file in a privi
 ## Common Scenarios
 
 ### Attaching to a page and sending CDP commands
+
+To send CDP commands to a page, call `chrome.debugger.getTargets()` to find the target, attach with protocol version `"1.3"`, then pass a command name and its parameters to `chrome.debugger.sendCommand()`:
 
 ```javascript
 chrome.debugger.getTargets(function (targets) {
@@ -127,7 +131,7 @@ chrome.debugger.getTargets(function (targets) {
 
 ### Per-context bot script bootstrap
 
-Create a BrowserContext with a profile and bot script in the same call:
+To bootstrap a per-context bot script, create the BrowserContext through `Target.createBrowserContext` and pass `--bot-profile` and `--bot-script` together in that call's `botbrowserFlags`. A process-level `--bot-script` is not inherited by new contexts, so every context that needs automation must carry its own:
 
 ```javascript
 const client = await browser.newBrowserCDPSession();
@@ -146,7 +150,7 @@ Process-level and context-scoped scripts are independent. A process-level script
 
 ### Interacting with iframe content
 
-Bot scripts can monitor for embedded iframes and interact with them using CDP input events:
+To interact with iframe content, poll `chrome.debugger.getTargets()` for targets whose `type` is `"iframe"`, attach to that target id, then send `Input.dispatchMouseEvent` to the frame target. Page-level selectors do not reach cross-origin frames; CDP input on the frame target is what works:
 
 ```javascript
 let activeTargets = new Set();
@@ -194,6 +198,8 @@ startMonitoring();
 
 ### Human-like mouse movement
 
+To produce human-like mouse movement, dispatch a sequence of `mouseMoved` events along an interpolated path instead of jumping straight to the destination:
+
 ```javascript
 async function moveMouse(targetId, fromX, fromY, toX, toY, steps) {
   for (let i = 0; i <= steps; i++) {
@@ -215,6 +221,8 @@ async function moveMouse(targetId, fromX, fromY, toX, toY, steps) {
 ```
 
 ### Typing with realistic cadence
+
+To type with realistic cadence, send one `Input.insertText` command per character and sleep a randomized delay between keystrokes:
 
 ```javascript
 async function typeText(targetId, text) {
@@ -315,7 +323,3 @@ For the full list of CDP commands you can send via `chrome.debugger.sendCommand(
 ---
 
 **[Legal Disclaimer & Terms of Use](https://github.com/botswin/BotBrowser/blob/main/DISCLAIMER.md) • [Responsible Use Guidelines](https://github.com/botswin/BotBrowser/blob/main/RESPONSIBLE_USE.md)**. BotBrowser is for authorized fingerprint protection and privacy research only.
-
----
-
-**Related BotBrowser blog:** [Bot Script Automation](https://botbrowser.io/en/blog/bot-script-automation/)

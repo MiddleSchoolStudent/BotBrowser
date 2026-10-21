@@ -96,6 +96,35 @@ To verify CJK font consistency:
 2. Visit a CJK-heavy site or a fingerprint testing tool such as [BrowserLeaks](https://browserleaks.com/) or [CreepJS](https://abrahamjuliot.github.io/creepjs/).
 3. Compare CJK text metrics on the exact hosts and profile modes you plan to use. Treat matching output as configuration-specific evidence; do not assume it generalizes to other hosts, profiles, font modes, or rendering surfaces.
 
+### Measure the glyph metrics instead of eyeballing the page
+
+Rendering that looks identical can still measure differently, and text width is the value a page reads. Compare `measureText` output and a canvas hash across hosts:
+
+```javascript
+const sample = "日本語のテキスト幅 中文文本宽度 한국어 텍스트 폭";
+const canvas = new OffscreenCanvas(300, 60);
+const ctx = canvas.getContext("2d");
+
+ctx.font = '24px "Noto Sans CJK JP", sans-serif';
+const width = ctx.measureText(sample).width;
+const inkWidth = ctx.measureText(sample).actualBoundingBoxLeft +
+  ctx.measureText(sample).actualBoundingBoxRight;
+
+ctx.fillText(sample, 10, 40);
+const pixels = ctx.getImageData(0, 0, 300, 60).data;
+let checksum = 0;
+for (let i = 0; i < pixels.length; i += 97) checksum = (checksum * 31 + pixels[i]) | 0;
+
+console.log({ width, inkWidth, checksum });
+```
+
+Run the same snippet with the same profile, `--bot-fonts` mode, and BotBrowser version on each host. Equal `width` and `inkWidth` with a matching `checksum` is the evidence that the font bundle, fallback chain, and shaping path all came from the profile. A width difference of a few tenths of a pixel is normal subpixel positioning; a difference of whole pixels, or a different `checksum`, means one host fell back to a system CJK font.
+
+Two details decide whether this test is meaningful:
+
+- Pin the family name you measure. If you measure `sans-serif` you are measuring the host's fontconfig resolution order, not the profile bundle. Name the family the profile ships.
+- Measure on the surfaces you ship. DOM text and canvas text use different shaping paths, so a matching canvas hash does not by itself prove that `getBoundingClientRect()` widths match.
+
 ---
 
 <a id="troubleshooting"></a>

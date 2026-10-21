@@ -79,6 +79,23 @@ When running an Android profile, BotBrowser configures the following:
 
 BotBrowser configures all platform-related surfaces to report Android identity: platform strings, Client Hints headers, mobile/tablet flags, and the User-Agent string. All values are internally consistent across JavaScript APIs and HTTP headers.
 
+<a id="why-navigator-platform-reports-linux-armv81"></a>
+#### Why `navigator.platform` reports `Linux armv81`
+
+Android Chrome is a Linux build on ARM, so the profile's `navigator.platform` value reads `Linux armv81`, not `Android` or `Linux aarch64`. The suffix carries the ARM architecture string that Android Chrome reports, and here it comes from the profile, not from the host CPU. On an Apple Silicon Mac or an x64 Linux server the same Android profile still reports `Linux armv81`, because the profile owns that string and the engine-level patch keeps `navigator.platform`, `navigator.userAgentData.platform`, Client Hints headers, and the User-Agent on the same value.
+
+To confirm the pairing in one page evaluation:
+
+```javascript
+console.log({
+  platform: navigator.platform,                       // "Linux armv81"
+  uaDataPlatform: navigator.userAgentData?.platform,  // "Android"
+  mobile: navigator.userAgentData?.mobile,            // true for phone profiles
+});
+```
+
+`navigator.userAgentData.platform` reports `Android` while `navigator.platform` reports `Linux armv81`. That split matches real Android Chrome; it is not an inconsistency to fix. A profile that returns `Win32` or `MacIntel` for `navigator.platform` is a desktop profile, and `--bot-mobile=true` alone will not make it an Android identity.
+
 ### Touch and Input
 
 - **Touch events enabled.** Touch event support and touch point count reflect the profile value.
