@@ -63,6 +63,51 @@ BotBrowser ensures that DRM capability result ordering and reporting are consist
 | Android | Hardware-backed DRM support reported when profile specifies it. |
 | Linux | Widevine CDM path follows Linux conventions. |
 
+### The license request in the EME flow
+
+A Widevine license request is not a single call. The page walks through a fixed sequence, and each step can fail for a different reason:
+
+1. `navigator.requestMediaKeySystemAccess('com.widevine.alpha', configs)` resolves with a `MediaKeySystemAccess` only when the CDM exists and at least one requested configuration is supported.
+2. `access.createMediaKeys()` returns a `MediaKeys` object backed by the CDM.
+3. `mediaKeys.createSession()` creates a `MediaKeySession`, and the page calls `session.generateRequest(initDataType, initData)` with the initialization data from the container.
+4. The CDM answers with a `message` event. That message is the license challenge: the page POSTs the bytes to the license server URL from the manifest.
+5. The server responds with a license, the page calls `session.update(license)`, and decoding can start.
+
+A page that stops at step 1 never sends a license request at all, so a "license request failed" report and a "DRM not supported" report have different causes. Pull the `MediaKeySession` events before reading server logs:
+
+```javascript
+const access = await navigator.requestMediaKeySystemAccess("com.widevine.alpha", [
+  {
+    initDataTypes: ["cenc"],
+    videoCapabilities: [{ contentType: 'video/mp4; codecs="avc1.42E01E"' }],
+  },
+]);
+
+const mediaKeys = await access.createMediaKeys();
+const session = mediaKeys.createSession();
+
+session.addEventListener("message", event => {
+  console.log("license challenge bytes:", event.message.byteLength);
+});
+session.addEventListener("keystatuseschange", () => {
+  session.keyStatuses.forEach((status, keyId) => console.log(keyId, status));
+});
+```
+
+`message` with a non-zero `byteLength` means the challenge reached the page. `keyStatuses` reporting `usable` after `session.update()` means the CDM accepted the license. Anything earlier is a capability or CDM-loading problem, not a license-server problem.
+
+<a id="what-bot-widevine-does-to-that-flow"></a>
+### What `--bot-widevine` does to that flow
+
+| Mode | Effect on the license request | Typical use |
+|------|------------------------------|-------------|
+| `stub` | Profile-backed default policy; the challenge is answered without leaving the browser | Reference runs that must show DRM capability without contacting a provider |
+| `send` | The normal challenge is emitted when the CDM supports it | Provider integration testing with a real license server |
+| `block` | License requests are suppressed | Reproducing a device without DRM authorization |
+| `no-cdm` | CDM exposure is removed for the context | Measuring how a page behaves when Widevine is absent |
+
+Apply the mode at launch. Changing it after the first page or worker starts leaves already-created contexts on the previous policy.
+
 ---
 
 <a id="quick-start"></a>
@@ -131,6 +176,37 @@ To verify DRM protection is working correctly:
 2. Confirm that content plays back without errors.
 3. Verify on a fingerprint testing site that DRM capability reporting matches the profile's target platform.
 
+### Checking the CDM before touching a provider
+
+Query the CDM directly on a page you control, so a provider failure is not confused with a missing module:
+
+```javascript
+const configs = [
+  {
+    initDataTypes: ["cenc"],
+    videoCapabilities: [
+      { contentType: 'video/mp4; codecs="avc1.42E01E"' },
+      { contentType: 'video/mp4; codecs="hvc1.1.6.L93.B0"' },
+    ],
+    robustness: "SW_SECURE_CRYPTO",
+  },
+];
+
+const supported = await navigator.requestMediaKeySystemAccess(
+  "com.widevine.alpha",
+  configs
+).then(access => access.getConfiguration())
+ .catch(() => null);
+
+console.log("widevine cdm config:", supported);
+```
+
+`null` means the CDM is absent or the profile disables it (`--bot-widevine=no-cdm`). A configuration object with fewer `videoCapabilities` entries than you requested means the CDM loaded but the profile's declared codec and robustness set is narrower than the query.
+
+### About Widevine device files
+
+A Widevine device file (`.wvd` or the older `.prd` form) carries a client ID and device key that a license server can recognize. BotBrowser does not distribute device files, and loading one is not a configuration step for BotBrowser: the Widevine capability comes from the CDM binary plus the loaded profile. Profiles are `.enc` or `.json` files loaded with `--bot-profile`, and the DRM capability set they report is what a page sees. If a provider rejects playback while the CDM reports support, the cause is normally license authorization for that account or device class, not a missing `.wvd`.
+
 ---
 
 <a id="troubleshooting"></a>
@@ -139,10 +215,12 @@ To verify DRM protection is working correctly:
 
 | Problem | Solution |
 |---------|----------|
-| Widevine not detected | Ensure the CDM is installed in the correct location for your platform. BotBrowser does not bundle the CDM. |
+| Widevine not detected | Ensure the CDM is installed in the correct location for your platform. BotBrowser does not bundle the CDM. Then re-run the `requestMediaKeySystemAccess` check above; `null` confirms the module is missing rather than the provider blocking playback. |
 | DRM playback fails | Verify the CDM version is compatible with the BotBrowser version. |
+| DRM playback fails but the CDM reports support | Read the `message` and `keystatuseschange` events: no `message` means the challenge never left the page, `keyStatuses` never reaching `usable` means the license server rejected the request. |
 | DRM capability order differs from expected | The profile defines the expected DRM capability order. Ensure the profile matches the target platform. |
 | "Unsupported platform" from streaming site | Check that the profile's platform identity matches a platform the site supports (e.g., Windows, macOS). |
+| License request blocked | Check that `--bot-widevine` is not set to `block` or `no-cdm` for that BrowserContext. |
 
 ---
 

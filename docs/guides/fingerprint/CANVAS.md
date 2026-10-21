@@ -89,6 +89,42 @@ To verify protection is active:
 2. Confirm that the reported Canvas hash and image data match the profile configuration, not the host machine.
 3. To verify reproducibility, launch two sessions with the same `--bot-noise-seed` and confirm that the Canvas fingerprint output is identical.
 
+### Checking a canvas fingerprint in the page
+
+A canvas fingerprint check does not need a third-party site. Draw the same fixed scene, read it back, and compare the digest between runs:
+
+```javascript
+function canvasDigest() {
+  const canvas = document.createElement("canvas");
+  canvas.width = 240;
+  canvas.height = 60;
+  const ctx = canvas.getContext("2d");
+  ctx.textBaseline = "top";
+  ctx.font = "14px Arial";
+  ctx.fillStyle = "#f60";
+  ctx.fillRect(10, 10, 80, 30);
+  ctx.fillStyle = "#069";
+  ctx.fillText("BotBrowser canvas check", 14, 20);
+  ctx.fillStyle = "rgba(102, 204, 0, 0.7)";
+  ctx.fillText("BotBrowser canvas check", 18, 26);
+  return canvas.toDataURL();
+}
+
+const first = canvasDigest();
+const second = canvasDigest();
+console.log("same within one page:", first === second);
+console.log("length:", first.length);
+```
+
+Compare two launches of the same profile rather than one page against itself. Within a single page the two reads should always match; the question is whether the value is the same in the next session. Record the profile path, the seed, the host, and the digest length, then repeat with `toBlob` and with an `OffscreenCanvas` worker to see whether all readback paths agree.
+
+| Observation | What it usually means |
+|-------------|-----------------------|
+| Digest differs between two runs of the same profile | `--bot-noise-seed` is missing or different, or the profile did not load |
+| Digest matches the host browser | The profile is not loaded; check for `--bot-profile` errors at startup |
+| Digest matches across hosts with the same profile | Profile-backed output is being applied consistently |
+| `getImageData` differs from `toDataURL` on the same canvas | Readback-path difference; compare the same API on both runs |
+
 ---
 
 <a id="troubleshooting"></a>

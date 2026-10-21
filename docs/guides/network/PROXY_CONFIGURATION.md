@@ -168,6 +168,50 @@ await page.goto("https://example.com");
 await browser.close();
 ```
 
+### Puppeteer or Playwright with a SOCKS5 proxy
+
+Puppeteer's `--proxy-server` argument and Playwright's `launch({ proxy })` option are both passed to Chromium, but only the launch argument keeps the credentials, the SOCKS5 remote-DNS choice, and BotBrowser's geo-detection in one place. Pass the same URL you would use on the command line:
+
+```javascript
+// Puppeteer + SOCKS5: the URL carries the protocol, credentials, host, and port
+const browser = await puppeteer.launch({
+  executablePath: process.env.BOTBROWSER_EXEC_PATH,
+  headless: true,
+  args: [
+    `--bot-profile=${process.env.BOT_PROFILE_PATH}`,
+    "--proxy-server=socks5://user:pass@proxy.example.com:1080",
+  ],
+});
+```
+
+```javascript
+// Playwright + SOCKS5H: hostnames resolve inside the tunnel, not on the local resolver
+const browser = await chromium.launch({
+  executablePath: process.env.BOTBROWSER_EXEC_PATH,
+  headless: true,
+  args: [
+    `--bot-profile=${process.env.BOT_PROFILE_PATH}`,
+    "--proxy-server=socks5h://user:pass@proxy.example.com:1080",
+  ],
+});
+```
+
+| Need | Puppeteer | Playwright | Use in BotBrowser |
+|------|-----------|------------|-------------------|
+| Proxy URL with credentials | `args: ["--proxy-server=..."]` | `args: ["--proxy-server=..."]` | Supported; keep the URL in launch args |
+| Username/password prompt | `page.authenticate()` | `launch({ proxy: { username, password } })` | Not needed; geo-detection reads the launch argument instead |
+| Remote DNS for SOCKS5 | `socks5h://` in the URL | `socks5h://` in the URL | Supported; `socks5://` resolves locally |
+| Headless and headful runs | same flag | same flag | Identical; the proxy layer does not depend on `headless` |
+
+`socks5://` versus `socks5h://` is the only difference between the two snippets above. It changes who resolves the hostname, not which port or credentials you use. If a run works in a browser started by hand but fails under Puppeteer, compare the resolved `--proxy-server` value first: a framework-level proxy object usually strips it back to `http://`.
+
+### Headless browser proxy setup checklist
+
+1. Put `--proxy-server` in the launch arguments, not in the framework's proxy option.
+2. Check the URL format is `protocol://username:password@hostname:port` and that reserved characters in the password are percent-encoded.
+3. Choose `socks5h://` when DNS must stay inside the tunnel, `socks5://` when local resolution is acceptable, and `http://` or `https://` when the provider only exposes an HTTP CONNECT endpoint.
+4. Launch once with the proxy and read the exit IP, timezone, and locale from the page before trusting the profile. See [Proxy and Geolocation](PROXY_GEOLOCATION_ALIGNMENT.md).
+
 ### Using SOCKS5H for remote DNS resolution
 
 When privacy requires that DNS queries also go through the proxy tunnel, use `socks5h://`. This prevents DNS queries from leaking to your local resolver.
@@ -208,6 +252,8 @@ Standard and request-aware PAC routes can include proxy credentials. Approved re
 | Problem | Solution |
 |---------|----------|
 | Proxy authentication fails | Verify credentials are embedded in the URL. Do not use `page.authenticate()`. |
+| Puppeteer or Playwright reports a proxy error while a manual launch works | Log the browser arguments; a framework `proxy` object can replace `--proxy-server`. Pass the full URL in `args`. |
+| SOCKS5 proxy resolves a hostname the target cannot see | Use `socks5h://` so the proxy resolves it inside the tunnel. |
 | Timezone does not match proxy location | Use `--proxy-server` in launch args, not framework proxy options. |
 | Special characters in password | URL-encode special characters (e.g., `@` becomes `%40`, `#` becomes `%23`). |
 | DNS leaking to local resolver | Switch from `socks5://` to `socks5h://` so DNS resolves through the proxy. |
