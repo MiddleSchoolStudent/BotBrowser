@@ -12,6 +12,12 @@ Use this profile line for desktop and mobile WebKit-family bundles. Use Chromium
 
 For the product page, see [WebKit-family Profile Consistency](../../../WEBKIT_PROFILE_CONSISTENCY.md).
 
+## Which browser version string does the profile report?
+
+The browser version a page sees comes from the profile, not from a hand-typed flag. The `.enc` package carries the browser-family version data, and BotBrowser derives the reported values from it at startup: `navigator.userAgent`, the structured `navigator.userAgentData` brands, and the Client Hints `fullVersionList` all resolve to the same profile-defined version. BotBrowser auto-generates matching Client Hints values with proper GREASE ordering, so the main thread, workers, and HTTP headers agree. See [Navigator Properties](../fingerprint/NAVIGATOR_PROPERTIES.md).
+
+That is why the version string must match the binary. A `153.0.8010.x` string identifies the BotBrowser 153 release line, whose Chromium core started at `153.0.8010.12` and continues through later 153 minors such as `153.0.8010.53`. A profile whose major version differs from the BotBrowser release line fails startup profile validation as a version mismatch; see [Startup profile states](../getting-started/PROFILE_MANAGEMENT.md#startup-profile-states). Pair `153.x` profiles with a 153 binary, `154.x` with 154, and so on.
+
 ## Requirements
 
 - BotBrowser 150.0.7871.46 or newer with a matching WebKit-family profile package.

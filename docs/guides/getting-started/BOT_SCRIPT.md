@@ -19,7 +19,7 @@
 
 ## Quick Start
 
-### 1. Create a bot script
+### How do I create a bot script?
 
 To create a bot script, save a plain JavaScript file anywhere on disk. It needs no package or bundler; the only requirement is that it may call the `chrome.debugger` API. Save the following as `my-script.js`:
 
@@ -42,7 +42,7 @@ if (typeof chrome !== "undefined" && chrome.debugger) {
 }
 ```
 
-### 2. Launch BotBrowser with the script
+### How do I launch BotBrowser with a bot script?
 
 To launch BotBrowser with the script, pass `--bot-profile` and `--bot-script` on the same command line. The script executes immediately after startup, before the first navigation finishes.
 
