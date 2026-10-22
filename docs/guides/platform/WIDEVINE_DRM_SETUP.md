@@ -123,7 +123,9 @@ Apply the mode at launch. Changing it after the first page or worker starts leav
    - **macOS:** The CDM follows macOS library conventions.
    - **Linux:** Place the CDM in the standard library path.
 
-3. **Launch BotBrowser** with your profile. BotBrowser detects the installed CDM automatically:
+3. **Check the installation before opening a provider page.** Start with the same profile and binary that the workload will use, and query `requestMediaKeySystemAccess()` on a page you control. A `null` result is an installation, entitlement, or profile-policy problem; it is not evidence that the provider rejected a license.
+
+4. **Launch BotBrowser** with your profile. BotBrowser detects the installed CDM automatically:
 
 ```javascript
 import { chromium } from "playwright-core";
@@ -143,6 +145,10 @@ await page.goto("https://streaming-service.example.com");
 
 await browser.close();
 ```
+
+For a controlled negative check, repeat the probe with `--bot-widevine=no-cdm`. The result should become `null`; if it does not, the context was created with a different argument set or the probe ran in an already-created context. Restore `stub` or `send` before testing provider playback.
+
+The profile and CDM are separate inputs. `--bot-profile` selects the platform identity and its declared DRM capability set; it does not install a CDM or import a device key. Keep the profile path, binary version, and CDM installation location in the same deployment record so a later license failure can be reproduced.
 
 ---
 
@@ -207,6 +213,8 @@ console.log("widevine cdm config:", supported);
 
 A Widevine device file (`.wvd` or the older `.prd` form) carries a client ID and device key that a license server can recognize. BotBrowser does not distribute device files, and loading one is not a configuration step for BotBrowser: the Widevine capability comes from the CDM binary plus the loaded profile. Profiles are `.enc` or `.json` files loaded with `--bot-profile`, and the DRM capability set they report is what a page sees. If a provider rejects playback while the CDM reports support, the cause is normally license authorization for that account or device class, not a missing `.wvd`.
 
+Do not place a `.wvd` or `.prd` path in `--bot-profile`, and do not copy a device file into a profile directory as an attempted fix. Treat device files as provider credentials: obtain them only from the provider or an authorized device-management process, restrict their permissions, and redact their contents from issue logs. For the browser-side setup path, see [DRM fingerprinting and EME signals](../../fingerprint/drm/); for headless-specific failure boundaries, see [Widevine headless troubleshooting](https://botbrowser.io/en/blog/widevine-headless-boundaries/).
+
 ---
 
 <a id="troubleshooting"></a>
@@ -221,6 +229,8 @@ A Widevine device file (`.wvd` or the older `.prd` form) carries a client ID and
 | DRM capability order differs from expected | The profile defines the expected DRM capability order. Ensure the profile matches the target platform. |
 | "Unsupported platform" from streaming site | Check that the profile's platform identity matches a platform the site supports (e.g., Windows, macOS). |
 | License request blocked | Check that `--bot-widevine` is not set to `block` or `no-cdm` for that BrowserContext. |
+| The probe works but the provider returns 401/403 | Confirm that `message` emitted a non-zero challenge, then inspect the provider response status and account/device authorization. Do not replace the profile or device file before separating an HTTP authorization failure from a CDM failure. |
+| A copied device file appears to fix one machine only | Remove the copied credential from the test path and reproduce with the official provider flow. A device file is not a substitute for CDM installation or profile selection, and sharing it can expose license credentials. |
 
 ---
 
