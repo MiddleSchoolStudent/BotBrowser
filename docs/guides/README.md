@@ -82,6 +82,7 @@ Configuration, deployment, and verification guides. Each guide includes prerequi
 | [Active Window Emulation](fingerprint/ACTIVE_WINDOW.md) | Prevent focus-based tracking by keeping windows in an always-active state. |
 | [WebGPU Fingerprint Protection](fingerprint/WEBGPU.md) | Control WebGPU adapter information and rendering behavior across platforms. |
 | [Media Devices Privacy](fingerprint/MEDIA_DEVICES.md) | Control device enumeration to return consistent audio/video device lists. |
+| [File-Backed Capture Device Identity](fingerprint/FILE_CAPTURE_DEVICE_IDENTITY.md) | Keep camera and microphone identity aligned with the profile when capture comes from a file fixture. |
 | [CPU Core Scaling Protection](fingerprint/CPU_CORE_SCALING.md) | Constrain Worker parallelism to match the profile's claimed core count. |
 
 <a id="identity-session"></a>

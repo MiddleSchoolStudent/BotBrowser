@@ -125,6 +125,7 @@ Each entry shows availability and the primary guide. The guide documents startup
 - [`--bot-webgpu`](#flag-bot-webgpu) (Core): [WebGPU Fingerprint Protection](docs/guides/fingerprint/WEBGPU.md)
 - [`--bot-noise-webgl-image`](#flag-bot-noise-webgl-image) (Core): [WebGL Fingerprinting](docs/guides/fingerprint/WEBGL.md)
 - [`--bot-noise-canvas`](#flag-bot-noise-canvas) (Core): [Canvas Fingerprinting](docs/guides/fingerprint/CANVAS.md)
+- [`--bot-audio`](#flag-bot-audio) (Core): [Audio Fingerprinting](docs/guides/fingerprint/AUDIO.md)
 - [`--bot-noise-audio-context`](#flag-bot-noise-audio-context) (Core): [Audio Fingerprinting](docs/guides/fingerprint/AUDIO.md)
 - [`--bot-noise-client-rects`](#flag-bot-noise-client-rects) (Core): [Font Fingerprinting](docs/guides/fingerprint/FONT.md)
 - [`--bot-noise-text-rects`](#flag-bot-noise-text-rects) (Core): [Font Fingerprinting](docs/guides/fingerprint/FONT.md)
@@ -771,6 +772,9 @@ BotBrowser auto-generates matching `navigator.userAgentData` (brands, fullVersio
 <a id="flag-bot-config-webgpu"></a>
 <a id="flag-bot-webgpu"></a>
 - `--bot-webgpu=profile`: WebGPU: profile (use profile), real (system), disabled (off). Guide: [WebGPU Fingerprint Protection](docs/guides/fingerprint/WEBGPU.md).
+<a id="flag-bot-config-audio"></a>
+<a id="flag-bot-audio"></a>
+- `--bot-audio=profile`: Audio surface: profile (profile-backed identity and parameters), real (host audio stack passes through). Guide: [Audio Fingerprinting](docs/guides/fingerprint/AUDIO.md).
 <a id="flag-bot-config-noise-webgl-image"></a>
 <a id="flag-bot-noise-webgl-image"></a>
 - `--bot-noise-webgl-image`: WebGL image noise: true, false. Guide: [WebGL Fingerprinting](docs/guides/fingerprint/WEBGL.md).

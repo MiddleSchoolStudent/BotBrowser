@@ -117,6 +117,7 @@ chromium-browser \
 ## Next Steps
 
 - [Audio Fingerprint Protection](AUDIO.md). Control audio rendering and noise.
+- [File-Backed Capture Device Identity](FILE_CAPTURE_DEVICE_IDENTITY.md). Keep camera and microphone identity consistent when capture is file-backed.
 - [Navigator Properties](NAVIGATOR_PROPERTIES.md). Other navigator-level fingerprint surfaces.
 - [`--bot-media-devices`](../../../CLI_FLAGS.md#flag-bot-media-devices). CLI values and availability.
 

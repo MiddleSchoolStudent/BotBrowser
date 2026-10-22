@@ -2,10 +2,24 @@
 
 > **Research scope:** Entries in this changelog describe features evaluated in authorized labs and defensive benchmarking programs. Follow the [Legal Disclaimer](DISCLAIMER.md) and [Responsible Use Guidelines](RESPONSIBLE_USE.md). We work with security vendors to investigate any misuse, so report concerns to [support@botbrowser.io](mailto:support@botbrowser.io).
 
+## [2026-10-23]
+### Major
+- **Chromium Core -> 156.0.8078.47**: Updated the BotBrowser 156 release line with the completed porting round and the latest validated profile, media-device, and browser-surface alignment changes.
+
+### New
+- **Audio Identity Control (`--bot-audio`)**: Added an audio surface control with `real` and `profile` modes. `profile` keeps the profile-backed audio identity and parameters; `real` passes the host audio stack through, matching the existing `--bot-webgl` and `--bot-webgpu` semantics. The legacy alias `--bot-config-audio` remains accepted.
+- **Media Device Identity for File-Backed Capture**: When `--use-fake-device-for-media-stream` replaces the capture devices, camera and microphone identities now follow the profile's target platform. This covers `--use-file-for-fake-video-capture=<file>` (Y4M or MJPEG) together with `--use-fake-ui-for-media-stream`, so `track.label`, `deviceId`, `groupId`, `enumerateDevices()` roster entries, `getCapabilities()`, and facing behavior stay consistent within a context instead of exposing capture file paths or placeholder names. Starting without `--use-fake-device-for-media-stream` leaves real devices untouched.
+
+### Improvements
+- **Browser-Surface Consistency**: Aligned computed-style initial values, WebAudio node structure and analyser parameters, worker-side globals, and web-transport capability reporting for the WebKit-family profile targets in the 155 and 156 release lines.
+- **Text and Layout Metrics**: Corrected layout-level text width rounding for mobile WebKit-family profiles so measured element widths match the target platform's grid, while desktop profiles and Blink profiles keep their existing metrics.
+- **Storage Quota Parsing**: Tightened profile quota parsing so only positive integer values are accepted and out-of-range values fall back instead of being coerced.
+- **Proxy and Network Stability**: Preserved the recently validated SOCKS5/QUIC routing behavior and network-service stability fixes in the 156 release line.
+
 ## [2026-10-16]
 ### Major
 - **Chromium Core -> 154.0.8037.99**: Synchronized the BotBrowser 154 release line with the validated profile and network fixes.
-- **Chromium Core -> 155.0.8059.80**: Updated the BotBrowser 155 release line with the upstream network-service stability fix and the latest validated maintenance changes.
+- **Chromium Core -> 155.0.8059.79**: Updated the BotBrowser 155 release line with the upstream network-service stability fix and the latest validated maintenance changes.
 - **Chromium Core -> 156.0.8078.4**: Released the BotBrowser 156 line with the validated port, profile, and request-integrity changes.
 
 ### New

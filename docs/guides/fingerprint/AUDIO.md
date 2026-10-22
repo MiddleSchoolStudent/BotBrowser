@@ -34,6 +34,20 @@ Web Audio API output can be used as a tracking identifier because it varies acro
 
 ## Configuration
 
+### Audio Surface Mode
+
+`--bot-audio` selects how the Web Audio surface is served. The default is `profile`.
+
+```bash
+# Use the profile-backed audio identity and parameters (default)
+--bot-audio=profile
+
+# Pass the host audio stack through without profile audio values
+--bot-audio=real
+```
+
+In `profile` mode, audio node structure and analyser parameters follow the profile, together with the noise controls described below. In `real` mode the host audio stack passes through and profile audio values, including audio noise, do not apply. The behavior mirrors `--bot-webgl` and `--bot-webgpu`. The legacy alias `--bot-config-audio` is still accepted.
+
 ### Enabling/Disabling Audio Noise
 
 AudioContext noise is enabled by default. To control it explicitly:
